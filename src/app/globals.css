@@ -35,3 +35,25 @@ body {
 .thumbs-swiper .swiper-slide-thumb-active {
   opacity: 1;
 }
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-family: swiper-icons;
+  font-size: 21px!important;
+  color: white;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.swiper-button-prev:hover:after,
+.swiper-button-next:hover:after {
+  opacity: 1;
+}
+
+.swiper-button-prev:after {
+  content: 'prev';
+}
+
+.swiper-button-next:after {
+  content: 'next';
+}
