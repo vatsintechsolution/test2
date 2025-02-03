@@ -17,9 +17,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
   const [verticalAngle, setVerticalAngle] = useState(0)
   const modelViewerLoaded = useRef(false)
 
-  const handleBuyNow = () => {
-    alert('Proceeding to checkout!')
-  }
+  
 
   useEffect(() => {
     if (!modelViewerLoaded.current) {
@@ -38,7 +36,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
   }
 
   return (
-    <div className="w-full h-[600px] relative">
+    <div className="w-full h-[600px] bg-[url(/fan-bg.jpeg)] bg-cover bg-top bg-no-repeat relative">
       <model-viewer
         src={modelPath}
         ar
@@ -51,32 +49,26 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         auto-rotate
         rotation-per-second={speedValues[rotationSpeed]}
         interaction-policy="allow-when-focused"
-        camera-orbit="0deg 75deg 150%"
-        min-camera-orbit="auto auto 100%"
-        max-camera-orbit="auto auto 200%"
-        camera-target="0m 0m 0m"
-        field-of-view="45deg"
+        camera-orbit="0deg 120deg 100%"
+        min-camera-orbit="auto 100deg 100%"
+        max-camera-orbit="auto 120deg 200%"
+        camera-target="0m 0.5m 0m"
+        field-of-view="30deg"
         shadow-intensity="1"
         bounds="tight"
         onArStatusChange={(e: ArStatusChangeEvent) => setIsAR(e.detail.status === 'session-started')}
         style={{ width: '100%', height: '100%' }}
       >
         
-        <button slot="ar-button" className="absolute bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded">
+        <button slot="ar-button" className="absolute bottom-4 right-4 bg-black/50 text-white px-4 py-2 rounded">
           View in AR
         </button>
 
-        <button 
-          slot="camera-controls"
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/50 text-white px-6 py-3 rounded-lg font-bold"
-          onClick={handleBuyNow}
-        >
-          Buy Now - $99.99
-        </button>
+       
       </model-viewer>
 
-      <div className="absolute top-4 left-4 z-[9999]">
-        <div className="flex gap-2 bg-black/70 p-3 rounded-lg">
+      <div className="absolute bottom-4 left-4 z-[9999]">
+        <div className="flex gap-2  p-3 rounded-lg   bg-black bg-cover bg-center bg-no-repeat">
           <button 
             onClick={() => setRotationSpeed('low')}
             className={`px-4 py-2 rounded ${
@@ -85,7 +77,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
             }`}
           >
-            Slow
+            1
           </button>
           <button 
             onClick={() => setRotationSpeed('medium')}
@@ -95,7 +87,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
             }`}
           >
-            Medium
+            3
           </button>
           <button 
             onClick={() => setRotationSpeed('high')}
@@ -105,7 +97,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
             }`}
           >
-            Fast
+            Turbo
           </button>
           {rotationSpeed !== 'off' && (
             <button 
@@ -120,7 +112,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
 
       {isAR && (
         <div className="fixed inset-x-0 bottom-0 flex flex-col gap-4 z-[9999] p-4">
-          <div className="mx-auto flex items-center gap-4 bg-black/70 p-3 rounded-lg">
+          <div className="mx-auto flex items-center gap-4 bg-white/70 p-3 rounded-lg">
             <span className="text-white">Size:</span>
             <input
               type="range"

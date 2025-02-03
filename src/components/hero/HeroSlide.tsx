@@ -1,0 +1,100 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+
+interface Feature {
+  icon: string
+  text: string
+}
+
+interface HeroSlideProps {
+  desktopBg: string
+  mobileBg: string
+  heading: string
+  subheading: string
+  buttonText: string
+  buttonLink: string
+  features: Feature[]
+}
+
+export const HeroSlide = ({
+  desktopBg,
+  mobileBg,
+  heading,
+  subheading,
+  buttonText,
+  buttonLink,
+  features
+}: HeroSlideProps) => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  return (
+    <div className="relative w-full h-screen">
+      {/* Background Image */}
+      <Image
+        src={isMobile ? mobileBg : desktopBg}
+        alt={heading}
+        fill
+        priority
+        className="object-cover"
+      />
+      
+      {/* Content Overlay */}
+      <div className="absolute inset-0 bg-black/40">
+        <div className="container mx-auto px-4 h-full flex flex-col justify-end">
+          <div className="max-w-2xl">
+          <p className="text-xl md:text-2xl text-white/90 mb-2 uppercase">
+              {subheading}
+            </p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+              {heading}
+            </h1>
+           
+            
+            <Link 
+              href={buttonLink}
+              className="inline-block border border-white text-white px-8 py-3 rounded-xl 
+                        font-semibold hover:bg-white/90 hover:text-black transition-colors"
+            >
+              {buttonText}
+            </Link>
+            
+            {/* Features */}
+            <div className="mt-12 mb-12 flex gap-2 md:gap-4">
+              {features.map((feature, index) => (
+                <div 
+                  key={index}
+                  className="flex flex-col items-center"
+                  role="img"
+                  aria-label={feature.text}
+                >
+                  <Image
+                    src={feature.icon}
+                    alt={feature.text}
+                    width={120}
+                    height={40}
+                    className=""
+                  />
+                  <span className="sr-only">
+                    {feature.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+} 

@@ -1,8 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import Head from 'next/head'
-import Link from 'next/link'
+
 
 const ARViewer = dynamic(() => import('@/components/ARViewer'), { 
   ssr: false,
@@ -13,20 +12,13 @@ const ARViewer = dynamic(() => import('@/components/ARViewer'), {
 
 export default function AlternatePage() {
   return (
-    <main className="h-screen w-full">
-      <Head>
-        <title>AR Model Viewer - Alternate</title>
-      </Head>
-      <div className="container mx-auto p-4">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">AR Model Viewer</h1>
-          <Link href="/" className="bg-blue-500 text-white px-4 py-2 rounded">
-            View Second Model
-          </Link>
-        </div>
+    <main className="h-screen w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/fan-bg.jpg)' }}>
+    
+      <div className="container mx-auto ">
+       
         
         <div className="h-[600px] w-full">
-          <ARViewer modelPath="/base.gltf" />
+          <ARViewer modelPath="/fancad.glb" />
         </div>
       </div>
     </main>
