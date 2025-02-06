@@ -43,7 +43,6 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         ar-modes="webxr scene-viewer quick-look"
         camera-controls="true"
         ar-scale="auto"
-        ar-placement="wall"
         scale={`${scale} ${scale} ${scale}`}
         orientation={`0deg ${verticalAngle}deg 0deg`}
         auto-rotate
@@ -52,7 +51,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         camera-orbit="0deg 120deg 100%"
         min-camera-orbit="auto 100deg 100%"
         max-camera-orbit="auto 120deg 200%"
-        camera-target="0m 0.5m 0m"
+        camera-target="0m -200.5m 0m"
         field-of-view="30deg"
         shadow-intensity="1"
         bounds="tight"
