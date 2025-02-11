@@ -17,18 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-<Head >
-      <link rel="stylesheet" href="https://cdn.statically.io/gist/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/fad2f254369fb54250260077a4c87391a6280c52/gotham.css" />
-
-
-</Head>
+      {/* <head>
+        <script async type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script async nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+      </head> */}
       <body
         className={` antialiased`}
       >
         <Header />
         {children}
-
-      
       </body>
     </html>
   );

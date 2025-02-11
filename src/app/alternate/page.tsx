@@ -18,7 +18,7 @@ export default function AlternatePage() {
        
         
         <div className="h-[600px] w-full">
-          <ARViewer modelPath="/fancad-new.glb" />
+          <ARViewer modelPath="/fan3d.gltf" />
           
         </div>
       </div>
