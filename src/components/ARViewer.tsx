@@ -18,9 +18,9 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
   const modelViewerLoaded = useRef(false);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const modelRef = useRef<any>(null);
+  const modelRef = useRef<HTMLElement | null>(null);
   const [arError, setArError] = useState<string | null>(null);
-  const [currentModel, setCurrentModel] = useState('/fan-export.glb');
+  // const [currentModel, setCurrentModel] = useState('/fan-export.glb');
 
   useEffect(() => {
     if (!modelViewerLoaded.current) {
@@ -32,13 +32,16 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
           .then(() => {
             setIsLoading(false);
             // Initialize model-viewer properly
+            // @ts-expect-error - type mismatch but works at runtime
             customElements.define(
               "model-viewer",
-              // @ts-ignore - type mismatch but works at runtime
               window["model-viewer"].ModelViewer
             );
           })
-          .catch(console.error);
+          .catch((error: Error) => {
+            setArError(error.message);
+            setIsLoading(false);
+          });
       } else {
         setIsLoading(false);
       }
@@ -46,6 +49,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
   }, []);
 
   if (error) {
+    setError(error);
     return <div className="text-red-500 p-4">{error}</div>;
   }
 
@@ -64,25 +68,22 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
     high: "1440deg",
   };
 
-  const toggleModel = async () => {
-    if (modelRef.current) {
-      // If in AR, exit the session first
-      if (isAR) {
-        await modelRef.current.exitAR();
-      }
+  // const toggleModel = async () => {
+  //   if (modelRef.current) {
+  //     if (isAR) {
+  //       await modelRef.current.exitAR();
+  //     }
       
-      // Change the model
-      const newModel = currentModel === '/fan-export.glb' ? '/base_basic_pbr.glb' : '/fan-export.glb';
-      setCurrentModel(newModel);
+  //     const newModel = currentModel === '/fan-export.glb' ? '/base_basic_pbr.glb' : '/fan-export.glb';
+  //     setCurrentModel(newModel);
       
-      // If was in AR, restart the session
-      if (isAR) {
-        setTimeout(() => {
-          modelRef.current.activateAR();
-        }, 300); // Small delay to ensure model is loaded
-      }
-    }
-  };
+  //     if (isAR) {
+  //       setTimeout(() => {
+  //         modelRef.current?.activateAR();
+  //       }, 300);
+  //     }
+  //   }
+  // };
 
   return (
     <div className="w-full h-[500px] md:h-[600px] bg-[url(/fan-bg.jpeg)] bg-cover bg-top bg-no-repeat relative">
@@ -143,7 +144,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
 
       {arError && (
         <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded">
-          {arError}
+          {/* {arError} */}
         </div>
       )}
 
