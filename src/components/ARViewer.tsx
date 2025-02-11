@@ -98,7 +98,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         scale={`${scale} ${scale} ${scale}`}
         orientation={`0deg ${verticalAngle}deg 0deg`}
         auto-rotate
-        ios-src="/fan3d.usdc"
+        ios-src="/fan-3d.usdz"
         rotation-per-second={speedValues[rotationSpeed]}
         interaction-policy="allow-when-focused"
         camera-orbit="0deg 120deg 100%"
