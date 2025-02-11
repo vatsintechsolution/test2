@@ -108,6 +108,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         field-of-view="30deg"
         shadow-intensity="1"
         exposure="1"
+        ar-scale="fixed"
         environment-image="neutral"
         loading="eager"
         onError={(error: Event) => {
