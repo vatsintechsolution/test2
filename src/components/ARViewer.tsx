@@ -16,8 +16,9 @@ interface ArStatusChangeEvent extends Event {
 export default function ARViewer({ modelPath }: { modelPath: string }) {
   const router = useRouter();
   const [rotationSpeed, setRotationSpeed] = useState<RotationSpeed>("off");
-  // const [isAR, setIsAR] = useState(false);
- 
+  const [isAR, setIsAR] = useState(false);
+  const [scale] = useState(0.5);
+  const [verticalAngle] = useState(0);
   const modelViewerLoaded = useRef(false);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -93,6 +94,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
 
   const handleARClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    setIsAR(true);
     router.push('/ar/fan1');
   };
 
@@ -129,7 +131,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         onArStatusChange={(e: ArStatusChangeEvent) => {
           const status = e.detail.status;
           console.log("AR Status:", status);
-          // setIsAR(status === "session-started");
+          setIsAR(status === "session-started");
           if (status === "failed") {
             setArError("AR session failed to start");
           }
@@ -196,7 +198,9 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         </div>
       </div>
 
-   
+      {isAR && (
+        <div></div>
+      )}
     </div>
   );
 }
