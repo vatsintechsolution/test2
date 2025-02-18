@@ -1,7 +1,6 @@
 'use client'
 
-import dynamic from 'next/dynamic'
-
+import dynamic from 'next/dynamic';
 
 const ARViewer = dynamic(() => import('@/components/ARViewer'), { 
   ssr: false,
@@ -10,17 +9,19 @@ const ARViewer = dynamic(() => import('@/components/ARViewer'), {
   </div>
 })
 
+
+
 export default function AlternatePage() {
+
+
   return (
     <main className="h-screen w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/fan-bg.jpg)' }}>
-    
-      <div className="container mx-auto ">
-       
-        
+      <div className="container mx-auto">
         <div className="h-[600px] w-full">
-          <ARViewer modelPath="/fan3d.gltf" />
-          
+          <ARViewer modelPath="/rotating-fan.glb" />
         </div>
+
+       
       </div>
     </main>
   )

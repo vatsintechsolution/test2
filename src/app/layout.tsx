@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/header/Header";
-
-
+import StyledComponentsRegistry from '../lib/registry';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +23,7 @@ export default function RootLayout({
         className={` antialiased`}
       >
         <Header />
-        {children}
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );

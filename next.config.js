@@ -6,6 +6,19 @@ const nextConfig = {
     // your project has type errors.
     ignoreBuildErrors: true,
   },
+  async headers() {
+    return [
+      {
+        source: '/ar-data/:path*',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+        ],
+      },
+    ]
+  },
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig

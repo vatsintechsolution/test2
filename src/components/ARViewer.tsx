@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { RemoteControl } from './RemoteControl/RemoteControl';
+import { useRouter } from 'next/navigation';
+import Link from "next/link";
 
-type RotationSpeed = "off" | "low" | "medium" | "high";
+type RotationSpeed = "off" | "speed1" | "speed2" | "speed3" | "speed4" | "speed5" | "speed6";
 
 interface ArStatusChangeEvent extends Event {
   detail: {
@@ -11,10 +14,10 @@ interface ArStatusChangeEvent extends Event {
 }
 
 export default function ARViewer({ modelPath }: { modelPath: string }) {
+  const router = useRouter();
   const [rotationSpeed, setRotationSpeed] = useState<RotationSpeed>("off");
-  const [isAR, setIsAR] = useState(false);
-  const [scale, setScale] = useState(0.5);
-  const [verticalAngle, setVerticalAngle] = useState(0);
+  // const [isAR, setIsAR] = useState(false);
+ 
   const modelViewerLoaded = useRef(false);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -63,9 +66,12 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
 
   const speedValues = {
     off: "0deg",
-    low: "360deg",
-    medium: "720deg",
-    high: "1440deg",
+    speed1: "180deg",   // Slowest
+    speed2: "360deg",   // Slow
+    speed3: "540deg",   // Medium
+    speed4: "720deg",   // Medium-fast
+    speed5: "1080deg",  // Fast
+    speed6: "1440deg",  // Fastest
   };
 
   // const toggleModel = async () => {
@@ -85,8 +91,13 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
   //   }
   // };
 
+  const handleARClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    router.push('/ar/fan1');
+  };
+
   return (
-    <div className="w-full h-[500px] md:h-[600px] bg-[url(/fan-bg.jpeg)] bg-cover bg-top bg-no-repeat relative">
+    <div className="w-full h-[500px] md:h-[600px] bg-[url(/fan-bg-zoomed.jpg)] bg-cover bg-top bg-no-repeat relative">
       <model-viewer
         ref={modelRef}
         src={modelPath}
@@ -118,19 +129,14 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         onArStatusChange={(e: ArStatusChangeEvent) => {
           const status = e.detail.status;
           console.log("AR Status:", status);
-          setIsAR(status === "session-started");
+          // setIsAR(status === "session-started");
           if (status === "failed") {
             setArError("AR session failed to start");
           }
         }}
         style={{ width: "100%", height: "100%" }}
       >
-        <button
-          slot="ar-button"
-          className="absolute bottom-4 right-4 bg-black/50 text-white px-4 py-2 rounded"
-        >
-          View in AR
-        </button>
+      
 
         {/* <div id="ar-prompt" className="absolute bottom-10 left-12 z-[9999]">
           <button 
@@ -148,79 +154,49 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         </div>
       )}
 
-      <div className="absolute bottom-4 left-4 z-[9999]">
-        <div className="flex gap-2  p-3 rounded-lg   bg-black bg-cover bg-center bg-no-repeat">
-          <button
-            onClick={() => setRotationSpeed("low")}
-            className={`px-4 py-2 rounded ${
-              rotationSpeed === "low"
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-            }`}
-          >
-            1
-          </button>
-          <button
-            onClick={() => setRotationSpeed("medium")}
-            className={`px-4 py-2 rounded ${
-              rotationSpeed === "medium"
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-            }`}
-          >
-            3
-          </button>
-          <button
-            onClick={() => setRotationSpeed("high")}
-            className={`px-4 py-2 rounded ${
-              rotationSpeed === "high"
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-            }`}
-          >
-            Turbo
-          </button>
-          {rotationSpeed !== "off" && (
-            <button
-              onClick={() => setRotationSpeed("off")}
-              className="px-4 py-2 rounded bg-red-500 text-white hover:bg-red-600"
-            >
-              Stop
-            </button>
-          )}
+      <div className="fixed bottom-[-150px] left-4 z-[999]">
+        <div className="p-3 rounded-lg bg-no-repeat">
+          <RemoteControl
+            onPowerClick={() => setRotationSpeed(prev => prev === "off" ? "speed1" : "off")}
+            onSpeedClick={(speed) => {
+              switch(speed) {
+                case 1:
+                  setRotationSpeed("speed1");
+                  break;
+                case 2:
+                  setRotationSpeed("speed2");
+                  break;
+                case 3:
+                  setRotationSpeed("speed3");
+                  break;
+                case 4:
+                  setRotationSpeed("speed4");
+                  break;
+                case 5:
+                  setRotationSpeed("speed5");
+                  break;
+                case 6:
+                  setRotationSpeed("speed6");
+                  break;
+                default:
+                  setRotationSpeed("off");
+              }
+            }}
+            onLightClick={() => console.log('Light clicked')}
+          />
+
+<button
+          onClick={handleARClick}
+          className="fixed z-[99999] bottom-4 right-4 bg-black/50 text-white px-4 py-2 rounded hover:bg-black/70 transition-colors"
+        >
+          <Link href="/ar/fan1"> 
+          View in AR
+          </Link>
+        </button>
         </div>
       </div>
 
-      {isAR && (
-        <div className="fixed inset-x-0 bottom-0 flex flex-col gap-4 z-[9999] p-4">
-          <div className="mx-auto flex items-center gap-4 bg-white/70 p-3 rounded-lg">
-            <span className="text-white">Size:</span>
-            <input
-              type="range"
-              min="0.1"
-              max="1.0"
-              step="0.05"
-              value={scale}
-              onChange={(e) => setScale(Number(e.target.value))}
-              className="w-32"
-            />
-            <span className="text-white">{scale.toFixed(2)}x</span>
-          </div>
-
-          <div className="mx-auto flex items-center gap-4 bg-black/70 p-3 rounded-lg">
-            <span className="text-white">Angle:</span>
-            <input
-              type="range"
-              min="-180"
-              max="180"
-              value={verticalAngle}
-              onChange={(e) => setVerticalAngle(Number(e.target.value))}
-              className="w-32"
-            />
-            <span className="text-white">{verticalAngle}°</span>
-          </div>
-        </div>
-      )}
+   
     </div>
   );
 }

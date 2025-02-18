@@ -1,0 +1,59 @@
+.zcomponent-zappar-three-place-ui {
+	position: absolute;
+	width: 100%;
+	pointer-events: none;
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	box-sizing: border-box;
+}
+.zcomponent-zappar-three-place-ui-button {
+	outline: none;
+	background-color: #555;
+	border-radius: 40px;
+	font-family: sans-serif;
+	color: white;
+	font-size: 16px;
+	border: none;
+	min-width: 60px;
+	height: 60px;
+	display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: center;
+}
+
+.zcomponent-zappar-three-place-ui-button:disabled {
+	opacity: 0.1;
+}
+
+.zcomponent-zappar-three-place-ui-button-text {
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+.zcomponent-zappar-three-place-ui-horizontal-left {
+	align-items: flex-start;
+}
+
+.zcomponent-zappar-three-place-ui-horizontal-right {
+	align-items: flex-end;
+}
+
+.zcomponent-zappar-three-place-ui-horizontal-center {
+	align-items: center;
+}
+
+.zcomponent-zappar-three-place-ui-vertical-top {
+	top: 0px;
+}
+
+.zcomponent-zappar-three-place-ui-vertical-bottom {
+	bottom: 0px;
+}
+
+.zcomponent-zappar-three-place-ui-vertical-center {
+	top: 50%;
+	margin-top: -30px;
+}

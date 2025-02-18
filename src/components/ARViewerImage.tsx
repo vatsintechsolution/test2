@@ -12,9 +12,9 @@ interface ArStatusChangeEvent extends Event {
 
 export default function ARViewer({ modelPath }: { modelPath: string }) {
   const [rotationSpeed, setRotationSpeed] = useState<RotationSpeed>("off");
-  const [isAR, setIsAR] = useState(false);
-  const [scale, setScale] = useState(0.5);
-  const [verticalAngle, setVerticalAngle] = useState(0);
+  // const [isAR, setIsAR] = useState(false);
+  // const [scale, setScale] = useState(0.5);
+  // const [verticalAngle, setVerticalAngle] = useState(0);
   const modelViewerLoaded = useRef(false);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -119,7 +119,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         onArStatusChange={(e: ArStatusChangeEvent) => {
           const status = e.detail.status;
           console.log("AR Status:", status);
-          setIsAR(status === "session-started");
+          // setIsAR(status === "session-started");
           if (status === "failed") {
             setArError("AR session failed to start");
           }
@@ -192,7 +192,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         </div>
       </div>
 
-      {isAR && (
+      {/* {isAR && (
         <div className="fixed inset-x-0 bottom-0 flex flex-col gap-4 z-[9999] p-4">
           <div className="mx-auto flex items-center gap-4 bg-white/70 p-3 rounded-lg">
             <span className="text-white">Size:</span>
@@ -221,7 +221,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
             <span className="text-white">{verticalAngle}°</span>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
