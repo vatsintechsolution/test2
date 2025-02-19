@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { RemoteControl } from './RemoteControl/RemoteControl';
 import { useRouter } from 'next/navigation';
 import Link from "next/link";
+import styled from "styled-components";
 
 type RotationSpeed = "off" | "speed1" | "speed2" | "speed3" | "speed4" | "speed5" | "speed6";
 
@@ -12,6 +13,37 @@ interface ArStatusChangeEvent extends Event {
     status: string;
   };
 }
+
+const ColorButton = styled.button<{ color: string }>`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid ${props => props.color === '#FFFFFF' ? '#000' : 'transparent'};
+  background-color: ${props => props.color};
+  margin: 0 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+    border: 0.5px solid white;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+`;
+
+const ColorControls = styled.div`
+  position: fixed;
+  bottom: 20px;
+  left: 10%;
+  transform: translateX(-10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 30px;
+  z-index: 1000;
+`;
 
 export default function ARViewer({ modelPath }: { modelPath: string }) {
   const router = useRouter();
@@ -25,6 +57,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
   const modelRef = useRef<HTMLElement | null>(null);
   const [arError, setArError] = useState<string | null>(null);
   const [direction, setDirection] = useState<"clockwise" | "anticlockwise">("clockwise");
+  const [currentColor, setCurrentColor] = useState('#FFFFFF');
   // const [currentModel, setCurrentModel] = useState('/fan-export.glb');
 
   useEffect(() => {
@@ -99,6 +132,17 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
     router.push('/ar/fan1');
   };
 
+  const handleColorChange = (color: string) => {
+    setCurrentColor(color);
+    if (modelRef.current) {
+      const model = (modelRef.current as any).model;
+      if (model) {
+        const [material] = model.materials;
+        material.pbrMetallicRoughness.setBaseColorFactor(color);
+      }
+    }
+  };
+
   return (
     <div className="w-full h-[500px] md:h-[600px] bg-[url(/fan-bg-zoomed.jpg)] bg-cover bg-top bg-no-repeat relative">
       <model-viewer
@@ -150,6 +194,24 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
           </button>
         </div> */}
       </model-viewer>
+
+      <ColorControls>
+        <ColorButton
+          color="#FFFFFF"
+          onClick={() => handleColorChange('#FFFFFF')}
+          aria-label="White"
+        />
+        <ColorButton
+          color="#808080"
+          onClick={() => handleColorChange('#808080')}
+          aria-label="Grey"
+        />
+        <ColorButton
+          color="#000000"
+          onClick={() => handleColorChange('#000000')}
+          aria-label="Black"
+        />
+      </ColorControls>
 
       {arError && (
         <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded">
