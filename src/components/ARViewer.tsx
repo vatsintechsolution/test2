@@ -34,13 +34,13 @@ const ColorButton = styled.button<{ color: string }>`
 const ColorControls = styled.div`
   position: fixed;
   bottom: 20px;
-  left: 10%;
-  transform: translateX(-10%);
+  left: 0%;
+  transform: translateX(-0%);
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 30px;
   z-index: 1000;
 `;
@@ -197,8 +197,8 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
 
       <ColorControls>
         <ColorButton
-          color="#FFFFFF"
-          onClick={() => handleColorChange('#FFFFFF')}
+          color="#F8F6F0"
+          onClick={() => handleColorChange('#F8F6F0')}
           aria-label="White"
         />
         <ColorButton
@@ -207,8 +207,8 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
           aria-label="Grey"
         />
         <ColorButton
-          color="#000000"
-          onClick={() => handleColorChange('#000000')}
+          color="#4e2a2a"
+          onClick={() => handleColorChange('#4e2a2a')}
           aria-label="Black"
         />
       </ColorControls>
