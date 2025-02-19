@@ -14,6 +14,16 @@ interface ArStatusChangeEvent extends Event {
   };
 }
 
+interface ModelViewerElement extends HTMLElement {
+  model: {
+    materials: Array<{
+      pbrMetallicRoughness: {
+        setBaseColorFactor: (color: string) => void;
+      }
+    }>;
+  };
+}
+
 const ColorButton = styled.button<{ color: string }>`
   width: 40px;
   height: 40px;
@@ -57,7 +67,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
   const modelRef = useRef<HTMLElement | null>(null);
   const [arError, setArError] = useState<string | null>(null);
   const [direction, setDirection] = useState<"clockwise" | "anticlockwise">("clockwise");
-  const [currentColor, setCurrentColor] = useState('#FFFFFF');
+  const [currentColor, setCurrentColor] = useState('#F8F6F0');
   // const [currentModel, setCurrentModel] = useState('/fan-export.glb');
 
   useEffect(() => {
@@ -135,7 +145,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
   const handleColorChange = (color: string) => {
     setCurrentColor(color);
     if (modelRef.current) {
-      const model = (modelRef.current as any).model;
+      const model = (modelRef.current as ModelViewerElement).model;
       if (model) {
         const [material] = model.materials;
         material.pbrMetallicRoughness.setBaseColorFactor(color);
@@ -199,7 +209,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         <ColorButton
           color="#F8F6F0"
           onClick={() => handleColorChange('#F8F6F0')}
-          aria-label="White"
+          aria-label={currentColor}
         />
         <ColorButton
           color="#808080"
