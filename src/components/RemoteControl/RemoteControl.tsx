@@ -32,18 +32,16 @@ interface RemoteControlProps {
   onPowerClick?: () => void;
   onLightClick?: () => void;
   onSpeedClick?: (speed: number) => void;
-  onTimerClick?: () => void;
-  onModeClick?: () => void;
-  onOscillateClick?: () => void;
+  onClockwiseClick?: () => void;
+  onAntiClockwiseClick?: () => void;
 }
 
 export const RemoteControl: React.FC<RemoteControlProps> = ({
   onPowerClick,
   onLightClick,
   onSpeedClick,
-  // onTimerClick,
-  // onModeClick,
-  // onOscillateClick,
+  onClockwiseClick,
+  onAntiClockwiseClick,
 }) => {
   const buttonClasses = "bg-white/10  hover:bg-white/20 active:bg-white/30 transition-all duration-200";
 
@@ -135,6 +133,25 @@ export const RemoteControl: React.FC<RemoteControlProps> = ({
         size="25px"
         onClick={() => onSpeedClick?.(6)}
         aria-label="Speed 6"
+      />
+
+      {/* Direction Buttons */}
+      <ButtonOverlay
+        className={buttonClasses}
+        top="34%"
+        left="38%"
+        size="25px"
+        onClick={onAntiClockwiseClick}
+        aria-label="Anti-clockwise"
+      />
+
+      <ButtonOverlay
+        className={buttonClasses}
+        top="34%"
+        left="55%"
+        size="25px"
+        onClick={onClockwiseClick}
+        aria-label="Clockwise"
       />
 
       {/* <ButtonOverlay

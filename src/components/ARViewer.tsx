@@ -24,6 +24,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
   const [isLoading, setIsLoading] = useState(true);
   const modelRef = useRef<HTMLElement | null>(null);
   const [arError, setArError] = useState<string | null>(null);
+  const [direction, setDirection] = useState<"clockwise" | "anticlockwise">("clockwise");
   // const [currentModel, setCurrentModel] = useState('/fan-export.glb');
 
   useEffect(() => {
@@ -67,12 +68,12 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
 
   const speedValues = {
     off: "0deg",
-    speed1: "180deg",   // Slowest
-    speed2: "360deg",   // Slow
-    speed3: "540deg",   // Medium
-    speed4: "720deg",   // Medium-fast
-    speed5: "1080deg",  // Fast
-    speed6: "1440deg",  // Fastest
+    speed1: direction === "clockwise" ? "180deg" : "-180deg",
+    speed2: direction === "clockwise" ? "360deg" : "-360deg",
+    speed3: direction === "clockwise" ? "540deg" : "-540deg",
+    speed4: direction === "clockwise" ? "720deg" : "-720deg",
+    speed5: direction === "clockwise" ? "1080deg" : "-1080deg",
+    speed6: direction === "clockwise" ? "1440deg" : "-1440deg",
   };
 
   // const toggleModel = async () => {
@@ -185,6 +186,8 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
               }
             }}
             onLightClick={() => console.log('Light clicked')}
+            onClockwiseClick={() => setDirection("clockwise")}
+            onAntiClockwiseClick={() => setDirection("anticlockwise")}
           />
 
 <button
