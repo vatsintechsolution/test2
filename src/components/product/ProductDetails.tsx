@@ -1,0 +1,150 @@
+'use client';
+
+import Image from 'next/image';
+import { useState } from 'react';
+
+interface ColorOption {
+  label: string;
+  value: string;
+}
+
+interface SizeOption {
+  label: string;
+  value: string;
+}
+
+interface ProductDetailsProps {
+  name: string;
+  description: string;
+  regularPrice: number;
+  colorOptions: ColorOption[];
+  sizeOptions: SizeOption[];
+}
+
+export const ProductDetails = ({
+  name,
+  description,
+  regularPrice,
+  colorOptions,
+  sizeOptions,
+}: ProductDetailsProps) => {
+  const [selectedColor, setSelectedColor] = useState(colorOptions[0]?.value || '');
+  const [selectedSize, setSelectedSize] = useState(sizeOptions[0]?.value || '');
+
+  return (
+    <div className="px-4 py-4">
+      {/* Product Details */}
+      <div className="space-y-6">
+        <div>
+          <h1 className="text-4xl md:text-5xl font-medium dark:text-white text-[#3A3A5B] mb-4">
+            {name}
+          </h1>
+          <p className="text-lg font-medium dark:text-white text-[#3A3A5B]">
+            {description}
+          </p>
+        </div>
+
+        {/* Price, Color, Size in one row */}
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between mt-8 gap-8">
+          {/* Pricing */}
+          <div className="md:w-1/3">
+            <span className="text-lg dark:text-neutral-400 text-gray-500 block mb-1">
+              MRP
+            </span>
+            <span className="text-3xl font-medium text-[#427437]">
+              ₹{regularPrice.toLocaleString('en-IN', {
+                maximumFractionDigits: 0,
+              })}
+            </span>
+          </div>
+
+          {/* Color Selection */}
+          <div className="md:w-1/3">
+            <h3 className="dark:text-white text-[#3A3A5B] text-lg mb-3">Color</h3>
+            <div className="flex gap-4">
+              {colorOptions.map((color) => (
+                <button
+                  key={color.value}
+                  onClick={() => setSelectedColor(color.value)}
+                  className={`w-8 h-8 rounded-lg p-2 ${
+                    selectedColor === color.value
+                      ? `ring-2 ring-[#582C83] shadow-md`
+                      : "border border-gray-300"
+                  }`}
+                  aria-label={`Select ${color.label} color`}
+                >
+                  <div 
+                    className="w-full h-full rounded-full" 
+                    style={{ backgroundColor: color.value }}
+                  />
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Size Selection */}
+          <div className="md:w-1/3">
+            <h3 className="dark:text-white text-[#3A3A5B] text-lg mb-3">Size</h3>
+            <div className="flex gap-4">
+              {sizeOptions.map((size) => (
+                <button
+                  key={size.value}
+                  onClick={() => setSelectedSize(size.value)}
+                  className={`px-4 py-2 rounded-full text-base ${
+                    selectedSize === size.value
+                      ? "border border-[#582C83] bg-white text-[#3A3A5B]"
+                      : "border border-gray-200 dark:border-[#DBDBDB]/10 dark:text-white text-[#3A3A5B]"
+                  }`}
+                >
+                  {size.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Warranty Section */}
+        <div className="mt-8  border border-gray-200 dark:border-gray-700 w-auto inline-block rounded-lg p-4">
+          <div className="flex items-center">
+            <div className="flex items-center">
+              <div className="relative">
+               
+                <Image
+                  src="/home/warrenty.svg"
+                  alt="Extended Warranty"
+                  width={117}
+                  height={52}
+                />
+              </div>
+            </div>
+            <div className="ml-4">
+              <p className="text-base font-medium dark:text-white text-[#3A3A5B] uppercase tracking-wide">
+                GET 3+2 YEAR*<br />
+                EXTENDED WARRANTY
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Buy Buttons */}
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 lg:mt-16">
+          {/* Amazon Button */}
+          <button className="w-full bg-[#582C83] text-white py-4 text-center rounded-lg flex items-center justify-center gap-2 hover:bg-[#4A2570] transition-colors">
+            <span className="text-lg font-medium">BUY NOW AT</span>
+            <Image
+              src="/home/buy-on-amazon.svg"
+              alt="Amazon"
+              width={150}
+              height={27}
+            />
+          </button>
+          
+          {/* Store Button */}
+          <button className="w-full border-2 border-[#582C83] dark:text-white text-[#582C83] py-4 text-center rounded-lg flex items-center justify-center gap-2 hover:bg-[#582C83]/5 transition-colors">
+            <span className="text-lg font-medium">BUY FROM STORE</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}; 

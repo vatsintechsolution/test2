@@ -1,40 +1,34 @@
 "use client";
 
-import { ProductSwiper } from "@/components/products/ProductSwiper";
-import { useState } from "react";
 import Image from "next/image";
+import { ProductSwiper } from "@/components/products/ProductSwiper";
 import { Footer } from "@/components/footer/Footer";
 import Link from "next/link";
+import { ProductDetails } from '@/components/product/ProductDetails';
+import { DigiShieldSection } from "@/components/DigiShieldSection";
 
-interface ColorOption {
-  name: string;
-  value: string;
-}
+export default function ProductPage({ params }: { params: { slug: string } }) {
+  // Use the slug parameter for future dynamic data fetching
+  console.log(`Loading product details for: ${params.slug}`);
 
-interface SizeOption {
-  label: string;
-  value: number;
-}
-
-export default function ProductDetails() {
-  const [selectedColor, setSelectedColor] = useState<string>("pink");
-  const [selectedSize, setSelectedSize] = useState<number>(1200);
-
+  // Product images for the swiper
   const productImages = [
     "/home/product/demo/1.jpg",
     "/home/product/demo/2.jpg",
     "/home/product/demo/3.jpg",
-    "/home/product/demo/4.jpg",
   ];
 
-  const colorOptions: ColorOption[] = [
-    { name: "Light Pink", value: "pink" },
-    { name: "White", value: "white" },
+  // Define color and size options
+  const colorOptions = [
+    { label: 'Rose Pink', value: '#FF69B4' },
+    { label: 'White', value: '#FFFFFF' },
+    { label: 'Brown', value: '#8B4513' },
+    { label: 'Black', value: '#000000' },
   ];
 
-  const sizeOptions: SizeOption[] = [
-    { label: "1200mm", value: 1200 },
-    { label: "1400mm", value: 1400 },
+  const sizeOptions = [
+    { label: '1200mm', value: '1200' },
+    { label: '1400mm', value: '1400' },
   ];
 
   const features = [
@@ -59,110 +53,25 @@ export default function ProductDetails() {
   return (
     <>
       <main className="min-h-screen py-2 lg:py-8">
-        <div className="container mx-auto ">
+        <div className="container mx-auto py-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
             {/* Product Images */}
             <div>
               <ProductSwiper images={productImages} />
             </div>
-            <div className="px-4">
-              {/* Product Details */}
-              <div className="space-y-4">
-                <div>
-                  <h1 className="text-xl font-medium text-white mb-2">
-                    EcoLink AiroElevate BLDC Ceiling Fan
-                  </h1>
-                  <p className="text-base text-white">
-                    Industry&apos;s first ceiling fan with hollow hub design |
-                    1200 mm Sweep size
-                  </p>
-                </div>
-
-                {/* Pricing */}
-                <div className="flex items-center gap-4">
-                  <div className="flex flex-col items-start gap-2">
-                    <span className="text-base text-neutral-400">
-                      Special Price
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl font-bold text-white">
-                        19,999
-                      </span>
-                      <div className="bg-[#43B02A] px-4 py-1 rounded-md">
-                        <span className="text-white ">10% off</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div></div>
-                  <div className="flex items-start flex-col gap-2">
-                    <span className="text-sm text-white/70">MRP</span>
-                    <span className="text-2xl font-bold text-white/70">
-                      <del>22,000</del>
-                    </span>
-                  </div>
-                </div>
-
-                {/* Color Selection */}
-                <div>
-                  <h3 className="text-white text-lg mb-3">Color</h3>
-                  <div className="flex gap-4">
-                    {colorOptions.map((color) => (
-                      <button
-                        key={color.value}
-                        onClick={() => setSelectedColor(color.value)}
-                        className={`w-8 h-8 rounded-lg flex items-center justify-center bg-white/10 ${
-                          selectedColor === color.value
-                            ? `border border-${color.value}/50`
-                            : "border border-white/10"
-                        }`}
-                      >
-                        <div
-                          className="w-[15px] h-[15px] rounded-full"
-                          style={{ backgroundColor: color.value }}
-                        />
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Size Selection */}
-                <div>
-                  <h3 className="text-white text-base mb-3">Sweep Size</h3>
-                  <div className="flex gap-4">
-                    {sizeOptions.map((size) => (
-                      <button
-                        key={size.value}
-                        onClick={() => setSelectedSize(size.value)}
-                        className={`px-4 py-1 rounded-lg  text-base ${
-                          selectedSize === size.value
-                            ? "border-[#582C83] border text-white bg-white/10"
-                            : "border-[#DBDBDB]/10 border text-white"
-                        }`}
-                      >
-                        {size.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-               
-
-                {/* Buy Button */}
-                <button className="w-full bg-[#582C83] text-white py-4 text-center rounded-lg flex items-center justify-center gap-2 hover:bg-[#8A5F1F] transition-colors">
-                  <Image
-                    src="/home/buy-on-amazon.svg"
-                    alt="Amazon"
-                    className="text-center object-center"
-                    width={254}
-                    height={27}
-                  />
-                </button>
-              </div>
-            </div>
+            
+            {/* Product Details */}
+            <ProductDetails 
+              name="EcoLink AiroElevate BLDC Ceiling Fan"
+              description="Industry's first ceiling fan with hollow hub design | 1200 mm Sweep size"
+              regularPrice={22000}
+              colorOptions={colorOptions}
+              sizeOptions={sizeOptions}
+            />
           </div>
         </div>
 
-        <div className="container mx-auto px-4 py-10">
+        <div className="container mx-auto px-4 py-10 md:hidden">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <Image
               src="/home/product/features/1.png"
@@ -291,6 +200,68 @@ export default function ProductDetails() {
                   </p>
                 </div>
               </section>
+        </div>
+
+        <div className="container mx-auto px-4 py-10 hidden md:block ">
+          <Image src="/home/product/demo/desktop.png" alt="Product Image" width={1536} height={1000}
+            className="mx-auto" />
+
+<Image src="/home/product/demo/features.png" alt="Product Image" width={1536} height={1000}
+            className="mx-auto py-10" />
+
+
+<DigiShieldSection />
+
+<Link href="/alternate">
+              <Image
+              src="/home/product/demo/vr-link.png"
+              alt="Why Choose EcoLink"
+            width={1536} height={1000}
+            className="mx-auto py-0"
+            />
+          </Link>
+
+<div className="py-16 container mx-auto px-4 max-w-5xl">
+
+<h2 className="text-4xl font-bold dark:text-white text-[#3C3A53] text-center mb-8">
+                  Product specifications
+                </h2>
+<div className="rounded-2xl dark:bg-black/20 dark:border-white/70 bg-white backdrop-blur-sm p-8 border border-[#555369]/50">
+                  <div className="space-y-4">
+                    {[
+                      { label: "Brand", value: "EcoLink" },
+                      { label: "Model", value: "AiroElevate" },
+                      { label: "Color", value: "Espresso Brown - Copper/ Silk White - Rose Gold" },
+                      { label: "Type", value: "BLDC Ceiling fan" },
+                      { label: "Star rating", value: "5 star" },
+                      { label: "Sweep Size", value: "1200 mm" },
+                      { label: "Speed", value: "370 RPM" },
+                      { label: "Air Delivery (CMM)", value: "230" },
+                      { label: "Warranty", value: "5 (3+2*) years" },
+                      { label: "Dimensions", value: "xx mm X yy mm X zz mm (length X width X height)" },
+                    ].map((spec, index) => (
+                      <div 
+                        key={index}
+                        className="flex flex-col sm:flex-row py-4 border-b border-[#555369]/50 dark:border-white/10"
+                      >
+                        <div className="w-full sm:w-1/3 text-[#3C3A53] dark:text-white/70">
+                          {spec.label}
+                        </div>
+                        <div className="w-full sm:w-2/3 text-[#3C3A53] dark:text-white">
+                          {spec.value}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <p className="text-sm text-[#3C3A53] dark:text-white/50 mt-6">
+                    * Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App
+                  </p>
+                </div>
+</div>
+
+
+
         </div>
       </main>
       <Footer />

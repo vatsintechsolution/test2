@@ -1,10 +1,11 @@
 'use client'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
 import Image from 'next/image'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
 interface ProductSwiperProps {
   images: string[]
@@ -12,32 +13,21 @@ interface ProductSwiperProps {
 
 export const ProductSwiper = ({ images }: ProductSwiperProps) => {
   return (
-    <div className="product-swiper-container">
-      <style jsx global>{`
-        .swiper-pagination-bullet {
-          width: 11px !important;
-          height: 11px !important;
-          background: transparent !important;
-          border: 1px solid white !important;
-          opacity: 1 !important;
-        }
-
-        .swiper-pagination-bullet-active {
-          background: white !important;
-        }
-      `}</style>
-
+    <div className="product-swiper">
       <Swiper
-        modules={[Pagination]}
+        modules={[Pagination, Navigation]}
         pagination={{
           clickable: true,
           bulletActiveClass: 'swiper-pagination-bullet-active',
         }}
-        className="h-[347px] w-full rounded-lg bg-neutral-900"
+        navigation
+        spaceBetween={10}
+        slidesPerView={1}
+        className="rounded-lg overflow-hidden"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-full">
+            <div className="relative h-[300px] lg:h-[500px] w-full">
               <Image
                 src={image}
                 alt={`Product image ${index + 1}`}

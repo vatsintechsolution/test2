@@ -2,16 +2,119 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Gotham Font Declarations */
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham/Gotham-Book.ttf') format('truetype'),
+       url('/fonts/Gotham/Gotham-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham/Gotham-BookItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham/Gotham-Medium.ttf') format('truetype'),
+       url('/fonts/Gotham/Gotham-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham/Gotham-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham/GOTHAM-BOLD.TTF') format('truetype'),
+       url('/fonts/Gotham/GothamBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham/Gotham-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham/Gotham-Light.ttf') format('truetype'),
+       url('/fonts/Gotham/GothamLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/Gotham/Gotham-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+  --primary: #0066cc;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #1e293b;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #1e293b;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #0066cc;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card: #171717;
+  --card-foreground: #ededed;
+  --popover: #171717;
+  --popover-foreground: #ededed;
+  --primary: #0284c7;
+  --primary-foreground: #ffffff;
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #1e293b;
+  --accent-foreground: #f8fafc;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #0ea5e9;
 }
 
 body {
@@ -20,6 +123,42 @@ body {
   font-family: "Gotham", Arial, Helvetica, sans-serif;
 }
 
+/* Light (300) */
+.light-text {
+  font-weight: 300;
+}
+
+/* Regular (400) */
+.regular-text {
+  font-weight: 400; /* or normal */
+}
+
+/* Medium (500) */
+.medium-text {
+  font-weight: 500;
+}
+
+/* Bold (700) */
+.bold-text {
+  font-weight: 700; /* or bold */
+}
+
+.light .section-heading{  
+  color: #3C3A53;
+}
+.dark .section-heading{
+@apply text-white/90 
+}
+
+/* Radial Gradient Background */
+.bg-radial-purple {
+  background: radial-gradient(circle, #391B5B 0%, #572C83 100%);
+}
+
+/* Dark mode variant with slightly adjusted colors for better contrast */
+.dark .bg-radial-purple {
+  background: radial-gradient(circle, #2D1547 0%, #4A2570 100%);
+}
 /* Add these styles */
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -56,4 +195,111 @@ body {
 
 .swiper-button-next:after {
   content: 'next';
+}
+
+/* Custom Swiper Navigation Styles */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.1);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important;
+  transform: scale(1.2);
+}
+
+/* Desktop Hero Swiper Specific Styles */
+.desktop-hero-swiper {
+  height: 90vh;
+  overflow: hidden;
+}
+
+.desktop-hero-swiper .swiper-slide {
+  overflow: hidden;
+}
+
+/* Radial gradient background */
+.bg-radial-purple {
+  background: radial-gradient(circle at center, #5D3587 0%, #4A2570 100%);
+  color: white;
+}
+
+/* Theme transition */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Product Page Styles */
+.product-swiper .swiper-button-next,
+.product-swiper .swiper-button-prev {
+  color: #582C83;
+  background: rgba(255, 255, 255, 0.5);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.product-swiper .swiper-button-next:hover,
+.product-swiper .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.product-swiper .swiper-button-next::after,
+.product-swiper .swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+.dark .product-swiper .swiper-button-next,
+.dark .product-swiper .swiper-button-prev {
+  color: white;
+  background: rgba(88, 44, 131, 0.5);
+}
+
+.dark .product-swiper .swiper-button-next:hover,
+.dark .product-swiper .swiper-button-prev:hover {
+  background: rgba(88, 44, 131, 0.8);
+}
+
+/* Product Swiper Pagination Styles */
+.product-swiper .swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: transparent !important;
+  border: 1px solid #582C83 !important;
+  opacity: 1 !important;
+}
+
+.product-swiper .swiper-pagination-bullet-active {
+  background: #582C83 !important;
+}
+
+.dark .product-swiper .swiper-pagination-bullet {
+  border-color: white !important;
+}
+
+.dark .product-swiper .swiper-pagination-bullet-active {
+  background: white !important;
 }

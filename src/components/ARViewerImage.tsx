@@ -63,9 +63,9 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
 
   const speedValues = {
     off: "0deg",
-    low: "360deg",
-    medium: "720deg",
-    high: "1440deg",
+    low: "720deg",
+    medium: "1440deg",
+    high: "1800deg",
   };
 
   // const toggleModel = async () => {

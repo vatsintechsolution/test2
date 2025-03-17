@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/header/Header";
 import StyledComponentsRegistry from '../lib/registry';
+import { ThemeProvider } from "@/lib/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,16 +15,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className="light">
       {/* <head>
         <script async type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
         <script async nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
       </head> */}
       <body
-        className={` antialiased`}
+        className="antialiased"
       >
-        <Header />
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <ThemeProvider>
+            <Header />
+            <main>{children}</main>
+          </ThemeProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

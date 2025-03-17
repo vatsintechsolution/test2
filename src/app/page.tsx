@@ -1,15 +1,33 @@
 "use client";
 
 import { HeroSwiper } from "@/components/hero/HeroSwiper";
+import { DesktopHeroSwiper } from "@/components/hero/DesktopHeroSwiper";
 import { ProductCard } from "@/components/fans/ProductCard";
-import Image from "next/image";
-import { BackgroundPattern } from "@/components/BackgroundPattern";
 import { FAQItem } from "@/components/FAQItem";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Footer } from "@/components/footer/Footer";
+import { WhyChooseSection } from "@/components/WhyChooseSection";
+import { CatalogSection } from "@/components/CatalogSection";
+import { DigiShieldSection } from "@/components/DigiShieldSection";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
+
   const features = [
     {
       icon: "/home/icons/premium.svg",
@@ -27,29 +45,29 @@ export default function Home() {
 
   const heroSlides = [
     {
-      desktopBg: "/home/slider-1.png",
+      desktopBg: "/home/AIroElevate Rosepink 2.png",
       mobileBg: "/home/slider-1.png",
       subheading: "ECOLINK AIROELEVATE",
       heading: "Unique Hollow Hub Design",
-      buttonText: "Learn More",
+      buttonText: "Explore Product",
       buttonLink: "/products",
       features: features,
     },
     {
-      desktopBg: "/home/slider-1.png",
+      desktopBg: "/home/AIroElevate Rosepink 2.png",
       mobileBg: "/home/slider-1.png",
       subheading: "ECOLINK AIROJEWEL",
       heading: "Premium Design with Power",
-      buttonText: "Learn More",
+      buttonText: "Explore Product",
       buttonLink: "/products",
       features: features,
     },
     {
-      desktopBg: "/home/slider-1.png",
+      desktopBg: "/home/AIroElevate Rosepink 2.png",
       mobileBg: "/home/slider-1.png",
       subheading: "ECOLINK AIROGEOMETRY",
       heading: "Modern Design Meets Efficiency",
-      buttonText: "Learn More",
+      buttonText: "Explore Product",
       buttonLink: "/products",
       features: features,
     },
@@ -78,7 +96,7 @@ export default function Home() {
     {
       name: "AiroElevate",
       price: 8000,
-      image: "/home/product/AIroElevate-Rosepink-25.png",
+      image: "/home/fan-design.png",
       slug: "airoelevate"
     },
     {
@@ -140,23 +158,35 @@ export default function Home() {
   const productFeaturesList = [
     {
       icon: "/home/icons/rotation.svg",
-      title: "2-WAY ROTATION",
+      title: "2-WAY ROTATION FOR SUMMER AND WINTER",
     },
     {
-      icon: "/home/icons/timer.svg",
-      title: "2H/4H/6H TIMER",
+      icon: "/home/icons/point.svg",
+      title: "POINT ANYWHERE RF REMOTE",
     },
     {
       icon: "/home/icons/turbo.svg",
       title: "TURBO MODE",
     },
     {
-      icon: "/home/icons/led.svg",
-      title: "LED DISPLAY",
+      icon: "/home/icons/timer.svg",
+      title: "BUILT IN TIMER FOR 2, 4 AND 6 HOUR",
+    },
+    {
+      icon: "/home/icons/copper.svg",
+      title: "100% COPPER WINDING",
     },
     {
       icon: "/home/icons/speed.svg",
       title: "6 SPEED AIR FLOW",
+    },
+    {
+      icon: "/home/icons/led.svg",
+      title: "UNIQUE LED DISPLAY",
+    },
+    {
+      icon: "/home/icons/energy.svg",
+      title: "UP TO 50% ENERGY SAVING WITH BLDC MOTOR",
     },
   ];
 
@@ -195,21 +225,26 @@ export default function Home() {
   return (
     <>
       <main className="mt-[-75px]">
-        <HeroSwiper slides={heroSlides} />
+        <div className="relative">
+          {isMobile ? (
+            <HeroSwiper slides={heroSlides} />
+          ) : (
+            <DesktopHeroSwiper slides={heroSlides} />
+          )}
+        </div>
 
         {/* BLDC Fans Section */}
         <section className="container mx-auto px-4 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold section-heading  mb-8 text-center">
             Explore our BLDC Ceiling Fans
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {bldcFans.map((fan, index) => (
               <ProductCard
                 key={index}
                 name={fan.name}
                 features={productFeatures}
                 price={fan.price}
-                link={`/products/${fan.slug}`}
                 badgeImage="/home/icons/badge.png"
                 productImage={fan.image}
                 slug={fan.slug}
@@ -220,17 +255,16 @@ export default function Home() {
 
         {/* Decorative Fans Section */}
         <section className="container mx-auto px-4 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold section-heading mb-8 text-center">
             Explore our Decorative Ceiling fans{" "}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {decorativeFans.map((fan, index) => (
               <ProductCard
                 key={index}
                 name={fan.name}
                 features={productFeatures}
                 price={fan.price}
-                link={`/products/${fan.slug}`}
                 badgeImage="/home/icons/badge.png"
                 productImage={fan.image}
                 slug={fan.slug}
@@ -240,17 +274,16 @@ export default function Home() {
         </section>
 
         <section className="container mx-auto px-4 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold section-heading mb-8 text-center">
             Explore our Economy Ceiling fans{" "}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {economyFans.map((fan, index) => (
               <ProductCard
                 key={index}
                 name={fan.name}
                 features={productFeatures}
                 price={fan.price}
-                link={`/products/${fan.slug}`}
                 badgeImage="/home/icons/badge.png"
                 productImage={fan.image}
                 slug={fan.slug}
@@ -259,93 +292,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
-          <Image
-            src="/home/why-choose.png"
-            alt="Why Choose EcoLink"
-            width={1000}
-            height={1000}
-          />
-          <div className="text-white/70 pl-8 pr-6 leading--154%] text-sm">
-            <p>
-              EcoLink, a global brand from the house of Signify in
-              technologically advanced home luminaires, has been illuminating
-              spaces with advanced and affordable luminaires. Beyond lighting,
-              EcoLink now breezes into homes, offering innovative, reliable and
-              award winning ceiling fans, fulfilling its vision of comfort and
-              illumination. EcoLink&#39;s luminaires and fans are engineered to
-              be durable, ensuring homes stay bright and breezy, with
-              long-lasting, efficient products that complement any budget!
-            </p>
+        <WhyChooseSection features={productFeaturesList} />
 
-            <p className="pt-6">
-              Powered by cutting-edge BLDC inverter technology, EcoLink fans
-              save up to 55% on energy expenditures, while offering modern
-              features like superior air delivery and high-powered motor. These
-              unique designs are carefully crafted with Indian homes in mind,
-              effortlessly complementing any budget and decor of your choosing.
-              Experience EcoLink&#39;s visionary cooling solutions for a breath
-              of fresh air in any space.
-            </p>
-          </div>
+        <CatalogSection />
 
-          <Image
-            src="/home/remote.png"
-            alt="Why Choose EcoLink"
-            width={1000}
-            height={1000}
-            className="mt-[-200px] mb-[-250px]"
-          />
+        <DigiShieldSection />
 
-          {/* Features Section */}
-          <section className="container mx-auto px-8 py-16">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {productFeaturesList.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-start text-left space-y-4"
-                >
-                  <div className=" rounded-full  items-start justify-start">
-                    <Image
-                      src={feature.icon}
-                      alt={feature.title}
-                      width={48}
-                      height={48}
-                      className="w-20 h-20"
-                    />
-                  </div>
-                  <h3 className="text-white/70 font-bold text-base tracking-wider">
-                    {feature.title}
-                  </h3>
-                </div>
-              ))}
-            </div>
-          </section>
-        </section>
-
-        <section>
-          <BackgroundPattern>
-            <Image
-              src="/home/fans-catalog.png"
-              alt="Pattern"
-              width={1000}
-              height={1000}
-            />
-          </BackgroundPattern>
-        </section>
-
-        <section>
-          <Image
-            src="/home/digi-shield.png"
-            alt="Why Choose EcoLink"
-            width={1000}
-            height={1000}
-            className=""
-          />
-        </section>
-
-        <section className="my-8 px-8">
-          <h4 className="text-white/90 text-center text-3xl font-bold mb-8 ">
+        <section className="my-8 px-8 max-w-[1000px] mx-auto">
+          <h4 className="dark:text-white/90 text-[#3C3A53] text-center text-3xl font-bold mb-8 ">
             Answers to the frequently asked questions.
           </h4>
 

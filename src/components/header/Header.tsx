@@ -2,6 +2,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ThemeToggle } from './ThemeToggle'
+import { usePathname } from 'next/navigation'
 
 const menuItems = [
   { label: 'Home', href: '/' },
@@ -12,6 +14,8 @@ const menuItems = [
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isHomePage = pathname === '/'
 
   return (
     <header className="relative top-0 left-0 right-0 z-50 ">
@@ -34,35 +38,42 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-white/70 hover:text-white transition-colors"
+                className={isHomePage 
+                  ? "text-white hover:text-white/80 transition-colors" 
+                  : "text-foreground/70 hover:text-foreground transition-colors"
+                }
               >
                 {item.label}
               </Link>
             ))}
+            <ThemeToggle />
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="relative z-50  pr-5 md:hidden"
-            aria-label="Toggle menu"
-          >
-            <div className="w-7 flex flex-col gap-1">
-              <span className={`block h-0.5 w-full bg-white transition-transform duration-300 ${
-                isMenuOpen ? 'rotate-45 translate-y-1.5' : ''
-              }`} />
-              <span className={`block h-0.5 w-full bg-white transition-opacity duration-300 ${
-                isMenuOpen ? 'opacity-0' : ''
-              }`} />
-              <span className={`block h-0.5 w-full bg-white transition-transform duration-300 ${
-                isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
-              }`} />
-            </div>
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="relative z-50 pr-5"
+              aria-label="Toggle menu"
+            >
+              <div className="w-7 flex flex-col gap-1">
+                <span className={`block h-0.5 w-full bg-foreground transition-transform duration-300 ${
+                  isMenuOpen ? 'rotate-45 translate-y-1.5' : ''
+                }`} />
+                <span className={`block h-0.5 w-full bg-foreground transition-opacity duration-300 ${
+                  isMenuOpen ? 'opacity-0' : ''
+                }`} />
+                <span className={`block h-0.5 w-full bg-foreground transition-transform duration-300 ${
+                  isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
+                }`} />
+              </div>
+            </button>
+          </div>
 
           {/* Mobile Menu Overlay */}
           <div className={`
-            fixed inset-0 bg-black/80 backdrop-blur-sm transition-transform duration-300 md:hidden
+            fixed inset-0 bg-background/80 backdrop-blur-sm transition-transform duration-300 md:hidden z-[9999]
             ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
           `}>
             <nav className="flex flex-col items-center justify-center h-full gap-8">
@@ -71,7 +82,10 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-xl text-white/70 hover:text-white transition-colors"
+                  className={isHomePage 
+                    ? "text-xl text-white hover:text-white/80 transition-colors" 
+                    : "text-xl text-foreground/70 hover:text-foreground transition-colors"
+                  }
                 >
                   {item.label}
                 </Link>
