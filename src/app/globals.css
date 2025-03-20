@@ -162,10 +162,12 @@ body {
 
 .dark .light-svg-fix {
  
-  @apply invert-[0.2] brightness-125
+  @apply invert-[0.2] brightness-125;
 }
 
-
+div+div+div+svg g, div+div+div+svg g path, div+div+svg g path {
+  @apply absolute -z-10 hidden -bottom-64 ;
+}
 /* Add these styles */
 .swiper-button-next::after,
 .swiper-button-prev::after {
