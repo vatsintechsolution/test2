@@ -97,7 +97,7 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
   const handleARClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setShowAR(true);
-    router.push('/ar/fan1');
+    router.push('/ar/fan2');
   };
 
   const handleColorChange = (color: string) => {
