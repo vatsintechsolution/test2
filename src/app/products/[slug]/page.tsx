@@ -5,7 +5,6 @@ import { ProductSwiper } from "@/components/products/ProductSwiper";
 import { Footer } from "@/components/footer/Footer";
 import Link from "next/link";
 import { ProductDetails } from "@/components/product/ProductDetails";
-import { DigiShieldSection } from "@/components/DigiShieldSection";
 import { ProductFeatureCard } from "@/components/product/ProductFeatureCard";
 import { ProductVideoCard } from "@/components/product/ProductVideoCard";
 import { ProductEnergyCard } from "@/components/product/ProductEnergyCard";
@@ -37,24 +36,24 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     { label: "1400mm", value: "1400" },
   ];
 
-  const features = [
-    {
-      icon: "/home/product/icons/1.svg",
-      title: "PREMIUM AESTHETIC",
-    },
-    {
-      icon: "/home/product/icons/2.svg",
-      title: "Superior air Delivery",
-    },
-    {
-      icon: "/home/product/icons/3.svg",
-      title: "100% Copper motor",
-    },
-    {
-      icon: "/home/product/icons/4.svg",
-      title: "Turbo mode & Timer",
-    },
-  ];
+  // const features = [
+  //   {
+  //     icon: "/home/product/icons/1.svg",
+  //     title: "PREMIUM AESTHETIC",
+  //   },
+  //   {
+  //     icon: "/home/product/icons/2.svg",
+  //     title: "Superior air Delivery",
+  //   },
+  //   {
+  //     icon: "/home/product/icons/3.svg",
+  //     title: "100% Copper motor",
+  //   },
+  //   {
+  //     icon: "/home/product/icons/4.svg",
+  //     title: "Turbo mode & Timer",
+  //   },
+  // ];
 
   const productImage = "/home/product/AiroElevate.png";
   const winterImage = "/home/winters.png";

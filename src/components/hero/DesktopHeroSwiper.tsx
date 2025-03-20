@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -28,7 +27,7 @@ interface DesktopHeroSwiperProps {
 }
 
 export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  // const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className="relative w-full desktop-hero-swiper overflow-hidden">
@@ -43,7 +42,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
         
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+        // onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         className="w-full h-full"
       >
         {slides.map((slide, index) => (

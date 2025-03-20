@@ -17,6 +17,7 @@
     "@types/animejs": "^3.1.12",
     "@types/styled-components": "^5.1.30",
     "@types/three": "^0.173.0",
+    "@zcomponent/three": "^1.32.0",
     "aframe": "^1.6.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

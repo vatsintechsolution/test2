@@ -93,7 +93,7 @@ const LaunchButton = styled.button`
 `;
 
 const SplashPage: React.FC = () => {
-  const [isLaunched, setIsLaunched] = useState(false);
+  const [isLaunched, setIsLaunched] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
