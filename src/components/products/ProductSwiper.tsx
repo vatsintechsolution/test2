@@ -23,16 +23,16 @@ export const ProductSwiper = ({ images }: ProductSwiperProps) => {
         navigation
         spaceBetween={10}
         slidesPerView={1}
-        className="rounded-lg overflow-hidden"
+        className="md:rounded-lg overflow-hidden"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="relative h-[300px] lg:h-[500px] w-full">
+            <div className="relative h-[360px] lg:h-[500px] w-full">
               <Image
                 src={image}
                 alt={`Product image ${index + 1}`}
                 fill
-                className="object-contain"
+                className=""
               />
             </div>
           </SwiperSlide>

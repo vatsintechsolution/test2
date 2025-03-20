@@ -30,13 +30,12 @@ export const WhyChooseSection = ({ features }: WhyChooseSectionProps) => {
   }, []);
 
   return (
-    <section className="bg-radial-purple dark:bg-transparent relative overflow-hidden">
+    <section className="bg-radial-purple dark:bg-radial-black relative overflow-hidden">
       {/* Green accent circle - visible on both layouts */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full border-[40px] border-[#5FD068]/20 -translate-y-1/2 translate-x-1/2 z-10"></div>
       
       {isMobile ? (
         // Mobile Layout
-        <>
+        <div className='bg-[#170D0B]'>
           <Image
             src="/home/why-choose.png"
             alt="Why Choose EcoLink"
@@ -66,18 +65,29 @@ export const WhyChooseSection = ({ features }: WhyChooseSectionProps) => {
               of fresh air in any space.
             </p>
           </div>
+<div className='relative'>
 
-          <Image
-            src="/home/remote.png"
+<Image
+            src="/home/motor-bg-lines.png"
             alt="Remote Control"
             width={1000}
             height={1000}
-            className="mt-[-200px] mb-[-250px]"
+            className="absolute top-0 left-0"
           />
 
+<Image
+            src="/home/motor-mobile.png"
+            alt="Remote Control"
+            width={1000}
+            height={1000}
+            className="mt-[20px] mb-[25px]"
+          />
+
+</div>
+         
           {/* Features Section - Mobile */}
-          <section className="container mx-auto px-8 py-16">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <section className="container mx-auto px-4 py-16">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {features.map((feature, index) => (
                 <div
                   key={index}
@@ -89,10 +99,11 @@ export const WhyChooseSection = ({ features }: WhyChooseSectionProps) => {
                       alt={feature.title}
                       width={48}
                       height={48}
-                      className="w-20 h-20"
+                      className="w-14 h-14"
                     />
+                    
                   </div>
-                  <h3 className="dark:text-white/70 text-[#3C3A53] font-bold text-base tracking-wider">
+                  <h3 className="dark:text-white/70 text-[#3C3A53] font-medium text-base tracking-wider">
                     {feature.title}
                   </h3>
                 </div>
@@ -101,16 +112,19 @@ export const WhyChooseSection = ({ features }: WhyChooseSectionProps) => {
           </section>
           
           {/* BLDC Savings Banner - Mobile */}
-          <div className="bg-[#4A2570] text-white p-6">
+          <div className="bg-[#4A2570] text-white p-6 hidden md:block">
             <div className="border-l-4 border-[#5FD068] pl-4">
               <h3 className="text-xl font-medium mb-2">BLDC Ceiling Fans Save up to</h3>
               <p className="text-4xl font-bold">55% on your electricity bill</p>
             </div>
           </div>
-        </>
+        </div>
       ) : (
         // Desktop Layout
-        <div className="container mx-auto py-16">
+
+        <div className='relative'>
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full border-[40px] border-[#5FD068]/20 -translate-y-1/2 translate-x-1/2 z-10"></div>
+                <div className="container mx-auto py-16">
           <div className="flex flex-col md:flex-row">
             {/* Left Column - Title and Fan Image */}
             <div className="w-full md:w-2/5 relative">
@@ -198,6 +212,8 @@ export const WhyChooseSection = ({ features }: WhyChooseSectionProps) => {
             </div>
           </div>
         </div>
+        </div>
+      
       )}
     </section>
   );

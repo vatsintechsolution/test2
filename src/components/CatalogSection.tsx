@@ -26,9 +26,11 @@ export const CatalogSection = () => {
       <BackgroundPattern>
         {isMobile ? (
           // Mobile version
+
+
           <div className="px-4 py-8">
             <Image
-              src="/home/fans-catalog.png"
+              src="/home/fans-catalog-new.png"
               alt="Fans Catalog - Mobile"
               width={1000}
               height={1000}

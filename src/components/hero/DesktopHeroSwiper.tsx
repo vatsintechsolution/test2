@@ -40,7 +40,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
-        navigation
+        
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
@@ -48,7 +48,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-radial-purple min-h-[90vh] flex flex-col md:flex-row items-center">
+            <div className="bg-radial-purple dark:bg-radial-black min-h-[90vh] flex flex-col md:flex-row items-center">
               {/* Left Content */}
               <div className="w-full md:w-1/2 px-8 md:px-16 py-16 flex flex-col justify-center">
                 <div className="max-w-xl mx-auto md:mx-0">
@@ -105,7 +105,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
       </Swiper>
       
       {/* Custom Pagination */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex space-x-2">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -116,7 +116,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 } 

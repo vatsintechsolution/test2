@@ -54,17 +54,17 @@ export function Header() {
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="relative z-50 pr-5"
+              className="relative pr-5 z-[9999] "
               aria-label="Toggle menu"
             >
               <div className="w-7 flex flex-col gap-1">
-                <span className={`block h-0.5 w-full bg-foreground transition-transform duration-300 ${
+                <span className={`block h-0.5 w-full dark:bg-white bg-foreground transition-transform duration-300 ${
                   isMenuOpen ? 'rotate-45 translate-y-1.5' : ''
                 }`} />
-                <span className={`block h-0.5 w-full bg-foreground transition-opacity duration-300 ${
+                <span className={`block h-0.5 w-full dark:bg-white bg-foreground transition-opacity duration-300 ${
                   isMenuOpen ? 'opacity-0' : ''
                 }`} />
-                <span className={`block h-0.5 w-full bg-foreground transition-transform duration-300 ${
+                <span className={`block h-0.5 w-full dark:bg-white  bg-foreground transition-transform duration-300 ${
                   isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
                 }`} />
               </div>
@@ -73,7 +73,7 @@ export function Header() {
 
           {/* Mobile Menu Overlay */}
           <div className={`
-            fixed inset-0 bg-background/80 backdrop-blur-sm transition-transform duration-300 md:hidden z-[9999]
+            fixed inset-0 bg-black/80 backdrop-blur-sm transition-transform duration-300 md:hidden z-[9996]
             ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
           `}>
             <nav className="flex flex-col items-center justify-center h-full gap-8">

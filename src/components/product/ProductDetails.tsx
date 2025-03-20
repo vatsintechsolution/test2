@@ -36,10 +36,10 @@ export const ProductDetails = ({
       {/* Product Details */}
       <div className="space-y-6">
         <div>
-          <h1 className="text-4xl md:text-5xl font-medium dark:text-white text-[#3A3A5B] mb-4">
+          <h1 className="text-xl md:text-5xl font-medium dark:text-white text-[#3A3A5B] mb-4">
             {name}
           </h1>
-          <p className="text-lg font-medium dark:text-white text-[#3A3A5B]">
+          <p className="text-base dark:text-white text-[#3A3A5B]">
             {description}
           </p>
         </div>
@@ -51,7 +51,7 @@ export const ProductDetails = ({
             <span className="text-lg dark:text-neutral-400 text-gray-500 block mb-1">
               MRP
             </span>
-            <span className="text-3xl font-medium text-[#427437]">
+            <span className="text-xl md:text-3xl font-medium text-[#427437] dark:text-white">
               ₹{regularPrice.toLocaleString('en-IN', {
                 maximumFractionDigits: 0,
               })}

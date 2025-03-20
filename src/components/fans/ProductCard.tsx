@@ -25,7 +25,7 @@ export const ProductCard = ({
   price,
   badgeImage,
   productImage,
-  backgroundImage = '/home/fans-bg.png',
+  backgroundImage = '/home/fans-bg-upscaled.png',
   slug
 }: ProductCardProps) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -65,12 +65,12 @@ export const ProductCard = ({
             // Mobile Layout
             <>
               {/* Product Image */}
-              <div className="relative h-64 w-full">
+              <div className="relative h-64 w-[80vw] m-auto">
                 <Image
                   src={productImage}
                   alt={name}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
 
@@ -100,11 +100,13 @@ export const ProductCard = ({
                 {/* Product Name and Price */}
                 <div className="flex items-end justify-between mb-2">
                   <div className='grow'>
-                    <h3 className="text-[24px] font-bold text-white mb-1">{name}</h3>
+                    <h3 className="text-[24px] font-medium text-white mb-1">{name}</h3>
                     <div className="flex items-center gap-1 text-[16px]">
                       <span className="text-neutral-400">MRP</span>
                       <span className="font-semibold text-white">₹{price.toLocaleString()}</span>
                     </div>
+                    <p className="text-[#7D7D7D] text-[7px] mb-6">Lorem Ipsum Dolor Sit Amet</p>
+
                   </div>
 
                   {/* Badge Image */}

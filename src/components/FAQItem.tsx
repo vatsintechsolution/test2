@@ -22,8 +22,8 @@ export function FAQItem({ question, answer, isOpen, onClick }: FAQItemProps) {
         onClick={onClick}
         className="flex justify-between items-center w-full text-left"
       >
-        <h3 className="text-gray-800 dark:text-white/70 text-lg font-medium">{question}</h3>
-        <span className="text-gray-600 dark:text-white/70 text-2xl">
+        <h3 className="text-[#3C3A53] dark:text-white/80 text-base ">{question}</h3>
+        <span className="text-[#3C3A53] dark:text-white/80 text-2xl">
           {isOpen ? '−' : '+'}
         </span>
       </button>

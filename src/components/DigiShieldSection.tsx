@@ -21,7 +21,7 @@ export const DigiShieldSection = () => {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-b from-[#f8f8f8] to-white dark:from-[#2a1a40] dark:to-[#1f1235] py-8 md:py-16">
+    <section className="relative bg-radial-purple dark:bg-radial-black py-8 md:py-16">
       <div className="container mx-auto">
         {isMobile ? (
           // Mobile version

@@ -28,28 +28,22 @@ export const BackgroundPattern = ({ children }: BackgroundPatternProps) => {
     <div className="relative overflow-hidden">
       {/* Background Pattern */}
       <div 
-        className="absolute inset-0 w-full pointer-events-none" 
+        className="absolute inset-0 w-full pointer-events-none " 
         style={{ 
-          height: isMobile ? '413px' : '600px', 
+          height: isMobile ? '413px' : '0px', 
           width: '100%' 
         }}
       >
-        <div className="flex absolute left-[-20%] w-[140%]">
+        <div className="flex absolute left-[-20%] bottom-[-200px] w-[230%]">
           {/* Duplicate pattern for seamless appearance */}
           <Image
             src="/home/bg-dots.svg"
             alt=""
             width={1283}
             height={413}
-            className="object-contain w-1/2"
+            className="object-cover md:hidden "
           />
-          <Image
-            src="/home/bg-dots.svg"
-            alt=""
-            width={1283}
-            height={413}
-            className="object-contain w-1/2"
-          />
+         
         </div>
       </div>
 

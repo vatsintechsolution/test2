@@ -10,6 +10,7 @@ import { Footer } from "@/components/footer/Footer";
 import { WhyChooseSection } from "@/components/WhyChooseSection";
 import { CatalogSection } from "@/components/CatalogSection";
 import { DigiShieldSection } from "@/components/DigiShieldSection";
+import { ProductEnergyCard } from '@/components/product/ProductEnergyCard';
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -96,19 +97,25 @@ export default function Home() {
     {
       name: "AiroElevate",
       price: 8000,
-      image: "/home/fan-design.png",
+      image: "/home/product/AiroElevate.png",
       slug: "airoelevate"
+    },
+    {
+      name: "Viroqua ",
+      price: 8000,
+      image: "/home/product/Viroqua.png",
+      slug: "airojewel"
     },
     {
       name: "AiroJewel",
       price: 8000,
-      image: "/home/product/AIroElevate-Rosepink-25.png",
+      image: "/home/product/AiroJewel.png",
       slug: "airojewel"
     },
     {
       name: "AiroGeometry",
       price: 8000,
-      image: "/home/product/AIroElevate-Rosepink-25.png",
+      image: "/home/product/AiroGeometry.png",
       slug: "airogeometry"
     },
   ];
@@ -117,25 +124,25 @@ export default function Home() {
     {
       name: "AiroZephyr",
       price: 8000,
-      image: "/home/product/AIroElevate-Rosepink-25.png",
+      image: "/home/product/AiroZephyr.png",
       slug: "airozephyr"
     },
     {
       name: "AiroSerenada",
       price: 8000,
-      image: "/home/product/AIroElevate-Rosepink-25.png",
+      image: "/home/product/AiroSerenada.png",
       slug: "airoserenada"
     },
     {
       name: "AiroSleek",
       price: 8000,
-      image: "/home/product/AIroElevate-Rosepink-25.png",
+      image: "/home/product/AiroSleek.png",
       slug: "airosleek"
     },
     {
       name: "StarDust",
       price: 8000,
-      image: "/home/product/AIroElevate-Rosepink-25.png",
+      image: "/home/product/StarDust.png",
       slug: "stardust"
     },
   ];
@@ -144,13 +151,13 @@ export default function Home() {
     {
       name: "Vayu Pro (High)",
       price: 8000,
-      image: "/home/product/AIroElevate-Rosepink-25.png",
+      image: "/home/product/vayupro.png",
       slug: "vayu-pro-high"
     },
     {
       name: "Vayu Pro",
       price: 8000,
-      image: "/home/product/AIroElevate-Rosepink-25.png",
+      image: "/home/product/vayu-pro.png",
       slug: "vayu-pro"
     },
   ];
@@ -192,14 +199,14 @@ export default function Home() {
 
   const faqs = [
     {
-      question: "Lorem ipsum dolor sit amet consectetur. Id consequat ut.",
+      question: "Q1: What types of fans are available?",
       answer:
         "Lorem ipsum dolor sit amet consectetur. Tristique id lacus a quam. Tortor ut in et orci feugiat duis elementum sapien. Adipiscing nascetur eu ut posuere consectetur. Maecenas id sed consequat gravida orci tristique.",
 
       isOpen: false,
     },
     {
-      question: "Lorem ipsum dolor sit amet consectetur. Platea ut gravida.",
+      question: "Q2: What size fan is suitable for my room?",
       answer:
         "Lorem ipsum dolor sit amet consectetur. Tristique id lacus a quam. Tortor ut in et orci feugiat duis elementum sapien. Adipiscing nascetur eu ut posuere consectetur. Maecenas id sed consequat gravida orci tristique.",
 
@@ -207,9 +214,16 @@ export default function Home() {
     },
     {
       question:
-        "Lorem ipsum dolor sit amet consectetur. Sed ultricies faucibus lacinia nullam.",
+        "Q4: What is BLDC technology?",
       answer:
         "Lorem ipsum dolor sit amet consectetur. Tristique id lacus a quam. Tortor ut in et orci feugiat duis elementum sapien. Adipiscing nascetur eu ut posuere consectetur. Maecenas id sed consequat gravida orci tristique.",
+      isOpen: true,
+    },
+    {
+      question:
+        "Q5: How is BLDC technology different from older induction technology?",
+      answer:
+        "A: BLDC motors contain permanent magnets to generate EMF, whereas induction motors use electromagnetic induction. Permanent magnets generate less heat and use less energy compared to electromagnetic induction, making BLDC fans more efficient, quieter, and longer-lasting",
       isOpen: true,
     },
   ];
@@ -297,6 +311,21 @@ export default function Home() {
         <CatalogSection />
 
         <DigiShieldSection />
+
+        {/* Energy Efficiency Feature */}
+        <section className="w-full py-16 px-6">
+          <div className="max-w-6xl mx-auto">
+            <ProductEnergyCard
+              imageSrc="/home/product/AiroElevate.png" 
+              iconSrc="/home/icons/inverter-energy.svg"
+              title="Runs 3x longer on inverter"
+              description="EcoLink AirElevate BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance."
+              className="w-full max-w-md mx-auto"
+              badgeText="RUN 3X LONGER ON INVERTER"
+              priority={true}
+            />
+          </div>
+        </section>
 
         <section className="my-8 px-8 max-w-[1000px] mx-auto">
           <h4 className="dark:text-white/90 text-[#3C3A53] text-center text-3xl font-bold mb-8 ">
