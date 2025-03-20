@@ -15,11 +15,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="light">
-      {/* <head>
-        <script async type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-        <script async nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-      </head> */}
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const theme = localStorage.getItem('theme') || 'system';
+                  const root = document.documentElement;
+                  
+                  if (theme === 'system') {
+                    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                    root.classList.add(systemTheme);
+                  } else {
+                    root.classList.add(theme);
+                  }
+                } catch (error) {
+                  // Default to light theme if localStorage is not available
+                  document.documentElement.classList.add('light');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className="antialiased"
       >
