@@ -51,8 +51,8 @@ export const ProductPremiumAestheticsCard: FC<ProductPremiumAestheticsCardProps>
   }, []);
 
   const Content = (
-    <div className="p-6 h-full flex flex-col">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 flex-grow">
+    <div className="p-6 h-full flex flex-col lg:py-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 flex-grow">
         {icons.map((icon) => (
           <div key={icon.name} className="flex flex-col items-center justify-center p-4 rounded-lg">
             <div className="relative h-16 w-full mb-3 flex items-center justify-center">

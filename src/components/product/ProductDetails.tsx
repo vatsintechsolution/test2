@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 interface ColorOption {
@@ -45,7 +46,7 @@ export const ProductDetails = ({
         </div>
 
         {/* Price, Color, Size in one row */}
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between mt-8 gap-8">
+        <div className="flex flex-col  md:items-start md:justify-between mt-8 gap-8">
           {/* Pricing */}
           <div className="md:w-1/3">
             <span className="text-lg dark:text-neutral-400 text-gray-500 block mb-1">
@@ -59,14 +60,14 @@ export const ProductDetails = ({
           </div>
 
           {/* Color Selection */}
-          <div className="md:w-1/3">
-            <h3 className="dark:text-white text-[#3A3A5B] text-lg mb-3">Color</h3>
+          <div className="md:w-1/2">
+            <h3 className="dark:text-white text-[#3A3A5B]  text-lg mb-3">Color</h3>
             <div className="flex gap-4">
               {colorOptions.map((color) => (
                 <button
                   key={color.value}
                   onClick={() => setSelectedColor(color.value)}
-                  className={`w-8 h-8 rounded-lg p-2 ${
+                  className={` rounded-[4px] p-2 ${
                     selectedColor === color.value
                       ? `ring-2 ring-[#582C83] shadow-md`
                       : "border border-gray-300"
@@ -74,16 +75,17 @@ export const ProductDetails = ({
                   aria-label={`Select ${color.label} color`}
                 >
                   <div 
-                    className="w-full h-full rounded-full" 
+                    className="w-8 h-8 rounded-full" 
                     style={{ backgroundColor: color.value }}
                   />
+                  <span className="text-xs">{color.label}</span>
                 </button>
               ))}
             </div>
           </div>
 
           {/* Size Selection */}
-          <div className="md:w-1/3">
+          <div className="md:w-1/3 hidden">
             <h3 className="dark:text-white text-[#3A3A5B] text-lg mb-3">Size</h3>
             <div className="flex gap-4">
               {sizeOptions.map((size) => (
@@ -130,19 +132,18 @@ export const ProductDetails = ({
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 lg:mt-16">
           {/* Amazon Button */}
           <button className="w-full bg-[#582C83] text-white py-4 text-center rounded-lg flex items-center justify-center gap-2 hover:bg-[#4A2570] transition-colors">
-            <span className="text-lg font-medium">BUY NOW AT</span>
             <Image
               src="/home/buy-on-amazon.svg"
               alt="Amazon"
-              width={150}
+              width={250}
               height={27}
             />
           </button>
           
           {/* Store Button */}
-          <button className="w-full border-2 border-[#582C83] dark:text-white text-[#582C83] py-4 text-center rounded-lg flex items-center justify-center gap-2 hover:bg-[#582C83]/5 transition-colors">
+          <Link href="/store-locator" className="w-full border-2 border-[#582C83] dark:text-white text-[#582C83] py-4 text-center rounded-lg flex items-center justify-center gap-2 hover:bg-[#582C83]/5 transition-colors">
             <span className="text-lg font-medium">BUY FROM STORE</span>
-          </button>
+          </Link>
         </div>
       </div>
     </div>

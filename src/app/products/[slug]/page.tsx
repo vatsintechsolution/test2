@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ProductSwiper } from "@/components/products/ProductSwiper";
 import { Footer } from "@/components/footer/Footer";
@@ -11,149 +12,154 @@ import { ProductEnergyCard } from "@/components/product/ProductEnergyCard";
 import { ProductSeasonCard } from "@/components/product/ProductSeasonCard";
 import { ProductRemoteCard } from "@/components/product/ProductRemoteCard";
 import { ProductPremiumAestheticsCard } from "@/components/product/ProductPremiumAestheticsCard";
+import productsData, { Product } from "@/lib/products";
 
 export default function ProductPage({ params }: { params: { slug: string } }) {
-  // Use the slug parameter for future dynamic data fetching
-  console.log(`Loading product details for: ${params.slug}`);
+  const [product, setProduct] = useState<Product | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // Product images for the swiper
-  const productImages = [
-    "/home/product/demo/1.png",
-    "/home/product/demo/2.jpg",
-    "/home/product/demo/3.jpg",
-  ];
+  useEffect(() => {
+    try {
+      // Find the product that matches the slug
+      const foundProduct = productsData.products.find(p => p.slug === params.slug);
+      
+      if (foundProduct) {
+        setProduct(foundProduct);
+      } else {
+        setError(`Product with slug "${params.slug}" not found`);
+      }
+    } catch (err) {
+      setError("Error loading product data");
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  }, [params.slug]);
 
-  // Define color and size options
-  const colorOptions = [
-    { label: "Rose Pink", value: "#FF69B4" },
-    { label: "White", value: "#FFFFFF" },
-    { label: "Brown", value: "#8B4513" },
-    { label: "Black", value: "#000000" },
-  ];
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+      </div>
+    );
+  }
 
-  const sizeOptions = [
-    { label: "1200mm", value: "1200" },
-    { label: "1400mm", value: "1400" },
-  ];
+  if (error || !product) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen p-4">
+        <h1 className="text-2xl font-bold text-red-500 mb-4">Error</h1>
+        <p className="text-gray-700 dark:text-gray-300">{error || "Product not found"}</p>
+        <Link href="/products" className="mt-6 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+          Back to Products
+        </Link>
+      </div>
+    );
+  }
 
-  // const features = [
-  //   {
-  //     icon: "/home/product/icons/1.svg",
-  //     title: "PREMIUM AESTHETIC",
-  //   },
-  //   {
-  //     icon: "/home/product/icons/2.svg",
-  //     title: "Superior air Delivery",
-  //   },
-  //   {
-  //     icon: "/home/product/icons/3.svg",
-  //     title: "100% Copper motor",
-  //   },
-  //   {
-  //     icon: "/home/product/icons/4.svg",
-  //     title: "Turbo mode & Timer",
-  //   },
-  // ];
-
-  const productImage = "/home/product/AiroElevate.png";
-  const winterImage = "/home/winters.png";
-  const summerImage = "/home/summer.png";
+  // Transform color options for the product details component
+  const colorOptions = product.colors.map(color => ({
+    label: color.name,
+    value: color.primary
+  }));
 
   return (
     <>
       <main className="min-h-screen py-2 lg:py-8">
-        <div className="container mx-auto ">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
             {/* Product Images */}
             <div>
-              <ProductSwiper images={productImages} />
+              <ProductSwiper images={product.images.gallery} />
             </div>
 
             {/* Product Details */}
             <ProductDetails
-              name="EcoLink AiroElevate BLDC Ceiling Fan"
-              description="Industry's first ceiling fan with hollow hub design | 1200 mm Sweep size"
-              regularPrice={22000}
+              name={product.fullName}
+              description={product.tagline}
+              regularPrice={product.price}
               colorOptions={colorOptions}
-              sizeOptions={sizeOptions}
+              sizeOptions={product.sizes}
             />
           </div>
         </div>
 
-        <div className="container mx-auto px-4 py-10 ">
-        <ProductFeatureCard
-              imageSrc={productImage}
-              title="Unique Hollow Hub Design"
-              description="Innovative design of EcoLink AirElevate BLDC ceiling fan enhances both functionality and style, making it a must-have for modern interiors!"
-              imageWidth={250}
-              imageHeight={250}
-              className=" md:min-h-[300px] mb-4"
-              darkBgClass="dark:bg-gradient-to-b dark:from-[#6E4427] dark:to-[#2B1D12]"
-              lightBgClass="bg-radial-purple"
-            />
-          <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-8 gap-4">
-           
+        <div className="container mx-auto px-4 py-10">
+          <ProductFeatureCard
+            imageSrc={product.images.main}
+            title={product.keyFeature}
+            description={product.description}
+            imageWidth={250}
+            imageHeight={250}
+            className="md:min-h-[300px] mb-4"
+            darkBgClass="dark:bg-gradient-to-b dark:from-[#6E4427] dark:to-[#2B1D12]"
+            lightBgClass="bg-radial-purple"
+          />
 
-          <ProductEnergyCard
-              imageSrc={productImage}
-              iconSrc="/home/icons/inverter-energy.svg"
-              title="Runs 3x longer on inverter"
-              description="EcoLink AirElevate BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance."
-              className="max-w-3xl mx-auto"
-              badgeText="RUN 3X LONGER ON INVERTER"
+          {/* Featured Sections */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+            <ProductEnergyCard
+              imageSrc={product.images.main}
+              iconSrc={product.energyEfficiency.icon}
+              title={`Save up to ${product.energyEfficiency.savingsPercentage}% Energy`}
+              description={product.energyEfficiency.description}
+              badgeText={`SAVE ₹${product.energyEfficiency.annualSavings}/YEAR`}
+              className="h-full"
               priority={true}
             />
-
             <ProductVideoCard
-              bgImageSrc="/home/video-card-bg.png"
-              videoSrc="https://youtu.be/CWAxGi9PZz0?si=tdTCh871nVOUcVgv"
-              title="Hassle-free Installation"
-              description="EcoLink AirElevate BLDC ceiling fan features adjustable mounting, making it suitable for any ceiling type in your home"
-              className=""
+              bgImageSrc={product.videos.thumbnail}
+              videoSrc={product.videos.promotional}
+              title={product.aesthetics.title}
+              description={product.aesthetics.description}
+              className="max-w-3xl mx-auto"
               priority={true}
-              gradientClass="bg-gradient-to-t from-black/90 via-black/50 to-transparent"
             />
-
-           
+          
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
 
             <ProductSeasonCard
-              summerImage={summerImage}
-              winterImage={winterImage}
+              summerImage={product.seasonalFeatures.summer.image}
+              winterImage={product.seasonalFeatures.winter.image}
               title="2-way rotation"
               description="Making it ideal choice for Summers & winters!"
               className="max-w-3xl mx-auto"
               priority={true}
             />
-            <ProductRemoteCard
-              title="Remote Control"
-              description="EcoLink AirElevate BLDC ceiling fan comes with a remote control, making it easy to operate from a distance."
-              className="max-w-3xl mx-auto"
+          
+
+          <ProductRemoteCard
+              title={product.remoteFeatures.type}
+              description={`Control your fan from anywhere with ${product.remoteFeatures.range}. ${product.remoteFeatures.functions.join(", ")}.`}
+              className="h-full"
               priority={true}
             />
+          
+          </div>
+
+          <div className="py-10">
+            <ProductPremiumAestheticsCard
+              className="max-w-3xl lg:max-w-6xl mx-auto"
+              priority={true}
+            />
+          </div>
 
          
-          </div>
-
-          <div className="mt-4">
-          <ProductPremiumAestheticsCard
-              className="max-w-3xl mx-auto"
-              priority={true}
-            />
-          </div>
 
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-10">
             <Image
               src="/home/digi-shield.png"
-              alt="Why Choose EcoLink"
+              alt="DigiShield"
               width={1000}
               height={1000}
               className="rounded-xl"
             />
 
-            <Link href="/alternate">
+            <Link href={`/ar/${product.slug}`}>
               <Image
                 src="/home/product/ar.png"
-                alt="Why Choose EcoLink"
+                alt="View in AR"
                 width={1000}
                 height={1000}
                 className="rounded-xl"
@@ -169,22 +175,20 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             <div className="rounded-2xl bg-black/20 backdrop-blur-sm p-8 border border-white/70">
               <div className="space-y-4">
                 {[
-                  { label: "Brand", value: "EcoLink" },
-                  { label: "Model", value: "AiroElevate" },
+                  { label: "Brand", value: product.specifications.brand },
+                  { label: "Model", value: product.modelName },
                   {
                     label: "Color",
-                    value: "Espresso Brown - Copper/ Silk White - Rose Gold",
+                    value: product.colors.map(c => c.name).join(', ')
                   },
-                  { label: "Type", value: "BLDC Ceiling fan" },
-                  { label: "Star rating", value: "5 star" },
-                  { label: "Sweep Size", value: "1200 mm" },
-                  { label: "Speed", value: "370 RPM" },
-                  { label: "Air Delivery (CMM)", value: "230" },
-                  { label: "Warranty", value: "5 (3+2*) years" },
-                  {
-                    label: "Dimensions",
-                    value: "xx mm X yy mm X zz mm (length X width X height)",
-                  },
+                  { label: "Type", value: product.specifications.type },
+                  { label: "Star rating", value: `${product.starRating} star` },
+                  { label: "Sweep Size", value: product.specifications.sweepSize },
+                  { label: "Speed", value: product.specifications.speed },
+                  { label: "Air Delivery (CMM)", value: product.specifications.airDelivery },
+                  { label: "Power", value: product.specifications.power },
+                  { label: "Warranty", value: `${product.warranty.standard}+${product.warranty.extended}* years` },
+                  { label: "Dimensions", value: product.specifications.dimensions },
                 ].map((spec, index) => (
                   <div
                     key={index}
@@ -201,75 +205,11 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               </div>
 
               <p className="text-sm text-white/50 mt-6">
-                * Get 2 years extended warranty with 3 years standard warranty
-                on EcoLink BLDC Ceiling fan. To activate extended warranty,
-                register product on Signify DigiShield App
+                {product.warranty.note}
               </p>
             </div>
           </section>
         </div>
-
-        {/* <div className="container mx-auto px-4 py-10 hidden md:block ">
-          <Image src="/home/product/demo/desktop.png" alt="Product Image" width={1536} height={1000}
-            className="mx-auto" />
-
-<Image src="/home/product/demo/features.png" alt="Product Image" width={1536} height={1000}
-            className="mx-auto py-10" />
-
-
-<DigiShieldSection />
-
-<Link href="/alternate">
-              <Image
-              src="/home/product/demo/vr-link.png"
-              alt="Why Choose EcoLink"
-            width={1536} height={1000}
-            className="mx-auto py-0"
-            />
-          </Link>
-
-<div className="py-16 container mx-auto px-4 max-w-5xl">
-
-<h2 className="text-4xl font-bold dark:text-white text-[#3C3A53] text-center mb-8">
-                  Product specifications
-                </h2>
-<div className="rounded-2xl dark:bg-black/20 dark:border-white/70 bg-white backdrop-blur-sm p-8 border border-[#555369]/50">
-                  <div className="space-y-4">
-                    {[
-                      { label: "Brand", value: "EcoLink" },
-                      { label: "Model", value: "AiroElevate" },
-                      { label: "Color", value: "Espresso Brown - Copper/ Silk White - Rose Gold" },
-                      { label: "Type", value: "BLDC Ceiling fan" },
-                      { label: "Star rating", value: "5 star" },
-                      { label: "Sweep Size", value: "1200 mm" },
-                      { label: "Speed", value: "370 RPM" },
-                      { label: "Air Delivery (CMM)", value: "230" },
-                      { label: "Warranty", value: "5 (3+2*) years" },
-                      { label: "Dimensions", value: "xx mm X yy mm X zz mm (length X width X height)" },
-                    ].map((spec, index) => (
-                      <div 
-                        key={index}
-                        className="flex flex-col sm:flex-row py-4 border-b border-[#555369]/50 dark:border-white/10"
-                      >
-                        <div className="w-full sm:w-1/3 text-[#3C3A53] dark:text-white/70">
-                          {spec.label}
-                        </div>
-                        <div className="w-full sm:w-2/3 text-[#3C3A53] dark:text-white">
-                          {spec.value}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <p className="text-sm text-[#3C3A53] dark:text-white/50 mt-6">
-                    * Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App
-                  </p>
-                </div>
-</div>
-
-
-
-        </div> */}
       </main>
       <Footer />
     </>

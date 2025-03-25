@@ -50,7 +50,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
             <div className="bg-radial-purple dark:bg-radial-black min-h-[90vh] flex flex-col md:flex-row items-center">
               {/* Left Content */}
               <div className="w-full md:w-1/2 px-8 md:px-16 py-16 flex flex-col justify-center">
-                <div className="max-w-xl mx-auto md:mx-0">
+                <div className="max-w-xl mx-auto md:mx-0 space-y-10">
                   <p className="text-white/70 tracking-widest mb-2 uppercase">{slide.subheading}</p>
                   <h1 className="text-white text-4xl md:text-6xl font-medium mb-6">{slide.heading}</h1>
                   

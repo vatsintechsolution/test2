@@ -1,0 +1,1183 @@
+{
+  "stores": [
+    {
+      "region": "South",
+      "storeId": "72023455",
+      "name": "Philips Smart Light Hub- Ketana Philips Lights",
+      "address": "No 16/1/38, GF, RCC Building, Netaji Road, Opposite Ramula Vari Temple, Tirupati, Andhra Pradesh, 517501",
+      "city": "Tirupati",
+      "state": "Andhra Pradesh",
+      "contact": "098851 35380"
+    },
+    {
+      "region": "South",
+      "storeId": "72101502",
+      "name": "Philips Smart Light Hub- Srinivasa Enterprises",
+      "address": "Ground Floor, Pedapadu Road, Srikakulam, Srikakulam, Andhra Pradesh, 532005",
+      "city": "Srikakulam",
+      "state": "Andhra Pradesh",
+      "contact": "091827 54598"
+    },
+    {
+      "region": "South",
+      "storeId": "91019553",
+      "name": "Philips Smart Light Hub- Super Power",
+      "address": "D No 52 1/1 5/3A, Ring Rd, Service Rd, Veterinary Colony, Opp. Tata Motors Showroom, Vijayawada, Andhra Pradesh, 520002",
+      "city": "Vijayawada",
+      "state": "Andhra Pradesh",
+      "contact": "098490 84146"
+    },
+    {
+      "region": "South",
+      "storeId": "91021450",
+      "name": "Philips Smart Light Hub- Chandra Electricals",
+      "address": "Shop No 48/19/1, 1st Floor, Satya Surya Comm Complex, Dwarakanagar, Opp. RTC bus depot, Visakhapatnam, Andhra Pradesh, 530016",
+      "city": "Visakhapatnam",
+      "state": "Andhra Pradesh",
+      "contact": "093931 01997"
+    },
+    {
+      "region": "East",
+      "storeId": "72113114",
+      "name": "Philips Smart Light Hub- Arihant Electricals",
+      "address": "First Floor, Jamila Manjil Building , AT Road,, Adabari,Opp.Manayabar/Adabari Masjid, Guwahati, Assam, 781014",
+      "city": "Guwahati",
+      "state": "Assam",
+      "contact": "095455 54123"
+    },
+    {
+      "region": "East",
+      "storeId": "91015627",
+      "name": "Philips Smart Light Hub- Next Lites",
+      "address": "Sikaria Complex, Dr B Baruah Road, Ulubari, Guwahati, Assam, 781007",
+      "city": "Guwahati",
+      "state": "Assam",
+      "contact": "094357 31571"
+    },
+    {
+      "region": "East",
+      "storeId": "72030270",
+      "name": "Philips Smart Light Hub- Luminance",
+      "address": "Ramlagan Business Park, Bailey Road, Rukanpura, Opposite Bhootnath Mandir, Patna, Bihar, 800014",
+      "city": "Patna",
+      "state": "Bihar",
+      "contact": "091355 55151"
+    },
+    {
+      "region": "East",
+      "storeId": "72033412",
+      "name": "Philips Smart Light Hub- Arohi Sales Pvt. Ltd.",
+      "address": "Upper Ground Floor, Saket Tower, SP Verma Road, Patna, Bihar, 800001",
+      "city": "Patna",
+      "state": "Bihar",
+      "contact": "094300 40951"
+    },
+    {
+      "region": "East",
+      "storeId": "72090521",
+      "name": "Philips Smart Light Hub- Agrawal & Co.",
+      "address": "Ground Floor, Gurudwara Road, In front of Gurudwara Gate, Bhagalpur, Bihar, 812002",
+      "city": "Bhagalpur",
+      "state": "Bihar",
+      "contact": "094312 15144"
+    },
+    {
+      "region": "West",
+      "storeId": "72058501",
+      "name": "Philips Smart Light Hub- Gopi House",
+      "address": "Gopi House, New Timber Market, Fafadih, Near Patidar Bhawan, Raipur, Chhattisgarh, 492001",
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "contact": "098269 07925"
+    },
+    {
+      "region": "North",
+      "storeId": "72000513",
+      "name": "Philips Smart Light Hub- Lite Zone",
+      "address": "1568 A, Bhagirath Palace, Chandni Chowk, New Delhi, Delhi, 110006",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "contact": "087438 42600"
+    },
+    {
+      "region": "North",
+      "storeId": "72037999",
+      "name": "Philips Smart Light Hub- Shri Laxmi Enterprises",
+      "address": "No F146, Jagat Puri Main Road, Near Ambedkar Gate, New Delhi, Delhi, 110051",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "contact": "070113 81081"
+    },
+    {
+      "region": "North",
+      "storeId": "72099582",
+      "name": "Philips Smart Light Hub- Tilak Trading Co Pvt Ltd",
+      "address": "No 4B/32, 1st Floor, Devki Nandan Marg, Tilak Nagar, New Delhi, Delhi, 110058",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "contact": "092895 66798"
+    },
+    {
+      "region": "North",
+      "storeId": "72100624",
+      "name": "Philips Smart Light Hub- Decolites",
+      "address": "No WP/501/A, Lower Ground Floor, Ashok Vihar, Shiv market, Wazirpur, New Delhi, Delhi, 110052",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "contact": "099100 00117"
+    },
+    {
+      "region": "North",
+      "storeId": "72113882",
+      "name": "Philips Smart Light Hub- Niranjan Lal & Sons",
+      "address": "346 Street No 10 Ajay Park Naya bazar, Near New Krishna Public School, Najafgarh, New Delhi, Delhi, 110043",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "contact": "098112 11677"
+    },
+    {
+      "region": "North",
+      "storeId": "91004887",
+      "name": "Philips Smart Light Hub- Rays",
+      "address": "803/2, Basement &amp; 1st Floor, Arjun Nagar, Bhishma Pitamah Road, Kotla Mubarakpur, Near Maruti Showroom, New Delhi, Delhi, 110003",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "contact": "093122 30329"
+    },
+    {
+      "region": "West",
+      "storeId": "72050147",
+      "name": "Philips Smart Light Hub- Shree Laxmi Lighting Hub",
+      "address": "Shop No 5, Dukle Elite Building, St Inez, Opposite Union Bank, Panaji, Goa, 403001",
+      "city": "Panaji",
+      "state": "Goa",
+      "contact": "093261 01492"
+    },
+    {
+      "region": "West",
+      "storeId": "72092716",
+      "name": "Philips Smart Light Hub- M/w PAWAN ELECTRICALS",
+      "address": "No 17, Vikrant Building, Ward No 13, South Goa, Malbhat, Near State Bank of India, Margao, Goa, 403601",
+      "city": "Margao",
+      "state": "Goa",
+      "contact": "097651 68082"
+    },
+    {
+      "region": "West",
+      "storeId": "72008717",
+      "name": "Philips Smart Light Hub- M/w LIGHT HOUSE",
+      "address": "Avadh Square, Urmi Char Rasta, Akota, Above Bata Showroom, Vadodara, Gujarat, 390020",
+      "city": "Vadodara",
+      "state": "Gujarat",
+      "contact": "070410 03571"
+    },
+    {
+      "region": "West",
+      "storeId": "72018708",
+      "name": "Philips Smart Light Hub- Palm Traders",
+      "address": "No 108, Aeron Spectra, Rajpath Rangoli Road, Near Rajpath Club, Ahmedabad, Gujarat, 380054",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "contact": "082383 31104"
+    },
+    {
+      "region": "West",
+      "storeId": "72036960",
+      "name": "Philips Smart Light Hub- Liteon",
+      "address": "T3/T4, G.P.Park Society, Beside Seema Suzuki, Near Navjivan Circle, Udhna Magdala Road, Surat, Gujarat, 395017",
+      "city": "Surat",
+      "state": "Gujarat",
+      "contact": "099985 44356"
+    },
+    {
+      "region": "West",
+      "storeId": "72047120",
+      "name": "Philips Smart Light Hub- Urban Light & Co",
+      "address": "No 4/F2, 1st Floor, Krishna Divine, College Road, Opposite Kokaran Mandir, Nadiad, Gujarat, 387001",
+      "city": "Nadiad",
+      "state": "Gujarat",
+      "contact": "098250 24992"
+    },
+    {
+      "region": "West",
+      "storeId": "72060273",
+      "name": "Philips Smart Light Hub- Prakash Corporation",
+      "address": "No CM/20, Silvassa Road, Gidc Char Rasta, Near Saradr Bhiladwala Coop Bank, Vapi, Gujarat, 396195",
+      "city": "Vapi",
+      "state": "Gujarat",
+      "contact": "096649 35943"
+    },
+    {
+      "region": "West",
+      "storeId": "72093441",
+      "name": "Philips Smart Light Hub- Universal Aurum",
+      "address": "No O/104, 1st Floor, Shree Nand Plaza, Rupani Sardarnagar Road, Sardarnagar, Opposite Laxmi Apartments, Bhavnagar, Gujarat, 364002",
+      "city": "Bhavnagar",
+      "state": "Gujarat",
+      "contact": "089057 50603"
+    },
+    {
+      "region": "West",
+      "storeId": "91009719",
+      "name": "Philips Smart Light Hub- HLS Lighting Solution",
+      "address": "L 5 & 6, Alishan Complex, Sardar Patel Stadium Road, Navrangpura, Opposite Valu Hospital, Ahmedabad, Gujarat, 380014",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "contact": "098250 45647"
+    },
+    {
+      "region": "West",
+      "storeId": "91017762",
+      "name": "Philips Smart Light Hub- Electrolights",
+      "address": "Floor 1st, Shapath 4, SG Highway, Opposite Karnavati Club, Ahmedabad, Gujarat, 380051",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "contact": "098243 89277"
+    },
+    {
+      "region": "North",
+      "storeId": "72010365",
+      "name": "Philips Smart Light Hub- A.R. Electricals",
+      "address": "Mannapuram Gold Loan Complex, Circular Road, Near Chawla Sweets, Sirsa, Haryana, 125055",
+      "city": "Sirsa",
+      "state": "Haryana",
+      "contact": "088138 00001"
+    },
+    {
+      "region": "North",
+      "storeId": "72011524",
+      "name": "Philips Smart Light Hub- Light Power Control",
+      "address": "Sco No 8, New Colony More, Old Railway Road, Near Bikaner Sweets, Gurgaon, Haryana, 122001",
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "contact": "0124 437 1819"
+    },
+    {
+      "region": "North",
+      "storeId": "72022628",
+      "name": "Philips Smart Light Hub- Jain Electricals",
+      "address": "1st Floor, Railway Road, Panipat, Haryana, 132103",
+      "city": "Panipat",
+      "state": "Haryana",
+      "contact": "0180 407 8525"
+    },
+    {
+      "region": "North",
+      "storeId": "72089820",
+      "name": "Philips Smart Light Hub- Shree Ram Enterprises",
+      "address": "Ground Floor, Murthal Adda Chowk, Adjacent to Action Showroom, Sonipat, Haryana, 131001",
+      "city": "Sonipat",
+      "state": "Haryana",
+      "contact": "099961 79788"
+    },
+    {
+      "region": "North",
+      "storeId": "72093336",
+      "name": "Philips Smart Light Hub- Jindal Ply (India) Private Limited",
+      "address": "Sadar Bazar, Railway Road, Timber Market, Karnal, Haryana, 132001",
+      "city": "Karnal",
+      "state": "Haryana",
+      "contact": "099969 01242"
+    },
+    {
+      "region": "North",
+      "storeId": "72114273",
+      "name": "Philips Smart Light Hub- The Lights Hub",
+      "address": "DSS 59, Adjacent Pushpa Complex, Near Bikaner Sweets, Urban Estate-2, Hisar, Haryana, 125005",
+      "city": "Hisar",
+      "state": "Haryana",
+      "contact": "070827 44792"
+    },
+    {
+      "region": "East",
+      "storeId": "72015734",
+      "name": "Philips Smart Light Hub- Lhila Marketing",
+      "address": "Ground Floor, Sarjana Chowk, Lalji Hirji Road, Opposite Madras Caf\u00e9, Ranchi, Jharkhand, 834001",
+      "city": "Ranchi",
+      "state": "Jharkhand",
+      "contact": "070042 21319"
+    },
+    {
+      "region": "East",
+      "storeId": "72081048",
+      "name": "Philips Smart Light Hub- Horizon",
+      "address": "1st Floor, Hari Kunj Apartment, Main Road, Saraidhella, Opposite Bandhan Bank, Dhanbad, Jharkhand, 828127",
+      "city": "Dhanbad",
+      "state": "Jharkhand",
+      "contact": "091539 95475"
+    },
+    {
+      "region": "South",
+      "storeId": "72023596",
+      "name": "Philips Smart Light Hub- Sun Light",
+      "address": "Shp No 101/2/3, Sy No 90, 1st Floor, Konappana AgraharaSignal, ElectronicCity, Opposite Pillar No 213, Bengaluru, Karnataka, 560100",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "contact": "098860 33866"
+    },
+    {
+      "region": "South",
+      "storeId": "72035535",
+      "name": "Philips Smart Light Hub- Ir Lights And Shades Studio Pvt Ltd",
+      "address": "Building No 19/2, Teja Reddy Complex, Honnenahalli Gate, Singanayakanahalli, Beside HDFC Bank, Bengaluru, Karnataka, 560064",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "contact": "090083 02595"
+    },
+    {
+      "region": "South",
+      "storeId": "72038442",
+      "name": "Philips Smart Light Hub- Samir Enterprises",
+      "address": "No 8/2, 102A, Whitefield Rd, Hoody Circle, Mahadevapura, Bengaluru, Karnataka, 560048",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "contact": "078298 08539"
+    },
+    {
+      "region": "South",
+      "storeId": "72042102",
+      "name": "Philips Smart Light Hub- Fairy Nest Private Limited",
+      "address": "No 86/3A, 1st Floor, Panchavati Circle, Kalidasa Road, VV Mohalla, Above Titan Eye Plus, Mysore, Karnataka, 570002",
+      "city": "Mysore",
+      "state": "Karnataka",
+      "contact": "090710 17722"
+    },
+    {
+      "region": "South",
+      "storeId": "72089866",
+      "name": "Philips Smart Light Hub- Creative Lighting Solutions",
+      "address": "No 12 & 13, 1st Flr, Avani Sringeri Ngr, BDA Double Road, Nyanappanahalli, Opposite Reliance Mart, Bengaluru, Karnataka, 560076",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "contact": "097028 31649"
+    },
+    {
+      "region": "South",
+      "storeId": "72099789",
+      "name": "Philips Smart Light Hub- Light Creations And Co",
+      "address": "New No 444, No. 19, 19, Outer Ring Road, above Kanti Sweets, Bengaluru, Karnataka, 560103",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "contact": "072040 22456"
+    },
+    {
+      "region": "South",
+      "storeId": "72111599",
+      "name": "Philips Smart Light Hub- Industrial And Control Products",
+      "address": "PN 23, 1st Flr, 2nd Block, 2nd Stage, 80 Feet, Old Outer Ring Rd, Nagarabhavi, Above Jockey showroom, Bengaluru, Karnataka, 560072",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "contact": "070193 92553"
+    },
+    {
+      "region": "South",
+      "storeId": "72113873",
+      "name": "Philips Smart Light Hub- Creative Space",
+      "address": "1st Floor Plot no 03, Sidhi Sai Plaza, Prabhat Colony, Vidyanagar, Near Sirur Park Jn, Opp union Bank, Hubballi, Karnataka, 580021",
+      "city": "Hubballi",
+      "state": "Karnataka",
+      "contact": "099027 76886"
+    },
+    {
+      "region": "South",
+      "storeId": "91016567",
+      "name": "Philips Smart Light Hub- Priority Concepts",
+      "address": "No 1360, Ground Floor, 100 Ft Road, 9th Block, Jayanagar, Near Ragigudda, Bengaluru, Karnataka, 560069",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "contact": "099000 44817"
+    },
+    {
+      "region": "South",
+      "storeId": "91020022",
+      "name": "Philips Smart Light Hub- Sachin Light House",
+      "address": "Shop No 9, 2nd Cross, K G Road, Chickpet, Next to Bank Of India, Bengaluru, Karnataka, 560009",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "contact": "090352 83456"
+    },
+    {
+      "region": "South",
+      "storeId": "91026986",
+      "name": "Philips Smart Light Hub- The Light Artillery",
+      "address": "No 13, Pillar No 98, Park View Layout, Bellary Main Road, Sahakar Nagar, Next to Motherhood Hospital, Bengaluru, Karnataka, 560092",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "contact": "096636 99116"
+    },
+    {
+      "region": "South",
+      "storeId": "72058881",
+      "name": "Philips Smart Light Hub- Lakshmi Electricals",
+      "address": "Vanchiyoor, Ayurveda College Jn, Behind Pothys, Thiruvananthapuram, Kerala, 695001",
+      "city": "Thiruvananthapuram",
+      "state": "Kerala",
+      "contact": "098959 27965"
+    },
+    {
+      "region": "South",
+      "storeId": "72104720",
+      "name": "Philips Smart Light Hub- Celestial Lights",
+      "address": "1st Floor, Kannothumchal, Elayavoor, Near Income Tax Road, Kannur, Kerala, 670005",
+      "city": "Kannur",
+      "state": "Kerala",
+      "contact": "088480 19470"
+    },
+    {
+      "region": "South",
+      "storeId": "72112947",
+      "name": "Philips Smart Light Hub- Airco Living Expirence",
+      "address": "197/2 Keeppallil Building 1st Floor Near HDFC Bank, Muthoor, Thiruvalla, Kerala, 689107",
+      "city": "Thiruvalla",
+      "state": "Kerala",
+      "contact": "077609 10290"
+    },
+    {
+      "region": "South",
+      "storeId": "91007131",
+      "name": "Philips Smart Light Hub- Qrs Marketing Pvt Ltd",
+      "address": "No 342/B1, Post Office Road, Thirunakkara, Behind Head Post Office, Kottayam, Kerala, 686001",
+      "city": "Kottayam",
+      "state": "Kerala",
+      "contact": "0481 258 0642"
+    },
+    {
+      "region": "South",
+      "storeId": "91014379",
+      "name": "Philips Smart Light Hub- Electro Dynamic",
+      "address": "TC 26/1309/1, Electro Dynamic, RBI Road, Panavila Junction, Thiruvananthapuram, Kerala, 695001",
+      "city": "Thiruvananthapuram",
+      "state": "Kerala",
+      "contact": "0471 233 9793"
+    },
+    {
+      "region": "South",
+      "storeId": "91025847",
+      "name": "Philips Smart Light Hub- Praana Marketing",
+      "address": "1st Floor, Amrutha Arcade, Mini Bypass, Govindapuram, near Near Punjab National Bank, , Kozhikode, Kerala, 673016",
+      "city": "Kozhikode",
+      "state": "Kerala",
+      "contact": "089071 37338"
+    },
+    {
+      "region": "West",
+      "storeId": "72086692",
+      "name": "Philips Smart Light Hub- Sanskriti Distributors",
+      "address": "2nd Floor, Jhinsi Road No 2, Lashkar, Near Gubbara Phatak, Gwalior, Madhya Pradesh, 474009",
+      "city": "Gwalior",
+      "state": "Madhya Pradesh",
+      "contact": "094251 09051"
+    },
+    {
+      "region": "West",
+      "storeId": "91007633",
+      "name": "Philips Smart Light Hub- Light Palace",
+      "address": "206, Om Tower, Sri Sai Das Classes Bldg, Zone 2, MP Nagar, Bhopal, Madhya Pradesh, 462011",
+      "city": "Bhopal",
+      "state": "Madhya Pradesh",
+      "contact": "0755 405 5711"
+    },
+    {
+      "region": "West",
+      "storeId": "91020839",
+      "name": "Philips Smart Light Hub- VHD Distributors Llp",
+      "address": "No 12/4, Race Course Road, Opp Yashwant Club, Indore, Madhya Pradesh, 452003",
+      "city": "Indore",
+      "state": "Madhya Pradesh",
+      "contact": "097130 62821"
+    },
+    {
+      "region": "West",
+      "storeId": "91025361",
+      "name": "Philips Smart Light Hub- Punjab House",
+      "address": "Start Complex, Jyoti Cinema Road, Russal Chowk, Opposite Dominos Pizza, Jabalpur, Madhya Pradesh, 482001",
+      "city": "Jabalpur",
+      "state": "Madhya Pradesh",
+      "contact": "099933 77555"
+    },
+    {
+      "region": "West",
+      "storeId": "72028160",
+      "name": "Philips Smart Light Hub- Parshva Light House",
+      "address": "Shop No 1, Panchratna Society, Saibaba Mandir Marg, Borivali West, Mumbai, Maharashtra, 400092",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "contact": "091525 25336"
+    },
+    {
+      "region": "West",
+      "storeId": "72035410",
+      "name": "Philips Smart Light Hub- Proserve Marketing Llp",
+      "address": "Shop No 1, Swapnabhoomi CHS, SK Bole Rd, near Portuguese Church, Omkar Society, Dadar West, Dadar, Mumbai, Maharashtra, 400028",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "contact": "098204 93225"
+    },
+    {
+      "region": "West",
+      "storeId": "72085515",
+      "name": "Philips Smart Light Hub- Light Idea",
+      "address": "No 14, Ground Floor, Aditya Centeegra, Shivajinagar, FC Road, Beside Mantri House, Pune, Maharashtra, 411004",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "contact": "075070 80022"
+    },
+    {
+      "region": "West",
+      "storeId": "72090474",
+      "name": "Philips Smart Light Hub- Neolite",
+      "address": "shop no 53, KESAR GARDENS, opp. Ramsheth school, Sector 20, Kharghar, Navi Mumbai, Maharashtra, 410210",
+      "city": "Navi Mumbai",
+      "state": "Maharashtra",
+      "contact": "095940 31155"
+    },
+    {
+      "region": "West",
+      "storeId": "72095526",
+      "name": "Philips Smart Light Hub- R S Electricals",
+      "address": "Unit no 15, Plot No 2, Ellora Shopee, B Wing, Indrayani Nagar, Bhosari, Sector 1, Near More Super Market, Pune, Maharashtra, 411026",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "contact": "098506 60335"
+    },
+    {
+      "region": "West",
+      "storeId": "72096283",
+      "name": "Philips Smart Light Hub- Sumang Technologies",
+      "address": "Shop No 1, M No 608, Mataji Complex, Bhukum, Pirangut, Near Federal Bank, Pune, Maharashtra, 412115",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "contact": "087936 75003"
+    },
+    {
+      "region": "West",
+      "storeId": "72096361",
+      "name": "Philips Smart Light Hub- Armo Project Solutions",
+      "address": "3, Nagar Road, Pathare Thube Nagar, Kharadi, Pune, Maharashtra, 411014",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "contact": "073978 77705"
+    },
+    {
+      "region": "West",
+      "storeId": "72098228",
+      "name": "Philips Smart Light Hub- Narmada Agency",
+      "address": "Shop No 4, Laxmi Vaibhav Apartment, Laxmi Nagar Square, Near Rokhde Jewellers, Nagpur, Maharashtra, 440010",
+      "city": "Nagpur",
+      "state": "Maharashtra",
+      "contact": "094228 05012"
+    },
+    {
+      "region": "West",
+      "storeId": "72101467",
+      "name": "Philips Smart Light Hub- Devarjun Enterprises",
+      "address": "Shop No 2, Siyara Elite, Kalyan Bhiwandi Road, Thane, Gove Naka, Opposite BPCL Petrol Pump, Kalyan, Maharashtra, 421311",
+      "city": "Kalyan",
+      "state": "Maharashtra",
+      "contact": "097690 56298"
+    },
+    {
+      "region": "West",
+      "storeId": "72101648",
+      "name": "Philips Smart Light Hub- Kishas Collection",
+      "address": "Shop No 105, Excellaa Plazzo, Ambegaon Budruk, Opposite Deccan Pavillion Hotel, Pune, Maharashtra, 411046",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "contact": "093561 98647"
+    },
+    {
+      "region": "West",
+      "storeId": "72113396",
+      "name": "Philips Smart Light Hub- Shree Balaji Electricals",
+      "address": "Nawathe Square, Beside Dr.Shah Hospital, Oza Niwas, Amravati, Maharashtra, 444606",
+      "city": "Amravati",
+      "state": "Maharashtra",
+      "contact": "087886 23890"
+    },
+    {
+      "region": "West",
+      "storeId": "72115039",
+      "name": "Philips Smart Light Hub- Samarth Enterprises",
+      "address": "Shop No. 13 B Wing, New Maharana Pratap CHS, JN of R.B. Mehta Marg & Tilak, Road, Ghatkopar East, Near Virant Circle, Mumbai, Maharashtra, 400077",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "contact": "090046 97502"
+    },
+    {
+      "region": "West",
+      "storeId": "91011870",
+      "name": "Philips Smart Light Hub- The Light Square",
+      "address": "B 17 & 21, Durain Industrial Estate, Goregaon Mulund Link Rd, Goregaon, Near Pravasi Estate, Mumbai, Maharashtra, 400063",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "contact": "098205 33147"
+    },
+    {
+      "region": "West",
+      "storeId": "91015586",
+      "name": "Philips Smart Light Hub- Planet House Of Light D\u00e9cor",
+      "address": "Shop No U5/6, Chetan Trade Centre, Jalna Road, Opposite St Francis School, Aurangabad, Maharashtra, 431001",
+      "city": "Aurangabad",
+      "state": "Maharashtra",
+      "contact": "098906 70775"
+    },
+    {
+      "region": "West",
+      "storeId": "91017127",
+      "name": "Philips Smart Light Hub- Raj Lite",
+      "address": "SN 4, Nirmala Apartments, Junction Of JP & Ceasor Rd, Andheri West, Nr. Andheri Sports Complex, Mumbai, Maharashtra, 400058",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "contact": "098201 32542"
+    },
+    {
+      "region": "East",
+      "storeId": "72028329",
+      "name": "Philips Smart Light Hub- Total Solutions",
+      "address": "1st Floor, Thangal Bazar, Opposite Sangai Continental, Imphal, Manipur, 795001",
+      "city": "Imphal",
+      "state": "Manipur",
+      "contact": "070057 82946"
+    },
+    {
+      "region": "East",
+      "storeId": "72095899",
+      "name": "Philips Smart Light Hub- Eles Konnect",
+      "address": "1st Floor, Lower Zarkawt, Aizawl, Mizoram, 796007",
+      "city": "Aizawl",
+      "state": "Mizoram",
+      "contact": "098627 52789"
+    },
+    {
+      "region": "East",
+      "storeId": "72020060",
+      "name": "Philips Smart Light Hub- Friends Enterprises",
+      "address": "1st Lane West, Gandhi Nagar, Behind CCD, Brahmapur, Odisha, 760001",
+      "city": "Brahmapur",
+      "state": "Odisha",
+      "contact": "089176 01217"
+    },
+    {
+      "region": "East",
+      "storeId": "72022153",
+      "name": "Philips Smart Light Hub- Elhard Marketing Ltd.",
+      "address": "554, Saheed Nagar, Bhubaneswar, Odisha, 751007",
+      "city": "Bhubaneswar",
+      "state": "Odisha",
+      "contact": "093374 74007"
+    },
+    {
+      "region": "East",
+      "storeId": "72099247",
+      "name": "Philips Smart Light Hub- Adco Ventures Pvt. Ltd.",
+      "address": "2nd Floor, Shivam Complex, Pahal, Near Big Cup Cafe, Bhubaneswar, Odisha, 752101",
+      "city": "Bhubaneswar",
+      "state": "Odisha",
+      "contact": "094386 77427"
+    },
+    {
+      "region": "East",
+      "storeId": "72109983",
+      "name": "Philips Smart Light Hub- M/s Karan Trading Co.",
+      "address": "BH1, Varun Plaza, Ainthapali, Sambalpur, Odisha, 768004",
+      "city": "Sambalpur",
+      "state": "Odisha",
+      "contact": "079788 86186"
+    },
+    {
+      "region": "North",
+      "storeId": "72022735",
+      "name": "Philips Smart Light Hub- Bothra Electrical",
+      "address": "Plot No 332 A, Shopping Centre, Near Karnataka Bank Lane, Kota, Rajasthan, 324007",
+      "city": "Kota",
+      "state": "Rajasthan",
+      "contact": "0744 236 3681"
+    },
+    {
+      "region": "North",
+      "storeId": "72041037",
+      "name": "Philips Smart Light Hub- Popli Trading Company",
+      "address": "Ground Floor, PM Complex, Road No 5, Industrial Area, Rani Bazar, Opposite Cinemagic Cinema, Bikaner, Rajasthan, 334001",
+      "city": "Bikaner",
+      "state": "Rajasthan",
+      "contact": "092140 43234"
+    },
+    {
+      "region": "North",
+      "storeId": "72041252",
+      "name": "Philips Smart Light Hub- Puneet sales",
+      "address": "38, New Atish Mkt, Mansarovar, Gopalpura Byepass, Jaipur, Rajasthan, 302020",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "contact": "0141 239 2338"
+    },
+    {
+      "region": "North",
+      "storeId": "72096188",
+      "name": "Philips Smart Light Hub- The Home Studio",
+      "address": "No G/1, 2, 3, 4, BTC Tower, Old Rto Road, Ghandhi Nagar, Opposite Hotel Harsh Palace, Bhilwara, Rajasthan, 311001",
+      "city": "Bhilwara",
+      "state": "Rajasthan",
+      "contact": "097725 58959"
+    },
+    {
+      "region": "North",
+      "storeId": "91006176",
+      "name": "Philips Smart Light Hub- Ashoka Electric & Lites",
+      "address": "Shop No 129, Sultan Nagar, Near Gurjar Ki Thadi, Jaipur, Rajasthan, 302019",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "contact": "0141 313 1524"
+    },
+    {
+      "region": "North",
+      "storeId": "91019941",
+      "name": "Philips Smart Light Hub- Hindustan Electricals",
+      "address": "Mandana Bhawan, Jalori Gate, Sardarpura, Nr. SBBJ Bank, Jodhpur, Rajasthan, 342001",
+      "city": "Jodhpur",
+      "state": "Rajasthan",
+      "contact": "0291 263 5355"
+    },
+    {
+      "region": "South",
+      "storeId": "72044026",
+      "name": "Philips Smart Light Hub- Universal Pipes",
+      "address": "Shop No 53/1, Gomath Lodge Building, Palani Road, Pensioner Street, Dindigul, Dindigul, Tamil Nadu, 624001",
+      "city": "Dindigul",
+      "state": "Tamil Nadu",
+      "contact": "098421 29394"
+    },
+    {
+      "region": "South",
+      "storeId": "72081251",
+      "name": "Philips Smart Light Hub- Nalam Enterprises",
+      "address": "No 362, Mettupalayam Road, Near Summit Apartments, Coimbatore, Tamil Nadu, 641043",
+      "city": "Coimbatore",
+      "state": "Tamil Nadu",
+      "contact": "097503 80008"
+    },
+    {
+      "region": "South",
+      "storeId": "72099248",
+      "name": "Philips Smart Light Hub- Extra Edge Enterprises",
+      "address": "Old No 67, New No 41, 4th Avenue, Ashok Nagar, Opposite Jawahar Vidyalaya, Chennai, Tamil Nadu, 600083",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "contact": "073389 87778"
+    },
+    {
+      "region": "South",
+      "storeId": "72099262",
+      "name": "Philips Smart Light Hub- Ampsnbytes Technologies Private Lim",
+      "address": "No 356, 1A & 158/2A, 1st Floor, SH 49A, Omr Road, Thoraipakkam, Chennai, Tamil Nadu, 600097",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "contact": "099402 72726"
+    },
+    {
+      "region": "South",
+      "storeId": "72100498",
+      "name": "Philips Smart Light Hub- Sukraas Venture",
+      "address": "No R7/55, 6th Avenue, Block R, Anna Nagar, K4 Police station Road, Chennai, Tamil Nadu, 600040",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "contact": "080562 38452"
+    },
+    {
+      "region": "South",
+      "storeId": "72114516",
+      "name": "Philips Smart Light Hub- Kristal Lites",
+      "address": "8A,West masi street, Near Ayyapan Kovil, Madurai, Tamil Nadu, 625001",
+      "city": "Madurai",
+      "state": "Tamil Nadu",
+      "contact": "0452 437 0450"
+    },
+    {
+      "region": "South",
+      "storeId": "91010295",
+      "name": "Philips Smart Light Hub- Spectra Traders",
+      "address": "No 5/1277, P N Road, Palanisamy Nagar, Pirivu, Poyampalayam, Opp Saran Super Speciality Hospital, Tiruppur, Tamil Nadu, 641602",
+      "city": "Tiruppur",
+      "state": "Tamil Nadu",
+      "contact": "097900 02965"
+    },
+    {
+      "region": "South",
+      "storeId": "91014026",
+      "name": "Philips Smart Light Hub- Fomra Electricals Pvt Ltd",
+      "address": "No 121, Govindappa Naicken Street, Chennai, Tamil Nadu, 600001",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "contact": "044 2536 9723"
+    },
+    {
+      "region": "South",
+      "storeId": "72114478",
+      "name": "Philips Smart Light Hub- Suvarchas Scintillators",
+      "address": "First Floor, Plot No 25, Nallagandla - Tellapur Rd, above HDFC Bank, HUDA Layout, Serilingampalle (M) , Hyderabad, Telangana, 500019",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "contact": "083412 91777"
+    },
+    {
+      "region": "North",
+      "storeId": "72022605",
+      "name": "Philips Smart Light Hub- Rishi Enterprises",
+      "address": "No 1082, Civil Lines, Jhokan Bagh, Jhansi, Uttar Pradesh, 284001",
+      "city": "Jhansi",
+      "state": "Uttar Pradesh",
+      "contact": "094150 92521"
+    },
+    {
+      "region": "North",
+      "storeId": "72028229",
+      "name": "Philips Smart Light Hub- Citylight Electricals",
+      "address": "Khasra No 514, Buidling No 1, Sai Complex, First Floor, Sector 104, Hazipur, Noida, Uttar Pradesh, 201304",
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "contact": "098106 80332"
+    },
+    {
+      "region": "North",
+      "storeId": "72038250",
+      "name": "Philips Smart Light Hub- Technolite Ensol LLP",
+      "address": "D 324, Sector 10, Noida, Uttar Pradesh, 201301",
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "contact": "098993 99899"
+    },
+    {
+      "region": "North",
+      "storeId": "72086408",
+      "name": "Philips Smart Light Hub- K.K Distributors",
+      "address": "No 35/76, Mughal Road, Kamla Nagar, Near KTL Service Center, Agra, Uttar Pradesh, 282005",
+      "city": "Agra",
+      "state": "Uttar Pradesh",
+      "contact": "098370 45192"
+    },
+    {
+      "region": "North",
+      "storeId": "72101095",
+      "name": "Philips Smart Light Hub- Shine Co",
+      "address": "No 52k/42, Tashkand Road, Civil Lines, Near Renault Showroom, Prayagraj, Uttar Pradesh, 211001",
+      "city": "Prayagraj",
+      "state": "Uttar Pradesh",
+      "contact": "063875 31001"
+    },
+    {
+      "region": "North",
+      "storeId": "91014001",
+      "name": "Philips Smart Light Hub- Ashok Enterprises.",
+      "address": "41, Hewitt Rd, Shivaji Marg, Opp. Kasturba Gandhi Kanya Vidhalye, Lucknow, Uttar Pradesh, 226018",
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "contact": "099364 99995"
+    },
+    {
+      "region": "North",
+      "storeId": "91015160",
+      "name": "Philips Smart Light Hub- Lights Gallery",
+      "address": "120/500/(8A), Lajpat Nagar, Opp. OBC, Kanpur, Uttar Pradesh, 208007",
+      "city": "Kanpur",
+      "state": "Uttar Pradesh",
+      "contact": "087261 40000"
+    },
+    {
+      "region": "North",
+      "storeId": "91015843",
+      "name": "Philips Smart Light Hub- Shyam Electricals",
+      "address": "192 A, Patel Marg Rd, New Arya Nagar, Ghaziabad, Uttar Pradesh, 201001",
+      "city": "Ghaziabad",
+      "state": "Uttar Pradesh",
+      "contact": "098111 75744"
+    },
+    {
+      "region": "North",
+      "storeId": "91018098",
+      "name": "Philips Smart Light Hub- Ved Prakash Ji & Sons",
+      "address": "No 195, Delhi Road, Merrut Cantt, Next to Hero Honda, Meerut, Uttar Pradesh, 250001",
+      "city": "Meerut",
+      "state": "Uttar Pradesh",
+      "contact": "094127 05496"
+    },
+    {
+      "region": "East",
+      "storeId": "72035459",
+      "name": "Philips Smart Light Hub- Light Emporium Pvt Ltd",
+      "address": "18, Rabindra Sarani, 2nd Flr, Gate No 3, Poodar Court, Kolkata, West Bengal, 700001",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "contact": "097028 06459"
+    },
+    {
+      "region": "East",
+      "storeId": "72055920",
+      "name": "Philips Smart Light Hub- Modern Electric",
+      "address": "No 12/2, Ward No 26, Jessore Road, Barasat, Near Great Eastern Trading Company, Kolkata, West Bengal, 700124",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "contact": "083368 03484"
+    },
+    {
+      "region": "East",
+      "storeId": "72092727",
+      "name": "Philips Smart Light Hub- Weaverbird Project Consultants",
+      "address": "204, Block B, 2nd Flr, Axis Mall, St 106, Wonderland Park, Action Area 1, New Town, Kolkata, West Bengal, 700156",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "contact": "082408 07225"
+    },
+    {
+      "region": "East",
+      "storeId": "72098921",
+      "name": "Philips Smart Light Hub- Agricultural Machinery Mart",
+      "address": "No 76, Monimart, GT Road, Near City Tower, Bardhaman, West Bengal, 713101",
+      "city": "Bardhaman",
+      "state": "West Bengal",
+      "contact": "098309 12099"
+    },
+    {
+      "region": "East",
+      "storeId": "72099325",
+      "name": "Philips Smart Light Hub- M/s Sanitary Plaza",
+      "address": "Ground Floor, Pranami Mandir Rd, Sevoke Rd, Punjabi Para, Opposite ASG Eye Hospital, Siliguri, West Bengal, 734001",
+      "city": "Siliguri",
+      "state": "West Bengal",
+      "contact": "098002 85066"
+    },
+    {
+      "region": "East",
+      "storeId": "72114618",
+      "name": "Philips Smart Light Hub- TKC Electricals",
+      "address": "Laldighi Plaza, R.N Tagore Road, Laldighi, Murshidabad, West Bengal, 742101",
+      "city": "Murshidabad",
+      "state": "West Bengal",
+      "contact": "083920 00828"
+    },
+    {
+      "region": "East",
+      "storeId": "72018422",
+      "name": "Philips Smart Light Hub- Shree Manmohan Corporation",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "East",
+      "storeId": "72041174",
+      "name": "Philips Smart Light Hub- S R B Agency",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "East",
+      "storeId": "72093378",
+      "name": "Philips Smart Light Hub- M/S Akash Hardware",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "East",
+      "storeId": "72094672",
+      "name": "Philips Smart Light Hub- Global Light Studio",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "East",
+      "storeId": "72111745",
+      "name": "Philips Smart Light Hub- Ganpati Lightkraft",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "East",
+      "storeId": "72111765",
+      "name": "Philips Smart Light Hub- Ashoka Electric & Power Solutions",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "East",
+      "storeId": "72113563",
+      "name": "Philips Smart Light Hub- Nishka Essentials Resource Pvt. Ltd.",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "East",
+      "storeId": "72115516",
+      "name": "Philips Smart Light Hub- Quartz Smart light House",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "East",
+      "storeId": "91019104",
+      "name": "Philips Smart Light Hub- Ladhuram Toshniwal & Sons",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "North",
+      "storeId": "72046913",
+      "name": "Philips Smart Light Hub- Gulati Electricals",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "North",
+      "storeId": "72049831",
+      "name": "Philips Smart Light Hub- Rebate Prov",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "North",
+      "storeId": "72080338",
+      "name": "Philips Smart Light Hub- Brij Bihar Sales",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "North",
+      "storeId": "91020877",
+      "name": "Philips Smart Light Hub- R S Electricals",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "South",
+      "storeId": "72073947",
+      "name": "Philips Smart Light Hub- M/s Light Fidelity",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "South",
+      "storeId": "72082444",
+      "name": "Philips Smart Light Hub- Jay Lites",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "South",
+      "storeId": "72085152",
+      "name": "Philips Smart Light Hub- Unique Traders",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "South",
+      "storeId": "72092687",
+      "name": "Philips Smart Light Hub- Eden Marketing",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "South",
+      "storeId": "72102299",
+      "name": "Philips Smart Light Hub- Lightify Solutions Llp",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "South",
+      "storeId": "72111775",
+      "name": "Philips Smart Light Hub- Sri Ganesha Sanitary Wares",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "South",
+      "storeId": "72113861",
+      "name": "Philips Smart Light Hub- Right Agencies",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "South",
+      "storeId": "72117883",
+      "name": "Philips Smart Light Hub- Home Ideas",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "West",
+      "storeId": "72091049",
+      "name": "Philips Smart Light Hub- Renown Electricals",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "West",
+      "storeId": "72115346",
+      "name": "Philips Smart Light Hub- Bya Group",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "West",
+      "storeId": "72116048",
+      "name": "Philips Smart Light Hub- M/s Gupta Enterprises",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    },
+    {
+      "region": "West",
+      "storeId": "72116414",
+      "name": "Philips Smart Light Hub- P.D. Sons",
+      "address": "-",
+      "city": "-",
+      "state": "-",
+      "contact": "-"
+    }
+  ]
+}

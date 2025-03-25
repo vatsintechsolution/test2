@@ -50,7 +50,7 @@ export const ProductCard = ({
     <Link href={productUrl} className="block">
       <div className="relative overflow-hidden rounded-xl group">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 lg:scale-x-[2]">
           <Image
             src={backgroundImage}
             alt=""
@@ -105,7 +105,7 @@ export const ProductCard = ({
                       <span className="text-neutral-400">MRP</span>
                       <span className="font-semibold text-white">₹{price.toLocaleString()}</span>
                     </div>
-                    <p className="text-[#7D7D7D] text-[7px] mb-6">Lorem Ipsum Dolor Sit Amet</p>
+                    {/* <p className="text-[#7D7D7D] text-[7px] mb-6">Lorem Ipsum Dolor Sit Amet</p> */}
 
                   </div>
 
@@ -156,7 +156,7 @@ export const ProductCard = ({
                     <span className="font-semibold ">₹{price.toLocaleString()}</span>
                   </div>
                   
-                  <p className="text-[#383838] text-sm mb-6">Lorem Ipsum Dolor Sit Amet</p>
+                  {/* <p className="text-[#383838] text-sm mb-6">Lorem Ipsum Dolor Sit Amet</p> */}
                   
                   <Link 
                     href={productUrl}

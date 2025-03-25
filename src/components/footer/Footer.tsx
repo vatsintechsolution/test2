@@ -54,14 +54,19 @@ export function Footer() {
                       Product Security
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/store-locator" className="hover:underline">
+                      Store Locator
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
 
           {/* Logo and Social Icons - Middle on desktop, top on mobile */}
-          <div className="md:col-span-2 md:col-start-6 md:col-end-8 order-1 md:order-2 flex flex-col items-center lg:mt-[-80px]">
-            <div className="mb-6  bg-white rounded-lg p-4">
+          <div className="md:col-span-2 md:col-start-6 md:col-end-8 order-1 md:order-2 flex flex-col items-center lg:mt-[-60px]">
+            <div className="mb-6  rounded-lg p-4">
               <Image 
                 src="/logo.svg" 
                 alt="EcoLink Logo" 
@@ -118,16 +123,19 @@ export function Footer() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-medium mb-3">Products</h4>
+                <h4 className="font-medium mb-3">Ceiling Fans</h4>
                 <ul className="space-y-1 text-sm">
-                  <li><Link href="/products/airo-elevate" className="hover:underline">Airo Elevate</Link></li>
-                  <li><Link href="/products/airo-jewel" className="hover:underline">Airo Jewel</Link></li>
-                  <li><Link href="/products/airo-geometry" className="hover:underline">Airo Geometry</Link></li>
-                  <li><Link href="/products/airo-zephyr" className="hover:underline">Airo Zephyr</Link></li>
-                  <li><Link href="/products/airo-serenata" className="hover:underline">Airo Serenata</Link></li>
-                  <li><Link href="/products/airo-sleek" className="hover:underline">Airo Sleek</Link></li>
-                  <li><Link href="/products/vayu-pro" className="hover:underline">Vayu Pro</Link></li>
-                  <li><Link href="/products/star-dusk" className="hover:underline">Star Dusk</Link></li>
+                  <li><Link href="/products/airoelevate" className="hover:underline">AiroElevate</Link></li>
+                  <li><Link href="/products/airojewel" className="hover:underline">AiroJewel</Link></li>
+                  <li><Link href="/products/airoquad" className="hover:underline">AiroQuad</Link></li>
+                  <li><Link href="/products/airogeometry" className="hover:underline">AiroGeometry</Link></li>
+                  <li><Link href="/products/airozephyr" className="hover:underline">AiroZephyr</Link></li>
+                  <li><Link href="/products/airoserenade" className="hover:underline">AiroSerenade</Link></li>
+                  <li><Link href="/products/airosleek" className="hover:underline">AiroSleek</Link></li>
+                  <li><Link href="/products/stardustbldc" className="hover:underline">Stardust BLDC</Link></li>
+                  <li><Link href="/products/vayuprohs" className="hover:underline">VayuPro HS</Link></li>
+                  <li><Link href="/products/vayuultra" className="hover:underline">VayuUltra</Link></li>
+                  <li><Link href="/products/airofreshnew" className="hover:underline">Airofresh New</Link></li>
                 </ul>
               </div>
             </div>
@@ -135,7 +143,7 @@ export function Footer() {
         </div>
       </div>
       <div className="py-4 text-center border-t border-white/20">
-        <p className="text-sm">Copyright © EcoLink 2021. All rights reserved.</p>
+        <p className="text-sm">© 2018-2025 Signify Holding. All rights reserved.</p>
       </div>
     </footer>
   );

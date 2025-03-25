@@ -33,21 +33,21 @@ export const ProductEnergyCard: FC<ProductEnergyCardProps> = ({
     >
       <div className="flex flex-col h-full p-6">
         {/* Top Text Content */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-6 lg:mt-10 lg:mb-10">
           <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white">{title}</h3>
           <p className="text-sm md:text-base text-white/90 max-w-xs mx-auto">{description}</p>
         </div>
 
         {/* Product Image */}
-        <div className="flex">
-        <div className="flex-1 flex w-3/4 items-center justify-center mb-6">
+        <div className="flex lg:flex-col">
+        <div className="flex-1 flex w-3/4  items-center justify-center mb-6">
           <Image
             src={imageSrc}
             alt={title}
             width={300}
             height={300}
             priority={priority}
-            className="object-contain"
+            className="object-contain lg:w-[600px] lg:h-[300px]"
           />
         </div>
         
@@ -58,7 +58,7 @@ export const ProductEnergyCard: FC<ProductEnergyCardProps> = ({
             alt="Energy Icon"
             width={40}
             height={40}
-            className="mb-2"
+            className="mb-2 lg:w-20"
           />
           <span className="text-xs text-center text-yellow-400 uppercase">{badgeText}</span>
         </div>

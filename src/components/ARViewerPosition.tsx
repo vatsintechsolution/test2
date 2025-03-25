@@ -112,11 +112,13 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
   };
 
   return (
-    <div className="w-full h-[500px] md:h-[600px] bg-[url(/home/fans-bg.png)] bg-cover bg-top bg-no-repeat relative">
+    <div className="w-full h-[500px] md:h-[600px] bg-[url(/fan-bg-zoomed.jpg)] bg-cover bg-top bg-no-repeat relative">
       {/* 
         This uses a lowercase model-viewer element which Next.js
         will process as a custom element. TypeScript will flag this
         but Next.js config ignores these errors during build.
+
+        Point Towards open area on ceiling
       */}
       <model-viewer
         ref={modelRef}

@@ -1,0 +1,1834 @@
+{
+  "products": [
+    {
+      "id": "airoelevate",
+      "slug": "airoelevate",
+      "modelName": "AiroElevate",
+      "fullName": "EcoLink AiroElevate BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 8700,
+      "starRating": 5,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "1200 mm",
+        "power": "35 W",
+        "speed": "370 RPM",
+        "airDelivery": "230 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Espresso Brown - Copper",
+          "primary": "#3A3A5B",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Silk White - Rose Gold",
+          "primary": "#FFFFFF",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "1200mm",
+          "value": "1200"
+        }
+      ],
+      "keyFeature": "Industry first hollow hub design",
+      "features": [
+        {
+          "title": "BLDC Technology",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "Runs 3x longer on inverter",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Ceiling adjustable mounting \nMaintains design aesthetic",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        },
+        {
+          "title": "2 way rotation for Summers and Winters",
+          "description": "",
+          "icon": "/home/icons/feature4.svg"
+        },
+        {
+          "title": "Point anywhere RF remote",
+          "description": "",
+          "icon": "/home/icons/feature5.svg"
+        },
+        {
+          "title": "Superior air delivery",
+          "description": "",
+          "icon": "/home/icons/feature6.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature7.svg"
+        },
+        {
+          "title": "Turbo mode, Timer (2,4,6 hours)",
+          "description": "",
+          "icon": "/home/icons/feature8.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/AiroElevate.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "airoquad",
+      "slug": "airoquad",
+      "modelName": "AiroQuad",
+      "fullName": "EcoLink AiroQuad BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 7400,
+      "starRating": 5,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "1200 mm",
+        "power": "35 W",
+        "speed": "370 RPM",
+        "airDelivery": "230 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Galactic Silver",
+          "primary": "#FFFFFF",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Rusty Brown",
+          "primary": "#8B4513",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Titanium Grey",
+          "primary": "#3A3A5B",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "1200mm",
+          "value": "1200"
+        }
+      ],
+      "keyFeature": "Industry first square hub design\n4 blade fan",
+      "features": [
+        {
+          "title": "BLDC Technology",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "Runs 3x longer on inverter",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Ceiling adjustable mounting \nMaintains design aesthetic",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        },
+        {
+          "title": "Designer LED speed indicators*",
+          "description": "",
+          "icon": "/home/icons/feature4.svg"
+        },
+        {
+          "title": "2 way rotation for Summers and Winters",
+          "description": "",
+          "icon": "/home/icons/feature5.svg"
+        },
+        {
+          "title": "Point anywhere RF remote",
+          "description": "",
+          "icon": "/home/icons/feature6.svg"
+        },
+        {
+          "title": "Superior air delivery",
+          "description": "",
+          "icon": "/home/icons/feature7.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature8.svg"
+        },
+        {
+          "title": "Turbo mode, Timer (2,4,6 hours)",
+          "description": "",
+          "icon": "/home/icons/feature9.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/AiroQuad.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "airogeometry",
+      "slug": "airogeometry",
+      "modelName": "AiroGeometry",
+      "fullName": "EcoLink AiroGeometry BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 5850,
+      "starRating": 5,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "1200 mm",
+        "power": "35 W",
+        "speed": "370 RPM",
+        "airDelivery": "230 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Titanium Grey",
+          "primary": "#3A3A5B",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Silver Mist",
+          "primary": "#FFFFFF",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Dark Coffee",
+          "primary": "#6F4E37",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "1200mm",
+          "value": "1200"
+        }
+      ],
+      "keyFeature": "Unique triangular hub design",
+      "features": [
+        {
+          "title": "BLDC Technology",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "Runs 3x longer on inverter",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Designer LED speed indicators*",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        },
+        {
+          "title": "2 way rotation for Summers and Winters",
+          "description": "",
+          "icon": "/home/icons/feature4.svg"
+        },
+        {
+          "title": "Point anywhere RF remote",
+          "description": "",
+          "icon": "/home/icons/feature5.svg"
+        },
+        {
+          "title": "Superior air delivery",
+          "description": "",
+          "icon": "/home/icons/feature6.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature7.svg"
+        },
+        {
+          "title": "Turbo mode, Timer (2,4,6 hours)",
+          "description": "",
+          "icon": "/home/icons/feature8.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/AiroGeometry.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "airogeometry",
+      "slug": "airogeometry",
+      "modelName": "AiroGeometry",
+      "fullName": "EcoLink AiroGeometry BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 5850,
+      "starRating": 5,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "900 mm",
+        "power": "28 W",
+        "speed": "450 RPM",
+        "airDelivery": "150 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Titanium Grey",
+          "primary": "#3A3A5B",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Silver Mist",
+          "primary": "#FFFFFF",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+       
+      ],
+      "sizes": [
+        {
+          "label": "900mm",
+          "value": "900"
+        }
+      ],
+      "keyFeature": "Unique triangular hub design",
+      "features": [
+        {
+          "title": "BLDC Technology",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "Runs 3x longer on inverter",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Designer LED speed indicators*",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        },
+        {
+          "title": "2 way rotation for Summers and Winters",
+          "description": "",
+          "icon": "/home/icons/feature4.svg"
+        },
+        {
+          "title": "Point anywhere RF remote",
+          "description": "",
+          "icon": "/home/icons/feature5.svg"
+        },
+        {
+          "title": "Superior air delivery",
+          "description": "",
+          "icon": "/home/icons/feature6.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature7.svg"
+        },
+        {
+          "title": "Turbo mode, Timer (2,4,6 hours)",
+          "description": "",
+          "icon": "/home/icons/feature8.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/AiroGeometry.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "airojewel",
+      "slug": "airojewel",
+      "modelName": "AiroJewel",
+      "fullName": "EcoLink AiroJewel BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 6550,
+      "starRating": 5,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "1200 mm",
+        "power": "35 W",
+        "speed": "370 RPM",
+        "airDelivery": "230 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Cherrywood",
+          "primary": "#651A14",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Aspen Gold",
+          "primary": "#FED65E",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Smoke Mocha Brown",
+          "primary": "#573f16",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "1200mm",
+          "value": "1200"
+        }
+      ],
+      "keyFeature": "Unique diamond cut design on motor",
+      "features": [
+        {
+          "title": "BLDC Technology",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "Runs 3x longer on inverter",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Designer LED speed indicators*",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        },
+        {
+          "title": "2 way rotation for Summers and Winters",
+          "description": "",
+          "icon": "/home/icons/feature4.svg"
+        },
+        {
+          "title": "Point anywhere RF remote",
+          "description": "",
+          "icon": "/home/icons/feature5.svg"
+        },
+        {
+          "title": "Superior air delivery",
+          "description": "",
+          "icon": "/home/icons/feature6.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature7.svg"
+        },
+        {
+          "title": "Turbo mode, Timer (2,4,6 hours)",
+          "description": "",
+          "icon": "/home/icons/feature8.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/AiroJewel.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "airojewel",
+      "slug": "airojewel",
+      "modelName": "AiroJewel",
+      "fullName": "EcoLink AiroJewel BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 5850,
+      "starRating": 5,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "900 mm",
+        "power": "28 W",
+        "speed": "450 RPM",
+        "airDelivery": "150 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Aspen Gold",
+          "primary": "#FED65E",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "900mm",
+          "value": "900"
+        }
+      ],
+      "keyFeature": "Unique diamond cut design on motor",
+      "features": [
+        {
+          "title": "BLDC Technology",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "Runs 3x longer on inverter",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Designer LED speed indicators*",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        },
+        {
+          "title": "2 way rotation for Summers and Winters",
+          "description": "",
+          "icon": "/home/icons/feature4.svg"
+        },
+        {
+          "title": "Point anywhere RF remote",
+          "description": "",
+          "icon": "/home/icons/feature5.svg"
+        },
+        {
+          "title": "Superior air delivery",
+          "description": "",
+          "icon": "/home/icons/feature6.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature7.svg"
+        },
+        {
+          "title": "Turbo mode, Timer (2,4,6 hours)",
+          "description": "",
+          "icon": "/home/icons/feature8.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/AiroJewel.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "stardustbldc",
+      "slug": "stardustbldc",
+      "modelName": "Stardust BLDC",
+      "fullName": "EcoLink Stardust BLDC BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 6499,
+      "starRating": 5,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "1200 mm",
+        "power": "32 W",
+        "speed": "350 RPM",
+        "airDelivery": "210 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Cinnamon Brown",
+          "primary": "#3A3A5B",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Pearl White",
+          "primary": "#FFFFFF",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Rose Gold",
+          "primary": "#FF6B6B",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "1200mm",
+          "value": "1200"
+        }
+      ],
+      "keyFeature": "",
+      "features": [
+        {
+          "title": "BLDC Technology",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "Runs 3x longer on inverter",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Point anywhere RF remote",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        },
+        {
+          "title": "Decorative trims and ring",
+          "description": "",
+          "icon": "/home/icons/feature4.svg"
+        },
+        {
+          "title": "2 way rotation for Summers and Winters",
+          "description": "",
+          "icon": "/home/icons/feature5.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature6.svg"
+        },
+        {
+          "title": "Aluminium blades",
+          "description": "",
+          "icon": "/home/icons/feature7.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/Stardust.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "airozephyr",
+      "slug": "airozephyr",
+      "modelName": "AiroZephyr",
+      "fullName": "EcoLink AiroZephyr BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 4395,
+      "starRating": 1,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "1200 mm",
+        "power": "53 W",
+        "speed": "370 RPM",
+        "airDelivery": "230 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Topaz Gold",
+          "primary": "#FED65E",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Dark Teak Brown",
+          "primary": "#95755E",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Oyster Grey",
+          "primary": "#cbc1ae",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "1200mm",
+          "value": "1200"
+        }
+      ],
+      "keyFeature": "",
+      "features": [
+        {
+          "title": "Superior air delivery",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Aluminium blades",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        },
+        {
+          "title": "Double ball bearing",
+          "description": "",
+          "icon": "/home/icons/feature4.svg"
+        },
+        {
+          "title": "Premium aesthetics",
+          "description": "",
+          "icon": "/home/icons/feature5.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/AiroZephyr.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "airoserenade",
+      "slug": "airoserenade",
+      "modelName": "AiroSerenade",
+      "fullName": "EcoLink AiroSerenade BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 4395,
+      "starRating": 1,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "1200 mm",
+        "power": "53 W",
+        "speed": "370 RPM",
+        "airDelivery": "230 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Smoke Mocha Brown",
+          "primary": "#573f16",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Pearl White",
+          "primary": "#FFFFFF",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Titanium Grey",
+          "primary": "#3A3A5B",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "1200mm",
+          "value": "1200"
+        }
+      ],
+      "keyFeature": "",
+      "features": [
+        {
+          "title": "Superior air delivery",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Aluminium blades",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        },
+        {
+          "title": "Double ball bearing",
+          "description": "",
+          "icon": "/home/icons/feature4.svg"
+        },
+        {
+          "title": "Premium aesthetics",
+          "description": "",
+          "icon": "/home/icons/feature5.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/AiroSerenada.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "airosleek",
+      "slug": "airosleek",
+      "modelName": "AiroSleek",
+      "fullName": "EcoLink AiroSleek BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 4395,
+      "starRating": 1,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "1200 mm",
+        "power": "53 W",
+        "speed": "370 RPM",
+        "airDelivery": "230 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Milky White",
+          "primary": "#FFFFFF",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Gold Chocolate",
+          "primary": "#FED65E",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "1200mm",
+          "value": "1200"
+        }
+      ],
+      "keyFeature": "",
+      "features": [
+        {
+          "title": "Superior air delivery",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Aluminium blades",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        },
+        {
+          "title": "Double ball bearing",
+          "description": "",
+          "icon": "/home/icons/feature4.svg"
+        },
+        {
+          "title": "Premium aesthetics",
+          "description": "",
+          "icon": "/home/icons/feature5.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/AiroSleek.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "vayuprohs",
+      "slug": "vayuprohs",
+      "modelName": "VayuPro HS",
+      "fullName": "EcoLink VayuPro HS BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 2350,
+      "starRating": 1,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "1200 mm",
+        "power": "50 W",
+        "speed": "400 RPM",
+        "airDelivery": "210 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Brown",
+          "primary": "#573f16",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "White",
+          "primary": "#FFFFFF",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "1200mm",
+          "value": "1200"
+        }
+      ],
+      "keyFeature": "",
+      "features": [
+        {
+          "title": "High speed fan",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Double ball bearing",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/VayuPro.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "vayuultra",
+      "slug": "vayuultra",
+      "modelName": "VayuUltra",
+      "fullName": "EcoLink VayuUltra BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 2350,
+      "starRating": 1,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "1200 mm",
+        "power": "52 W",
+        "speed": "400 RPM",
+        "airDelivery": "210 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Brown",
+          "primary": "#573f16",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "White",
+          "primary": "#FFFFFF",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Ivory",
+          "primary": "#FFFFF0",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "1200mm",
+          "value": "1200"
+        }
+      ],
+      "keyFeature": "",
+      "features": [
+        {
+          "title": "High speed fan",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "100% copper motor",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Double ball bearing",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/VayuUltra.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    },
+    {
+      "id": "airofreshnew",
+      "slug": "airofreshnew",
+      "modelName": "Airofresh New",
+      "fullName": "EcoLink Airofresh New BLDC Ceiling Fan",
+      "tagline": "",
+      "description": "",
+      "price": 2120,
+      "starRating": 1,
+      "warranty": {
+        "standard": 3,
+        "extended": 2,
+        "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
+      },
+      "specifications": {
+        "sweepSize": "1200 mm",
+        "power": "50 W",
+        "speed": "360 RPM",
+        "airDelivery": "210 CMM",
+        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "type": "BLDC Ceiling fan",
+        "brand": "EcoLink"
+      },
+      "colors": [
+        {
+          "name": "Brown",
+          "primary": "#573f16",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "White",
+          "primary": "#FFFFFF",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Ivory",
+          "primary": "#FFFFF0",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        }
+      ],
+      "sizes": [
+        {
+          "label": "1200mm",
+          "value": "1200"
+        }
+      ],
+      "keyFeature": "",
+      "features": [
+        {
+          "title": "Aluminium blades",
+          "description": "",
+          "icon": "/home/icons/feature1.svg"
+        },
+        {
+          "title": "Efficient performance",
+          "description": "",
+          "icon": "/home/icons/feature2.svg"
+        },
+        {
+          "title": "Double ball bearing",
+          "description": "",
+          "icon": "/home/icons/feature3.svg"
+        }
+      ],
+      "seasonalFeatures": {
+        "summer": {
+          "title": "Summer Mode",
+          "description": "Counter-clockwise rotation pushes air down for a cooling effect",
+          "image": "/home/summer.png"
+        },
+        "winter": {
+          "title": "Winter Mode",
+          "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
+          "image": "/home/winters.png"
+        }
+      },
+      "energyEfficiency": {
+        "savingsPercentage": 50,
+        "annualSavings": 1500,
+        "description": "BLDC technology ensures up to 50% less power consumption compared to regular ceiling fans",
+        "icon": "/home/icons/energy.svg"
+      },
+      "remoteFeatures": {
+        "type": "RF Remote",
+        "range": "No line of sight required",
+        "functions": [
+          "Power On/Off",
+          "Speed Control (6 speeds)",
+          "Turbo Mode",
+          "Timer (2, 4, 6 hours)",
+          "Summer/Winter Mode (Direction Control)"
+        ],
+        "image": "/home/dark-remote-feat.png",
+        "lightModeImage": "/home/light-remote-feat.png"
+      },
+      "images": {
+        "main": "/home/product/Airofresh New.png",
+        "gallery": [
+          "/home/product/demo/1.png",
+          "/home/product/demo/2.jpg",
+          "/home/product/demo/3.jpg"
+        ],
+        "arModel": "/models/fan-3d.glb"
+      },
+      "videos": {
+        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "thumbnail": "/home/video-card-bg.png"
+      },
+      "aesthetics": {
+        "title": "Premium Aesthetic Design",
+        "description": "",
+        "highlightPoints": []
+      },
+      "categories": [
+        "bldc",
+        "premium",
+        "featured"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "bldc",
+      "name": "BLDC Fans",
+      "description": "Energy-efficient fans with Brushless DC motor technology"
+    },
+    {
+      "id": "premium",
+      "name": "Premium Collection",
+      "description": "Luxury fans with premium aesthetics and advanced features"
+    },
+    {
+      "id": "featured",
+      "name": "Featured Products",
+      "description": "Our most popular and recommended ceiling fans"
+    },
+    {
+      "id": "decorative",
+      "name": "Decorative Fans",
+      "description": "Fans designed to enhance your interior décor"
+    },
+    {
+      "id": "economy",
+      "name": "Economy Range",
+      "description": "Affordable fans without compromising on quality"
+    }
+  ],
+  "featureIcons": {
+    "bldc": "/home/icons/bldc.svg",
+    "inverter": "/home/icons/inverter-energy.svg",
+    "aesthetics": "/home/icons/asthetics.svg",
+    "rotation": "/home/icons/rotation.svg",
+    "rfRemote": "/home/icons/point.svg",
+    "airDelivery": "/home/icons/air.svg",
+    "copperMotor": "/home/icons/copper.svg",
+    "turboMode": "/home/icons/turbo.svg",
+    "timer": "/home/icons/timer.svg",
+    "energy": "/home/icons/energy.svg",
+    "speed": "/home/icons/speed.svg",
+    "led": "/home/icons/led.svg"
+  }
+} 

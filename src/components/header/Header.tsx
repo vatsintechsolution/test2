@@ -2,12 +2,12 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ThemeToggle } from './ThemeToggle'
+// import { ThemeToggle } from './ThemeToggle'
 import { usePathname } from 'next/navigation'
 
 const menuItems = [
   { label: 'Home', href: '/' },
-  { label: 'Products', href: '/products' },
+  { label: 'Products', href: '/#products' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -46,12 +46,12 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="relative pr-5 z-[9999] "
