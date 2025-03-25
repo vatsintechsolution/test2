@@ -27,7 +27,7 @@ export const ProductSwiper = ({ images }: ProductSwiperProps) => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="relative h-[360px] lg:h-[500px] w-full">
+            <div className="relative h-[360px] lg:h-[550px] w-full">
               <Image
                 src={image}
                 alt={`Product image ${index + 1}`}
