@@ -241,6 +241,7 @@ div+div+div+svg g, div+div+div+svg g path, div+div+svg g path {
 /* Desktop Hero Swiper Specific Styles */
 .desktop-hero-swiper {
   height: 90vh;
+  min-height: 850px;
   overflow: hidden;
 }
 

@@ -32,8 +32,8 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
   return (
     <div className="relative w-full desktop-hero-swiper overflow-hidden">
       {/* Green accent circle */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full border-[20px] border-[#5FD068]/20 -translate-y-1/2 translate-x-1/2 z-10"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full border-[20px] border-[#5FD068]/20 translate-y-1/2 -translate-x-1/2 z-10"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[600px] rounded-full border-[20px] border-[#5FD068]/20 -translate-y-1/2 translate-x-1/2 z-10"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[600px] rounded-full border-[20px] border-[#5FD068]/20 translate-y-1/2 -translate-x-1/2 z-10"></div>
       
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
@@ -49,7 +49,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
           <SwiperSlide key={index}>
             {!slide.heading ? (
               // Full-scale background image only when there's no heading
-              <div className="relative w-full min-h-[90vh]">
+              <div className="relative w-full min-h-[850px]">
                 <Image
                   src={slide.desktopBg || "/home/slider-1.png"}
                   alt="Slide background"
