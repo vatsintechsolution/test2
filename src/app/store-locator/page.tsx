@@ -127,7 +127,7 @@ export default function StoreLocator() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Store Locator</h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Find an EcoLink store near you. Filter by state and city to locate your nearest store.
+            Filter by state and city to locate your nearest store.
           </p>
         </div>
 
@@ -259,9 +259,7 @@ export default function StoreLocator() {
                   </div>
                   
                   <div className="mb-4">
-                    <p className="text-gray-700 dark:text-gray-300 mb-2">
-                      <span className="font-medium">Region:</span> {store.region}
-                    </p>
+                   
                     <p className="text-gray-700 dark:text-gray-300 mb-2">
                       <span className="font-medium">Address:</span> {store.address}
                     </p>

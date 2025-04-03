@@ -135,8 +135,8 @@ export const ProductVideoCard: FC<ProductVideoCardProps> = ({
 
           {/* Content */}
           <div className="relative flex flex-col items-center justify-end text-center h-full z-10 px-4 pb-8 pt-20">
-            <h3 className="text-xl md:text-2xl font-bold mb-3 text-white">{title}</h3>
-            <p className="text-sm md:text-base text-white/90 max-w-xs">{description}</p>
+            <h3 className="text-xl md:text-3xl font-bold mb-3 text-white">{title}</h3>
+            <p className="text-sm md:text-lg text-white/90 max-w-xl">{description}</p>
             {videoError && (
               <p className="text-xs mt-2 text-white/60 italic">
                 Video unavailable

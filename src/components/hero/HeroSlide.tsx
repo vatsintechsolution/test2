@@ -14,7 +14,7 @@ interface HeroSlideProps {
   subheading: string
   buttonText: string
   buttonLink: string
-  features: Feature[]
+  features?: Feature[] | null
 }
 
 export const HeroSlide = ({
@@ -39,9 +39,26 @@ export const HeroSlide = ({
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
+  // If there's no heading, show only the full-scale background image
+  if (!heading) {
+    return (
+      <div className="relative w-full h-screen">
+        <Image
+          src={isMobile ? mobileBg : desktopBg}
+          alt="Slide background"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
+    )
+  }
+
   return (
     <div className="relative w-full h-screen">
       {/* Background Image */}
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40 z-[1]"></div> */}
+
       <Image
         src={isMobile ? mobileBg : desktopBg}
         alt={heading}
@@ -51,7 +68,7 @@ export const HeroSlide = ({
       />
       
       {/* Content Overlay */}
-      <div className="absolute inset-0 bg-black/40">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90 z-[1]">
         <div className="container mx-auto px-4 h-full flex flex-col justify-end">
           <div className="max-w-2xl">
           <p className="text-xl md:text-2xl text-white/90 mb-2 uppercase">
@@ -71,27 +88,29 @@ export const HeroSlide = ({
             </Link>
             
             {/* Features */}
-            <div className="mt-12 mb-12 flex gap-2 md:gap-4">
-              {features.map((feature, index) => (
-                <div 
-                  key={index}
-                  className="flex flex-col items-center"
-                  role="img"
-                  aria-label={feature.text}
-                >
-                  <Image
-                    src={feature.icon}
-                    alt={feature.text}
-                    width={120}
-                    height={40}
-                    className=""
-                  />
-                  <span className="sr-only">
-                    {feature.text}
-                  </span>
-                </div>
-              ))}
-            </div>
+            {features && (
+              <div className="mt-12 mb-12 flex gap-2 md:gap-4">
+                {features.map((feature, index) => (
+                  <div 
+                    key={index}
+                    className="flex flex-col items-center"
+                    role="img"
+                    aria-label={feature.text}
+                  >
+                    <Image
+                      src={feature.icon}
+                      alt={feature.text}
+                      width={120}
+                      height={40}
+                      className=""
+                    />
+                    <span className="sr-only">
+                      {feature.text}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -17,6 +17,8 @@ export interface Product {
   description: string;
   price: number;
   starRating: number;
+  arLink?: string;
+  amazonLink?: string;
   warranty: {
     standard: number;
     extended: number;
@@ -61,7 +63,7 @@ export interface Product {
     };
   };
   energyEfficiency: {
-    savingsPercentage: number;
+    title: string;
     annualSavings: number;
     description: string;
     icon: string;
@@ -72,6 +74,8 @@ export interface Product {
     functions: string[];
     image: string;
     lightModeImage: string;
+    title: string;
+    description: string;
   };
   images: {
     main: string;

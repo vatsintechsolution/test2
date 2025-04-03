@@ -35,52 +35,20 @@ export const ProductFeatureCard: FC<ProductFeatureCardProps> = ({
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
-      <div className="flex flex-col items-center p-6 text-center h-full">
-        <div className="relative mb-4 flex-1 flex items-center justify-center">
+      <div className="flex flex-col items-center p-6 md:p-10 text-center h-full">
+        <div className="relative mb-4 flex-1 md:mb-8 flex items-center justify-center">
           <Image
             src={imageSrc}
             alt={title}
             width={imageWidth}
             height={imageHeight}
             priority={priority}
-            className="object-contain lg:w-[450px] lg:h-[250px]"
+            className="object-contain lg:w-[450px] lg:h-[250px] scale-125"
           />
         </div>
         <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white dark:text-white">{title}</h3>
-        <p className="text-sm md:text-base text-white dark:text-white/80">{description}</p>
+        <p className="text-sm md:text-lg text-white dark:text-white/80">{description}</p>
       </div>
     </motion.div>
   );
 };
-
-// Example simplified version without animation for easier testing
-export const SimpleProductFeatureCard: FC<ProductFeatureCardProps> = ({
-  imageSrc,
-  title,
-  description,
-  className = '',
-  imageWidth = 300,
-  imageHeight = 300,
-  priority = false,
-  darkBgClass = 'bg-radial-black',
-  lightBgClass = 'bg-gradient-to-br from-slate-100 to-slate-200',
-}) => {
-  return (
-    <div className={`rounded-2xl overflow-hidden shadow-lg ${className} ${lightBgClass} dark:${darkBgClass}`}>
-      <div className="flex flex-col items-center p-6 text-center h-full">
-        <div className="relative mb-4 flex-1 flex items-center justify-center">
-          <Image
-            src={imageSrc}
-            alt={title}
-            width={imageWidth}
-            height={imageHeight}
-            priority={priority}
-            className="object-contain"
-          />
-        </div>
-        <h3 className="text-xl md:text-2xl font-bold mb-2 text-slate-900 dark:text-white">{title}</h3>
-        <p className="text-sm md:text-base text-slate-700 dark:text-white/80">{description}</p>
-      </div>
-    </div>
-  );
-}; 

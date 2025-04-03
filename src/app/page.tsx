@@ -46,30 +46,30 @@ export default function Home() {
   const heroSlides = [
     {
       desktopBg: "/home/AIroElevate Rosepink 2.png",
-      mobileBg: "/home/slider-1.png",
+      mobileBg: "/home/slider-1.png?1",
       subheading: "ECOLINK AIROELEVATE",
       heading: "Unique Hollow Hub Design",
       buttonText: "Explore Product",
-      buttonLink: "/products",
+      buttonLink: "/products/airoelevate",
       features: features,
     },
     {
-      desktopBg: "/home/AIroElevate Rosepink 2.png",
-      mobileBg: "/home/slider-1.png",
-      subheading: "ECOLINK AIROJEWEL",
+      desktopBg: "/home/product/AiroGeometry.png",
+      mobileBg: "/home/slider-2.png",
+      subheading: "ECOLINK AIROGEOMETRY",
       heading: "Premium Design with Power",
       buttonText: "Explore Product",
-      buttonLink: "/products",
+      buttonLink: "/products/airogeometry",
       features: features,
-    },
+     },
     {
-      desktopBg: "/home/AIroElevate Rosepink 2.png",
-      mobileBg: "/home/slider-1.png",
-      subheading: "ECOLINK AIROGEOMETRY",
-      heading: "Modern Design Meets Efficiency",
-      buttonText: "Explore Product",
-      buttonLink: "/products",
-      features: features,
+      desktopBg: "/home/ipl-desktop.png",
+      mobileBg: "/home/ipl-mobile.png",
+      subheading: "",
+      heading: "",
+      buttonText: "",
+      buttonLink: "",
+      features: null,
     },
   ];
 
@@ -89,6 +89,25 @@ export default function Home() {
     {
       icon: "/home/icons/reverse.svg",
       text: "2 Way Rotation",
+    },
+  ];
+
+  const decorativeproductFeatures = [
+    {
+      icon: "/home/icons/air-delivery.svg",
+      text: "Superior Air Delivery",
+    },
+    {
+      icon: "/home/icons/100-coppor-motor.svg",
+      text: "100% Copper Motor",
+    },
+    {
+      icon: "/home/icons/aluminium-blades.svg",
+      text: "Aluminium Blades",
+    },
+    {
+      icon: "/home/icons/double-ball-bearing.svg",
+      text: "Double Ball Bearing",
     },
   ];
 
@@ -117,60 +136,62 @@ export default function Home() {
       image: "/home/product/AiroGeometry.png",
       slug: "airogeometry"
     },
+    {
+      name: "EcoLink Stardust BLDC Ceiling Fan",
+      price: 6499,
+      image: "/home/product/StarDust.png",
+      slug: "stardustbldc"
+    },
+   
   ];
 
   const smartbldcFans = [
    
     {
       name: "EcoLink AiroJewel BLDC Smart Ceiling Fan",
-      price: 6550,
+      price: 6950,
       image: "/home/product/AiroJewel.png",
-      slug: "airojewel"
+      slug: "airojewelsmart"
     },
     {
-      name: "EcoLink AiroElevate BLDC Smart Ceiling Fan",
-      price: 8700,
-      image: "/home/product/AiroElevate.png",
-      slug: "airoelevate"
+      name: "EcoLink AiroGeometry BLDC Smart Ceiling Fan",
+      price: 5850,
+      image: "/home/product/AiroGeometry.png",
+      slug: "airogeometrysmart"
     },
   ];
 
   const decorativeFans = [
     {
-      name: "EcoLink AiroZephyr BLDC Ceiling Fan",
+      name: "EcoLink AiroZephyr Ceiling Fan",
       price: 4395,
       image: "/home/product/AiroZephyr.png",
       slug: "airozephyr"
     },
     {
-      name: "EcoLink AiroSerenade BLDC Ceiling Fan",
+      name: "EcoLink AiroSerenade Ceiling Fan",
       price: 4395,
       image: "/home/product/AiroSerenada.png",
       slug: "airoserenade"
     },
     {
-      name: "EcoLink AiroSleek BLDC Ceiling Fan",
+      name: "EcoLink AiroSleek Ceiling Fan",
       price: 4395,
       image: "/home/product/AiroSleek.png",
       slug: "airosleek"
-    },
-    {
-      name: "EcoLink Stardust BLDC BLDC Ceiling Fan",
-      price: 6499,
-      image: "/home/product/StarDust.png",
-      slug: "stardustbldc"
-    },
+    }
+    
   ];
 
   const economyFans = [
     {
-      name: "EcoLink VayuPro HS BLDC Ceiling Fan",
+      name: "EcoLink VayuPro High Speed Ceiling Fan",
       price: 2350,
       image: "/home/product/VayuPro.png",
       slug: "vayuprohs"
     },
     {
-      name: "EcoLink VayuUltra BLDC Ceiling Fan",
+      name: "EcoLink VayuUltra Ceiling Fan",
       price: 2350,
       image: "/home/product/VayuUltra.png",
       slug: "vayuultra"
@@ -223,21 +244,9 @@ export default function Home() {
       "answer": "<table><thead><tr><th>Sweep Size</th><th>Room Size</th></tr></thead><tbody><tr><td>600 mm (24\")</td><td>Up to 36 sq. ft.</td></tr><tr><td>900 mm (36\")</td><td>36\u201364 sq. ft.</td></tr><tr><td>1200 mm (48\")</td><td>65\u2013100 sq. ft.</td></tr><tr><td>1400 mm (56\")</td><td>>101 sq. ft.</td></tr></tbody></table>",
       "isOpen": false
     },
-    {
-      "question": "Q7: What are the benefits of BLDC technology?",
-      "answer": "<ul><li>Energy Efficiency: Consumes up to 55% less electricity than induction motors.</li><li>Durability: Generates less heat, prolonging lifespan.</li><li>Quiet Operation: Reduced noise compared to induction fans.</li><li>Eco-Friendly: Lower power consumption contributes to energy savings.</li></ul>",
-      "isOpen": false
-    },
-    {
-      "question": "Q20: What is Breeze Mode in the WiZ App?",
-      "answer": "<ul><li>Summer Breeze: Speed cycles between 1 and 5.</li><li>Winter Breeze: Speed cycles between 1 and 3 in reverse direction.</li></ul>",
-      "isOpen": false
-    },
-    {
-      "question": "Q21: How to pair the fan with the WiZ app if the product is not visible?",
-      "answer": "<ul><li>Tap and hold the Sleep button for 5 seconds.</li><li>Wait for 'Device found' pop-up on the WiZ app screen.</li><li>Follow the standard pairing process in the app.</li></ul>",
-      "isOpen": false
-    },
+    
+
+  
     {
       "question": "Q3: How do energy-efficient fans help save on electricity bills?",
       "answer": "Energy-efficient fans, such as those with BLDC motors, consume significantly less power than conventional induction fans\u2014offering up to 55% energy savings. BLDC motors use permanent magnets, which are more efficient than electromagnetic induction motors.",
@@ -256,6 +265,11 @@ export default function Home() {
     {
       "question": "Q6: Are BLDC fans noiseless?",
       "answer": "BLDC fans are quieter due to less friction and no humming like induction fans. However, they still produce some air-cutting noise.",
+      "isOpen": false
+    },
+    {
+      "question": "Q7: What are the benefits of BLDC technology?",
+      "answer": "<ul><li>Energy Efficiency: Consumes up to 55% less electricity than induction motors.</li><li>Durability: Generates less heat, prolonging lifespan.</li><li>Quiet Operation: Reduced noise compared to induction fans.</li><li>Eco-Friendly: Lower power consumption contributes to energy savings.</li></ul>",
       "isOpen": false
     },
     {
@@ -317,7 +331,17 @@ export default function Home() {
       "question": "Q19: What functions can be controlled through Google Home or Alexa?",
       "answer": "You can control fan speed and power ON/OFF via voice assistants.",
       "isOpen": false
-    }
+    },
+    {
+      "question": "Q20: What is Breeze Mode in the WiZ App?",
+      "answer": "<ul><li>Summer Breeze: Speed cycles between 1 and 5.</li><li>Winter Breeze: Speed cycles between 1 and 3 in reverse direction.</li></ul>",
+      "isOpen": false
+    },
+    {
+      "question": "Q21: How to pair the fan with the WiZ app if the product is not visible?",
+      "answer": "<ul><li>Tap and hold the Sleep button for 5 seconds.</li><li>Wait for 'Device found' pop-up on the WiZ app screen.</li><li>Follow the standard pairing process in the app.</li></ul>",
+      "isOpen": false
+    },
   ];
 
   
@@ -351,7 +375,7 @@ export default function Home() {
                 name={fan.name}
                 features={productFeatures}
                 price={fan.price}
-                badgeImage="/home/icons/badge.png"
+                badgeImage="/home/icons/badge.svg"
                 productImage={fan.image}
                 slug={fan.slug}
               />
@@ -371,7 +395,7 @@ export default function Home() {
                 name={fan.name}
                 features={productFeatures}
                 price={fan.price}
-                badgeImage="/home/icons/badge.png"
+                badgeImage="/home/icons/badge.svg"
                 productImage={fan.image}
                 slug={fan.slug}
               />
@@ -389,9 +413,9 @@ export default function Home() {
               <ProductCard
                 key={index}
                 name={fan.name}
-                features={productFeatures}
+                features={decorativeproductFeatures}
                 price={fan.price}
-                badgeImage="/home/icons/badge.png"
+                badgeImage="/home/icons/1-star-badge.svg"
                 productImage={fan.image}
                 slug={fan.slug}
               />
@@ -410,7 +434,7 @@ export default function Home() {
                 name={fan.name}
                 features={productFeatures}
                 price={fan.price}
-                badgeImage="/home/icons/badge.png"
+                badgeImage="/home/icons/badge.svg"
                 productImage={fan.image}
                 slug={fan.slug}
               />

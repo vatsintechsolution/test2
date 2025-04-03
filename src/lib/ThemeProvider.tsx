@@ -10,12 +10,12 @@ type ThemeContextType = {
 };
 
 const ThemeContext = createContext<ThemeContextType>({
-  theme: 'system',
+  theme: 'dark',
   setTheme: () => null,
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('system');
+  const [theme, setTheme] = useState<Theme>('dark');
   const [mounted, setMounted] = useState(false);
 
   // Initialize theme from localStorage
@@ -27,6 +27,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       }
     } catch (error) {
       console.error('Error accessing localStorage:', error);
+      // Default to dark if localStorage fails
+      setTheme('dark');
     }
     setMounted(true);
   }, []);
@@ -51,6 +53,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       }
     } catch (error) {
       console.error('Error setting theme:', error);
+      // Fallback to dark theme if error occurs
+      document.documentElement.classList.add('dark');
     }
   }, [theme, mounted]);
 

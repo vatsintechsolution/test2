@@ -33,11 +33,11 @@ to-black`}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
-      <div className="flex flex-col h-full p-2">
+      <div className="flex flex-col h-full justify-center p-2">
         {/* Top Text Content */}
         <div className="text-center mb-4 pt-2">
           <h3 className="text-2xl md:text-3xl font-medium mb-2 text-white">{title}</h3>
-          <p className="text-base md:text-base text-white/90 max-w-md mx-auto">{description}</p>
+          <p className="text-base md:text-lg text-white/90 max-w-lg mx-auto">{description}</p>
         </div>
 
         {/* Summer/Winter Comparison */}

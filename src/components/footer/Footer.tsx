@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 export function Footer() {
   return (
@@ -40,17 +40,17 @@ export function Footer() {
                 <h3 className="text-xl font-medium mb-4">Policies</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <Link href="/privacy-policy" className="hover:underline">
+                    <Link href="https://www.signify.com/en-in/privacy-notice" target="_blank" className="hover:underline">
                       Privacy Policy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/terms-of-use" className="hover:underline">
+                    <Link href="https://www.signify.com/en-in/terms-of-use" target="_blank" className="hover:underline">
                       Terms of Use
                     </Link>
                   </li>
                   <li>
-                    <Link href="/product-security" className="hover:underline">
+                    <Link href="https://www.signify.com/global/product-security" target="_blank" className="hover:underline">
                       Product Security
                     </Link>
                   </li>
@@ -77,19 +77,19 @@ export function Footer() {
             </div>
             
             <div className="flex space-x-4 mb-8">
-              <Link href="https://facebook.com" aria-label="Facebook">
+              <Link href="https://www.facebook.com/people/EcoLink-India/100066838484524/" target="_blank" aria-label="Facebook">
                 <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center">
                   <FaFacebook className="text-[#4A2570] text-xl" />
                 </div>
               </Link>
-              <Link href="https://instagram.com" aria-label="Instagram">
+              <Link href="https://www.instagram.com/ecolinkindia/" target="_blank" aria-label="Instagram">
                 <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center">
                   <FaInstagram className="text-[#4A2570] text-xl" />
                 </div>
               </Link>
-              <Link href="https://twitter.com" aria-label="Twitter">
+              <Link href="https://www.youtube.com/@EcoLinkLightingIndia?app=desktop" target="_blank" aria-label="Twitter">
                 <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center">
-                  <FaTwitter className="text-[#4A2570] text-xl" />
+                  <FaYoutube className="text-[#4A2570] text-xl" />
                 </div>
               </Link>
             </div>
@@ -97,45 +97,32 @@ export function Footer() {
 
           {/* Product Menus - Right side on desktop */}
           <div className="md:col-span-5 md:col-start-8 md:col-end-13 order-2 md:order-3">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full text-center md:text-left">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full text-center md:text-left">
               <div>
-                <h4 className="font-medium mb-3">Products</h4>
+                <h4 className="font-medium mb-3">LED Lights</h4>
                 <ul className="space-y-1 text-sm">
-                  <li><Link href="/products/led-downlighter" className="hover:underline">LED Downlighter</Link></li>
-                  <li><Link href="/products/led-spotlight" className="hover:underline">LED Spotlight</Link></li>
-                  <li><Link href="/products/led-cob-light" className="hover:underline">LED Cob Light</Link></li>
-                  <li><Link href="/products/led-surface" className="hover:underline">LED Surface</Link></li>
-                  <li><Link href="/products/led-strip-drivers" className="hover:underline">LED Strip & Drivers</Link></li>
-                  <li><Link href="/products/led-rope" className="hover:underline">LED Rope</Link></li>
-                  <li><Link href="/products/led-batten" className="hover:underline">LED Batten</Link></li>
+                  <li><Link href="/products/led-downlighter" className="hover:underline">Bulbs</Link></li>
+                  <li><Link href="/products/led-spotlight" className="hover:underline">Downlights</Link></li>
+                  <li><Link href="/products/led-cob-light" className="hover:underline">Surface Lights</Link></li>
+                  <li><Link href="/products/led-surface" className="hover:underline">COB Surface</Link></li>
+                  <li><Link href="/products/led-strip-drivers" className="hover:underline">Batten & Tube Lights</Link></li>
+                  <li><Link href="/products/led-rope" className="hover:underline">Strip Lights / Rope Lights</Link></li>
                 </ul>
               </div>
-              <div>
-                <h4 className="font-medium mb-3">Products</h4>
-                <ul className="space-y-1 text-sm">
-                  <li><Link href="/products/led-bulb-t-bulb" className="hover:underline">LED Bulb & T-bulb</Link></li>
-                  <li><Link href="/products/led-flood-light" className="hover:underline">LED Flood Light</Link></li>
-                  <li><Link href="/products/led-street-light" className="hover:underline">LED Street Light</Link></li>
-                  <li><Link href="/products/led-troffer" className="hover:underline">LED Troffer</Link></li>
-                  <li><Link href="/products/led-desk-light" className="hover:underline">LED Desk Light</Link></li>
-                  <li><Link href="/products/wall-light" className="hover:underline">Wall Light</Link></li>
-                  <li><Link href="/products/product-catalogue" className="hover:underline">Product Catalogue</Link></li>
-                </ul>
-              </div>
+              
               <div>
                 <h4 className="font-medium mb-3">Ceiling Fans</h4>
                 <ul className="space-y-1 text-sm">
                   <li><Link href="/products/airoelevate" className="hover:underline">AiroElevate</Link></li>
-                  <li><Link href="/products/airojewel" className="hover:underline">AiroJewel</Link></li>
                   <li><Link href="/products/airoquad" className="hover:underline">AiroQuad</Link></li>
+                  <li><Link href="/products/airojewel" className="hover:underline">AiroJewel</Link></li>
                   <li><Link href="/products/airogeometry" className="hover:underline">AiroGeometry</Link></li>
                   <li><Link href="/products/airozephyr" className="hover:underline">AiroZephyr</Link></li>
                   <li><Link href="/products/airoserenade" className="hover:underline">AiroSerenade</Link></li>
                   <li><Link href="/products/airosleek" className="hover:underline">AiroSleek</Link></li>
-                  <li><Link href="/products/stardustbldc" className="hover:underline">Stardust BLDC</Link></li>
-                  <li><Link href="/products/vayuprohs" className="hover:underline">VayuPro HS</Link></li>
+                  <li><Link href="/products/stardustbldc" className="hover:underline">Stardust</Link></li>
+                  <li><Link href="/products/vayuprohs" className="hover:underline">VayuPro</Link></li>
                   <li><Link href="/products/vayuultra" className="hover:underline">VayuUltra</Link></li>
-                  <li><Link href="/products/airofreshnew" className="hover:underline">Airofresh New</Link></li>
                 </ul>
               </div>
             </div>

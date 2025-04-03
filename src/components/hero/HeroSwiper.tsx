@@ -17,7 +17,7 @@ interface HeroSwiperProps {
     subheading: string
     buttonText: string
     buttonLink: string
-    features: Feature[]
+    features?: Feature[] | null
   }>
 }
 

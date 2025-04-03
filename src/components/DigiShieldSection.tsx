@@ -39,7 +39,7 @@ export const DigiShieldSection = () => {
               src={isMobile ? "/home/digimobile.jpg" : "/home/digidesktop.jpg"}
               alt="DigiShield Background"
               fill
-              className="object-cover"
+              className="object-cover "
             />
           </div>
 
@@ -86,7 +86,7 @@ export const DigiShieldSection = () => {
           ) : (
             // Desktop Layout
             <div className="relative min-h-[700px] z-10 flex flex-row w-full">
-              <div className="w-1/2 px-12 py-16 flex flex-col justify-start">
+              <div className="w-1/2 px-12 py-16 flex flex-col justify-end">
                 <h2 className="text-5xl font-bold text-white mb-2">
                   Get 3+2 Year*
                 </h2>

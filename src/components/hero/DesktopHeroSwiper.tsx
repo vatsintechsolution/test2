@@ -19,7 +19,7 @@ interface Slide {
   heading: string;
   buttonText: string;
   buttonLink: string;
-  features: Feature[];
+  features?: Feature[] | null;
 }
 
 interface DesktopHeroSwiperProps {
@@ -32,8 +32,8 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
   return (
     <div className="relative w-full desktop-hero-swiper overflow-hidden">
       {/* Green accent circle */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full border-[40px] border-[#5FD068]/20 -translate-y-1/2 translate-x-1/2 z-10"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full border-[40px] border-[#5FD068]/20 translate-y-1/2 -translate-x-1/2 z-10"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full border-[20px] border-[#5FD068]/20 -translate-y-1/2 translate-x-1/2 z-10"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full border-[20px] border-[#5FD068]/20 translate-y-1/2 -translate-x-1/2 z-10"></div>
       
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
@@ -47,58 +47,69 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-radial-purple dark:bg-radial-black min-h-[90vh] flex flex-col md:flex-row items-center">
-              {/* Left Content */}
-              <div className="w-full md:w-1/2 px-8 md:px-16 py-16 flex flex-col justify-center">
-                <div className="max-w-xl mx-auto md:mx-0 space-y-10">
-                  <p className="text-white/70 tracking-widest mb-2 uppercase">{slide.subheading}</p>
-                  <h1 className="text-white text-4xl md:text-6xl font-medium mb-6">{slide.heading}</h1>
-                  
-                  <p className="text-white/70 mb-8 max-w-md">
-                    Lorem ipsum dolor sit amet consectetur. Tristique id lacus a quam. 
-                    Tortor ut in et orci feugiat duis elementum sapien. Adipiscing 
-                    nascetur eu ut posuere consectetur. Maecenas id sed consequat 
-                    gravida orci tristique.
-                  </p>
-                  
-                  <Link 
-                    href={slide.buttonLink}
-                    className="inline-block bg-white hover:bg-white/90 text-[#50287A] py-3 px-8 font-medium rounded-md transition-all duration-300 mb-12"
-                  >
-                    {slide.buttonText}
-                  </Link>
-                  
-                  <div className="flex items-center space-x-8">
-                    {slide.features.map((feature, idx) => (
-                      <div key={idx} className="flex flex-col items-center">
-                        <Image 
-                          src={feature.icon} 
-                          alt={feature.text} 
-                          width={200} 
-                          height={70}
-                          className="mb-2"
-                        />
-                        <span className="text-white/70 text-xs text-center sr-only">{feature.text}</span>
+            {!slide.heading ? (
+              // Full-scale background image only when there's no heading
+              <div className="relative w-full min-h-[90vh]">
+                <Image
+                  src={slide.desktopBg || "/home/slider-1.png"}
+                  alt="Slide background"
+                  fill
+                  priority
+                  className="object-cover"
+                />
+              </div>
+            ) : (
+              // Regular content slide with heading and content
+              <div className="bg-radial-purple dark:bg-radial-black min-h-[90vh] container mx-auto flex flex-col md:flex-row items-center">
+                {/* Left Content */}
+                <div className="w-full md:w-1/2  py-16 flex flex-col justify-center">
+                  <div className="max-w-xl mx-auto md:mx-0 space-y-10">
+                    <p className="text-white/70 tracking-widest mb-2 uppercase">{slide.subheading}</p>
+                    <h1 className="text-white text-4xl md:text-6xl font-medium mb-6">{slide.heading}</h1>
+                    
+                    {slide.buttonText && slide.buttonLink && (
+                      <Link 
+                        href={slide.buttonLink}
+                        className="inline-block bg-white hover:bg-white/90 text-[#50287A] py-3 px-8 font-medium rounded-md transition-all duration-300 mb-12"
+                      >
+                        {slide.buttonText}
+                      </Link>
+                    )}
+                    
+                    {slide.features && (
+                      <div className="flex items-center space-x-8">
+                        {slide.features.map((feature, idx) => (
+                          <div key={idx} className="flex flex-col items-center">
+                            <Image 
+                              src={feature.icon} 
+                              alt={feature.text} 
+                              width={200} 
+                              height={70}
+                              className="mb-2"
+                            />
+                            <span className="text-white/70 text-xs text-center sr-only">{feature.text}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    )}
+                  </div>
+                </div>
+                
+                {/* Right Image */}
+                <div className="w-full md:w-1/2 relative h-[50vh] md:h-[90vh] flex items-center justify-center">
+                  <div className="relative w-[90%] h-[90%]">
+                    <Image
+                      src={slide.desktopBg || "/home/slider-1.png"}
+                      alt={slide.heading}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      priority
+                      className="drop-shadow-2xl"
+                    />
                   </div>
                 </div>
               </div>
-              
-              {/* Right Image */}
-              <div className="w-full md:w-1/2 relative h-[50vh] md:h-[90vh] flex items-center justify-center">
-                <div className="relative w-[90%] h-[90%]">
-                  <Image
-                    src={slide.desktopBg || "/home/slider-1.png"}
-                    alt={slide.heading}
-                    fill
-                    style={{ objectFit: 'contain' }}
-                    priority
-                    className="drop-shadow-2xl"
-                  />
-                </div>
-              </div>
-            </div>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

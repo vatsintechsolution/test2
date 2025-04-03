@@ -22,13 +22,13 @@ export function Header() {
       <div className="container mx-auto ">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="relative z-50">
+          <Link href="/" className="relative z-50 pl-4 md:pl-0">
             <Image 
               src="/logo.svg" 
               alt="EcoLink Logo" 
               width={155} 
               height={75} 
-              className="h-[75px] w-auto pl-4"
+              className="h-[75px] w-auto"
             />
           </Link>
 

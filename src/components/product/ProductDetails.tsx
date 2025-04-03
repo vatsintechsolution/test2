@@ -20,6 +20,8 @@ interface ProductDetailsProps {
   regularPrice: number;
   colorOptions: ColorOption[];
   sizeOptions: SizeOption[];
+  amazonLink?: string;
+  onColorChange?: (colorValue: string) => void;
 }
 
 export const ProductDetails = ({
@@ -28,9 +30,19 @@ export const ProductDetails = ({
   regularPrice,
   colorOptions,
   sizeOptions,
+  amazonLink,
+  onColorChange,
 }: ProductDetailsProps) => {
   const [selectedColor, setSelectedColor] = useState(colorOptions[0]?.value || '');
   const [selectedSize, setSelectedSize] = useState(sizeOptions[0]?.value || '');
+
+  const handleColorSelect = (colorValue: string) => {
+    setSelectedColor(colorValue);
+    // Notify parent component about color change if callback is provided
+    if (onColorChange) {
+      onColorChange(colorValue);
+    }
+  };
 
   return (
     <div className="px-4 py-4">
@@ -66,7 +78,7 @@ export const ProductDetails = ({
               {colorOptions.map((color) => (
                 <button
                   key={color.value}
-                  onClick={() => setSelectedColor(color.value)}
+                  onClick={() => handleColorSelect(color.value)}
                   className={` rounded-[4px] p-2 ${
                     selectedColor === color.value
                       ? `ring-2 ring-[#582C83] shadow-md`
@@ -130,18 +142,25 @@ export const ProductDetails = ({
 
         {/* Buy Buttons */}
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 lg:mt-16">
-          {/* Amazon Button */}
-          <button className="w-full bg-[#582C83] text-white py-4 text-center rounded-lg flex items-center justify-center gap-2 hover:bg-[#4A2570] transition-colors">
-            <Image
-              src="/home/buy-on-amazon.svg"
-              alt="Amazon"
-              width={250}
-              height={27}
-            />
-          </button>
+          {/* Amazon Button - Only show if amazonLink exists */}
+          {amazonLink && (
+            <Link 
+              href={amazonLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-[#582C83] text-white py-4 text-center rounded-lg flex items-center justify-center gap-2 hover:bg-[#4A2570] transition-colors"
+            >
+              <Image
+                src="/home/buy-on-amazon.svg"
+                alt="Amazon"
+                width={250}
+                height={27}
+              />
+            </Link>
+          )}
           
           {/* Store Button */}
-          <Link href="/store-locator" className="w-full border-2 border-[#582C83] dark:text-white text-[#582C83] py-4 text-center rounded-lg flex items-center justify-center gap-2 hover:bg-[#582C83]/5 transition-colors">
+          <Link href="/store-locator" className={`w-full border-2 border-[#582C83] dark:text-white text-[#582C83] py-4 text-center rounded-lg flex items-center justify-center gap-2 hover:bg-[#582C83]/5 transition-colors ${!amazonLink ? 'md:w-1/2 ' : ''}`}>
             <span className="text-lg font-medium">BUY FROM STORE</span>
           </Link>
         </div>

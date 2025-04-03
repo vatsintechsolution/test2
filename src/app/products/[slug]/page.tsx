@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { ProductSwiper } from "@/components/products/ProductSwiper";
 import { Footer } from "@/components/footer/Footer";
 import Link from "next/link";
@@ -13,11 +12,34 @@ import { ProductSeasonCard } from "@/components/product/ProductSeasonCard";
 import { ProductRemoteCard } from "@/components/product/ProductRemoteCard";
 import { ProductPremiumAestheticsCard } from "@/components/product/ProductPremiumAestheticsCard";
 import productsData, { Product } from "@/lib/products";
+import { DigiShieldSection } from "@/components/DigiShieldSection";
+import { ARViewSection } from "@/components/ARViewSection";
+
+// Map of product slugs to their Amazon links
+const amazonLinks: { [key: string]: string } = {
+  airogeometry: "https://www.amazon.in/dp/B0D7D1G6MG?th=1",
+  airojewel: "https://www.amazon.in/dp/B0D7D127ZV?th=1",
+  airoserenade: "https://www.amazon.in/dp/B0D7CWN7W4",
+  airosleek: "https://www.amazon.in/dp/B0D7CYXX9C?th=1",
+  airozephyr: "https://www.amazon.in/dp/B0D7CZP5Y8?th=1"
+};
+
+// Map of product slugs to their dimensions
+const productDimensions: { [key: string]: string } = {
+  airoquad: "574mm X 260mm X 264mm (Length X Width X Height)",
+  airoelevate: "652mm X 238mm X 258mm (Length X Width X Height)",
+  airojewel: "578mm X 270mm X 295mm (Length X Width X Height)",
+  airogeometry: "578mm X 270mm X 295mm (Length X Width X Height)",
+  vayuultra: "258mm X 200mm X 285mm (Length X Width X Height)",
+  vayuprohs: "260mm X 210mm X 165mm (Length X Width X Height)",
+  airofreshnew: "267mm X 212mm X 160mm (Length X Width X Height)"
+};
 
 export default function ProductPage({ params }: { params: { slug: string } }) {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [selectedColor, setSelectedColor] = useState<string>("");
 
   useEffect(() => {
     try {
@@ -25,7 +47,15 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       const foundProduct = productsData.products.find(p => p.slug === params.slug);
       
       if (foundProduct) {
+        // Update dimensions if available
+        if (productDimensions[params.slug]) {
+          foundProduct.specifications.dimensions = productDimensions[params.slug];
+        }
         setProduct(foundProduct);
+        // Set the default selected color to the first color option
+        if (foundProduct.colors && foundProduct.colors.length > 0) {
+          setSelectedColor(foundProduct.colors[0].name);
+        }
       } else {
         setError(`Product with slug "${params.slug}" not found`);
       }
@@ -36,6 +66,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       setLoading(false);
     }
   }, [params.slug]);
+
+  // Handle color selection change
+  const handleColorChange = (colorValue: string) => {
+    if (product) {
+      const newSelectedColor = product.colors.find(c => c.primary === colorValue)?.name || "";
+      setSelectedColor(newSelectedColor);
+    }
+  };
 
   if (loading) {
     return (
@@ -70,7 +108,12 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
             {/* Product Images */}
             <div>
-              <ProductSwiper images={product.images.gallery} />
+              <ProductSwiper 
+                images={product.images.gallery} 
+                slug={params.slug}
+                selectedColor={selectedColor}
+                productData={product}
+              />
             </div>
 
             {/* Product Details */}
@@ -80,11 +123,15 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               regularPrice={product.price}
               colorOptions={colorOptions}
               sizeOptions={product.sizes}
+              amazonLink={amazonLinks[params.slug]}
+              onColorChange={handleColorChange}
             />
           </div>
         </div>
 
         <div className="container mx-auto px-4 py-10">
+
+        {product.keyFeature &&
           <ProductFeatureCard
             imageSrc={product.images.main}
             title={product.keyFeature}
@@ -95,18 +142,23 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             darkBgClass="dark:bg-gradient-to-b dark:from-[#6E4427] dark:to-[#2B1D12]"
             lightBgClass="bg-radial-purple"
           />
+        }
 
           {/* Featured Sections */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+           
+          {product.energyEfficiency.icon &&
             <ProductEnergyCard
               imageSrc={product.images.main}
               iconSrc={product.energyEfficiency.icon}
-              title={`Save up to ${product.energyEfficiency.savingsPercentage}% Energy`}
-              description={product.energyEfficiency.description}
-              badgeText={`SAVE ₹${product.energyEfficiency.annualSavings}/YEAR`}
+              title={product.energyEfficiency.title}
+              description={`${product.fullName}, features a powerful BLDC motor, maximizing energy savings and cooling performance.`}
+              badgeText={`RUNS 3X LONGER`}
               className="h-full"
               priority={true}
-            />
+            />}
+
+          {product.aesthetics.title && 
             <ProductVideoCard
               bgImageSrc={product.videos.thumbnail}
               videoSrc={product.videos.promotional}
@@ -115,23 +167,23 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               className="max-w-3xl mx-auto"
               priority={true}
             />
+          }
           
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
-
+        
+{product.seasonalFeatures.summer.image &&
             <ProductSeasonCard
               summerImage={product.seasonalFeatures.summer.image}
               winterImage={product.seasonalFeatures.winter.image}
-              title="2-way rotation"
-              description="Making it ideal choice for Summers & winters!"
+              title="Enjoy benefits of 2-way rotation!"
+              description={`Experience year-round comfort with ${product.fullName}, featuring 2-way rotation- a reverse mode to circulate warm air during winter.`}
               className="max-w-3xl mx-auto"
               priority={true}
             />
-          
+          }
 
           <ProductRemoteCard
-              title={product.remoteFeatures.type}
-              description={`Control your fan from anywhere with ${product.remoteFeatures.range}. ${product.remoteFeatures.functions.join(", ")}.`}
+              title={product.remoteFeatures.title}
+              description={product.remoteFeatures.description}
               className="h-full"
               priority={true}
             />
@@ -140,31 +192,23 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
           <div className="py-10">
             <ProductPremiumAestheticsCard
-              className="max-w-3xl lg:max-w-6xl mx-auto"
+              className=" mx-auto"
               priority={true}
             />
           </div>
 
          
 
-          <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-10">
-            <Image
-              src="/home/digi-shield.png"
-              alt="DigiShield"
-              width={1000}
-              height={1000}
-              className="rounded-xl"
-            />
+          <section className="grid grid-cols-1 gap-4 py-10">
+            <div className="col-span-1 h-full">
+              <DigiShieldSection />
+            </div>
 
-            <Link href={`/ar/${product.slug}`}>
-              <Image
-                src="/home/product/ar.png"
-                alt="View in AR"
-                width={1000}
-                height={1000}
-                className="rounded-xl"
-              />
-            </Link>
+            {product.arLink && (
+              <div className="col-span-1 h-full">
+                <ARViewSection arLink={product.arLink} />
+              </div>
+            )}
           </section>
 
           <section className="py-16">
@@ -188,7 +232,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   { label: "Air Delivery (CMM)", value: product.specifications.airDelivery },
                   { label: "Power", value: product.specifications.power },
                   { label: "Warranty", value: `${product.warranty.standard}+${product.warranty.extended}* years` },
-                  { label: "Dimensions", value: product.specifications.dimensions },
+                  ...(product.specifications.dimensions !== "xx mm X yy mm X zz mm (length X width X height)" ? [{ label: "Dimensions", value: product.specifications.dimensions }] : []),
                 ].map((spec, index) => (
                   <div
                     key={index}
