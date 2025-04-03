@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 export function Footer() {
   return (
-    <footer className="bg-radial-purple dark:bg-radial-black text-white px-2">
+    <footer className="bg-radial-purple dark:bg-radial-black text-white px-2" id="contact-us">
       <div className="container mx-auto py-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Get in Touch and Policies - Left side on desktop */}

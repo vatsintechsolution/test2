@@ -30,7 +30,7 @@ export const WhyChooseSection = ({ features }: WhyChooseSectionProps) => {
   }, []);
 
   return (
-    <section className="bg-radial-purple dark:bg-radial-black relative overflow-hidden">
+    <section className="bg-radial-purple dark:bg-radial-black relative overflow-hidden" id="about-us">
       {/* Green accent circle - visible on both layouts */}
       
       {isMobile ? (

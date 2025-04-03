@@ -8,8 +8,8 @@ import { usePathname } from 'next/navigation'
 const menuItems = [
   { label: 'Home', href: '/' },
   { label: 'Products', href: '/#products' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'About', href: '/#about-us' },
+  { label: 'Contact', href: '/#contact-us' },
 ]
 
 export function Header() {
