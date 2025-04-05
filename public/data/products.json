@@ -1821,7 +1821,7 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/summer.png"
+          "image": ""
         },
         "winter": {
           "title": "Winter Mode",
@@ -1833,7 +1833,7 @@
         "title": "Runs 3x longer on inverter",
         "annualSavings": 1500,
         "description": "EcoLink VayuUltra BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
-        "icon": "/home/icons/inverter-energy.svg"
+        "icon": ""
       },
       "remoteFeatures": {
         "type": "RF Remote",
