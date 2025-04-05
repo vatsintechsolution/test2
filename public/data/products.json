@@ -1623,7 +1623,7 @@
       "modelName": "VayuPro HS",
       "fullName": "EcoLink VayuPro HS BLDC Ceiling Fan",
       "tagline": "High Speed Performance",
-      "description": "EcoLink VayuPro High Speed fan delivers exceptional airflow and powerful cooling performance for maximum comfort.",
+      "description": "High-speed ceiling fan offering exceptional efficiency and powerful airflow for optimal comfort in every room",
       "price": 2350,
       "starRating": 4,
       "warranty": {
@@ -1636,7 +1636,7 @@
         "power": "50 W",
         "speed": "400 RPM",
         "airDelivery": "210 CMM",
-        "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
+        "dimensions": "",
         "type": "BLDC Ceiling fan",
         "brand": "EcoLink"
       },
@@ -1667,7 +1667,7 @@
           "value": "1200"
         }
       ],
-      "keyFeature": "",
+      "keyFeature": "Fast, Efficient, and Powerful!",
       "features": [
         {
           "title": "High speed fan",
@@ -1748,7 +1748,7 @@
       "modelName": "Vayu Ultra",
       "fullName": "EcoLink Vayu Ultra Table Fan",
       "tagline": "Experience the power of air",
-      "description": "EcoLink Vayu Ultra 400 mm (16\") Table Fan brings powerful airflow and energy efficiency to your space.",
+      "description": "High-speed ceiling fan offering exceptional efficiency and powerful airflow for optimal comfort in every room",
       "price": 2499,
       "starRating": 5,
       "warranty": {
@@ -1799,7 +1799,7 @@
           "value": "1200"
         }
       ],
-      "keyFeature": "",
+      "keyFeature": "Fast, Efficient, and Powerful!",
       "features": [
         {
           "title": "High speed fan",
