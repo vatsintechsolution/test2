@@ -9,7 +9,7 @@
       "description": "Innovative design of EcoLink AiroElevate BLDC ceiling fan enhances both functionality and style, making it a must-have for modern interiors!",
       "price": 8700,
       "starRating": 5,
-      "arLink": "/ar/airoelevate",
+      "arLink": "",
       "warranty": {
         "standard": 3,
         "extended": 2,
@@ -132,7 +132,7 @@
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
         "title": "Convenient Control at your fingertips!",
-        "description": "Experience year-round comfort with EcoLink AiroElevate BLDC ceiling fan, featuring 2-way rotation - a reverse mode to circulate warm air during winter."
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/AiroElevate.png",
@@ -167,7 +167,7 @@
       "description": "Innovative design with 4 sleek blades for efficient cooling and modern elegance",
       "price": 7400,
       "starRating": 5,
-      "arLink": "",
+      "arLink": "/quard-3d",
       "warranty": {
         "standard": 3,
         "extended": 2,
@@ -325,7 +325,7 @@
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
         "title": "Convenient Control at your fingertips!",
-        "description": "Experience year-round comfort with EcoLink AiroQuad BLDC ceiling fan, featuring 2-way rotation - a reverse mode to circulate warm air during winter."
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/AiroQuad.png",
@@ -463,12 +463,12 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/geometry-summer.png"
+          "image": "/home/geometery-summer.png"
         },
         "winter": {
           "title": "Winter Mode",
           "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
-          "image": "/home/geometry-winter.png"
+          "image": "/home/geometery-winter.png"
         }
       },
       "energyEfficiency": {
@@ -490,7 +490,7 @@
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
         "title": "Convenient Control at your fingertips!",
-        "description": "Experience year-round comfort with EcoLink AiroGeometry BLDC ceiling fan, featuring 2-way rotation - a reverse mode to circulate warm air during winter."
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/AiroGeometry.png",
@@ -661,8 +661,8 @@
         ],
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
-        "title": "Smart Control at your fingertips!",
-        "description": "Experience complete control with the EcoLink AiroJewel BLDC Smart ceiling fan, featuring WiFi connectivity for smartphone and voice assistant control."
+        "title": "Convenient Control at your fingertips!",
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/AiroJewel.png",
@@ -833,8 +833,8 @@
         ],
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
-        "title": "Smart Control at your fingertips!",
-        "description": "Experience complete control with the EcoLink AiroJewel BLDC Smart ceiling fan, featuring WiFi connectivity for smartphone and voice assistant control."
+        "title": "Convenient Control at your fingertips!",
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/AiroJewel.png",
@@ -1006,8 +1006,8 @@
         ],
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
-        "title": "Smart Control at your fingertips!",
-        "description": "Experience complete control with the EcoLink AiroGeometry BLDC Smart ceiling fan, featuring WiFi connectivity for smartphone and voice assistant control."
+        "title": "Convenient Control at your fingertips!",
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/AiroGeometry.png",
@@ -1158,7 +1158,7 @@
         "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
-        "main": "/home/product/Stardust.png",
+        "main": "/home/product/StarDust.png",
         "gallery": [
         "/sliders/stardust/1.jpg",
          "/sliders/stardust/2.png",
