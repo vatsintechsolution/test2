@@ -86,6 +86,15 @@ export const DigiShieldSection = () => {
           ) : (
             // Desktop Layout
             <div className="relative min-h-[700px] z-10 flex flex-row w-full">
+
+<Image 
+                    src="/home/icons/digi-shield.svg" 
+                    alt="Download on the App Store" 
+                    width={150} 
+                    height={45}
+                    className="h-20 w-auto mx-auto absolute top-10 left-10"
+                  />
+
               <div className="w-1/2 px-12 py-16 flex flex-col justify-end">
                 <h2 className="text-5xl font-bold text-white mb-2">
                   Get 3+2 Year*

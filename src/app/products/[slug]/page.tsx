@@ -14,6 +14,7 @@ import { ProductPremiumAestheticsCard } from "@/components/product/ProductPremiu
 import productsData, { Product } from "@/lib/products";
 import { DigiShieldSection } from "@/components/DigiShieldSection";
 import { ARViewSection } from "@/components/ARViewSection";
+import { WizAppSection } from "@/components/wizAppSection";
 
 // Map of product slugs to their Amazon links
 const amazonLinks: { [key: string]: string } = {
@@ -160,7 +161,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
           {product.aesthetics.title && 
             <ProductVideoCard
-              bgImageSrc={product.videos.thumbnail}
+              bgImageSrc={product.images.main}
               videoSrc={product.videos.promotional}
               title={product.aesthetics.title}
               description={product.aesthetics.description}
@@ -201,7 +202,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
           <section className="grid grid-cols-1 gap-4 py-10">
             <div className="col-span-1 h-full">
-              <DigiShieldSection />
+              {params.slug.includes('smart') ? <WizAppSection /> : <DigiShieldSection />}
             </div>
 
             {product.arLink && (

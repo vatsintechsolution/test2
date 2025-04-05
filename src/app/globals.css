@@ -249,6 +249,14 @@ div+div+div+svg g, div+div+div+svg g path, div+div+svg g path {
   overflow: hidden;
 }
 
+.faq-wrapper table{
+  @apply w-full sm:max-w-[300px] sm:overflow-scroll;
+}
+
+
+
+
+
 /* Radial gradient background */
 .bg-radial-purple {
   background: radial-gradient(circle at center, #5D3587 0%, #4A2570 100%);

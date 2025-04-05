@@ -79,7 +79,7 @@ export const ProductDetails = ({
                 <button
                   key={color.value}
                   onClick={() => handleColorSelect(color.value)}
-                  className={` rounded-[4px] p-2 ${
+                  className={` rounded-[4px]  p-2 ${
                     selectedColor === color.value
                       ? `ring-2 ring-[#582C83] shadow-md`
                       : "border border-gray-300"
@@ -87,7 +87,7 @@ export const ProductDetails = ({
                   aria-label={`Select ${color.label} color`}
                 >
                   <div 
-                    className="w-8 h-8 rounded-full" 
+                    className="w-8 h-8 rounded-full hidden" 
                     style={{ backgroundColor: color.value }}
                   />
                   <span className="text-xs">{color.label}</span>

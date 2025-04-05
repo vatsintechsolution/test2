@@ -144,7 +144,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -167,7 +167,7 @@
       "description": "Innovative design with 4 sleek blades for efficient cooling and modern elegance",
       "price": 7400,
       "starRating": 5,
-      "arLink": "/ar/airoquad",
+      "arLink": "",
       "warranty": {
         "standard": 3,
         "extended": 2,
@@ -298,12 +298,12 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/summer.png"
+          "image": "/home/quad-summer.png"
         },
         "winter": {
           "title": "Winter Mode",
           "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
-          "image": "/home/winters.png"
+          "image": "/home/quad-winter.png"
         }
       },
       "energyEfficiency": {
@@ -337,7 +337,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -463,12 +463,12 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/summer.png"
+          "image": "/home/geometry-summer.png"
         },
         "winter": {
           "title": "Winter Mode",
           "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
-          "image": "/home/winters.png"
+          "image": "/home/geometry-winter.png"
         }
       },
       "energyEfficiency": {
@@ -502,7 +502,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -633,12 +633,12 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/summer.png"
+          "image": "/home/jewel-summer.png"
         },
         "winter": {
           "title": "Winter Mode",
           "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
-          "image": "/home/winters.png"
+          "image": "/home/jewel-winter.png"
         }
       },
       "energyEfficiency": {
@@ -674,7 +674,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -805,12 +805,12 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/summer.png"
+          "image": "/home/jewel-summer.png"
         },
         "winter": {
           "title": "Winter Mode",
           "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
-          "image": "/home/winters.png"
+          "image": "/home/jewel-winter.png"
         }
       },
       "energyEfficiency": {
@@ -846,7 +846,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -1019,7 +1019,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -1128,12 +1128,12 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/summer.png"
+          "image": "/home/stardust-summer.png"
         },
         "winter": {
           "title": "Winter Mode",
           "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
-          "image": "/home/winters.png"
+          "image": "/home/stardust-winter.png"
         }
       },
       "energyEfficiency": {
@@ -1155,19 +1155,19 @@
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
         "title": "Convenient Control at your fingertips!",
-        "description": "Experience year-round comfort with EcoLink Stardust BLDC ceiling fan, featuring 2-way rotation - a reverse mode to circulate warm air during winter."
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/Stardust.png",
         "gallery": [
-          "/home/product/demo/1.png",
-          "/home/product/demo/2.jpg",
-          "/home/product/demo/3.jpg"
+        "/sliders/stardust/1.jpg",
+         "/sliders/stardust/2.png",
+         "/sliders/stardust/3.png"
         ],
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -1301,7 +1301,7 @@
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
         "title": "Convenient Control at your fingertips!",
-        "description": "Experience year-round comfort with EcoLink AiroZephyr BLDC ceiling fan, featuring 2-way rotation - a reverse mode to circulate warm air during winter."
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/AiroZephyr.png",
@@ -1313,7 +1313,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -1449,7 +1449,7 @@
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
         "title": "Convenient Control at your fingertips!",
-        "description": "Experience year-round comfort with EcoLink AiroSerenade BLDC ceiling fan, featuring 2-way rotation - a reverse mode to circulate warm air during winter."
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/AiroSerenada.png",
@@ -1461,7 +1461,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -1591,7 +1591,7 @@
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
         "title": "Convenient Control at your fingertips!",
-        "description": "Experience year-round comfort with EcoLink AiroSleek BLDC ceiling fan, featuring 2-way rotation - a reverse mode to circulate warm air during winter."
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/AiroSleek.png",
@@ -1603,7 +1603,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -1716,7 +1716,7 @@
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
         "title": "Convenient Control at your fingertips!",
-        "description": "Experience year-round comfort with EcoLink VayuPro HS BLDC ceiling fan, featuring 2-way rotation - a reverse mode to circulate warm air during winter."
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/VayuPro.png",
@@ -1728,7 +1728,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -1848,7 +1848,7 @@
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
         "title": "Convenient Control at your fingertips!",
-        "description": "Experience year-round comfort with EcoLink VayuUltra BLDC ceiling fan, featuring 2-way rotation - a reverse mode to circulate warm air during winter."
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/VayuUltra.png",
@@ -1860,7 +1860,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -1975,7 +1975,7 @@
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
         "title": "Convenient Control at your fingertips!",
-        "description": "Experience year-round comfort with EcoLink Airofresh New BLDC ceiling fan, featuring 2-way rotation - a reverse mode to circulate warm air during winter."
+        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
         "main": "/home/product/Airofresh New.png",
@@ -1987,7 +1987,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://www.youtube.com/watch?v=Ku02YTuQcIs",
+        "promotional": "https://youtu.be/_-lJf3g3kDQ",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {

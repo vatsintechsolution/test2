@@ -64,6 +64,28 @@ export const ProductCard = ({
           />
         </div>
 
+        {slug?.includes('smart') && (
+          <>
+            <div className="absolute inset-0 z-1 w-20 h-20 top-0 left-2 lg:hidden">
+              <Image
+                src={'/home/wiz-banner-icon.svg'}
+                alt=""
+                fill
+                className=""
+              />
+            </div>
+
+            <div className="absolute z-1 w-20 h-20 top-0 right-2 hidden lg:block">
+              <Image
+                src={'/home/wiz-banner-icon.svg'}
+                alt=""
+                fill
+                className=""
+              />
+            </div>
+          </>
+        )}
+
         {/* Card Content with Background Overlay */}
         <div className="relative z-10 rounded-lg overflow-hidden">
           {/* Add top-to-bottom gradient overlay */}

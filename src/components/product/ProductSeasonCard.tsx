@@ -45,7 +45,7 @@ to-black`}
           {/* Summer Side */}
           <div className="flex-1 flex flex-col items-center border-r md:border-b-0 md:border-r border-white/90 pr-3 pb-4 md:pb-0 md:pr-4">
             <h4 className="text-xl font-bold text-white mb-3">SUMMER</h4> 
-            <div className="relative h-32 w-full mb-3">
+            <div className="relative h-32 lg:h-64 w-full mb-3">
               <Image
                 src={summerImage}
                 alt="Summer mode fan"
@@ -74,7 +74,7 @@ to-black`}
           {/* Winter Side */}
           <div className="flex-1 flex flex-col items-center  md:pt-0 md:pl-4">
             <h4 className="text-xl font-medium text-white mb-3">WINTER</h4>
-            <div className="relative h-32 w-full mb-3">
+            <div className="relative h-32 lg:h-64 w-full mb-3">
               <Image
                 src={winterImage}
                 alt="Winter mode fan"

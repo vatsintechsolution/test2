@@ -97,12 +97,12 @@ export const ProductSwiper = ({ images, slug, selectedColor, productData }: Prod
       >
         {sliderImages.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="relative h-[360px] lg:h-[550px] w-full">
+            <div className="relative min-h-[360px] h-full aspect-square  lg:min-h-[550px] w-full">
               <Image
                 src={image}
                 alt={`Product image ${index + 1}`}
                 fill
-                className="object-contain"
+                className="object-contain w-full aspect-square"
                 onError={(e) => {
                   // If an image fails to load, hide it
                   const target = e.target as HTMLImageElement

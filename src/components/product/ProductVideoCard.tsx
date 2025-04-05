@@ -86,20 +86,30 @@ export const ProductVideoCard: FC<ProductVideoCardProps> = ({
         >
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full bg-slate-800">
+            {/* Static background image */}
+            <Image
+              src="/home/installation-bg.png"
+              alt="Installation Background"
+              fill
+              priority={priority}
+              className="object-cover"
+            />
+            
+            {/* Product image overlay */}
             {!imageError && (
               <Image
                 src={bgImageSrc}
                 alt={title}
                 fill
                 priority={priority}
-                className="object-cover"
+                className="object-contain z-[1] object-top"
                 onError={() => setImageError(true)}
               />
             )}
           </div>
 
           {/* Play Button */}
-          <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="absolute inset-0 flex items-center justify-center top-[-20px] z-10">
             {embedUrl && !videoError && (
               <div className="w-24 h-24 rounded-full bg-white/10 backdrop-blur-xs flex items-center justify-center transition-transform hover:scale-110 shadow-lg">
                 {/* Try to use the custom play icon, fallback to a simple triangle */}
@@ -134,7 +144,7 @@ export const ProductVideoCard: FC<ProductVideoCardProps> = ({
           <div className={`absolute bottom-0 left-0 right-0 h-2/3 ${gradientClass} z-5`}></div>
 
           {/* Content */}
-          <div className="relative flex flex-col items-center justify-end text-center h-full z-10 px-4 pb-8 pt-20">
+          <div className="relative flex flex-col items-center justify-end text-center h-full z-10 px-2 pb-4 pt-20">
             <h3 className="text-xl md:text-3xl font-bold mb-3 text-white">{title}</h3>
             <p className="text-sm md:text-lg text-white/90 max-w-xl">{description}</p>
             {videoError && (

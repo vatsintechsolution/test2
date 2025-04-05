@@ -159,7 +159,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
       ></model-viewer>
 
       {/* Color Controls with inline styles */}
-      <div style={{
+      <div className="hidden" style={{
         position: 'fixed',
         bottom: '80px',
         left: '50%',
