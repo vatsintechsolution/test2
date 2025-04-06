@@ -10,6 +10,11 @@ import { ProductVideoCard } from "@/components/product/ProductVideoCard";
 import { ProductEnergyCard } from "@/components/product/ProductEnergyCard";
 import { ProductSeasonCard } from "@/components/product/ProductSeasonCard";
 import { ProductRemoteCard } from "@/components/product/ProductRemoteCard";
+import { ProductLEDCard } from "@/components/product/ProductLEDCard";
+import { ProductAluminumBladeCard } from "@/components/product/ProductAluminumBladeCard";
+import { ProductAirDeliveryCard } from "@/components/product/ProductAirDeliveryCard";
+import { ProductRobustMotorCard } from "@/components/product/ProductRobustMotorCard";
+import { ProductDoubleBearingCard } from "@/components/product/ProductDoubleBearingCard";
 import { ProductPremiumAestheticsCard } from "@/components/product/ProductPremiumAestheticsCard";
 import productsData, { Product } from "@/lib/products";
 import { DigiShieldSection } from "@/components/DigiShieldSection";
@@ -148,7 +153,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
           {/* Featured Sections */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
            
-          {product.energyEfficiency.icon &&
+          {product.energyEfficiency.icon && product.energyEfficiency.title &&
             <ProductEnergyCard
               imageSrc={product.images.main}
               iconSrc={product.energyEfficiency.icon}
@@ -170,8 +175,57 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             />
           }
           
+          {product.ledFeature && product.ledFeature.title && 
+            <ProductLEDCard
+              title={product.ledFeature.title}
+              description={product.ledFeature.description}
+              imageSrc={product.ledFeature.image}
+              className="h-full"
+              priority={true}
+            />
+          }
+
+          {product.aluminumBladeFeature && product.aluminumBladeFeature.title && 
+            <ProductAluminumBladeCard
+              title={product.aluminumBladeFeature.title}
+              description={product.aluminumBladeFeature.description}
+              imageSrc={product.aluminumBladeFeature.image}
+              className="h-full"
+              priority={true}
+            />
+          }
+
+          {product.airDeliveryFeature && product.airDeliveryFeature.title && 
+            <ProductAirDeliveryCard
+              title={product.airDeliveryFeature.title}
+              description={product.airDeliveryFeature.description}
+              imageSrc={product.airDeliveryFeature.image}
+              className="h-full"
+              priority={true}
+            />
+          }
+
+          {product.robustMotorFeature && product.robustMotorFeature.title && 
+            <ProductRobustMotorCard
+              title={product.robustMotorFeature.title}
+              description={product.robustMotorFeature.description}
+              imageSrc={product.robustMotorFeature.image}
+              className="h-full"
+              priority={true}
+            />
+          }
+
+          {product.doubleBearingFeature && product.doubleBearingFeature.title && 
+            <ProductDoubleBearingCard
+              title={product.doubleBearingFeature.title}
+              description={product.doubleBearingFeature.description}
+              imageSrc={product.doubleBearingFeature.image}
+              className="h-full"
+              priority={true}
+            />
+          }
         
-{product.seasonalFeatures.summer.image &&
+          {product.seasonalFeatures.summer.image &&
             <ProductSeasonCard
               summerImage={product.seasonalFeatures.summer.image}
               winterImage={product.seasonalFeatures.winter.image}
@@ -181,22 +235,26 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               priority={true}
             />
           }
-
+          
+          {product.remoteFeatures.title &&
           <ProductRemoteCard
               title={product.remoteFeatures.title}
               description={product.remoteFeatures.description}
               className="h-full"
               priority={true}
-            />
+            />}
           
           </div>
 
-          <div className="py-10">
-            <ProductPremiumAestheticsCard
-              className=" mx-auto"
-              priority={true}
-            />
-          </div>
+          {!params.slug.includes('vayuprohs') && !params.slug.includes('vayuultra') && (
+            <div className="py-10">
+              <ProductPremiumAestheticsCard
+                className="mx-auto"
+                priority={true}
+                productId={product.id}
+              />
+            </div>
+          )}
 
          
 

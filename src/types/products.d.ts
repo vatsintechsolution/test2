@@ -25,10 +25,40 @@ interface ProductSeasonalFeature {
 }
 
 interface ProductEnergyEfficiency {
-  savingsPercentage: number;
+  title: string;
   annualSavings: number;
   description: string;
   icon: string;
+}
+
+interface ProductLEDFeature {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+interface ProductAluminumBladeFeature {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+interface ProductAirDeliveryFeature {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+interface ProductRobustMotorFeature {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+interface ProductDoubleBearingFeature {
+  title?: string;
+  description?: string;
+  image?: string;
 }
 
 interface ProductRemoteFeatures {
@@ -37,6 +67,8 @@ interface ProductRemoteFeatures {
   functions: string[];
   image: string;
   lightModeImage: string;
+  title: string;
+  description: string;
 }
 
 interface ProductImages {
@@ -81,8 +113,12 @@ interface Product {
   description: string;
   price: number;
   starRating: number;
+  arLink?: string;
   warranty: ProductWarranty;
   specifications: ProductSpecifications;
+  sliderImages?: {
+    [key: string]: string[];
+  };
   colors: ProductColor[];
   sizes: ProductSize[];
   keyFeature: string;
@@ -92,6 +128,11 @@ interface Product {
     winter: ProductSeasonalFeature;
   };
   energyEfficiency: ProductEnergyEfficiency;
+  ledFeature?: ProductLEDFeature;
+  aluminumBladeFeature?: ProductAluminumBladeFeature;
+  airDeliveryFeature?: ProductAirDeliveryFeature;
+  robustMotorFeature?: ProductRobustMotorFeature;
+  doubleBearingFeature?: ProductDoubleBearingFeature;
   remoteFeatures: ProductRemoteFeatures;
   images: ProductImages;
   videos: ProductVideos;

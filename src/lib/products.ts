@@ -33,6 +33,9 @@ export interface Product {
     type: string;
     brand: string;
   };
+  sliderImages?: {
+    [key: string]: string[];
+  };
   colors: Array<{
     name: string;
     primary: string;
@@ -67,6 +70,31 @@ export interface Product {
     annualSavings: number;
     description: string;
     icon: string;
+  };
+  ledFeature?: {
+    title?: string;
+    description?: string;
+    image?: string;
+  };
+  aluminumBladeFeature?: {
+    title?: string;
+    description?: string;
+    image?: string;
+  };
+  airDeliveryFeature?: {
+    title?: string;
+    description?: string;
+    image?: string;
+  };
+  robustMotorFeature?: {
+    title?: string;
+    description?: string;
+    image?: string;
+  };
+  doubleBearingFeature?: {
+    title?: string;
+    description?: string;
+    image?: string;
   };
   remoteFeatures: {
     type: string;

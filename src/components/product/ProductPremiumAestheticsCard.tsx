@@ -8,21 +8,34 @@ import { BackgroundPattern } from '../BackgroundPattern';
 export interface ProductPremiumAestheticsCardProps {
   className?: string;
   priority?: boolean;
+  productId?: string;
 }
 
 export const ProductPremiumAestheticsCard: FC<ProductPremiumAestheticsCardProps> = ({
   className = '',
   priority = false,
+  productId = '',
 }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  
+  // Determine which products should not show turbo mode
+  const excludeTurboMode = ['airozephyr', 'airoserenade', 'airosleek'].includes(productId);
 
   // Icons for the premium aesthetics
-  const icons = [
-    { name: 'premium-asthetics', alt: 'Premium Aesthetics' },
-    { name: 'superior-air', alt: 'Superior Air Flow' },
-    { name: 'copper-motor', alt: 'Copper Motor' },
-    { name: 'turbo-motor', alt: 'Turbo Motor' }
-  ];
+  const getIcons = () => {
+    const baseIcons = [
+      { name: 'premium-asthetics', alt: 'Premium Aesthetics' },
+      { name: 'superior-air', alt: 'Superior Air Flow' },
+      { name: 'copper-motor', alt: 'Copper Motor' },
+    ];
+    
+    // Only add turbo motor icon if not in exclusion list
+    if (!excludeTurboMode) {
+      baseIcons.push({ name: 'turbo-motor', alt: 'Turbo Motor' });
+    }
+    
+    return baseIcons;
+  };
 
   // Check for theme changes
   useEffect(() => {
@@ -50,9 +63,11 @@ export const ProductPremiumAestheticsCard: FC<ProductPremiumAestheticsCardProps>
     };
   }, []);
 
+  const icons = getIcons();
+
   const Content = (
     <div className="p-6 h-full flex flex-col lg:py-20">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 flex-grow">
+      <div className={`grid grid-cols-1 sm:grid-cols-2 ${icons.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-6 flex-grow`}>
         {icons.map((icon) => (
           <div key={icon.name} className="flex flex-col items-center justify-center p-4 rounded-lg">
             <div className="relative h-16 w-full mb-3 flex items-center justify-center">

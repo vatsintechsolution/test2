@@ -119,6 +119,7 @@
         "description": "EcoLink AiroElevate BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
         "icon": "/home/icons/inverter-energy.svg"
       },
+      "ledFeature": {},
       "remoteFeatures": {
         "type": "RF Remote",
         "range": "No line of sight required",
@@ -312,6 +313,11 @@
         "description": "EcoLink AiroQuad BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
         "icon": "/home/icons/inverter-energy.svg"
       },
+      "ledFeature": {
+        "title": "Designer LED speed indicator",
+        "description": "Stylish ceiling fan featuring a designer LED speed indicator for a modern touch and enhanced functionality",
+        "image": "/home/product/quard-led.png"
+      },
       "remoteFeatures": {
         "type": "RF Remote",
         "range": "No line of sight required",
@@ -476,6 +482,11 @@
         "annualSavings": 1500,
         "description": "EcoLink AiroGeometry BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
         "icon": "/home/icons/inverter-energy.svg"
+      },
+      "ledFeature": {
+        "title": "Designer LED speed indicator",
+        "description": "Stylish ceiling fan featuring a designer LED speed indicator for a modern touch and enhanced functionality",
+        "image": "/home/product/geometry-led.png"
       },
       "remoteFeatures": {
         "type": "RF Remote",
@@ -647,6 +658,11 @@
         "description": "EcoLink AiroJewel BLDC Smart ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
         "icon": "/home/icons/energy.svg"
       },
+      "ledFeature": {
+        "title": "Designer LED speed indicator",
+        "description": "Stylish ceiling fan featuring a designer LED speed indicator for a modern touch and enhanced functionality",
+        "image": "/home/product/jewel-led.png"
+      },
       "remoteFeatures": {
         "type": "RF Remote & App Control",
         "range": "No line of sight required, control from anywhere",
@@ -678,8 +694,8 @@
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
-        "title": "Smart connectivity with elegant design",
-        "description": "EcoLink AiroJewel BLDC Smart ceiling fan combines premium aesthetics with advanced smart home features for modern living",
+        "title": "",
+        "description": "",
         "highlightPoints": []
       },
       "categories": [
@@ -819,6 +835,11 @@
         "description": "EcoLink AiroJewel BLDC Smart ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
         "icon": "/home/icons/energy.svg"
       },
+      "ledFeature": {
+        "title": "Designer LED speed indicator",
+        "description": "Stylish ceiling fan featuring a designer LED speed indicator for a modern touch and enhanced functionality",
+        "image": "/home/product/jewel-led.png"
+      },
       "remoteFeatures": {
         "type": "RF Remote & App Control",
         "range": "No line of sight required, control from anywhere",
@@ -850,8 +871,8 @@
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
-        "title": "Smart connectivity with elegant design",
-        "description": "EcoLink AiroJewel BLDC Smart ceiling fan combines premium aesthetics with advanced smart home features for modern living",
+        "title": "",
+        "description": "",
         "highlightPoints": []
       },
       "categories": [
@@ -867,7 +888,7 @@
       "modelName": "AiroGeometry Smart",
       "fullName": "EcoLink AiroGeometry BLDC Smart Ceiling Fan",
       "tagline": "Smart control with voice assistants",
-      "description": "Innovative design with WiFi connectivity, combining elegance and smart technology for a stunning modern ambiance.",
+      "description": "Innovative design of EcoLink AiroGeometry BLDC ceiling fan combines elegance and efficiency for a stunning modern ambiance.",
       "price": 5850,
       "starRating": 5,
       "warranty": {
@@ -931,7 +952,7 @@
           "value": "1200"
         }
       ],
-      "keyFeature": "Unique Triangular hub design with WiFi connectivity",
+      "keyFeature": "Unique Triangular hub design",
       "features": [
         {
           "title": "BLDC Technology",
@@ -992,6 +1013,11 @@
         "description": "EcoLink AiroGeometry BLDC Smart ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
         "icon": "/home/icons/energy.svg"
       },
+      "ledFeature": {
+        "title": "Designer LED speed indicator",
+        "description": "Stylish ceiling fan featuring a designer LED speed indicator for a modern touch and enhanced functionality",
+        "image": "/home/product/geometry-led.png"
+      },
       "remoteFeatures": {
         "type": "RF Remote & App Control",
         "range": "No line of sight required, control from anywhere",
@@ -1023,8 +1049,8 @@
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
-        "title": "Smart connectivity with elegant design",
-        "description": "EcoLink AiroGeometry BLDC Smart ceiling fan combines premium aesthetics with advanced smart home features for modern living",
+        "title": "",
+        "description": "",
         "highlightPoints": []
       },
       "categories": [
@@ -1142,6 +1168,7 @@
         "description": "EcoLink Stardust BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
         "icon": "/home/icons/inverter-energy.svg"
       },
+      "ledFeature": {},
       "remoteFeatures": {
         "type": "RF Remote",
         "range": "No line of sight required",
@@ -1274,7 +1301,7 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/summer.png"
+          "image": ""
         },
         "winter": {
           "title": "Winter Mode",
@@ -1283,11 +1310,12 @@
         }
       },
       "energyEfficiency": {
-        "title": "Robust motor, lasting performance!",
+        "title": "",
         "annualSavings": 1500,
-        "description": "Durable ceiling fan motor with 100% copper winding for enhanced efficiency and longevity.",
+        "description": "",
         "icon": "/home/icons/motor.svg"
       },
+      "ledFeature": {},
       "remoteFeatures": {
         "type": "RF Remote",
         "range": "No line of sight required",
@@ -1300,8 +1328,8 @@
         ],
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
-        "title": "Convenient Control at your fingertips!",
-        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
+        "title": "",
+        "description": ""
       },
       "images": {
         "main": "/home/product/AiroZephyr.png",
@@ -1317,7 +1345,7 @@
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
-        "title": "Premium Aesthetic Design",
+        "title": "",
         "description": "",
         "highlightPoints": []
       },
@@ -1325,7 +1353,22 @@
         "bldc",
         "premium",
         "featured"
-      ]
+      ],
+      "aluminumBladeFeature": {
+        "title": "Durable Aluminum Blade design",
+        "description": "Elegant ceiling fan featuring durable aluminum blades for optimal airflow and lasting performance",
+        "image": "/home/product/zypher-angle.png"
+      },
+      "airDeliveryFeature": {
+        "title": "Superior air delivery",
+        "description": "High-performance ceiling fan delivering superior air flow of 230 CMM for ultimate comfort",
+        "image": "/home/product/AiroZephyr.png"
+      },
+      "robustMotorFeature": {
+        "title": "Robust motor, lasting performance!",
+        "description": "Durable ceiling fan motor with 100% copper winding for enhanced efficiency and longevity.",
+        "image": "/home/product/AiroZephyr.png"
+      }
     },
     {
       "id": "airoserenade",
@@ -1431,11 +1474,12 @@
         }
       },
       "energyEfficiency": {
-        "title": "Robust motor, lasting performance!",
+        "title": "",
         "annualSavings": 1500,
-        "description": "Durable ceiling fan motor with 100% copper winding for enhanced efficiency and longevity.",
+        "description": "",
         "icon": "/home/icons/motor.svg"
       },
+      "ledFeature": {},
       "remoteFeatures": {
         "type": "RF Remote",
         "range": "No line of sight required",
@@ -1448,7 +1492,7 @@
         ],
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
-        "title": "Convenient Control at your fingertips!",
+        "title": "",
         "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
@@ -1465,7 +1509,7 @@
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
-        "title": "Premium Aesthetic Design",
+        "title": "",
         "description": "",
         "highlightPoints": []
       },
@@ -1473,7 +1517,22 @@
         "bldc",
         "premium",
         "featured"
-      ]
+      ],
+      "aluminumBladeFeature": {
+        "title": "Durable Aluminum Blade design",
+        "description": "Elegant ceiling fan featuring durable aluminum blades for optimal airflow and lasting performance",
+        "image": "/home/product/sereenade-angle.png"
+      },
+      "airDeliveryFeature": {
+        "title": "Superior air delivery",
+        "description": "High-performance ceiling fan delivering superior air flow of 230 CMM for ultimate comfort",
+        "image": "/home/product/AiroSerenada.png"
+      },
+      "robustMotorFeature": {
+        "title": "Robust motor, lasting performance!",
+        "description": "Durable ceiling fan motor with 100% copper winding for enhanced efficiency and longevity.",
+        "image": "/home/product/AiroSerenada.png"
+      }
     },
     {
       "id": "airosleek",
@@ -1481,7 +1540,7 @@
       "modelName": "AiroSleek",
       "fullName": "EcoLink AiroSleek BLDC Ceiling Fan",
       "tagline": "",
-      "description": "",
+      "description": "Elegant decorative ceiling fan with distinctive design and superior air delivery, enhancing any space with efficient performance.",
       "price": 4395,
       "starRating": 1,
       "warranty": {
@@ -1532,7 +1591,7 @@
           "value": "1200"
         }
       ],
-      "keyFeature": "",
+      "keyFeature": "Your perfect home accent!",
       "features": [
         {
           "title": "Superior air delivery",
@@ -1564,7 +1623,7 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/summer.png"
+          "image": ""
         },
         "winter": {
           "title": "Winter Mode",
@@ -1573,11 +1632,12 @@
         }
       },
       "energyEfficiency": {
-        "title": "Runs 3x longer on inverter",
+        "title": "",
         "annualSavings": 1500,
         "description": "EcoLink AiroSleek BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
         "icon": "/home/icons/inverter-energy.svg"
       },
+      "ledFeature": {},
       "remoteFeatures": {
         "type": "RF Remote",
         "range": "No line of sight required",
@@ -1590,7 +1650,7 @@
         ],
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
-        "title": "Convenient Control at your fingertips!",
+        "title": "",
         "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
@@ -1607,7 +1667,7 @@
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
-        "title": "Premium Aesthetic Design",
+        "title": "",
         "description": "",
         "highlightPoints": []
       },
@@ -1615,7 +1675,22 @@
         "bldc",
         "premium",
         "featured"
-      ]
+      ],
+      "aluminumBladeFeature": {
+        "title": "Durable Aluminum Blade design",
+        "description": "Elegant ceiling fan featuring durable aluminum blades for optimal airflow and lasting performance",
+        "image": "/home/product/airosleek-angle.png"
+      },
+      "airDeliveryFeature": {
+        "title": "Superior air delivery",
+        "description": "High-performance ceiling fan delivering superior air flow of 230 CMM for ultimate comfort",
+        "image": "/home/product/AiroSleek.png"
+      },
+      "robustMotorFeature": {
+        "title": "Robust motor, lasting performance!",
+        "description": "Durable ceiling fan motor with 100% copper winding for enhanced efficiency and longevity.",
+        "image": "/home/product/AiroSleek.png"
+      }
     },
     {
       "id": "vayuprohs",
@@ -1689,7 +1764,7 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/summer.png"
+          "image": ""
         },
         "winter": {
           "title": "Winter Mode",
@@ -1698,11 +1773,12 @@
         }
       },
       "energyEfficiency": {
-        "title": "Runs 3x longer on inverter",
+        "title": "",
         "annualSavings": 1500,
         "description": "EcoLink VayuPro HS BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
         "icon": "/home/icons/inverter-energy.svg"
       },
+      "ledFeature": {},
       "remoteFeatures": {
         "type": "RF Remote",
         "range": "No line of sight required",
@@ -1715,7 +1791,7 @@
         ],
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
-        "title": "Convenient Control at your fingertips!",
+        "title": "",
         "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
@@ -1732,7 +1808,7 @@
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
-        "title": "Premium Aesthetic Design",
+        "title": "",
         "description": "",
         "highlightPoints": []
       },
@@ -1740,7 +1816,17 @@
         "bldc",
         "premium",
         "featured"
-      ]
+      ],
+      "robustMotorFeature": {
+        "title": "Robust motor, lasting performance!",
+        "description": "Durable ceiling fan motor with 100% copper winding for enhanced efficiency and longevity.",
+        "image": "/home/product/VayuPro.png"
+      },
+      "doubleBearingFeature": {
+        "title": "Smooth operation with Double ball bearings!",
+        "description": "Powerful ceiling fan with double ball bearings, ensuring smooth airflow and extended lifespan.",
+        "image": "/home/product/VayuPro.png"
+      }
     },
     {
       "id": "vayuultra",
@@ -1830,11 +1916,12 @@
         }
       },
       "energyEfficiency": {
-        "title": "Runs 3x longer on inverter",
+        "title": "",
         "annualSavings": 1500,
-        "description": "EcoLink VayuUltra BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
+        "description": "",
         "icon": ""
       },
+      "ledFeature": {},
       "remoteFeatures": {
         "type": "RF Remote",
         "range": "No line of sight required",
@@ -1847,7 +1934,7 @@
         ],
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
-        "title": "Convenient Control at your fingertips!",
+        "title": "",
         "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
@@ -1864,7 +1951,7 @@
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
-        "title": "Premium Aesthetic Design",
+        "title": "",
         "description": "",
         "highlightPoints": []
       },
@@ -1872,7 +1959,17 @@
         "bldc",
         "premium",
         "featured"
-      ]
+      ],
+      "robustMotorFeature": {
+        "title": "Robust motor, lasting performance!",
+        "description": "Durable ceiling fan motor with 100% copper winding for enhanced efficiency and longevity.",
+        "image": "/home/product/VayuUltra.png"
+      },
+      "doubleBearingFeature": {
+        "title": "Smooth operation with Double ball bearings!",
+        "description": "Powerful ceiling fan with double ball bearings, ensuring smooth airflow and extended lifespan.",
+        "image": "/home/product/VayuUltra.png"
+      }
     },
     {
       "id": "airofreshnew",
@@ -1948,7 +2045,7 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/summer.png"
+          "image": ""
         },
         "winter": {
           "title": "Winter Mode",
@@ -1962,6 +2059,7 @@
         "description": "EcoLink Airofresh New BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
         "icon": "/home/icons/inverter-energy.svg"
       },
+      "ledFeature": {},
       "remoteFeatures": {
         "type": "RF Remote",
         "range": "No line of sight required",
@@ -1974,8 +2072,8 @@
         ],
         "image": "/home/dark-remote-feat.png",
         "lightModeImage": "/home/light-remote-feat.png",
-        "title": "Convenient Control at your fingertips!",
-        "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
+        "title": "",
+        "description": ""
       },
       "images": {
         "main": "/home/product/Airofresh New.png",
@@ -1991,7 +2089,7 @@
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
-        "title": "Premium Aesthetic Design",
+        "title": "",
         "description": "",
         "highlightPoints": []
       },

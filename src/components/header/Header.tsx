@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 const menuItems = [
   { label: 'Home', href: '/' },
   { label: 'Products', href: '/#products' },
-  { label: 'About', href: '/#about-us' },
+  { label: 'Why EcoLink', href: '/#why-ecolink' },
   { label: 'Contact', href: '/#contact-us' },
 ]
 
