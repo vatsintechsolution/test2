@@ -187,7 +187,7 @@ export default function Home() {
     {
       name: "EcoLink VayuPro High Speed Ceiling Fan",
       price: 2350,
-      image: "/home/product/VayuPro.png",
+      image: "/home/product/vayuprofan.png",
       slug: "vayuprohs"
     },
     {

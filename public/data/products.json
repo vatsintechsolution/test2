@@ -1795,7 +1795,7 @@
         "description": "Effortlessly control your comfort with a Point Anywhere RF remote for ultimate convenience"
       },
       "images": {
-        "main": "/home/product/VayuPro.png",
+        "main": "/home/product/vayuprofan.png",
         "gallery": [
           "/home/product/demo/1.png",
           "/home/product/demo/2.jpg",
@@ -1820,12 +1820,12 @@
       "robustMotorFeature": {
         "title": "Robust motor, lasting performance!",
         "description": "Durable ceiling fan motor with 100% copper winding for enhanced efficiency and longevity.",
-        "image": "/home/product/VayuPro.png"
+        "image": "/home/product/vayuprofan.png"
       },
       "doubleBearingFeature": {
         "title": "Smooth operation with Double ball bearings!",
         "description": "Powerful ceiling fan with double ball bearings, ensuring smooth airflow and extended lifespan.",
-        "image": "/home/product/VayuPro.png"
+        "image": "/home/product/vayuprofan.png"
       }
     },
     {
