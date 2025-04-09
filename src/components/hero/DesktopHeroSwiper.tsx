@@ -72,52 +72,58 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
               </div>
             ) : (
               // Regular content slide with heading and content
-              <div className="bg-radial-purple dark:bg-radial-black min-h-[90vh] container mx-auto flex flex-col md:flex-row items-center">
-                {/* Left Content */}
-                <div className="w-full md:w-1/2  py-16 flex flex-col justify-center">
-                  <div className="max-w-xl mx-auto md:mx-0 space-y-10">
-                    <p className="text-white/70 tracking-widest mb-2 uppercase">{slide.subheading}</p>
-                    <h1 className="text-white text-4xl md:text-6xl font-medium mb-6">{slide.heading}</h1>
-                    
-                    {slide.buttonText && slide.buttonLink && (
-                      <Link 
-                        href={slide.buttonLink}
-                        className="inline-block bg-white hover:bg-white/90 text-[#50287A] py-3 px-8 font-medium rounded-md transition-all duration-300 mb-12"
-                      >
-                        {slide.buttonText}
-                      </Link>
-                    )}
-                    
-                    {slide.features && (
-                      <div className="flex items-center space-x-8">
-                        {slide.features.map((feature, idx) => (
-                          <div key={idx} className="flex flex-col items-center">
-                            <Image 
-                              src={feature.icon} 
-                              alt={feature.text} 
-                              width={200} 
-                              height={70}
-                              className="mb-2"
-                            />
-                            <span className="text-white/70 text-xs text-center sr-only">{feature.text}</span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+              <div className="relative min-h-[850px] ">
+                {/* Background Image */}
+                <div className="absolute  inset-0 w-full h-full">
+                  <Image
+                    src={slide.desktopBg || "/home/slider-1.png"}
+                    alt={slide.heading}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    priority
+                    className="z-0"
+                  />
                 </div>
-                
-                {/* Right Image */}
-                <div className="w-full md:w-1/2 relative h-[50vh] md:h-[90vh] flex items-center justify-center">
-                  <div className="relative w-[90%] h-[90%]">
-                    <Image
-                      src={slide.desktopBg || "/home/slider-1.png"}
-                      alt={slide.heading}
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      priority
-                      className="drop-shadow-2xl"
-                    />
+
+                {/* Content Overlay */}
+                <div className="relative z-10 bg-black/20  min-h-[850px]">
+                  <div className="container mx-auto flex flex-col md:flex-row items-center min-h-[850px]">
+                    {/* Left Content */}
+                    <div className="w-full md:w-1/2 py-16 flex flex-col justify-center">
+                      <div className="max-w-xl mx-auto md:mx-0 space-y-10">
+                        <p className="text-[#fff] tracking-widest mb-2 text-xl font-medium">{slide.subheading}</p>
+                        <h1 className="text-[#fff] text-[68px]  font-bold mb-6">{slide.heading}</h1>
+                        
+                        {slide.buttonText && slide.buttonLink && (
+                          <Link 
+                            href={slide.buttonLink}
+                            className="inline-block bg-white hover:bg-white/90 text-[#50287A] py-3 px-8 font-medium rounded-md transition-all duration-300 mb-12"
+                          >
+                            {slide.buttonText}
+                          </Link>
+                        )}
+                        
+                        {slide.features && (
+                          <div className="flex items-center space-x-8">
+                            {slide.features.map((feature, idx) => (
+                              <div key={idx} className="flex flex-col items-center">
+                                <Image 
+                                  src={feature.icon} 
+                                  alt={feature.text} 
+                                  width={300} 
+                                  height={100}
+                                  className="mb-2 w-96 "
+                                />
+                                <span className="text-white/70 text-xs text-center sr-only">{feature.text}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    
+                    {/* Right side - empty to maintain layout */}
+                    <div className="w-full md:w-1/2" />
                   </div>
                 </div>
               </div>

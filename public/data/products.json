@@ -316,7 +316,7 @@
       "ledFeature": {
         "title": "Designer LED speed indicator",
         "description": "Stylish ceiling fan featuring a designer LED speed indicator for a modern touch and enhanced functionality",
-        "image": "/home/product/quard-led.png"
+        "image": "/home/product/AiroQuad.png"
       },
       "remoteFeatures": {
         "type": "RF Remote",
@@ -382,11 +382,11 @@
       },
       "sliderImages": {
         "default": [
-          "/sliders/airogeometry/1.png",
+          "/sliders/airogeometry/5.png",
           "/sliders/airogeometry/2.png",
           "/sliders/airogeometry/3.png",
           "/sliders/airogeometry/4.png",
-          "/sliders/airogeometry/5.png",
+          "/sliders/airogeometry/1.png",
           "/sliders/airogeometry/6.png",
           "/sliders/airogeometry/7.png",
           "/sliders/airogeometry/8.png",
@@ -395,19 +395,20 @@
       },
       "colors": [
         {
-          "name": "Titanium Grey",
-          "primary": "#3A3A5B",
-          "secondary": "#CCCCCC",
-          "gradientFrom": "#FFFFFF",
-          "gradientTo": "#DDDDDD"
-        },
-        {
           "name": "Silver Mist",
           "primary": "#FFFFFF",
           "secondary": "#CCCCCC",
           "gradientFrom": "#FFFFFF",
           "gradientTo": "#DDDDDD"
         },
+        {
+          "name": "Titanium Grey",
+          "primary": "#3A3A5B",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
+        },
+      
         {
           "name": "Dark Coffee",
           "primary": "#6F4E37",
@@ -486,7 +487,7 @@
       "ledFeature": {
         "title": "Designer LED speed indicator",
         "description": "Stylish ceiling fan featuring a designer LED speed indicator for a modern touch and enhanced functionality",
-        "image": "/home/product/geometry-led.png"
+        "image": "/home/product/AiroGeometry.png"
       },
       "remoteFeatures": {
         "type": "RF Remote",
@@ -513,11 +514,11 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://youtu.be/_-lJf3g3kDQ",
+        "promotional": "",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
-        "title": "Hassle free installation",
+        "title": "",
         "description": "EcoLink AiroGeometry BLDC ceiling fan features adjustable mounting, making it suitable for any ceiling type in your home",
         "highlightPoints": []
       },
@@ -533,7 +534,7 @@
       "modelName": "AiroJewel",
       "fullName": "EcoLink AiroJewel BLDC Ceiling Fan",
       "tagline": "Smart control with voice assistants",
-      "description": "Stunning design with WiFi connectivity, merging elegance with smart technology for modern homes",
+      "description": "Stunning design, merging elegance with energy-efficient technology",
       "price": 6550,
       "starRating": 5,
       "warranty": {
@@ -547,7 +548,7 @@
         "speed": "370 RPM",
         "airDelivery": "230 CMM",
         "dimensions": "578mm X 270mm X 295mm (Length X Width X Height)",
-        "type": "BLDC Smart Ceiling fan",
+        "type": "BLDC Ceiling fan",
         "brand": "EcoLink"
       },
       "sliderImages": {
@@ -597,7 +598,7 @@
           "value": "1200"
         }
       ],
-      "keyFeature": "Unique diamond cut design with WiFi connectivity",
+      "keyFeature": "Unique diamond cut design ",
       "features": [
         {
           "title": "BLDC Technology",
@@ -655,8 +656,8 @@
       "energyEfficiency": {
         "title": "Runs 3x longer on inverter",
         "annualSavings": 1500,
-        "description": "EcoLink AiroJewel BLDC Smart ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
-        "icon": "/home/icons/energy.svg"
+        "description": "EcoLink AiroJewel BLDC ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
+        "icon": "/home/icons/inverter-energy.svg"
       },
       "ledFeature": {
         "title": "Designer LED speed indicator",
@@ -710,7 +711,7 @@
       "modelName": "AiroJewel Smart",
       "fullName": "EcoLink AiroJewel BLDC Smart Ceiling Fan",
       "tagline": "Smart control with voice assistants",
-      "description": "Stunning design with WiFi connectivity, merging elegance with smart technology for modern homes",
+      "description": "Stunning design, merging elegance with energy-efficient technology",
       "price": 6950,
       "starRating": 5,
       "warranty": {
@@ -729,7 +730,8 @@
       },
       "sliderImages": {
         "default": [
-          "/sliders/airojewelsmart/1.png",
+          "/sliders/airojewelsmart/1.png?1",
+           "/sliders/airojewelsmart/33.png",
           "/sliders/airojewelsmart/2.png",
           "/sliders/airojewelsmart/3.png",
           "/sliders/airojewelsmart/4.jpg",
@@ -742,7 +744,9 @@
           "/sliders/airojewelsmart/11.png",
           "/sliders/airojewelsmart/12.png",
           "/sliders/airojewelsmart/13.png",
-          "/sliders/airojewelsmart/32.png"
+          "/sliders/airojewelsmart/32.png",
+          "/sliders/airojewelsmart/33.png"
+
         ]
       },
       "colors": [
@@ -774,7 +778,7 @@
           "value": "1200"
         }
       ],
-      "keyFeature": "Unique diamond cut design with WiFi connectivity",
+      "keyFeature": "Unique diamond cut design ",
       "features": [
         {
           "title": "BLDC Technology",
@@ -833,7 +837,7 @@
         "title": "Runs 3x longer on inverter",
         "annualSavings": 1500,
         "description": "EcoLink AiroJewel BLDC Smart ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
-        "icon": "/home/icons/energy.svg"
+        "icon": "/home/icons/inverter-energy.svg"
       },
       "ledFeature": {
         "title": "Designer LED speed indicator",
@@ -907,37 +911,33 @@
       },
       "sliderImages": {
         "default": [
-          "/sliders/airogeometrysmart/1.png",
+          "/sliders/airogeometrysmart/6.png",
+          "/sliders/airogeometrysmart/33.png",
           "/sliders/airogeometrysmart/2.png",
           "/sliders/airogeometrysmart/3.png",
-          "/sliders/airogeometrysmart/4.jpg",
-          "/sliders/airogeometrysmart/5.jpg",
-          "/sliders/airogeometrysmart/6.jpg",
-          "/sliders/airogeometrysmart/7.jpg",
-          "/sliders/airogeometrysmart/8.jpg",
-          "/sliders/airogeometrysmart/9.jpg",
-          "/sliders/airogeometrysmart/10.jpg",
-          "/sliders/airogeometrysmart/11.png",
-          "/sliders/airogeometrysmart/12.png",
-          "/sliders/airogeometrysmart/13.png",
-          "/sliders/airogeometrysmart/32.png"
+          "/sliders/airogeometrysmart/4.png",
+          "/sliders/airogeometrysmart/1.png",
+          "/sliders/airogeometrysmart/7.png",
+          "/sliders/airogeometrysmart/8.png",
+       
+          "/sliders/airogeometrysmart/10.png"
         ]
       },
       "colors": [
-        {
-          "name": "Titanium Grey",
-          "primary": "#3A3A5B",
-          "secondary": "#CCCCCC",
-          "gradientFrom": "#FFFFFF",
-          "gradientTo": "#DDDDDD"
-        },
         {
           "name": "Silver Mist",
           "primary": "#FFFFFF",
           "secondary": "#CCCCCC",
           "gradientFrom": "#FFFFFF",
           "gradientTo": "#DDDDDD"
+        }, {
+          "name": "Titanium Grey",
+          "primary": "#3A3A5B",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
         },
+       
         {
           "name": "Dark Coffee",
           "primary": "#6F4E37",
@@ -999,24 +999,24 @@
         "summer": {
           "title": "Summer Mode",
           "description": "Counter-clockwise rotation pushes air down for a cooling effect",
-          "image": "/home/summer.png"
+          "image": "/home/geometery-summer.png"
         },
         "winter": {
           "title": "Winter Mode",
           "description": "Clockwise rotation pulls cold air up and pushes warm air down without causing a draft",
-          "image": "/home/winters.png"
+          "image": "/home/geometery-winter.png"
         }
       },
       "energyEfficiency": {
         "title": "Runs 3x longer on inverter",
         "annualSavings": 1500,
         "description": "EcoLink AiroGeometry BLDC Smart ceiling fan, features a powerful BLDC motor, maximizing energy savings and cooling performance.",
-        "icon": "/home/icons/energy.svg"
+        "icon": "/home/icons/inverter-energy.svg"
       },
       "ledFeature": {
         "title": "Designer LED speed indicator",
         "description": "Stylish ceiling fan featuring a designer LED speed indicator for a modern touch and enhanced functionality",
-        "image": "/home/product/geometry-led.png"
+        "image": "/home/product/AiroGeometry.png"
       },
       "remoteFeatures": {
         "type": "RF Remote & App Control",
@@ -1045,7 +1045,7 @@
         "arModel": "/models/fan-3d.glb"
       },
       "videos": {
-        "promotional": "https://youtu.be/_-lJf3g3kDQ",
+        "promotional": "",
         "thumbnail": "/home/video-card-bg.png"
       },
       "aesthetics": {
@@ -1212,7 +1212,7 @@
       "id": "airozephyr",
       "slug": "airozephyr",
       "modelName": "AiroZephyr",
-      "fullName": "EcoLink AiroZephyr BLDC Ceiling Fan",
+      "fullName": "EcoLink AiroZephyr Decorative Ceiling Fan",
       "tagline": "",
       "description": "Elegant decorative ceiling fan with distinctive design and superior air delivery, enhancing any space with efficient performance.",
       "price": 4395,
@@ -1228,7 +1228,7 @@
         "speed": "370 RPM",
         "airDelivery": "230 CMM",
         "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
-        "type": "BLDC Ceiling fan",
+        "type": "Decorative Ceiling fan",
         "brand": "EcoLink"
       },
       "sliderImages": {
@@ -1374,7 +1374,7 @@
       "id": "airoserenade",
       "slug": "airoserenade",
       "modelName": "AiroSerenade",
-      "fullName": "EcoLink AiroSerenade BLDC Ceiling Fan",
+      "fullName": "EcoLink AiroSerenade Decorative Ceiling Fan",
       "tagline": "",
       "description": "Elegant decorative ceiling fan with distinctive design and superior air delivery, enhancing any space with efficient performance.",
       "price": 4395,
@@ -1390,7 +1390,7 @@
         "speed": "370 RPM",
         "airDelivery": "230 CMM",
         "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
-        "type": "BLDC Ceiling fan",
+        "type": "Decorative Ceiling fan",
         "brand": "EcoLink"
       },
       "sliderImages": {
@@ -1538,7 +1538,7 @@
       "id": "airosleek",
       "slug": "airosleek",
       "modelName": "AiroSleek",
-      "fullName": "EcoLink AiroSleek BLDC Ceiling Fan",
+      "fullName": "EcoLink AiroSleek Decorative Ceiling Fan",
       "tagline": "",
       "description": "Elegant decorative ceiling fan with distinctive design and superior air delivery, enhancing any space with efficient performance.",
       "price": 4395,
@@ -1554,7 +1554,7 @@
         "speed": "370 RPM",
         "airDelivery": "230 CMM",
         "dimensions": "xx mm X yy mm X zz mm (length X width X height)",
-        "type": "BLDC Ceiling fan",
+        "type": "Decorative Ceiling fan",
         "brand": "EcoLink"
       },
       "sliderImages": {
@@ -1696,11 +1696,11 @@
       "id": "vayuprohs",
       "slug": "vayuprohs",
       "modelName": "VayuPro HS",
-      "fullName": "EcoLink VayuPro HS BLDC Ceiling Fan",
+      "fullName": "EcoLink VayuPro HS Economy Ceiling Fan",
       "tagline": "High Speed Performance",
       "description": "High-speed ceiling fan offering exceptional efficiency and powerful airflow for optimal comfort in every room",
       "price": 2350,
-      "starRating": 4,
+      "starRating": 1,
       "warranty": {
         "standard": 3,
         "extended": 2,
@@ -1832,15 +1832,15 @@
       "id": "vayuultra",
       "slug": "vayuultra",
       "modelName": "Vayu Ultra",
-      "fullName": "EcoLink Vayu Ultra Table Fan",
+      "fullName": "EcoLink Vayu Ultra  Ceiling Fan",
       "tagline": "Experience the power of air",
       "description": "High-speed ceiling fan offering exceptional efficiency and powerful airflow for optimal comfort in every room",
       "price": 2499,
-      "starRating": 5,
+      "starRating": 1,
       "warranty": {
         "standard": 2,
         "extended": 0,
-        "note": "Get 2 years warranty on EcoLink Vayu Ultra table fan."
+        "note": "Get 2 years warranty on EcoLink Vayu Ultra Ceiling fan."
       },
       "specifications": {
         "sweepSize": "400 mm",
@@ -1848,7 +1848,7 @@
         "speed": "1350 RPM",
         "airDelivery": "85 CMM",
         "dimensions": "258mm X 200mm X 285mm (Length X Width X Height)",
-        "type": "Table fan",
+        "type": "Economy fan",
         "brand": "EcoLink"
       },
       "sliderImages": {

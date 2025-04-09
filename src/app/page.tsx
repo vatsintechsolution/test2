@@ -45,24 +45,6 @@ export default function Home() {
 
   const heroSlides = [
     {
-      desktopBg: "/home/elevate-slider.jpg",
-      mobileBg: "/home/slider-1.png?1",
-      subheading: "ECOLINK AIROELEVATE",
-      heading: "",
-      buttonText: "Explore Product",
-      buttonLink: "/products/airoelevate",
-      features: features,
-    },
-    {
-      desktopBg: "/home/geometry-slider.jpg",
-      mobileBg: "/home/slider-2.png",
-      subheading: "ECOLINK AIROGEOMETRY",
-      heading: "",
-      buttonText: "Explore Product",
-      buttonLink: "/products/airogeometry",
-      features: features,
-     },
-    {
       desktopBg: "/home/ipl-desktop.png",
       mobileBg: "/home/ipl-mobile.png",
       subheading: "",
@@ -71,6 +53,25 @@ export default function Home() {
       buttonLink: "",
       features: null,
     },
+    {
+      desktopBg: "/home/elevate-slider.jpg",
+      mobileBg: "/home/slider-1.png?1",
+      subheading: "EcoLink AiroElevate BLDC Ceiling Fan",
+      heading: "Unique Hollow Hub Design",
+      buttonText: "Explore Product",
+      buttonLink: "/products/airoelevate",
+      features: features,
+    },
+    {
+      desktopBg: "/home/geometry-slider.svg",
+      mobileBg: "/home/slider-2.png",
+      subheading: "EcoLink AiroQuad BLDC Ceiling Fan",
+      heading: "Unique Square hub design",
+      buttonText: "Explore Product",
+      buttonLink: "/products/airoquad",
+      features: features,
+     },
+    
   ];
 
   const productFeatures = [
@@ -110,6 +111,39 @@ export default function Home() {
       text: "Double Ball Bearing",
     },
   ];
+
+  const VayuProFeatures = [
+    {
+      icon: "/home/icons/effic-performence.svg",
+      text: "Efficient Performance",
+    },
+    {
+      icon: "/home/icons/100-coppor-motor.svg",
+      text: "100% Copper Motor",
+    },
+    {
+      icon: "/home/icons/double-ball-bearing.svg",
+      text: "Double Ball Bearing",
+    },
+  ];
+
+  const VayuHSFeatures = [
+    {
+      icon: "/home/icons/high-spped-fan.svg",
+      text: "High Speed Fan",
+    },
+    {
+      icon: "/home/icons/100-coppor-motor.svg",
+      text: "100% Copper Motor",
+    },
+    {
+      icon: "/home/icons/double-ball-bearing.svg",
+      text: "Double Ball Bearing",
+    },
+  ];
+
+
+  
 
   const bldcFans = [
     {
@@ -183,13 +217,17 @@ export default function Home() {
     
   ];
 
-  const economyFans = [
+  const economyFansPro = [
     {
       name: "EcoLink VayuPro High Speed Ceiling Fan",
       price: 2350,
       image: "/home/product/vayuprofan.png",
       slug: "vayuprohs"
-    },
+    }
+  ];
+
+  const economyFansHS = [
+    
     {
       name: "EcoLink VayuUltra Ceiling Fan",
       price: 2350,
@@ -425,13 +463,24 @@ export default function Home() {
             Explore our Economy Ceiling fans{" "}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-            {economyFans.map((fan, index) => (
+            {economyFansHS.map((fan, index) => (
               <ProductCard
                 key={index}
                 name={fan.name}
-                features={productFeatures}
+                features={VayuHSFeatures}
                 price={fan.price}
-                badgeImage="/home/icons/badge.svg"
+                badgeImage="/home/icons/1-star-badge.svg"
+                productImage={fan.image}
+                slug={fan.slug}
+              />
+            ))}
+            {economyFansPro.map((fan, index) => (
+              <ProductCard
+                key={index}
+                name={fan.name}
+                features={VayuProFeatures}
+                price={fan.price}
+                badgeImage="/home/icons/1-star-badge.svg"
                 productImage={fan.image}
                 slug={fan.slug}
               />

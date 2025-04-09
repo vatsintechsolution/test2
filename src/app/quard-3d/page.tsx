@@ -18,7 +18,7 @@ export default function AlternatePage() {
     <main className="h-screen w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/fan-bg.jpg)' }}>
       <div className="container mx-auto">
         <div className="h-[600px] w-full">
-          <ARViewer modelPath="/models/quard.glb" />
+          <ARViewer modelPath="/models/quad.glb" />
         </div>
 
        

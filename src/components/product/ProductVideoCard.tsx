@@ -93,6 +93,7 @@ export const ProductVideoCard: FC<ProductVideoCardProps> = ({
               fill
               priority={priority}
               className="object-cover"
+              quality={100}
             />
             
             {/* Product image overlay */}
@@ -104,6 +105,7 @@ export const ProductVideoCard: FC<ProductVideoCardProps> = ({
                 priority={priority}
                 className="object-contain z-[1] object-top"
                 onError={() => setImageError(true)}
+                quality={100} 
               />
             )}
           </div>

@@ -16,7 +16,7 @@ interface SizeOption {
 
 interface ProductDetailsProps {
   name: string;
-  description: string;
+  slug: string;
   regularPrice: number;
   colorOptions: ColorOption[];
   sizeOptions: SizeOption[];
@@ -26,7 +26,7 @@ interface ProductDetailsProps {
 
 export const ProductDetails = ({
   name,
-  description,
+  slug,
   regularPrice,
   colorOptions,
   sizeOptions,
@@ -52,9 +52,7 @@ export const ProductDetails = ({
           <h1 className="text-xl md:text-5xl font-medium dark:text-white text-[#3A3A5B] mb-4">
             {name}
           </h1>
-          <p className="text-base dark:text-white text-[#3A3A5B]">
-            {description}
-          </p>
+        
         </div>
 
         {/* Price, Color, Size in one row */}
@@ -118,6 +116,8 @@ export const ProductDetails = ({
         </div>
 
         {/* Warranty Section */}
+        {!slug.includes('airozephyr') && !slug.includes('airoserenade') && !slug.includes('airosleek') && !slug.includes('stardust') && !slug.includes('vayuultra') && !slug.includes('vayuprohs') && (
+
         <div className="mt-8  border border-gray-200 dark:border-gray-700 w-auto inline-block rounded-lg p-4">
           <div className="flex items-center">
             <div className="flex items-center">
@@ -139,6 +139,8 @@ export const ProductDetails = ({
             </div>
           </div>
         </div>
+
+            )}
 
         {/* Buy Buttons */}
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 lg:mt-16">

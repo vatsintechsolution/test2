@@ -43,7 +43,8 @@ export const ProductFeatureCard: FC<ProductFeatureCardProps> = ({
             width={imageWidth}
             height={imageHeight}
             priority={priority}
-            className="object-contain lg:w-[450px] lg:h-[250px] scale-125 lg:scale-150"
+            className="object-cover lg:w-[450px] lg:h-[250px] scale-150 lg:scale-150"
+            quality={100}
           />
         </div>
         <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white dark:text-white">{title}</h3>

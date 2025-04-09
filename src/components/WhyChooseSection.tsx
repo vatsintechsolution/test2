@@ -137,10 +137,11 @@ export const WhyChooseSection = ({ features }: WhyChooseSectionProps) => {
                 
                 <div className="relative h-[500px] w-full">
                   <Image
-                    src="/home/why-choose-desktop.png"
+                    src="/home/why-choose-desktop.png?v=3"
                     alt="EcoLink Ceiling Fan"
                     fill
-                    className="object-cover scale-125 -ml-10"
+                    className="object-contain scale-125 -ml-2"
+                    quality={100}
                   />
                 </div>
                 

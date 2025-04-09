@@ -122,6 +122,7 @@ export const ProductCard = ({
                         width={68}
                         height={71}
                         className=""
+                        quality={100}
                       />
                       <span className="sr-only">{feature.text}</span>
                     </div>
@@ -131,7 +132,7 @@ export const ProductCard = ({
                 {/* Product Name and Price */}
                 <div className="flex items-end justify-between mb-2">
                   <div className='grow'>
-                    <h3 className="text-[18px] font-medium leading-6 text-white mb-1">{name}</h3>
+                    <h3 className="text-[16px] xs:text-[14px] font-medium leading-6 text-white mb-1">{name}</h3>
                     <div className="flex items-center gap-1 text-[16px]">
                       <span className="text-neutral-400">MRP</span>
                       <span className="font-semibold text-white">₹{price.toLocaleString()}</span>
@@ -207,7 +208,7 @@ export const ProductCard = ({
                     src={productImage}
                     alt={name}
                     fill
-                    className="object-contain transition-transform duration-300 group-hover:scale-105 p-4"
+                    className="object-contain transition-transform ml-[-50px] scale-110 duration-300 group-hover:scale-125 p-4"
                   />
                 </div>
               </div>

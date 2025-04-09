@@ -125,7 +125,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             {/* Product Details */}
             <ProductDetails
               name={product.fullName}
-              description={product.tagline}
+              slug={params.slug}
               regularPrice={product.price}
               colorOptions={colorOptions}
               sizeOptions={product.sizes}
@@ -259,9 +259,11 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
          
 
           <section className="grid grid-cols-1 gap-4 py-10">
-            <div className="col-span-1 h-full">
-              {params.slug.includes('smart') ? <WizAppSection /> : <DigiShieldSection />}
-            </div>
+            {!params.slug.includes('airozephyr') && !params.slug.includes('airoserenade') && !params.slug.includes('airosleek') && !params.slug.includes('stardust') && !params.slug.includes('vayuultra') && !params.slug.includes('vayuprohs') && (
+              <div className="col-span-1 h-full">
+                <DigiShieldSection />
+              </div>
+            )}
 
             {product.arLink && (
               <div className="col-span-1 h-full">
@@ -290,7 +292,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   { label: "Speed", value: product.specifications.speed },
                   { label: "Air Delivery (CMM)", value: product.specifications.airDelivery },
                   { label: "Power", value: product.specifications.power },
-                  { label: "Warranty", value: `${product.warranty.standard}+${product.warranty.extended}* years` },
+                  { label: "Warranty", value: params.slug.includes('airozephyr') || params.slug.includes('airoserenade') || params.slug.includes('airosleek') || params.slug.includes('stardust') || params.slug.includes('vayuultra') || params.slug.includes('vayuprohs') ? "2 years" : `${product.warranty.standard}+${product.warranty.extended}* years` },
                   ...(product.specifications.dimensions !== "xx mm X yy mm X zz mm (length X width X height)" ? [{ label: "Dimensions", value: product.specifications.dimensions }] : []),
                 ].map((spec, index) => (
                   <div
@@ -307,9 +309,12 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 ))}
               </div>
 
-              <p className="text-sm text-white/50 mt-6">
-                {product.warranty.note}
+              {!params.slug.includes('airozephyr') && !params.slug.includes('airoserenade') && !params.slug.includes('airosleek') && !params.slug.includes('stardust') && !params.slug.includes('vayuultra') && !params.slug.includes('vayuprohs') && (
+                <p className="text-sm text-white/50 mt-6">
+                * {product.warranty.note}
               </p>
+              )}
+
             </div>
           </section>
         </div>
