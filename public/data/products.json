@@ -662,7 +662,7 @@
       "ledFeature": {
         "title": "Designer LED speed indicator",
         "description": "Stylish ceiling fan featuring a designer LED speed indicator for a modern touch and enhanced functionality",
-        "image": "/home/product/jewel-led.png"
+        "image": "/home/product/jewel-led.png?s"
       },
       "remoteFeatures": {
         "type": "RF Remote & App Control",
@@ -842,7 +842,7 @@
       "ledFeature": {
         "title": "Designer LED speed indicator",
         "description": "Stylish ceiling fan featuring a designer LED speed indicator for a modern touch and enhanced functionality",
-        "image": "/home/product/jewel-led.png"
+        "image": "/home/product/jewel-led.png?s"
       },
       "remoteFeatures": {
         "type": "RF Remote & App Control",

@@ -99,28 +99,41 @@ export function Footer() {
           <div className="md:col-span-5 md:col-start-8 md:col-end-13 order-2 md:order-3">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full text-center md:text-left">
               <div>
-                <h4 className="font-medium mb-3">LED Lights</h4>
+                <h4 className="font-medium mb-3">BLDC Ceiling Fans</h4>
                 <ul className="space-y-1 text-sm">
-                  <li><Link href="/products/led-downlighter" className="hover:underline">Bulbs</Link></li>
-                  <li><Link href="/products/led-spotlight" className="hover:underline">Downlights</Link></li>
-                  <li><Link href="/products/led-cob-light" className="hover:underline">Surface Lights</Link></li>
-                  <li><Link href="/products/led-surface" className="hover:underline">COB Surface</Link></li>
-                  <li><Link href="/products/led-strip-drivers" className="hover:underline">Batten & Tube Lights</Link></li>
-                  <li><Link href="/products/led-rope" className="hover:underline">Strip Lights / Rope Lights</Link></li>
+                <li><Link href="/products/airoelevate" className="hover:underline">AiroElevate</Link></li>
+                  <li><Link href="/products/airoquad" className="hover:underline">AiroQuad</Link></li>
+                  <li><Link href="/products/airojewel" className="hover:underline">AiroJewel</Link></li>
+                  <li><Link href="/products/airogeometry" className="hover:underline">AiroGeometry</Link></li>
+                  <li><Link href="/products/stardustbldc" className="hover:underline">Stardust</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-medium mb-3">BLDC Smart Ceiling Fans</h4>
+                <ul className="space-y-1 text-sm">
+                  <li><Link href="/products/airojewelsmart" className="hover:underline">AiroJewel</Link></li>
+                  <li><Link href="/products/airogeometrysmart" className="hover:underline">AiroGeometry</Link></li>
                 </ul>
               </div>
               
               <div>
-                <h4 className="font-medium mb-3">Ceiling Fans</h4>
+                <h4 className="font-medium mb-3">Decorative Fans</h4>
                 <ul className="space-y-1 text-sm">
-                  <li><Link href="/products/airoelevate" className="hover:underline">AiroElevate</Link></li>
-                  <li><Link href="/products/airoquad" className="hover:underline">AiroQuad</Link></li>
-                  <li><Link href="/products/airojewel" className="hover:underline">AiroJewel</Link></li>
-                  <li><Link href="/products/airogeometry" className="hover:underline">AiroGeometry</Link></li>
+                
                   <li><Link href="/products/airozephyr" className="hover:underline">AiroZephyr</Link></li>
                   <li><Link href="/products/airoserenade" className="hover:underline">AiroSerenade</Link></li>
                   <li><Link href="/products/airosleek" className="hover:underline">AiroSleek</Link></li>
-                  <li><Link href="/products/stardustbldc" className="hover:underline">Stardust</Link></li>
+                  
+                  <li><Link href="/products/vayuprohs" className="hover:underline">VayuPro</Link></li>
+                  <li><Link href="/products/vayuultra" className="hover:underline">VayuUltra</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-medium mb-3">Economy Fans</h4>
+                <ul className="space-y-1 text-sm">
+                
+                
+                  
                   <li><Link href="/products/vayuprohs" className="hover:underline">VayuPro</Link></li>
                   <li><Link href="/products/vayuultra" className="hover:underline">VayuUltra</Link></li>
                 </ul>

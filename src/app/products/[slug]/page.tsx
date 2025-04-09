@@ -19,7 +19,6 @@ import { ProductPremiumAestheticsCard } from "@/components/product/ProductPremiu
 import productsData, { Product } from "@/lib/products";
 import { DigiShieldSection } from "@/components/DigiShieldSection";
 import { ARViewSection } from "@/components/ARViewSection";
-import { WizAppSection } from "@/components/wizAppSection";
 
 // Map of product slugs to their Amazon links
 const amazonLinks: { [key: string]: string } = {

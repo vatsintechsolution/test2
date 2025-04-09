@@ -185,7 +185,7 @@ export const ProductCard = ({
               <div className="flex flex-row flex-grow relative z-[2]">
                 {/* Content at the left */}
                 <div className="p-8 w-1/2 flex flex-col justify-start text-[#383838]">
-                  <h3 className="text-[28px] font-medium  mb-1">{name}</h3>
+                  <h3 className="text-[26px] font-medium  mb-1">{name}</h3>
                   <div className="flex items-center gap-1 text-[16px] mb-4">
                     <span className="">MRP</span>
                     <span className="font-semibold ">₹{price.toLocaleString()}</span>

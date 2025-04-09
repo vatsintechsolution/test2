@@ -132,9 +132,9 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         ios-src="/fan-3d.usdz"
         rotation-per-second={speedValues[rotationSpeed]}
         interaction-policy="allow-when-focused"
-        camera-orbit="0deg 120deg 100%"
+        camera-orbit="0deg 100deg 100%"
         min-camera-orbit="auto 100deg 100%"
-        max-camera-orbit="auto 120deg 200%"
+        max-camera-orbit="auto 120deg 100%"
         camera-target="0m -200.5m 0m"
         field-of-view="30deg"
         shadow-intensity="1"

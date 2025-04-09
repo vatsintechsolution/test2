@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/header/Header";
 import StyledComponentsRegistry from '../lib/registry';
 import { ThemeProvider } from "@/lib/ThemeProvider";
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -55,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -83,6 +84,7 @@ export default function RootLayout({
       <body
         className="antialiased"
       >
+        <ScrollToTop />
         <StyledComponentsRegistry>
           <ThemeProvider>
             <Header />

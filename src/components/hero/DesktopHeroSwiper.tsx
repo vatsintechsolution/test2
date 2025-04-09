@@ -91,7 +91,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
                     {/* Left Content */}
                     <div className="w-full md:w-1/2 py-16 flex flex-col justify-center">
                       <div className="max-w-xl mx-auto md:mx-0 space-y-10">
-                        <p className="text-[#fff] tracking-widest mb-2 text-xl font-medium">{slide.subheading}</p>
+                        <p className="text-[#fff] tracking-[0.2em] mb-2 text-xl font-medium ">{slide.subheading}</p>
                         <h1 className="text-[#fff] text-[68px]  font-bold mb-6">{slide.heading}</h1>
                         
                         {slide.buttonText && slide.buttonLink && (
