@@ -109,7 +109,7 @@ export function Footer() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-medium mb-3">BLDC Smart Ceiling Fans</h4>
+                <h4 className="font-medium mb-3">Smart Ceiling Fans</h4>
                 <ul className="space-y-1 text-sm">
                   <li><Link href="/products/airojewelsmart" className="hover:underline">AiroJewel</Link></li>
                   <li><Link href="/products/airogeometrysmart" className="hover:underline">AiroGeometry</Link></li>
@@ -124,8 +124,7 @@ export function Footer() {
                   <li><Link href="/products/airoserenade" className="hover:underline">AiroSerenade</Link></li>
                   <li><Link href="/products/airosleek" className="hover:underline">AiroSleek</Link></li>
                   
-                  <li><Link href="/products/vayuprohs" className="hover:underline">VayuPro</Link></li>
-                  <li><Link href="/products/vayuultra" className="hover:underline">VayuUltra</Link></li>
+                  
                 </ul>
               </div>
               <div>

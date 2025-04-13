@@ -720,10 +720,10 @@
         "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
       },
       "specifications": {
-        "sweepSize": "1200 mm",
-        "power": "35 W",
-        "speed": "370 RPM",
-        "airDelivery": "230 CMM",
+      "sweepSize": "1200 mm, 900 mm",
+        "power": "35 W, 28 W",
+        "speed": "370 RPM, 450 RPM",
+        "airDelivery": "230 CMM, 150 CMM",
         "dimensions": "578mm X 270mm X 295mm (Length X Width X Height)",
         "type": "BLDC Smart Ceiling fan",
         "brand": "EcoLink"
@@ -776,6 +776,10 @@
         {
           "label": "1200mm",
           "value": "1200"
+        },
+        {
+          "label": "900mm",
+          "value": "900"
         }
       ],
       "keyFeature": "Unique diamond cut design ",
@@ -901,11 +905,11 @@
         "note": "Get 2 years extended warranty with 3 years standard warranty on EcoLink BLDC Ceiling fan. To activate extended warranty, register product on Signify DigiShield App"
       },
       "specifications": {
-        "sweepSize": "1200 mm",
-        "power": "35 W",
-        "speed": "370 RPM",
-        "airDelivery": "230 CMM",
-        "dimensions": "578mm X 270mm X 295mm (Length X Width X Height)",
+        "sweepSize": "1200 mm, 900 mm",
+        "power": "35 W, 28 W",
+        "speed": "370 RPM, 450 RPM",
+        "airDelivery": "230 CMM, 150 CMM",
+        "dimensions": "578mm X 270mm X 295mm (Length X Width X Height), 578mm X 270mm X 295mm (Length X Width X Height)",
         "type": "BLDC Smart Ceiling fan",
         "brand": "EcoLink"
       },
@@ -950,6 +954,10 @@
         {
           "label": "1200mm",
           "value": "1200"
+        },
+        {
+          "label": "900mm",
+          "value": "900"
         }
       ],
       "keyFeature": "Unique Triangular hub design",
@@ -1844,9 +1852,9 @@
       },
       "specifications": {
         "sweepSize": "400 mm",
-        "power": "55 W",
-        "speed": "1350 RPM",
-        "airDelivery": "85 CMM",
+        "power": "52 W",
+        "speed": "1200 RPM",
+        "airDelivery": "210 CMM",
         "dimensions": "258mm X 200mm X 285mm (Length X Width X Height)",
         "type": "Economy fan",
         "brand": "EcoLink"

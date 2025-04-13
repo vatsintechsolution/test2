@@ -95,24 +95,26 @@ export const ProductDetails = ({
           </div>
 
           {/* Size Selection */}
-          <div className="md:w-1/3 hidden">
-            <h3 className="dark:text-white text-[#3A3A5B] text-lg mb-3">Size</h3>
-            <div className="flex gap-4">
-              {sizeOptions.map((size) => (
-                <button
-                  key={size.value}
-                  onClick={() => setSelectedSize(size.value)}
-                  className={`px-4 py-2 rounded-full text-base ${
-                    selectedSize === size.value
-                      ? "border border-[#582C83] bg-white text-[#3A3A5B]"
-                      : "border border-gray-200 dark:border-[#DBDBDB]/10 dark:text-white text-[#3A3A5B]"
-                  }`}
-                >
-                  {size.label}
-                </button>
-              ))}
+          {slug.includes('airojewelsmart') || slug.includes('airogeometrysmart') && (
+            <div className="md:w-1/3 ">
+              <h3 className="dark:text-white text-[#3A3A5B] text-lg mb-3">Size</h3>
+              <div className="flex gap-4">
+                {sizeOptions.map((size) => (
+                  <button
+                    key={size.value}
+                    onClick={() => setSelectedSize(size.value)}
+                    className={`px-4 py-2 rounded-full text-base ${
+                      selectedSize === size.value
+                        ? "border border-[#582C83] bg-white text-[#3A3A5B]"
+                        : "border border-gray-200 dark:border-[#DBDBDB]/10 dark:text-white text-[#3A3A5B]"
+                    }`}
+                  >
+                    {size.label}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Warranty Section */}

@@ -43,7 +43,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
       // Apply theme class to document
       const root = document.documentElement;
-      root.classList.remove('light', 'dark');
+      root.classList.remove('light');
 
       // Always use dark theme for system preference
       if (theme === 'system') {
@@ -63,7 +63,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (!mounted || theme !== 'system') return;
     
     const root = document.documentElement;
-    root.classList.remove('light', 'dark');
+    root.classList.remove('light');
     root.classList.add('dark');
   }, [theme, mounted]);
 
