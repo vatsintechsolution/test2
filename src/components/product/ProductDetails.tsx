@@ -95,7 +95,7 @@ export const ProductDetails = ({
           </div>
 
           {/* Size Selection */}
-          {slug.includes('airojewelsmart') || slug.includes('airogeometrysmart') && (
+          {slug.includes('airojewelsmart') && slug.includes('airogeometrysmart') && (
             <div className="md:w-1/3 ">
               <h3 className="dark:text-white text-[#3A3A5B] text-lg mb-3">Size</h3>
               <div className="flex gap-4">

@@ -208,35 +208,35 @@ export const ProductCard = ({
                     src={productImage}
                     alt={name}
                     fill
-                    className="object-contain transition-transform ml-[-50px] scale-110 duration-300 group-hover:scale-125 p-4"
+                    className="object-contain transition-transform ml-[-20px] scale-105 duration-300 group-hover:scale-110 p-4"
                   />
                 </div>
               </div>
               
               {/* Features at the bottom */}
-              <div className="mt-auto p- relative w-[70%] pl-4 pb-2">
+              <div className="mt-auto p- relative lg:w-[70%] md:w-[60%] pl-4 pb-2">
                 <div className="flex justify-start items-center px-4">
                   {features.slice(0, 4).map((feature, index) => (
                     <div
                       key={index}
-                      className="flex flex-col items-center"
+                      className="flex flex-col items-center "
                       role="img"
                       aria-label={feature.text}
                     >
                       <Image
                         src={feature.icon}
                         alt=""
-                        width={80}
-                        height={60}
+                        width={60}
+                        height={50}
                         className=""
                       />
-                      <span className="text-white/70 text-xs mt-1 sr-only">{feature.text}</span>
+                      <span className="text-white/70 text-xs mt-1 sr-only md:w-9">{feature.text}</span>
                     </div>
                   ))}
                 </div>
                 
                 {/* Badge Image - positioned in bottom right corner */}
-                <div className="absolute bottom-0 right-[-120px] w-36 h-36 translate-y-1/4 translate-x-1/4">
+                <div className="absolute bottom-0 right-[-120px] md:right-[-100px] w-36 h-36 translate-y-1/4 translate-x-1/4">
                   <Image
                     src={badgeImage}
                     alt="Rating"

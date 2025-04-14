@@ -3,10 +3,18 @@ import type { Metadata } from 'next';
 // Import the product data from the lib file
 import productsData from '@/lib/products';
 
+// Define a type for the route params
+type ProductPageParams = {
+  slug: string;
+};
+
 // This is a dynamic metadata function that will generate metadata for each product page
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: ProductPageParams }): Promise<Metadata> {
+  // Properly await params to access the slug in Next.js 15
+  const { slug } = await params;
+  
   // Find the product with the matching slug
-  const product = productsData.products.find(p => p.slug === params.slug);
+  const product = productsData.products.find(p => p.slug === slug);
 
   // If no product is found, return a basic metadata object
   if (!product) {

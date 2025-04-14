@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import * as React from 'react';
 import { ProductSwiper } from "@/components/products/ProductSwiper";
 import { Footer } from "@/components/footer/Footer";
 import Link from "next/link";
@@ -40,21 +41,30 @@ const productDimensions: { [key: string]: string } = {
   airofreshnew: "267mm X 212mm X 160mm (Length X Width X Height)"
 };
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
+// Define a type for route params
+type ProductPageParams = {
+  slug: string;
+};
+
+export default function ProductPage({ params }: { params: ProductPageParams }) {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string>("");
+  
+  // Properly type the params Promise
+  const resolvedParams = React.use(params as Promise<ProductPageParams> & ProductPageParams);
+  const { slug } = resolvedParams;
 
   useEffect(() => {
     try {
       // Find the product that matches the slug
-      const foundProduct = productsData.products.find(p => p.slug === params.slug);
+      const foundProduct = productsData.products.find(p => p.slug === slug);
       
       if (foundProduct) {
         // Update dimensions if available
-        if (productDimensions[params.slug]) {
-          foundProduct.specifications.dimensions = productDimensions[params.slug];
+        if (productDimensions[slug]) {
+          foundProduct.specifications.dimensions = productDimensions[slug];
         }
         setProduct(foundProduct);
         // Set the default selected color to the first color option
@@ -62,7 +72,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
           setSelectedColor(foundProduct.colors[0].name);
         }
       } else {
-        setError(`Product with slug "${params.slug}" not found`);
+        setError(`Product with slug "${slug}" not found`);
       }
     } catch (err) {
       setError("Error loading product data");
@@ -70,7 +80,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     } finally {
       setLoading(false);
     }
-  }, [params.slug]);
+  }, [slug]);
 
   // Handle color selection change
   const handleColorChange = (colorValue: string) => {
@@ -115,7 +125,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             <div>
               <ProductSwiper 
                 images={product.images.gallery} 
-                slug={params.slug}
+                slug={slug}
                 selectedColor={selectedColor}
                 productData={product}
               />
@@ -124,11 +134,11 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             {/* Product Details */}
             <ProductDetails
               name={product.fullName}
-              slug={params.slug}
+              slug={slug}
               regularPrice={product.price}
               colorOptions={colorOptions}
               sizeOptions={product.sizes}
-              amazonLink={amazonLinks[params.slug]}
+              amazonLink={amazonLinks[slug]}
               onColorChange={handleColorChange}
             />
           </div>
@@ -138,7 +148,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
         {product.keyFeature &&
           <ProductFeatureCard
-            imageSrc={product.images.main}
+            imageSrc={slug === 'airoelevate' ? '/home/UNIQUE-HOLLOW-HUB.png' : product.images.main}
             title={product.keyFeature}
             description={product.description}
             imageWidth={250}
@@ -245,7 +255,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
           
           </div>
 
-          {!params.slug.includes('vayuprohs') && !params.slug.includes('vayuultra') && (
+          {!slug.includes('vayuprohs') && !slug.includes('vayuultra') && (
             <div className="py-10">
               <ProductPremiumAestheticsCard
                 className="mx-auto"
@@ -258,7 +268,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
          
 
           <section className="grid grid-cols-1 gap-4 py-10">
-            {!params.slug.includes('airozephyr') && !params.slug.includes('airoserenade') && !params.slug.includes('airosleek') && !params.slug.includes('stardust') && !params.slug.includes('vayuultra') && !params.slug.includes('vayuprohs') && (
+            {!slug.includes('airozephyr') && !slug.includes('airoserenade') && !slug.includes('airosleek') && !slug.includes('stardust') && !slug.includes('vayuultra') && !slug.includes('vayuprohs') && (
               <div className="col-span-1 h-full">
                 <DigiShieldSection />
               </div>
@@ -291,7 +301,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   { label: "Speed", value: product.specifications.speed },
                   { label: "Air Delivery (CMM)", value: product.specifications.airDelivery },
                   { label: "Power", value: product.specifications.power },
-                  { label: "Warranty", value: params.slug.includes('airozephyr') || params.slug.includes('airoserenade') || params.slug.includes('airosleek') || params.slug.includes('stardust') || params.slug.includes('vayuultra') || params.slug.includes('vayuprohs') ? "2 years" : `${product.warranty.standard}+${product.warranty.extended}* years` },
+                  { label: "Warranty", value: slug.includes('airozephyr') || slug.includes('airoserenade') || slug.includes('airosleek') || slug.includes('stardust') || slug.includes('vayuultra') || slug.includes('vayuprohs') ? "2 years" : `${product.warranty.standard}+${product.warranty.extended}* years` },
                   ...(product.specifications.dimensions !== "xx mm X yy mm X zz mm (length X width X height)" ? [{ label: "Dimensions", value: product.specifications.dimensions }] : []),
                 ].map((spec, index) => (
                   <div
@@ -308,7 +318,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 ))}
               </div>
 
-              {!params.slug.includes('airozephyr') && !params.slug.includes('airoserenade') && !params.slug.includes('airosleek') && !params.slug.includes('stardust') && !params.slug.includes('vayuultra') && !params.slug.includes('vayuprohs') && (
+              {!slug.includes('airozephyr') && !slug.includes('airoserenade') && !slug.includes('airosleek') && !slug.includes('stardust') && !slug.includes('vayuultra') && !slug.includes('vayuprohs') && (
                 <p className="text-sm text-white/50 mt-6">
                 * {product.warranty.note}
               </p>

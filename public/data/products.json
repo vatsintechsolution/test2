@@ -567,11 +567,37 @@
           "/sliders/airojewel/12.png",
           "/sliders/airojewel/13.png",
           "/sliders/airojewel/32.png"
+        ],
+        "Pearl White": [
+          "/sliders/airojewel/1.png",
+          "/sliders/airojewel/2.png",
+
+          "/sliders/airojewel/4.jpg",
+          "/sliders/airojewel/5.jpg",
+          "/sliders/airojewel/6.jpg",
+       
+          "/sliders/airojewel/11.png",
+          "/sliders/airojewel/12.png",
+          "/sliders/airojewel/13.png",
+          "/sliders/airojewel/32.png"
+        ],
+        "Aspen Gold": [
+        
+          "/sliders/airojewel/3.png",
+        
+          "/sliders/airojewel/7.jpg",
+          "/sliders/airojewel/8.jpg",
+          "/sliders/airojewel/9.jpg",
+          "/sliders/airojewel/10.jpg",
+           "/sliders/airojewel/13.png",
+          "/sliders/airojewel/32.png"
+
         ]
+
       },
       "colors": [
         {
-          "name": "Cherrywood",
+          "name": "Pearl White",
           "primary": "#651A14",
           "secondary": "#CCCCCC",
           "gradientFrom": "#FFFFFF",
@@ -747,11 +773,40 @@
           "/sliders/airojewelsmart/32.png",
           "/sliders/airojewelsmart/33.png"
 
+        ],
+        "Pearl White": [
+          "/sliders/airojewelsmart/1.png",
+          "/sliders/airojewelsmart/33.png",
+
+          "/sliders/airojewelsmart/2.png",
+
+          "/sliders/airojewelsmart/4.jpg",
+          "/sliders/airojewelsmart/5.jpg",
+          "/sliders/airojewelsmart/6.jpg",
+       
+          "/sliders/airojewelsmart/11.png",
+          "/sliders/airojewelsmart/12.png",
+          "/sliders/airojewelsmart/13.png",
+          "/sliders/airojewelsmart/32.png"
+        ],
+        "Aspen Gold": [
+        
+          "/sliders/airojewelsmart/3.png",
+          "/sliders/airojewelsmart/33.png",
+
+          "/sliders/airojewelsmart/7.jpg",
+          "/sliders/airojewelsmart/8.jpg",
+          "/sliders/airojewelsmart/9.jpg",
+          "/sliders/airojewelsmart/10.jpg",
+           "/sliders/airojewelsmart/13.png",
+          "/sliders/airojewelsmart/32.png"
+
         ]
+        
       },
       "colors": [
         {
-          "name": "Cherrywood",
+          "name": "Pearl White",
           "primary": "#651A14",
           "secondary": "#CCCCCC",
           "gradientFrom": "#FFFFFF",
@@ -1578,16 +1633,17 @@
         ]
       },
       "colors": [
+        
         {
-          "name": "Milky White",
-          "primary": "#FFFFFF",
+          "name": "Gold Chocolate",
+          "primary": "#FED65E",
           "secondary": "#CCCCCC",
           "gradientFrom": "#FFFFFF",
           "gradientTo": "#DDDDDD"
         },
         {
-          "name": "Gold Chocolate",
-          "primary": "#FED65E",
+          "name": "Milky White",
+          "primary": "#FFFFFF",
           "secondary": "#CCCCCC",
           "gradientFrom": "#FFFFFF",
           "gradientTo": "#DDDDDD"
@@ -1704,7 +1760,7 @@
       "id": "vayuprohs",
       "slug": "vayuprohs",
       "modelName": "VayuPro HS",
-      "fullName": "EcoLink VayuPro HS Economy Ceiling Fan",
+      "fullName": "EcoLink VayuPro High Speed Ceiling Fan",
       "tagline": "High Speed Performance",
       "description": "High-speed ceiling fan offering exceptional efficiency and powerful airflow for optimal comfort in every room",
       "price": 2350,
@@ -1720,7 +1776,7 @@
         "speed": "400 RPM",
         "airDelivery": "210 CMM",
         "dimensions": "",
-        "type": "BLDC Ceiling fan",
+        "type": "Economy Ceiling fan",
         "brand": "EcoLink"
       },
       "sliderImages": {

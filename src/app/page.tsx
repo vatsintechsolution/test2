@@ -54,7 +54,7 @@ export default function Home() {
       features: null,
     },
     {
-      desktopBg: "/home/elevate-slider.jpg",
+      desktopBg: "/home/elevate-slider.jpg.jpg",
       mobileBg: "/home/slider-1.png?1",
       subheading: "EcoLink AiroElevate BLDC Ceiling Fan",
       heading: "Unique Hollow Hub Design",
@@ -63,7 +63,7 @@ export default function Home() {
       features: features,
     },
     {
-      desktopBg: "/home/geometry-slider.svg",
+      desktopBg: "/home/geometry-slider.png",
       mobileBg: "/home/slider-2.png",
       subheading: "EcoLink AiroQuad BLDC Ceiling Fan",
       heading: "Unique Square hub design",

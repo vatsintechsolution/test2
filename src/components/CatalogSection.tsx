@@ -26,32 +26,34 @@ export const CatalogSection = () => {
       <BackgroundPattern>
         {isMobile ? (
           // Mobile version
-
-
           <div className="px-4 py-8">
-            <Image
-              src="/home/fans-catalog-new.png"
-              alt="Fans Catalog - Mobile"
-              width={1000}
-              height={1000}
-              className="w-full rounded-lg shadow-md"
-            />
+            <a href="/Ecolink-Fans brochure-2025.pdf" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/home/fans-catalog-new.png?V=1"
+                alt="Fans Catalog - Mobile"
+                width={1000}
+                height={1000}
+                className="w-full rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity"
+              />
+            </a>
           </div>
         ) : (
           // Desktop version
           <div className="container mx-auto px-4 py-16">
             <div className="w-full">
-              <Image
-                src="/home/download-catalog.png"
-                alt="Fans Catalog - Desktop"
-                width={1000}
-                height={1000}
-                className="w-full rounded-lg shadow-lg"
-              />
+              <a href="/Ecolink-Fans brochure-2025.pdf" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/home/download-catalog.png?V=1"
+                  alt="Fans Catalog - Desktop"
+                  width={1000}
+                  height={1000}
+                  className="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                />
+              </a>
             </div>
           </div>
         )}
       </BackgroundPattern>
     </section>
   );
-}; 
+};

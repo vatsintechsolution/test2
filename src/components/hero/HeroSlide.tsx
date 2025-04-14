@@ -71,7 +71,7 @@ export const HeroSlide = ({
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90 z-[1]">
         <div className="container mx-auto px-4 h-full flex flex-col justify-end">
           <div className="max-w-2xl">
-          <p className="text-xl md:text-2xl text-white/90 mb-2 uppercase">
+          <p className="text-xl md:text-2xl text-white/90 mb-2 ">
               {subheading}
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
