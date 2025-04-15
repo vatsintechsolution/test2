@@ -120,25 +120,25 @@ export const ProductDetails = ({
         {/* Warranty Section */}
         {!slug.includes('airozephyr') && !slug.includes('airoserenade') && !slug.includes('airosleek') && !slug.includes('stardust') && !slug.includes('vayuultra') && !slug.includes('vayuprohs') && (
 
-        <div className="mt-8  border border-gray-200 dark:border-gray-700 w-auto inline-block rounded-lg p-4">
+        <div className="mt-8 dark:border-gray-700 w-auto inline-block rounded-lg ">
           <div className="flex items-center">
             <div className="flex items-center">
               <div className="relative">
                
                 <Image
-                  src="/home/warrenty.svg"
+                  src="/home/icons/warrenty.svg"
                   alt="Extended Warranty"
-                  width={117}
+                  width={250}
                   height={52}
                 />
               </div>
             </div>
-            <div className="ml-4">
+            {/* <div className="ml-4">
               <p className="text-base font-medium dark:text-white text-[#3A3A5B] uppercase tracking-wide">
                 GET 3+2 YEAR*<br />
                 EXTENDED WARRANTY
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
 
