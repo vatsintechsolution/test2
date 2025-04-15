@@ -149,7 +149,7 @@ export default function Home() {
     {
       name: "EcoLink AiroElevate BLDC Ceiling Fan",
       price: 8700,
-      image: "/home/product/AiroElevate.png",
+      image: "/home/product/AiroElevate.png?v=1",
       slug: "airoelevate"
     },
     {
