@@ -54,7 +54,7 @@ export default function Home() {
       features: null,
     },
     {
-      desktopBg: "/home/elevate-slider.jpg.jpg",
+      desktopBg: "/home/elevate-slider-with-logo.jpg",
       mobileBg: "/home/slider-1.png?1",
       subheading: "EcoLink AiroElevate BLDC Ceiling Fan",
       heading: "Unique Hollow Hub Design",
