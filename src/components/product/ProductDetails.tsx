@@ -128,7 +128,7 @@ export const ProductDetails = ({
                 <Image
                   src="/home/icons/warrenty.svg"
                   alt="Extended Warranty"
-                  width={250}
+                  width={300}
                   height={52}
                 />
               </div>
