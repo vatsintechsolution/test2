@@ -586,43 +586,41 @@
           "/sliders/airojewel/1.png",
           "/sliders/airojewel/2.png",
           "/sliders/airojewel/3.png",
-          "/sliders/airojewel/4.jpg",
-          "/sliders/airojewel/5.jpg",
-          "/sliders/airojewel/6.jpg",
-          "/sliders/airojewel/7.jpg",
-          "/sliders/airojewel/8.jpg",
-          "/sliders/airojewel/9.jpg",
-          "/sliders/airojewel/10.jpg",
-          "/sliders/airojewel/11.png",
-          "/sliders/airojewel/12.png",
-          "/sliders/airojewel/13.png",
-          "/sliders/airojewel/32.png"
+          "/sliders/airojewel/4.png",
+          "/sliders/airojewel/5.png",
+          "/sliders/airojewel/6.png",
+          "/sliders/airojewel/7.png"
+        
         ],
         "Pearl White": [
           "/sliders/airojewel/1.png",
           "/sliders/airojewel/2.png",
+          "/sliders/airojewel/3.png",
+          "/sliders/airojewel/4.png",
+          "/sliders/airojewel/5.png",
+          "/sliders/airojewel/6.png",
+          "/sliders/airojewel/7.png",
+          "/sliders/airojewel/Pearl White/1.jpg",
+          "/sliders/airojewel/Pearl White/2.jpg",
+          "/sliders/airojewel/Pearl White/3.jpg",
+          "/sliders/airojewel/Pearl White/4.jpg",
+          "/sliders/airojewel/Pearl White/5.jpg"
 
-          "/sliders/airojewel/4.jpg",
-          "/sliders/airojewel/5.jpg",
-          "/sliders/airojewel/6.jpg",
-       
-          "/sliders/airojewel/11.png",
-          "/sliders/airojewel/12.png",
-          "/sliders/airojewel/13.png",
-          "/sliders/airojewel/32.png"
         ],
         "Aspen Gold": [
         
-          "/sliders/airojewel/3.png",
+          "/sliders/airojewel/Aspen Gold/1.jpg",
+          "/sliders/airojewel/Aspen Gold/2.jpg",
+          "/sliders/airojewel/Aspen Gold/3.jpg",
+          "/sliders/airojewel/Aspen Gold/4.jpg",
+          "/sliders/airojewel/Aspen Gold/5.jpg"
+        ],
+        "Smoke Mocha Brown": [
         
-          "/sliders/airojewel/7.jpg",
-          "/sliders/airojewel/8.jpg",
-          "/sliders/airojewel/9.jpg",
-          "/sliders/airojewel/10.jpg",
-           "/sliders/airojewel/13.png",
-          "/sliders/airojewel/32.png"
-
+          "/sliders/airojewel/Mocha Brown/1.jpg"
         ]
+
+
 
       },
       "colors": [
@@ -786,53 +784,46 @@
       },
       "sliderImages": {
         "default": [
-          "/sliders/airojewelsmart/1.png?1",
-           "/sliders/airojewelsmart/33.png",
-          "/sliders/airojewelsmart/2.png",
-          "/sliders/airojewelsmart/3.png",
-          "/sliders/airojewelsmart/4.jpg",
-          "/sliders/airojewelsmart/5.jpg",
-          "/sliders/airojewelsmart/6.jpg",
-          "/sliders/airojewelsmart/7.jpg",
-          "/sliders/airojewelsmart/8.jpg",
-          "/sliders/airojewelsmart/9.jpg",
-          "/sliders/airojewelsmart/10.jpg",
-          "/sliders/airojewelsmart/11.png",
-          "/sliders/airojewelsmart/12.png",
-          "/sliders/airojewelsmart/13.png",
-          "/sliders/airojewelsmart/32.png",
-          "/sliders/airojewelsmart/33.png"
-
+          "/sliders/airojewel/1.png",
+          "/sliders/airojewel/2.png",
+          "/sliders/airojewel/3.png",
+          "/sliders/airojewel/4.png",
+          "/sliders/airojewel/5.png",
+          "/sliders/airojewel/6.png",
+          "/sliders/airojewel/7.png"
+        
         ],
         "Pearl White": [
-          "/sliders/airojewelsmart/1.png",
-          "/sliders/airojewelsmart/33.png",
+          "/sliders/airojewel/1.png",
+          "/sliders/airojewel/33.png",
+          "/sliders/airojewel/2.png",
+          "/sliders/airojewel/3.png",
+          "/sliders/airojewel/4.png",
+          "/sliders/airojewel/5.png",
+          "/sliders/airojewel/6.png",
+          "/sliders/airojewel/7.png",
+          "/sliders/airojewel/Pearl White/1.jpg",
+          "/sliders/airojewel/Pearl White/2.jpg",
+          "/sliders/airojewel/Pearl White/3.jpg",
+          "/sliders/airojewel/Pearl White/4.jpg",
+          "/sliders/airojewel/Pearl White/5.jpg"
 
-          "/sliders/airojewelsmart/2.png",
-
-          "/sliders/airojewelsmart/4.jpg",
-          "/sliders/airojewelsmart/5.jpg",
-          "/sliders/airojewelsmart/6.jpg",
-       
-          "/sliders/airojewelsmart/11.png",
-          "/sliders/airojewelsmart/12.png",
-          "/sliders/airojewelsmart/13.png",
-          "/sliders/airojewelsmart/32.png"
         ],
         "Aspen Gold": [
         
-          "/sliders/airojewelsmart/3.png",
-          "/sliders/airojewelsmart/33.png",
-
-          "/sliders/airojewelsmart/7.jpg",
-          "/sliders/airojewelsmart/8.jpg",
-          "/sliders/airojewelsmart/9.jpg",
-          "/sliders/airojewelsmart/10.jpg",
-           "/sliders/airojewelsmart/13.png",
-          "/sliders/airojewelsmart/32.png"
-
-        ]
+          "/sliders/airojewel/Aspen Gold/1.jpg",
+          "/sliders/airojewel/Aspen Gold/2.jpg",
+          "/sliders/airojewel/Aspen Gold/3.jpg",
+          "/sliders/airojewel/Aspen Gold/4.jpg",
+          "/sliders/airojewel/Aspen Gold/5.jpg"
+        ],
+        "Smoke Mocha Brown": [
         
+          "/sliders/airojewel/Mocha Brown/1.jpg"
+        ]
+
+
+
       },
       "colors": [
         {
@@ -1000,17 +991,48 @@
       },
       "sliderImages": {
         "default": [
-          "/sliders/airogeometrysmart/6.png",
-          "/sliders/airogeometrysmart/33.png",
-          "/sliders/airogeometrysmart/2.png",
-          "/sliders/airogeometrysmart/3.png",
-          "/sliders/airogeometrysmart/4.png",
-          "/sliders/airogeometrysmart/1.png",
-          "/sliders/airogeometrysmart/7.png",
-          "/sliders/airogeometrysmart/8.png",
-       
-          "/sliders/airogeometrysmart/10.png"
+          "/sliders/airogeometry/Image 1.png",
+          "/sliders/airogeometry/33.png",
+          "/sliders/airogeometry/Image 2.png",
+          "/sliders/airogeometry/Image 3.png",
+          "/sliders/airogeometry/Image 4.png",
+          "/sliders/airogeometry/Image 5.png",
+          "/sliders/airogeometry/Image 6.png",
+          "/sliders/airogeometry/Image 7.png"
+
+        ],
+        "Silver Mist": [
+          "/sliders/airogeometry/Image1.png",
+          "/sliders/airogeometry/33.png",
+          "/sliders/airogeometry/Image 2.png",
+          "/sliders/airogeometry/Image 3.png",
+          "/sliders/airogeometry/Image 4.png",
+          "/sliders/airogeometry/Image 5.png",
+          "/sliders/airogeometry/Image 6.png",
+          "/sliders/airogeometry/Image 7.png",
+          "/sliders/airogeometry/Silver Mist/1.jpg",
+          "/sliders/airogeometry/Silver Mist/2.png",
+          "/sliders/airogeometry/Silver Mist/3.jpg",
+          "/sliders/airogeometry/Silver Mist/4.jpg",
+          "/sliders/airogeometry/Silver Mist/5.jpg",
+          "/sliders/airogeometry/Silver Mist/6.jpg"
+
+        ],
+        "Titanium Grey": [
+          "/sliders/airogeometry/Titanium Grey/1.jpg",
+          "/sliders/airogeometry/Titanium Grey/2.jpg",
+          "/sliders/airogeometry/Titanium Grey/3.jpg",
+          "/sliders/airogeometry/Titanium Grey/4.jpg"
+
+        ],
+        "Dark Coffee": [
+          "/sliders/airogeometry/Dark Coffee Brown/1.jpg",
+          "/sliders/airogeometry/Dark Coffee Brown/2.jpg",
+          "/sliders/airogeometry/Dark Coffee Brown/3.jpg",
+          "/sliders/airogeometry/Dark Coffee Brown/4.jpg",
+          "/sliders/airogeometry/Dark Coffee Brown/5.jpg"
         ]
+        
       },
       "colors": [
         {
@@ -1328,10 +1350,37 @@
         "default": [
           "/sliders/airozephyr/1.png",
           "/sliders/airozephyr/2.jpg",
+          "/sliders/airozephyr/3.jpg"
+        ],
+        "Topaz Gold": [
+          "/sliders/airozephyr/1.png",
+          "/sliders/airozephyr/2.jpg",
           "/sliders/airozephyr/3.jpg",
-          "/sliders/airozephyr/4.jpg",
-          "/sliders/airozephyr/5.png"
-        ]
+          "/sliders/airozephyr/Topaz Gold/1.jpg",
+          "/sliders/airozephyr/Topaz Gold/2.jpg",
+          "/sliders/airozephyr/Topaz Gold/3.jpg",
+          "/sliders/airozephyr/Topaz Gold/4.jpg",
+          "/sliders/airozephyr/Topaz Gold/5.jpg",
+          "/sliders/airozephyr/Topaz Gold/6.jpg",
+          "/sliders/airozephyr/Topaz Gold/7.jpg"      
+        ],
+        "Dark Teak Brown": [
+         
+          "/sliders/airozephyr/Teak Brown/1.jpg",
+          "/sliders/airozephyr/Teak Brown/2.jpg",
+          "/sliders/airozephyr/Teak Brown/3.jpg",
+          "/sliders/airozephyr/Teak Brown/4.jpg"
+        ],
+        "Oyster Grey": [
+         
+          "/sliders/airozephyr/Oyster Grey/1.jpg",
+          "/sliders/airozephyr/Oyster Grey/2.jpg",
+          "/sliders/airozephyr/Oyster Grey/3.jpg",
+          "/sliders/airozephyr/Oyster Grey/4.jpg",
+          "/sliders/airozephyr/Oyster Grey/5.jpg"
+            ]
+        
+
       },
       "colors": [
         {
@@ -1490,21 +1539,39 @@
         "default": [
           "/sliders/airoserenade/1.png",
           "/sliders/airoserenade/2.jpg",
+          "/sliders/airoserenade/3.png"
+         
+        ],
+        "Pearl White": [
+          "/sliders/airoserenade/1.png",
+          "/sliders/airoserenade/2.jpg",
           "/sliders/airoserenade/3.png",
-          "/sliders/airoserenade/4.jpg",
-          "/sliders/airoserenade/5.jpg",
-          "/sliders/airoserenade/6.jpg",
-          "/sliders/airoserenade/AiroSerenade.png"
+          "/sliders/airoserenade/Pearl White/1.jpg",
+          "/sliders/airoserenade/Pearl White/2.jpg",
+          "/sliders/airoserenade/Pearl White/3.jpg",
+          "/sliders/airoserenade/Pearl White/4.jpg",
+          "/sliders/airoserenade/Pearl White/5.jpg",
+          "/sliders/airoserenade/Pearl White/6.jpg"         
+         
+        ],
+        "Smoke Mocha Brown": [
+        
+          "/sliders/airoserenade/Smoke Mocha Brown/1.jpg"
+            
+         
+        ],
+        "Titanium Grey": [
+         
+          "/sliders/airoserenade/Titanium Grey/1.jpg",
+          "/sliders/airoserenade/Titanium Grey/2.jpg",
+          "/sliders/airoserenade/Titanium Grey/3.jpg",
+          "/sliders/airoserenade/Titanium Grey/4.jpg",
+          "/sliders/airoserenade/Titanium Grey/5.jpg",
+          "/sliders/airoserenade/Titanium Grey/6.jpg"         
+         
         ]
       },
       "colors": [
-        {
-          "name": "Smoke Mocha Brown",
-          "primary": "#573f16",
-          "secondary": "#CCCCCC",
-          "gradientFrom": "#FFFFFF",
-          "gradientTo": "#DDDDDD"
-        },
         {
           "name": "Pearl White",
           "primary": "#FFFFFF",
@@ -1518,7 +1585,16 @@
           "secondary": "#CCCCCC",
           "gradientFrom": "#FFFFFF",
           "gradientTo": "#DDDDDD"
+        },
+        {
+          "name": "Smoke Mocha Brown",
+          "primary": "#573f16",
+          "secondary": "#CCCCCC",
+          "gradientFrom": "#FFFFFF",
+          "gradientTo": "#DDDDDD"
         }
+      
+       
       ],
       "sizes": [
         {
@@ -1653,10 +1729,19 @@
       "sliderImages": {
         "default": [
           "/sliders/airosleek/1.png",
+          "/sliders/airosleek/2.jpg"
+         
+        ],
+        "Gold Chocolate": [
+          "/sliders/airosleek/1.png",
           "/sliders/airosleek/2.jpg",
           "/sliders/airosleek/3.jpg",
           "/sliders/airosleek/4.jpg",
-          "/sliders/airosleek/5.jpg", 
+          "/sliders/airosleek/5.jpg"
+         
+        ],
+        "Milky White": [
+         
           "/sliders/airosleek/6.jpg",
           "/sliders/airosleek/7.jpg",
           "/sliders/airosleek/8.jpg"
@@ -1948,7 +2033,18 @@
       "sliderImages": {
         "default": [
           "/sliders/vayuultra/Vayu Ultra.png"
+        ],
+        "Brown": [
+          "/sliders/vayuultra/Vayu Ultra.png",
+          "/sliders/vayuultra/3.jpg"
+        ],
+        "White": [
+          "/sliders/vayuultra/2.jpg"
+        ],
+        "Ivory": [
+          "/sliders/vayuultra/1.jpg"
         ]
+
       },
       "colors": [
         {

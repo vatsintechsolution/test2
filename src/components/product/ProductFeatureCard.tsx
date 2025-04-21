@@ -36,14 +36,14 @@ export const ProductFeatureCard: FC<ProductFeatureCardProps> = ({
       viewport={{ once: true }}
     >
       <div className="flex flex-col items-center p-6 md:p-10 text-center h-full">
-        <div className="relative mb-4 flex-1 md:mb-8 flex items-center justify-center">
+        <div className="relative mb-4 flex-1 md:mb-8 lg:p-4 flex items-center justify-center">
           <Image
             src={imageSrc}
             alt={title}
             width={imageWidth}
             height={imageHeight}
             priority={priority}
-            className="object-contain lg:w-[450px] lg:h-[250px] scale-150"
+            className="object-contain lg:w-[450px] lg:h-[250px] scale-150 lg:p-4"
             quality={100}
           />
         </div>
