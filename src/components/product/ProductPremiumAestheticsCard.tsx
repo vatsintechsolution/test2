@@ -31,7 +31,7 @@ export const ProductPremiumAestheticsCard: FC<ProductPremiumAestheticsCardProps>
     
     // Only add turbo motor icon if not in exclusion list
     if (!excludeTurboMode) {
-      baseIcons.push({ name: 'turbo-motor', alt: 'Turbo Motor' });
+      baseIcons.push({ name: 'turbo-motor', alt: 'Turbo Mode' });
     }
     
     return baseIcons;

@@ -42,13 +42,14 @@ export const HeroSlide = ({
   // If there's no heading, show only the full-scale background image
   if (!heading) {
     return (
-      <div className="relative w-full h-screen">
+      <div className={`relative w-full ${isMobile ? 'aspect-square' : ''} `}>
         <Image
           src={isMobile ? mobileBg : desktopBg}
           alt="Slide background"
           fill
           priority
           className="object-cover"
+          quality={100}
         />
       </div>
     )

@@ -68,5 +68,23 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),
+	function ({ addComponents }) {
+		addComponents({
+		  '.container': {
+			maxWidth: '100%',
+			
+			'@screen md': {
+			  maxWidth: '98vw',
+			},
+			'@screen lg': {
+			  maxWidth: '90vw',
+			},
+			'@screen xl': {
+			  maxWidth: '86vw',
+			}
+		  }
+		})
+	  }
+  ],
 } satisfies Config;

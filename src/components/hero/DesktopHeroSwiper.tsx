@@ -49,9 +49,9 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
           <SwiperSlide key={index}>
             {!slide.heading ? (
               // Full-scale background image only when there's no heading
-              <div className="relative w-full min-h-[850px]">
+              <div className="relative w-full md:min-h-[90vh] lg:min-h-[80vh]">
                 {slide.buttonLink ? (
-                  <Link href={slide.buttonLink} className="block w-full h-full">
+                  <Link href={slide.buttonLink} className="block w-full h-full ">
                     <Image
                       src={slide.desktopBg || "/home/slider-1.png"}
                       alt="Slide background"

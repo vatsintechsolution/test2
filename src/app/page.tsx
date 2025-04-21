@@ -28,49 +28,56 @@ export default function Home() {
     };
   }, []);
 
-  const features = [
-    {
-      icon: "/home/icons/premium.svg",
-      text: "PREMIUM AESTHETIC",
-    },
-    {
-      icon: "/home/icons/air.svg",
-      text: "SUPERIOR AIR DELIVERY",
-    },
-    {
-      icon: "/home/icons/motor.svg",
-      text: "100% COPPER MOTOR",
-    },
-  ];
+  // const features = [
+  //   {
+  //     icon: "/home/icons/premium.svg",
+  //     text: "PREMIUM AESTHETIC",
+  //   },
+  //   {
+  //     icon: "/home/icons/air.svg",
+  //     text: "SUPERIOR AIR DELIVERY",
+  //   },
+  //   {
+  //     icon: "/home/icons/motor.svg",
+  //     text: "100% COPPER MOTOR",
+  //   },
+  // ];
 
   const heroSlides = [
     {
-      desktopBg: "/home/ipl-desktop.png",
-      mobileBg: "/home/ipl-mobile.png",
+      desktopBg: "/home/sliders/desktop/01.png",
+      mobileBg: "/home/sliders/mobile/01.png",
       subheading: "",
       heading: "",
       buttonText: "",
-      buttonLink: "",
+      buttonLink: "/products/airoquad",
+      features: null,
+    },{
+      desktopBg: "/home/sliders/desktop/02.png",
+      mobileBg: "/home/sliders/mobile/02.png?v=3",
+      subheading: "",
+      heading: "",
+      buttonText: "",
+      buttonLink: "/products/airoelevate",
+      features: null,
+    },{
+      desktopBg: "/home/sliders/desktop/03.png",
+      mobileBg: "/home/sliders/mobile/03.png",
+      subheading: "",
+      heading: "",
+      buttonText: "",
+      buttonLink: "/products/airogeometry",
+      features: null,
+    },{
+      desktopBg: "/home/sliders/desktop/04.png",
+      mobileBg: "/home/sliders/mobile/04.png",
+      subheading: "",
+      heading: "",
+      buttonText: "",
+      buttonLink: "/products/airojewel",
       features: null,
     },
-    {
-      desktopBg: "/home/elevate-slider-with-logo.jpg",
-      mobileBg: "/home/slider-1.png?1",
-      subheading: "EcoLink AiroElevate BLDC Ceiling Fan",
-      heading: "Unique Hollow Hub Design",
-      buttonText: "Explore Product",
-      buttonLink: "/products/airoelevate",
-      features: features,
-    },
-    {
-      desktopBg: "/home/geometry-slider.png",
-      mobileBg: "/home/slider-2.png",
-      subheading: "EcoLink AiroQuad BLDC Ceiling Fan",
-      heading: "Unique Square hub design",
-      buttonText: "Explore Product",
-      buttonLink: "/products/airoquad",
-      features: features,
-     },
+    
     
   ];
 
@@ -161,13 +168,13 @@ export default function Home() {
     {
       name: "EcoLink AiroJewel BLDC Ceiling Fan",
       price: 6550,
-      image: "/home/product/AiroJewel.png",
+      image: "/home/product/AiroJewel.png?v=1",
       slug: "airojewel"
     },
     {
       name: "EcoLink AiroGeometry BLDC Ceiling Fan",
       price: 5850,
-      image: "/home/product/AiroGeometry.png",
+      image: "/home/product/AiroGeometry.png?v=1",
       slug: "airogeometry"
     },
     {
@@ -184,13 +191,13 @@ export default function Home() {
     {
       name: "EcoLink AiroJewel BLDC Smart Ceiling Fan",
       price: 6950,
-      image: "/home/product/AiroJewel.png",
+      image: "/home/product/AiroJewel.png?v=1",
       slug: "airojewelsmart"
     },
     {
       name: "EcoLink AiroGeometry BLDC Smart Ceiling Fan",
       price: 5850,
-      image: "/home/product/AiroGeometry.png",
+      image: "/home/product/AiroGeometry.png?v=1",
       slug: "airogeometrysmart"
     },
   ];

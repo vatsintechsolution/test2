@@ -36,8 +36,8 @@ to-black`}
       <div className="flex flex-col h-full justify-center p-2">
         {/* Top Text Content */}
         <div className="text-center mb-4 pt-2">
-          <h3 className="text-2xl md:text-3xl font-medium mb-2 text-white">{title}</h3>
-          <p className="text-base md:text-lg text-white/90 max-w-lg mx-auto">{description}</p>
+          <h3 className="text-2xl lg:text-3xl font-medium mb-2 text-white">{title}</h3>
+          <p className="text-base lg:text-lg text-white/90 max-w-lg mx-auto">{description}</p>
         </div>
 
         {/* Summer/Winter Comparison */}
@@ -45,7 +45,7 @@ to-black`}
           {/* Summer Side */}
           <div className="flex-1 flex flex-col items-center border-r md:border-b-0 md:border-r border-white/90 pr-3 pb-4 md:pb-0 md:pr-4">
             <h4 className="text-xl font-bold text-white mb-3">SUMMER</h4> 
-            <div className="relative h-32 lg:h-64 w-full mb-3">
+            <div className="relative h-32 md:h-32 lg:h-64 w-full mb-3">
               <Image
                 src={summerImage}
                 alt="Summer mode fan"
@@ -66,7 +66,7 @@ to-black`}
                   width={32} 
                   height={32}
                 />
-                <span className="text-white text-base">Cool Air Circulation in Summer</span>
+                <span className="text-white text-sm lg:text-base">Cool Air Circulation in Summer</span>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ to-black`}
                   width={32} 
                   height={32}
                 />
-                <span className="text-white text-base">Hot Air Circulation in Winter</span>
+                <span className="text-white  text-sm lg:text-base">Hot Air Circulation in Winter</span>
               </div>  
              
             </div>

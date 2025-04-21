@@ -39,7 +39,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={isHomePage 
-                  ? "text-white hover:text-white/80 transition-colors" 
+                  ? "text-black/80 hover:text-black transition-colors" 
                   : "text-foreground/70 hover:text-foreground transition-colors"
                 }
               >

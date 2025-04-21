@@ -382,16 +382,46 @@
       },
       "sliderImages": {
         "default": [
-          "/sliders/airogeometry/5.png",
-          "/sliders/airogeometry/2.png",
-          "/sliders/airogeometry/3.png",
-          "/sliders/airogeometry/4.png",
-          "/sliders/airogeometry/1.png",
-          "/sliders/airogeometry/6.png",
-          "/sliders/airogeometry/7.png",
-          "/sliders/airogeometry/8.png",
-          "/sliders/airogeometry/9.png"
+          "/sliders/airogeometry/Image 1.png",
+          "/sliders/airogeometry/Image 2.png",
+          "/sliders/airogeometry/Image 3.png",
+          "/sliders/airogeometry/Image 4.png",
+          "/sliders/airogeometry/Image 5.png",
+          "/sliders/airogeometry/Image 6.png",
+          "/sliders/airogeometry/Image 7.png"
+
+        ],
+        "Silver Mist": [
+          "/sliders/airogeometry/Image1.png",
+          "/sliders/airogeometry/Image 2.png",
+          "/sliders/airogeometry/Image 3.png",
+          "/sliders/airogeometry/Image 4.png",
+          "/sliders/airogeometry/Image 5.png",
+          "/sliders/airogeometry/Image 6.png",
+          "/sliders/airogeometry/Image 7.png",
+          "/sliders/airogeometry/Silver Mist/1.jpg",
+          "/sliders/airogeometry/Silver Mist/2.png",
+          "/sliders/airogeometry/Silver Mist/3.jpg",
+          "/sliders/airogeometry/Silver Mist/4.jpg",
+          "/sliders/airogeometry/Silver Mist/5.jpg",
+          "/sliders/airogeometry/Silver Mist/6.jpg"
+
+        ],
+        "Titanium Grey": [
+          "/sliders/airogeometry/Titanium Grey/1.jpg",
+          "/sliders/airogeometry/Titanium Grey/2.jpg",
+          "/sliders/airogeometry/Titanium Grey/3.jpg",
+          "/sliders/airogeometry/Titanium Grey/4.jpg"
+
+        ],
+        "Dark Coffee": [
+          "/sliders/airogeometry/Dark Coffee Brown/1.jpg",
+          "/sliders/airogeometry/Dark Coffee Brown/2.jpg",
+          "/sliders/airogeometry/Dark Coffee Brown/3.jpg",
+          "/sliders/airogeometry/Dark Coffee Brown/4.jpg",
+          "/sliders/airogeometry/Dark Coffee Brown/5.jpg"
         ]
+        
       },
       "colors": [
         {

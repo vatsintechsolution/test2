@@ -1,52 +1,55 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Header } from "@/components/header/Header";
-import StyledComponentsRegistry from '../lib/registry';
+import StyledComponentsRegistry from "../lib/registry";
 import { ThemeProvider } from "@/lib/ThemeProvider";
-import ScrollToTop from '@/components/ScrollToTop';
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | EcoLink - Premium Fans & Lighting Solutions',
-    default: 'EcoLink - Premium Fans & Lighting Solutions',
+    template: "%s",
+    default: "Explore EcoLink Ceiling Fans | energy-efficient BLDC Fans | Decorative Fans ",
   },
-  description: "Discover EcoLink's premium range of BLDC ceiling fans, lighting solutions and smart home products. Energy-efficient, beautifully designed, technologically advanced products for modern homes.",
-  keywords: ["EcoLink", "BLDC fans", "ceiling fans", "lighting", "smart home", "energy efficient", "Signify", "LED lights", "home decor"],
+  description:
+    "EcoLink offers wide range of energy efficient BLDC ceiling fans designed for performance & style. Explore premium fans with modern design & powerful airflow.",
+  
   authors: [{ name: "Signify Innovations" }],
   openGraph: {
-    type: 'website',
-    locale: 'en_IN',
-    url: 'https://www.ecolink.in',
-    siteName: 'EcoLink',
-    title: 'EcoLink - Premium Fans & Lighting Solutions',
-    description: "Discover EcoLink's premium range of BLDC ceiling fans, lighting solutions and smart home products.",
+    type: "website",
+    locale: "en_IN",
+    url: "https://fans.ecolinklighting.in/",
+    siteName: "EcoLink",
+    title: "Explore EcoLink Ceiling Fans | energy-efficient BLDC Fans | Decorative Fans",
+    description:
+      "EcoLink offers wide range of energy efficient BLDC ceiling fans designed for performance & style. Explore premium fans with modern design & powerful airflow.",
     images: [
       {
-        url: '/og-image.jpg',
+        url: "/home/sliders/desktop/01.png",
         width: 1200,
         height: 630,
-        alt: 'EcoLink',
+        alt: "EcoLink",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'EcoLink - Premium Fans & Lighting Solutions',
-    description: "Discover EcoLink's premium range of BLDC ceiling fans, lighting solutions and smart home products.",
-    images: ['/og-image.jpg'],
+    card: "summary_large_image",
+    title: "Explore EcoLink Ceiling Fans | energy-efficient BLDC Fans | Decorative Fans",
+    description:
+      "EcoLink offers wide range of energy efficient BLDC ceiling fans designed for performance & style. Explore premium fans with modern design & powerful airflow.",
+    images: ["/home/sliders/desktop/01.png"],
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: '/faviconn.png',
-    apple: '/apple-touch-icon.png',
+    icon: "/faviconn.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -80,10 +83,68 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          
+
+!function(f,b,e,v,n,t,s)
+
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+
+n.queue=[];t=b.createElement(e);t.async=!0;
+
+t.src=v;s=b.getElementsByTagName(e)[0];
+
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '316453551413128');
+
+fbq('track', 'PageView');
+
+
+            `,
+          }}
+        />
+
+<script
+          dangerouslySetInnerHTML={{
+            __html: `
+          
+ async src="https://www.googletagmanager.com/gtag/js?id=AW-10956281123"
+
+
+            `,
+          }}
+        />
+<script
+          dangerouslySetInnerHTML={{
+            __html: `
+          
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'AW-10956281123');
+
+
+            `,
+          }}
+        />
+
+
+{/* <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=316453551413128&ev=PageView&noscript=1"/> </noscript> */}
+
+
+       
       </head>
-      <body
-        className="antialiased"
-      >
+      <body className="antialiased">
         <ScrollToTop />
         <StyledComponentsRegistry>
           <ThemeProvider>

@@ -46,6 +46,7 @@ type ProductPageParams = {
   slug: string;
 };
 
+
 export default function ProductPage({ params }: { params: ProductPageParams }) {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
@@ -118,6 +119,16 @@ export default function ProductPage({ params }: { params: ProductPageParams }) {
 
   return (
     <>
+
+<script
+          dangerouslySetInnerHTML={{
+            __html: `
+          
+              gtag('event', 'conversion', {'send_to': 'AW-10956281123/ug4zCKbnj7UZEKOqrugo'});
+
+            `,
+          }}
+        />
       <main className="min-h-screen py-2 lg:py-8">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
@@ -148,7 +159,7 @@ export default function ProductPage({ params }: { params: ProductPageParams }) {
 
         {product.keyFeature &&
           <ProductFeatureCard
-            imageSrc={slug === 'airoelevate' ? '/home/UNIQUE-HOLLOW-HUB.png' : product.images.main}
+            imageSrc={slug === 'airoelevate' ? '/home/UNIQUE-HOLLOW-HUB.png?v=2' : product.images.main}
             title={product.keyFeature}
             description={product.description}
             imageWidth={250}
