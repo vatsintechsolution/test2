@@ -68,7 +68,7 @@ export const ProductRemoteCard: FC<ProductRemoteCardProps> = ({
       </div>
 
       {/* Text Content Overlay at Bottom */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent z-10">
+      <div className="absolute bottom-0 left-0 right-0 lg:p-4 bg-gradient-to-t from-black/80 to-transparent z-10">
         <div className="text-center">
           <h3 className="text-xl md:text-3xl font-medium mb-2 text-white">{title}</h3>
           <p className="text-sm md:text-xl text-white/90">{description}</p>
