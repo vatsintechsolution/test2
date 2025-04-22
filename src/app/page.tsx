@@ -76,7 +76,7 @@ export default function Home() {
       buttonText: "",
       buttonLink: "/products/airojewel",
       features: null,
-    },
+    }
     
     
   ];
@@ -396,7 +396,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="mt-[-75px]">
+      <main className="lg:mt-[-75px]">
         <div className="relative">
           {isMobile ? (
             <HeroSwiper slides={heroSlides} />

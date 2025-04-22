@@ -43,14 +43,27 @@ export const HeroSlide = ({
   if (!heading) {
     return (
       <div className={`relative w-full ${isMobile ? 'aspect-square' : ''} `}>
-        <Image
-          src={isMobile ? mobileBg : desktopBg}
-          alt="Slide background"
-          fill
-          priority
-          className="object-cover"
-          quality={100}
-        />
+        {buttonLink ? (
+          <Link href={buttonLink} className="block w-full h-full">
+            <Image
+              src={isMobile ? mobileBg : desktopBg}
+              alt="Slide background"
+              fill
+              priority
+              className="object-cover"
+              quality={100}
+            />
+          </Link>
+        ) : (
+          <Image
+            src={isMobile ? mobileBg : desktopBg}
+            alt="Slide background"
+            fill
+            priority
+            className="object-cover"
+            quality={100}
+          />
+        )}
       </div>
     )
   }

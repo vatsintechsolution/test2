@@ -39,7 +39,10 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
-        
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         // onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
@@ -49,7 +52,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
           <SwiperSlide key={index}>
             {!slide.heading ? (
               // Full-scale background image only when there's no heading
-              <div className="relative w-full md:min-h-[90vh] lg:min-h-[80vh]">
+              <div className="relative w-full md:min-h-[90vh] lg:min-h-[90vh]">
                 {slide.buttonLink ? (
                   <Link href={slide.buttonLink} className="block w-full h-full ">
                     <Image

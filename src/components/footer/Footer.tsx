@@ -111,8 +111,8 @@ export function Footer() {
               <div>
                 <h4 className="font-medium mb-3">Smart Ceiling Fans</h4>
                 <ul className="space-y-1 text-sm">
-                  <li><Link href="/products/airojewelsmart" className="hover:underline">AiroJewel Samrt</Link></li>
-                  <li><Link href="/products/airogeometrysmart" className="hover:underline">AiroGeometry Samrt</Link></li>
+                  <li><Link href="/products/airojewelsmart" className="hover:underline">AiroJewel Smart</Link></li>
+                  <li><Link href="/products/airogeometrysmart" className="hover:underline">AiroGeometry Smart</Link></li>
                 </ul>
               </div>
               

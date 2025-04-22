@@ -159,7 +159,7 @@ export default function ProductPage({ params }: { params: ProductPageParams }) {
 
         {product.keyFeature &&
           <ProductFeatureCard
-            imageSrc={slug === 'airoelevate' ? '/home/UNIQUE-HOLLOW-HUB.png?v=2' : product.images.main}
+            imageSrc={slug === 'airoelevate' ? '/home/UNIQUE-HOLLOW-HUB.png?v=3' : product.images.main}
             title={product.keyFeature}
             description={product.description}
             imageWidth={250}
