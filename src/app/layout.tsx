@@ -4,6 +4,7 @@ import { Header } from "@/components/header/Header";
 import StyledComponentsRegistry from "../lib/registry";
 import { ThemeProvider } from "@/lib/ThemeProvider";
 import ScrollToTop from "@/components/ScrollToTop";
+import Script from "next/script";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -83,66 +84,35 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Facebook Pixel Code */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-          
-
-!function(f,b,e,v,n,t,s)
-
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-
-n.queue=[];t=b.createElement(e);t.async=!0;
-
-t.src=v;s=b.getElementsByTagName(e)[0];
-
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '316453551413128');
-
-fbq('track', 'PageView');
-
-
+              !function(f,b,e,v,n,t,s) {
+                if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '316453551413128');
+                fbq('track', 'PageView');
             `,
           }}
         />
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            height="1" 
+            width="1" 
+            style={{display: 'none'}}
+            src="https://www.facebook.com/tr?id=316453551413128&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
 
-<script
-          dangerouslySetInnerHTML={{
-            __html: `
-          
- async src="https://www.googletagmanager.com/gtag/js?id=AW-10956281123"
-
-
-            `,
-          }}
-        />
-<script
-          dangerouslySetInnerHTML={{
-            __html: `
-          
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'AW-10956281123');
-
-
-            `,
-          }}
-        />
-
-
-{/* <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=316453551413128&ev=PageView&noscript=1"/> </noscript> */}
-
-
-       
+        {/* Google Tag Manager scripts moved to next/script components */}
       </head>
       <body className="antialiased">
         <ScrollToTop />
@@ -152,6 +122,20 @@ gtag('config', 'AW-10956281123');
             <main>{children}</main>
           </ThemeProvider>
         </StyledComponentsRegistry>
+        
+        {/* Google Tag Manager */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10956281123"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-10956281123');
+          `}
+        </Script>
       </body>
     </html>
   );

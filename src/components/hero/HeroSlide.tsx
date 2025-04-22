@@ -42,7 +42,7 @@ export const HeroSlide = ({
   // If there's no heading, show only the full-scale background image
   if (!heading) {
     return (
-      <div className={`relative w-full ${isMobile ? 'aspect-square' : ''} `}>
+      <div className={`relative w-full  h-screen `}>
         {buttonLink ? (
           <Link href={buttonLink} className="block w-full h-full">
             <Image

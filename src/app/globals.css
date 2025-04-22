@@ -210,7 +210,7 @@ div+div+div+svg g, div+div+div+svg g path, div+div+svg g path {
 .swiper-button-next,
 .swiper-button-prev {
   color: white !important;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   width: 40px !important;
   height: 40px !important;
   border-radius: 50%;
@@ -219,7 +219,7 @@ div+div+div+svg g, div+div+div+svg g path, div+div+svg g path {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .swiper-button-next::after,

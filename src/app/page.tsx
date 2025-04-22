@@ -46,7 +46,7 @@ export default function Home() {
   const heroSlides = [
     {
       desktopBg: "/home/sliders/desktop/01.png",
-      mobileBg: "/home/sliders/mobile/01.png",
+      mobileBg: "/home/sliders/mobile/01.png?v=1",
       subheading: "",
       heading: "",
       buttonText: "",
@@ -54,7 +54,7 @@ export default function Home() {
       features: null,
     },{
       desktopBg: "/home/sliders/desktop/02.png",
-      mobileBg: "/home/sliders/mobile/02.png?v=3",
+      mobileBg: "/home/sliders/mobile/02.png?v=4",
       subheading: "",
       heading: "",
       buttonText: "",
@@ -62,7 +62,7 @@ export default function Home() {
       features: null,
     },{
       desktopBg: "/home/sliders/desktop/03.png",
-      mobileBg: "/home/sliders/mobile/03.png",
+      mobileBg: "/home/sliders/mobile/03.png?v=1",
       subheading: "",
       heading: "",
       buttonText: "",
@@ -70,7 +70,7 @@ export default function Home() {
       features: null,
     },{
       desktopBg: "/home/sliders/desktop/04.png",
-      mobileBg: "/home/sliders/mobile/04.png",
+      mobileBg: "/home/sliders/mobile/04.png?v=1",
       subheading: "",
       heading: "",
       buttonText: "",
@@ -396,7 +396,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="lg:mt-[-75px]">
+      <main className="mt-[-75px]">
         <div className="relative">
           {isMobile ? (
             <HeroSwiper slides={heroSlides} />
