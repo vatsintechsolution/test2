@@ -76,7 +76,17 @@ export default function Home() {
       buttonText: "",
       buttonLink: "/products/airojewel",
       features: null,
+    },
+    {
+      desktopBg: "/home/sliders/desktop/ipl-desktop.png",
+      mobileBg: "/home/sliders/mobile/ipl-mobile.png",
+      subheading: "",
+      heading: "",
+      buttonText: "",
+      buttonLink: "",
+      features: null,
     }
+
     
     
   ];
