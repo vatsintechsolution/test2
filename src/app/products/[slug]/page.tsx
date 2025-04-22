@@ -119,16 +119,6 @@ export default function ProductPage({ params }: { params: ProductPageParams }) {
 
   return (
     <>
-
-<script
-          dangerouslySetInnerHTML={{
-            __html: `
-          
-              gtag('event', 'conversion', {'send_to': 'AW-10956281123/ug4zCKbnj7UZEKOqrugo'});
-
-            `,
-          }}
-        />
       <main className="min-h-screen py-2 lg:py-8">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">

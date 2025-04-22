@@ -134,6 +134,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-10956281123');
+            gtag('event', 'conversion', {'send_to': 'AW-10956281123/ug4zCKbnj7UZEKOqrugo'});
           `}
         </Script>
       </body>
