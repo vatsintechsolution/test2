@@ -112,7 +112,7 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
   };
 
   return (
-    <div className="w-full h-[500px] md:h-[600px] bg-[url(/fan-bg-zoomed.jpg)] bg-cover bg-top bg-no-repeat relative">
+    <div className="w-full h-[500px] md:h-[600px] bg-[url(/home/ar-bg.jpg)] bg-cover bg-top bg-no-repeat relative">
       {/* 
         This uses a lowercase model-viewer element which Next.js
         will process as a custom element. TypeScript will flag this
@@ -166,14 +166,14 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
         bottom: '80px',
         left: '50%',
         transform: 'translateX(-50%)',
-        display: 'flex',
+        display: 'hidden',
         justifyContent: 'center',
         alignItems: 'center',
         background: 'rgba(0, 0, 0, 0.7)',
         padding: '10px 20px',
         borderRadius: '30px',
         zIndex: 1002 // Higher than RemoteControl but lower than mobile menu
-      }}>
+      }} className="hidden">
         {/* White/Default Color Button */}
         <button
           onClick={() => handleColorChange('#F8F6F0')}

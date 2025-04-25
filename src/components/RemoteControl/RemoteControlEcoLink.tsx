@@ -28,30 +28,79 @@ interface ButtonProps {
   children?: React.ReactNode;
 }
 
-const ButtonOverlay = ({ top, left, size = '30px', onClick, 'aria-label': ariaLabel }: ButtonProps) => (
-  <button
+const ButtonOverlay = ({ top, left, size = '30px', onClick, 'aria-label': ariaLabel, children }: ButtonProps) => (
+  <div
     style={{
       position: 'absolute',
       top: top,
       left: left,
-      width: size,
-      height: size,
-      border: '0px solid rgba(255, 255, 255, 0.3)',
-      backgroundColor: 'rgba(255, 255, 255, 0.1)',
-      borderRadius: '50%',
-      cursor: 'pointer',
-      zIndex: 1001, // Lower than the mobile menu overlay
-      transition: 'all 0.2s ease',
     }}
-    onClick={onClick}
-    aria-label={ariaLabel}
-    onMouseOver={(e) => {
-      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+  >
+    <button
+      style={{
+        width: size,
+        height: size,
+        border: '0px solid rgba(255, 255, 255, 0.3)',
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        borderRadius: '50%',
+        cursor: 'pointer',
+        zIndex: 1001, // Lower than the mobile menu overlay
+        transition: 'all 0.2s ease',
+      }}
+      onClick={onClick}
+      aria-label={ariaLabel}
+      onMouseOver={(e) => {
+        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+      }}
+      onMouseOut={(e) => {
+        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+      }}
+    />
+    {children}
+  </div>
+);
+
+// Custom tooltip component
+interface TooltipProps {
+  text: string;
+  position: 'left' | 'right';
+}
+
+const Tooltip = ({ text, position }: TooltipProps) => (
+  <div
+    style={{
+      position: 'absolute',
+      top: '50%',
+      [position]: position === 'right' ? '-180px' : '-180px',
+      transform: 'translateY(-50%)',
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      color: 'white',
+      padding: '8px 12px',
+      borderRadius: '6px',
+      fontSize: '14px',
+      fontWeight: '500',
+      whiteSpace: 'nowrap',
+      zIndex: 1002,
+      boxShadow: '0 2px 10px rgba(0, 0, 0, 0.2)',
+      display: 'flex',
+      alignItems: 'center',
+      minWidth: '120px',
     }}
-    onMouseOut={(e) => {
-      e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-    }}
-  />
+  >
+    {/* Arrow for the tooltip */}
+    <div
+      style={{
+        position: 'absolute',
+        width: '10px',
+        height: '10px',
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        transform: 'rotate(45deg)',
+        top: 'calc(50% - 5px)',
+        [position === 'right' ? 'left' : 'right']: '-5px',
+      }}
+    />
+    {text}
+  </div>
 );
 
 interface RemoteControlProps {
@@ -104,14 +153,16 @@ export const RemoteControl: React.FC<RemoteControlProps> = ({
         aria-label="Power On"
       />   
       
-      {/* Power Off Button */}
+      {/* Power Off Button with Tooltip */}
       <ButtonOverlay
         top="10%"
         left="55%"
         size="20px"
         onClick={onPowerOffClick}
         aria-label="Power Off"
-      /> 
+      >
+        <Tooltip text=" Turn Power on/off" position="right"  />
+      </ButtonOverlay> 
 
       {/* Light Button */}
       <ButtonOverlay
@@ -153,13 +204,16 @@ export const RemoteControl: React.FC<RemoteControlProps> = ({
         onClick={() => onSpeedClick?.(3)}
         aria-label="Speed 3"
       />
+      {/* Speed 4 Button with Tooltip */}
       <ButtonOverlay
         top="23%"
         left="54%"
         size="20px"
         onClick={() => onSpeedClick?.(4)}
         aria-label="Speed 4"
-      />
+      >
+        <Tooltip text="Control the speed" position="right" />
+      </ButtonOverlay>
       <ButtonOverlay
         top="28%"
         left="52%"

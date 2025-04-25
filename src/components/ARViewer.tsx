@@ -164,7 +164,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         bottom: '80px',
         left: '50%',
         transform: 'translateX(-50%)',
-        display: 'flex',
+        display: 'hidden',
         justifyContent: 'center',
         alignItems: 'center',
         background: 'rgba(0, 0, 0, 0.7)',
