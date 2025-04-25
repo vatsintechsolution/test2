@@ -78,7 +78,7 @@ export default function Home() {
       features: null,
     },
     {
-      desktopBg: "/home/sliders/desktop/ipl-desktop.png",
+      desktopBg: "/home/sliders/desktop/ipl-desktop.png?v=1",
       mobileBg: "/home/sliders/mobile/ipl-mobile.png",
       subheading: "",
       heading: "",
