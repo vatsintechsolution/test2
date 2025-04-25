@@ -83,12 +83,9 @@ export default function Home() {
       subheading: "",
       heading: "",
       buttonText: "",
-      buttonLink: "",
+      buttonLink: "#products",
       features: null,
     }
-
-    
-    
   ];
 
   const productFeatures = [
@@ -436,7 +433,7 @@ export default function Home() {
         </section>
 
          {/* BLDC Fans Section */}
-         <section className="container mx-auto px-4 py-16">
+         <section className="container mx-auto px-4 py-16" >
           <h2 className="text-3xl md:text-4xl font-bold section-heading  mb-8 text-center">
             Explore our Smart Ceiling Fans
           </h2>

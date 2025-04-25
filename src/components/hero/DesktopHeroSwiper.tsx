@@ -30,7 +30,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
   // const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="relative w-full desktop-hero-swiper min-h-[850px] overflow-hidden">
+    <div className="relative w-full desktop-hero-swiper min-h-[800px] overflow-hidden">
       {/* Green accent circle */}
       {/* <div className="absolute top-0 right-0 w-[500px] h-[600px] rounded-full border-[20px] border-[#5FD068]/20 -translate-y-1/2 translate-x-1/2 z-10"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[600px] rounded-full border-[20px] border-[#5FD068]/20 translate-y-1/2 -translate-x-1/2 z-10"></div>
@@ -43,6 +43,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         }}
+        loop={true}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         // onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
@@ -54,7 +55,7 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
               // Full-scale background image only when there's no heading
               <div className="relative w-full ">
                 {slide.buttonLink ? (
-                  <Link href={slide.buttonLink} className="block w-full h-full min-h-[900px]  ">
+                  <Link href={slide.buttonLink} className="block w-full h-full min-h-[800px]  ">
                     <Image
                       src={slide.desktopBg || "/home/slider-1.png"}
                       alt="Slide background"
@@ -64,13 +65,13 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
                     />
                   </Link>
                 ) : (
-                  <Link href={'#'} className="block w-full h-full min-h-[900px]  ">
+                  <Link href={'#'} className="block w-full h-full min-h-[800px]  ">
                   <Image
                     src={slide.desktopBg || "/home/slider-1.png"}
                     alt="Slide background"
                     fill
                     priority
-                    className="object-cover "
+                    className="object-cover  md:object-center "
                   />
                   </Link>
                 )}
@@ -136,7 +137,13 @@ export function DesktopHeroSwiper({ slides }: DesktopHeroSwiperProps) {
           </SwiperSlide>
         ))}
       </Swiper>
-      
+      {/* Custom Navigation Arrows */}
+      <button className="swiper-button-prev absolute left-4 top-1/2 z-10 -translate-y-1/2 w-12 h-12 flex items-center justify-center transition-colors">
+       
+      </button>
+      <button className="swiper-button-next absolute right-4 top-1/2 z-10 -translate-y-1/2 w-12 h-12 flex items-center justify-center transition-colors">
+        
+      </button>
       {/* Custom Pagination */}
       {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex space-x-2">
         {slides.map((_, index) => (
