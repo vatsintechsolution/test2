@@ -287,12 +287,12 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
         </div>
       </div>
 
-      {/* <button
+      <button
         onClick={handleARClick}
         className="fixed z-[9998] bottom-4 right-4 bg-black/70 text-white px-6 py-3 rounded-full hover:bg-black transition-colors font-medium"
       >
         <Link href="/ar/fan1">View in AR</Link>
-      </button> */}
+      </button>
 
       {showAR && (
 < > </>
