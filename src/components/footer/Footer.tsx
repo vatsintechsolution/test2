@@ -45,7 +45,7 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="https://www.signify.com/en-in/terms-of-use" target="_blank" className="hover:underline">
+                    <Link href="/terms-of-use" className="hover:underline">
                       Terms of Use
                     </Link>
                   </li>

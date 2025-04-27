@@ -134,10 +134,13 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
         ios-src="/fan-3d.usdz"
         rotation-per-second={speedValues[rotationSpeed]}
         interaction-policy="allow-when-focused"
+        disable-zoom
+        disable-tap
+        disable-scroll
         camera-orbit="0deg 120deg 100%"
-        min-camera-orbit="auto 100deg 100%"
+        min-camera-orbit="auto 120deg 100%"
         max-camera-orbit="auto 120deg 200%"
-        camera-target="0m -200.5m 0m"
+        camera-target="0m -300.5m 0m"
         field-of-view="30deg"
         shadow-intensity="1"
         exposure="1"
@@ -241,7 +244,7 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
         </div>
       )}
 
-      <div className="fixed bottom-[-150px] md:bottom-10 left-6 z-[999]">
+      <div className="fixed bottom-[-150px] md:bottom-10 left-[-100px] md:left-6 z-[999]">
         <div className="p-3 rounded-lg bg-no-repeat">
           <RemoteControl
             onPowerClick={() => {
@@ -284,12 +287,12 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
         </div>
       </div>
 
-      <button
+      {/* <button
         onClick={handleARClick}
         className="fixed z-[9998] bottom-4 right-4 bg-black/70 text-white px-6 py-3 rounded-full hover:bg-black transition-colors font-medium"
       >
         <Link href="/ar/fan1">View in AR</Link>
-      </button>
+      </button> */}
 
       {showAR && (
 < > </>
