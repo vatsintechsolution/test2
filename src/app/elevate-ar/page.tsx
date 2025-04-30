@@ -173,8 +173,15 @@ export default function SimpleAR() {
             console.log(`${Math.round(percentComplete)}% loaded`);
           },
           (err) => {
-            // Error callback
+            // Error callback with specific AWS S3 error detection
             console.error('Error loading model:', err);
+            
+            // Check if the error is likely a MIME type issue
+            const errorString = err instanceof Error ? err.message : String(err);
+            if (errorString.includes('Failed to load resource') || errorString.includes('Unexpected token')) {
+              setError(`MIME type configuration issue detected. The server is likely not serving .glb files with the correct MIME type (model/gltf-binary). Please check AWS S3 configuration.`);
+              console.error('Server configuration issue: GLB files should be served with MIME type "model/gltf-binary". Check S3/server configuration.');
+            }
             
             // Retry logic - try up to 3 times with different paths
             if (modelLoadAttempts < 3) {

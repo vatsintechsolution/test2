@@ -17,6 +17,24 @@ const nextConfig = {
           },
         ],
       },
+      // Add CORS headers for GLB model files with proper MIME type
+      {
+        source: '/models/:path*.glb',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Content-Type',
+            value: 'model/gltf-binary',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
       // Add CORS headers for GLB model files
       {
         source: '/models/:path*',
