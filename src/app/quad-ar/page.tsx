@@ -27,7 +27,12 @@ export default function SimpleAR() {
 
   // Initialize camera stream and scene setup with useCallback
   const startCamera = useCallback(async () => {
-    if (!videoRef.current) return;
+    // First check if the ref is available
+    if (!videoRef.current) {
+      console.log('Video ref not yet available, retrying in 500ms');
+      setTimeout(() => startCamera(), 500);
+      return;
+    }
     
     try {
       setError(null);
@@ -40,6 +45,14 @@ export default function SimpleAR() {
           height: { ideal: 720 }
         } 
       });
+      
+      // Double check ref is still available before setting srcObject
+      if (!videoRef.current) {
+        console.error('Video element disappeared after getting camera stream');
+        setError('Video element not available. Please reload the page.');
+        setShowPermissionPrompt(true);
+        return;
+      }
       
       videoRef.current.srcObject = stream;
       videoRef.current.play();
@@ -112,11 +125,9 @@ export default function SimpleAR() {
         // Load model with better error handling and absolute path
         const loader = new GLTFLoader();
         
-        // Use an absolute path for production environments
-        const modelPath = process.env.NODE_ENV === 'production' 
-          ? 'https://fans.ecolinklighting.in/models/airo-quad.glb'
-          : '/models/airo-quad.glb';
-          
+        // Use a direct URL regardless of environment
+        // Don't rely on NODE_ENV which may not be correct in production
+        const modelPath = 'https://fans.ecolinklighting.in/models/airo-quad.glb';
         console.log('Loading model from path:', modelPath);
         
         loader.load(
@@ -125,6 +136,19 @@ export default function SimpleAR() {
             try {
               console.log('Model loaded successfully, processing...');
               const model = gltf.scene;
+              
+              // Traverse all materials to ensure they're properly processed
+              model.traverse((object) => {
+                if ((object as THREE.Mesh).isMesh) {
+                  const mesh = object as THREE.Mesh;
+                  if (mesh.material) {
+                    // Make sure materials use correct color space
+                    const material = mesh.material as THREE.MeshStandardMaterial;
+                    if (material.map) material.map.colorSpace = THREE.SRGBColorSpace;
+                    if (material.normalMap) material.normalMap.colorSpace = THREE.NoColorSpace;
+                  }
+                }
+              });
               
               // Scale model
               model.scale.set(0.01, 0.01, 0.01);
@@ -170,8 +194,8 @@ export default function SimpleAR() {
               
               // Try different paths on each attempt
               let retryPath = 'https://fans.ecolinklighting.in/models/airo-quad.glb';
-              if (modelLoadAttempts === 1) retryPath = '/models/airo-quad.glb';
-              if (modelLoadAttempts === 2) retryPath = 'https://raw.githubusercontent.com/ecolinklighting/fans/main/public/models/airo-quad.glb';
+              if (modelLoadAttempts === 1) retryPath = 'https://d2s50w7dshxhiq.cloudfront.net/models/airo-quad.glb'; // Try a CDN URL if available
+              if (modelLoadAttempts === 2) retryPath = '/models/airo-quad.glb'; // Try local path as last resort
               
               setTimeout(() => {
                 loader.load(
@@ -312,6 +336,12 @@ export default function SimpleAR() {
 
   return (
     <div className="h-screen w-full bg-black">
+      {/* Add Cross-Origin headers for better WebGL support */}
+      <head>
+        <meta httpEquiv="Cross-Origin-Opener-Policy" content="same-origin" />
+        <meta httpEquiv="Cross-Origin-Embedder-Policy" content="require-corp" />
+      </head>
+      
       <div 
         ref={containerRef} 
         className="relative w-full h-full"
