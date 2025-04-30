@@ -15,7 +15,8 @@ export default function SimpleAR() {
   const [error, setError] = useState<string | null>(null);
   const [cameraPermissionGranted, setCameraPermissionGranted] = useState(false);
   const [showPermissionPrompt, setShowPermissionPrompt] = useState(true);
-  const [modelLoadAttempts, setModelLoadAttempts] = useState(0);
+  const [arSupported, setArSupported] = useState(false);
+  const [arActive, setArActive] = useState(false);
   
   // Store scene elements in refs
   const sceneRef = useRef<THREE.Scene | null>(null);
@@ -24,6 +25,120 @@ export default function SimpleAR() {
   const modelRef = useRef<THREE.Group | null>(null);
   const controlsRef = useRef<OrbitControls | null>(null);
   const requestRef = useRef<number | null>(null);
+
+  // Check if WebXR is supported
+  useEffect(() => {
+    if (navigator.xr) {
+      navigator.xr.isSessionSupported('immersive-ar')
+        .then(supported => {
+          setArSupported(supported);
+          console.log('AR supported:', supported);
+        })
+        .catch(err => {
+          console.error('Error checking AR support:', err);
+          setArSupported(false);
+        });
+    } else {
+      console.log('WebXR not supported in this browser');
+      setArSupported(false);
+    }
+  }, []);
+
+  // Function to create XR compatible WebGL context
+  const createXRCompatibleWebGLContext = (canvas: HTMLCanvasElement) => {
+    let context = null;
+    
+    // Try WebGL2 first
+    try {
+      context = canvas.getContext('webgl2', { 
+        alpha: true, 
+        antialias: true,
+        xrCompatible: true,
+        premultipliedAlpha: true,
+        preserveDrawingBuffer: false,
+        powerPreference: 'default'
+      });
+      if (context) {
+        console.log('Using WebGL2 context');
+        return context;
+      }
+    } catch (e) {
+      console.warn('WebGL2 not available:', e);
+    }
+    
+    // Fall back to WebGL1
+    try {
+      context = canvas.getContext('webgl', { 
+        alpha: true, 
+        antialias: true,
+        xrCompatible: true,
+        premultipliedAlpha: true,
+        preserveDrawingBuffer: false 
+      });
+      if (context) {
+        console.log('Using WebGL1 context');
+        return context;
+      }
+    } catch (e) {
+      console.error('WebGL not available:', e);
+    }
+    
+    return null;
+  };
+
+  // AR Session Start Function
+  const startARSession = async () => {
+    if (!rendererRef.current || !sceneRef.current || !cameraRef.current) {
+      console.error('Renderer, scene, or camera not initialized');
+      setError('Unable to start AR: scene not initialized');
+      return;
+    }
+    
+    if (!arSupported) {
+      setError('AR is not supported on this device');
+      return;
+    }
+    
+    try {
+      // Try different reference spaces if one fails
+      const referenceSpaceTypes = ['local', 'local-floor', 'viewer', 'unbounded'];
+      
+      // Make sure XR is enabled on the renderer
+      rendererRef.current.xr.enabled = true;
+      
+      // Request AR session with minimal features for compatibility
+      const session = await navigator.xr.requestSession('immersive-ar', {
+        optionalFeatures: []
+      });
+      
+      // Set session
+      await rendererRef.current.xr.setSession(session);
+      setArActive(true);
+      
+      // Try different reference spaces
+      for (const spaceType of referenceSpaceTypes) {
+        try {
+          const referenceSpace = await session.requestReferenceSpace(spaceType as XRReferenceSpaceType);
+          rendererRef.current.xr.setReferenceSpace(referenceSpace);
+          console.log(`Using reference space: ${spaceType}`);
+          break;
+        } catch (e) {
+          console.warn(`Failed to get reference space ${spaceType}:`, e);
+          // Continue trying other space types
+        }
+      }
+      
+      // Setup session end handling
+      session.addEventListener('end', () => {
+        setArActive(false);
+        console.log('AR session ended');
+      });
+      
+    } catch (error) {
+      console.error('Failed to start AR session:', error);
+      setError(`Failed to start AR session: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
+  };
 
   // Initialize camera stream and scene setup with useCallback
   const startCamera = useCallback(async () => {
@@ -74,9 +189,18 @@ export default function SimpleAR() {
         camera.position.set(0, 0, 25); // Increased distance from 20 to 25 to zoom out more
         cameraRef.current = camera;
         
-        // Setup renderer
+        // Create XR-compatible context and initialize renderer with it
+        const glContext = createXRCompatibleWebGLContext(canvasRef.current);
+        
+        if (!glContext) {
+          setError('Failed to create WebGL context');
+          return;
+        }
+        
+        // Setup renderer with the XR-compatible context
         const renderer = new THREE.WebGLRenderer({
           canvas: canvasRef.current,
+          context: glContext,
           alpha: true, // Transparent background
           antialias: true
         });
@@ -84,6 +208,9 @@ export default function SimpleAR() {
         renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight);
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.outputColorSpace = THREE.SRGBColorSpace;
+        
+        // Enable XR
+        renderer.xr.enabled = true;
         rendererRef.current = renderer;
         
         // Add lights
@@ -122,12 +249,11 @@ export default function SimpleAR() {
         
         controlsRef.current = controls;
         
-        // Load model with better error handling and absolute path
+        // Load model with simplified approach matching working AR viewer
         const loader = new GLTFLoader();
         
-        // Use a direct URL regardless of environment
-        // Don't rely on NODE_ENV which may not be correct in production
-        const modelPath = 'https://fans.ecolinklighting.in/models/airo-quad.glb';
+        // Simple direct path without environment checks or fallbacks
+        const modelPath = '/models/airo-quad.glb';
         console.log('Loading model from path:', modelPath);
         
         loader.load(
@@ -153,9 +279,6 @@ export default function SimpleAR() {
               // Scale model
               model.scale.set(0.01, 0.01, 0.01);
               
-              // Normal orientation - no flip needed for this model
-              // model.rotation.x = Math.PI; // Removed the 180 degree rotation
-              
               // Center model
               const box = new THREE.Box3().setFromObject(model);
               const center = box.getCenter(new THREE.Vector3());
@@ -170,7 +293,6 @@ export default function SimpleAR() {
               scene.add(model);
               modelRef.current = model;
               setIsLoading(false);
-              setModelLoadAttempts(0); // Reset attempts counter on success
               console.log('Model successfully added to scene');
             } catch (err) {
               console.error('Error processing loaded model:', err);
@@ -184,78 +306,20 @@ export default function SimpleAR() {
             console.log(`${Math.round(percentComplete)}% loaded`);
           },
           (err) => {
-            // Error callback with specific AWS S3 error detection
+            // Error callback with simplified handling
             console.error('Error loading model:', err);
-            
-            // Check if the error is likely a MIME type issue
-            const errorString = err instanceof Error ? err.message : String(err);
-            if (errorString.includes('Failed to load resource') || errorString.includes('Unexpected token')) {
-              setError(`MIME type configuration issue detected. The server is likely not serving .glb files with the correct MIME type (model/gltf-binary). Please check AWS S3 configuration.`);
-              console.error('Server configuration issue: GLB files should be served with MIME type "model/gltf-binary". Check S3/server configuration.');
-            }
-            
-            // Retry logic - try up to 3 times with different paths
-            if (modelLoadAttempts < 3) {
-              console.log(`Retrying model load, attempt ${modelLoadAttempts + 1}/3`);
-              setModelLoadAttempts(prev => prev + 1);
-              
-              // Try different paths on each attempt
-              let retryPath = 'https://fans.ecolinklighting.in/models/airo-quad.glb';
-              if (modelLoadAttempts === 1) retryPath = 'https://d2s50w7dshxhiq.cloudfront.net/models/airo-quad.glb'; // Try a CDN URL if available
-              if (modelLoadAttempts === 2) retryPath = '/models/airo-quad.glb'; // Try local path as last resort
-              
-              setTimeout(() => {
-                loader.load(
-                  retryPath,
-                  (gltf) => {
-                    // Same success callback as original
-                    try {
-                      console.log('Model loaded successfully on retry, processing...');
-                      const model = gltf.scene;
-                      
-                      // Process model same as above...
-                      model.scale.set(0.01, 0.01, 0.01);
-                      const box = new THREE.Box3().setFromObject(model);
-                      const center = box.getCenter(new THREE.Vector3());
-                      controls.target.set(center.x, center.y, center.z);
-                      model.position.y = 4;
-                      
-                      scene.add(model);
-                      modelRef.current = model;
-                      setIsLoading(false);
-                      setModelLoadAttempts(0);
-                      console.log('Model successfully added to scene on retry');
-                    } catch (retryErr) {
-                      console.error('Error processing loaded model on retry:', retryErr);
-                      setError(`Error processing 3D model on retry: ${retryErr instanceof Error ? retryErr.message : 'Unknown error'}`);
-                      setIsLoading(false);
-                    }
-                  },
-                  undefined,
-                  (retryErr) => {
-                    console.error(`Retry ${modelLoadAttempts} failed:`, retryErr);
-                    // Let the next attempt try or show final error
-                    if (modelLoadAttempts === 3) {
-                      setError(`Failed to load 3D model after 3 attempts: ${retryErr instanceof Error ? retryErr.message : 'Unknown error'}`);
-                      setIsLoading(false);
-                    }
-                  }
-                );
-              }, 1000); // Add a small delay between retries
-            } else {
-              setError(`Failed to load 3D model: ${err instanceof Error ? err.message : 'Unknown error'}`);
-              setIsLoading(false);
-            }
+            setError(`Failed to load 3D model: ${err instanceof Error ? err.message : 'Unknown error'}`);
+            setIsLoading(false);
           }
         );
         
-        // Animation loop
+        // Animation loop - using requestAnimationFrame for better cleanup
         const animate = () => {
           if (controlsRef.current) {
             controlsRef.current.update();
           }
           
-          if (sceneRef.current && cameraRef.current && rendererRef.current) {
+          if (!rendererRef.current?.xr.isPresenting && sceneRef.current && cameraRef.current && rendererRef.current) {
             rendererRef.current.render(sceneRef.current, cameraRef.current);
           }
           
@@ -307,6 +371,13 @@ export default function SimpleAR() {
     videoRef.current.srcObject = null;
     console.log('Camera stopped');
     
+    // End AR session if active
+    if (rendererRef.current?.xr.isPresenting) {
+      rendererRef.current.xr.getSession()?.end().catch(err => {
+        console.error('Error ending XR session:', err);
+      });
+    }
+    
     // Redirect to /elevate
     router.push('/quad');
   };
@@ -327,8 +398,16 @@ export default function SimpleAR() {
         tracks.forEach(track => track.stop());
       }
       
+      // End AR session if active
+      if (rendererRef.current?.xr.isPresenting) {
+        rendererRef.current.xr.getSession()?.end().catch(err => {
+          console.error('Error ending XR session:', err);
+        });
+      }
+      
       if (requestRef.current !== null) {
         cancelAnimationFrame(requestRef.current);
+        requestRef.current = null;
       }
       
       if (rendererRef.current) {
@@ -406,6 +485,18 @@ export default function SimpleAR() {
         {error && (
           <div className="absolute top-4 left-4 bg-red-500/90 text-white px-4 py-2 rounded-md z-30 max-w-xs">
             {error}
+          </div>
+        )}
+        
+        {/* AR Button - Only show when camera is active and AR is supported */}
+        {cameraPermissionGranted && arSupported && !arActive && !isLoading && (
+          <div className="fixed bottom-24 left-0 right-0 flex justify-center z-50">
+            <button
+              onClick={startARSession}
+              className="px-8 py-4 rounded-full font-bold text-lg shadow-lg bg-blue-500 hover:bg-blue-600 text-white"
+            >
+              START AR
+            </button>
           </div>
         )}
         
