@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from "react";
 import { RemoteControl } from './RemoteControl/RemoteControlEcoLink';
-import { useRouter } from 'next/navigation';
 import Link from "next/link";
 import React from "react";
 // Import dynamic to handle client-side only components
@@ -26,7 +25,6 @@ interface ModelViewerElement extends HTMLElement {
 }
 
 export default function ARViewer2({ modelPath }: { modelPath: string }) {
-  const router = useRouter();
   const [rotationSpeed, setRotationSpeed] = useState<RotationSpeed>("off");
   const [showAR, setShowAR] = useState(false);
   const [scale] = useState(0.5);
@@ -94,11 +92,11 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
     speed6: direction === "clockwise" ? "2000deg" : "-2000deg",
   };
 
-  const handleARClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setShowAR(true);
-    router.push('/ar/fan2');
-  };
+  // const handleARClick = (e: React.MouseEvent) => {
+  //   e.preventDefault();
+  //   setShowAR(true);
+  //   router.push('/ar/fan2');
+  // };
 
   const handleColorChange = (color: string) => {
     setCurrentColor(color);
@@ -287,11 +285,11 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
         </div>
       </div>
 
-      <button
-        onClick={handleARClick}
+      <button 
+       
         className="fixed z-[9998] bottom-4 right-4 bg-black/70 text-white px-6 py-3 rounded-full hover:bg-black transition-colors font-medium"
       >
-        <Link href="/ar/fan1">View in AR</Link>
+        <Link href="/elevate-ar">View in AR</Link>
       </button>
 
       {showAR && (

@@ -97,7 +97,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
   const handleARClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setShowAR(true);
-    router.push('/ar/fan1');
+    router.push('/quad-ar');
   };
 
   const handleColorChange = (color: string) => {
@@ -239,8 +239,8 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         </div>
       )}
 
-      <div className="fixed bottom-[-150px] md:bottom-10 left-6 z-[999]">
-        <div className="p-3 rounded-lg bg-no-repeat">
+<div className="fixed bottom-[-150px] md:bottom-10 left-[-100px] md:left-6 z-[999]">
+<div className="p-3 rounded-lg bg-no-repeat">
           <RemoteControl
             onPowerClick={() => {
               // Power on - set to speed1 if currently off
@@ -286,7 +286,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
         onClick={handleARClick}
         className="fixed z-[9998] bottom-4 right-4 bg-black/70 text-white px-6 py-3 rounded-full hover:bg-black transition-colors font-medium"
       >
-        <Link href="/ar/fan1">View in AR</Link>
+        <Link href="/quad-ar">View in AR</Link>
       </button>
 
       {showAR && (
