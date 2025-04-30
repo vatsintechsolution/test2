@@ -15,6 +15,7 @@ export default function SimpleAR() {
   const [error, setError] = useState<string | null>(null);
   const [cameraPermissionGranted, setCameraPermissionGranted] = useState(false);
   const [showPermissionPrompt, setShowPermissionPrompt] = useState(true);
+  const [modelLoadAttempts, setModelLoadAttempts] = useState(0);
   
   // Store scene elements in refs
   const sceneRef = useRef<THREE.Scene | null>(null);
@@ -108,13 +109,21 @@ export default function SimpleAR() {
         
         controlsRef.current = controls;
         
-        // Load model
+        // Load model with better error handling and absolute path
         const loader = new GLTFLoader();
         
+        // Use an absolute path for production environments
+        const modelPath = process.env.NODE_ENV === 'production' 
+          ? 'https://fans.ecolinklighting.in/models/airo-quad.glb'
+          : '/models/airo-quad.glb';
+          
+        console.log('Loading model from path:', modelPath);
+        
         loader.load(
-          '/models/airo-quad.glb',
+          modelPath,
           (gltf) => {
             try {
+              console.log('Model loaded successfully, processing...');
               const model = gltf.scene;
               
               // Scale model
@@ -137,23 +146,75 @@ export default function SimpleAR() {
               scene.add(model);
               modelRef.current = model;
               setIsLoading(false);
-              console.log('Model loaded successfully');
+              setModelLoadAttempts(0); // Reset attempts counter on success
+              console.log('Model successfully added to scene');
             } catch (err) {
               console.error('Error processing loaded model:', err);
-              setError('Error processing 3D model');
+              setError(`Error processing 3D model: ${err instanceof Error ? err.message : 'Unknown error'}`);
               setIsLoading(false);
             }
           },
           (xhr) => {
             // Progress callback
             const percentComplete = xhr.loaded / xhr.total * 100;
-            console.log(Math.round(percentComplete) + "% loaded");
+            console.log(`${Math.round(percentComplete)}% loaded`);
           },
           (err) => {
             // Error callback
             console.error('Error loading model:', err);
-            setError('Failed to load 3D model');
-            setIsLoading(false);
+            
+            // Retry logic - try up to 3 times with different paths
+            if (modelLoadAttempts < 3) {
+              console.log(`Retrying model load, attempt ${modelLoadAttempts + 1}/3`);
+              setModelLoadAttempts(prev => prev + 1);
+              
+              // Try different paths on each attempt
+              let retryPath = 'https://fans.ecolinklighting.in/models/airo-quad.glb';
+              if (modelLoadAttempts === 1) retryPath = '/models/airo-quad.glb';
+              if (modelLoadAttempts === 2) retryPath = 'https://raw.githubusercontent.com/ecolinklighting/fans/main/public/models/airo-quad.glb';
+              
+              setTimeout(() => {
+                loader.load(
+                  retryPath,
+                  (gltf) => {
+                    // Same success callback as original
+                    try {
+                      console.log('Model loaded successfully on retry, processing...');
+                      const model = gltf.scene;
+                      
+                      // Process model same as above...
+                      model.scale.set(0.01, 0.01, 0.01);
+                      const box = new THREE.Box3().setFromObject(model);
+                      const center = box.getCenter(new THREE.Vector3());
+                      controls.target.set(center.x, center.y, center.z);
+                      model.position.y = 4;
+                      
+                      scene.add(model);
+                      modelRef.current = model;
+                      setIsLoading(false);
+                      setModelLoadAttempts(0);
+                      console.log('Model successfully added to scene on retry');
+                    } catch (retryErr) {
+                      console.error('Error processing loaded model on retry:', retryErr);
+                      setError(`Error processing 3D model on retry: ${retryErr instanceof Error ? retryErr.message : 'Unknown error'}`);
+                      setIsLoading(false);
+                    }
+                  },
+                  undefined,
+                  (retryErr) => {
+                    console.error(`Retry ${modelLoadAttempts} failed:`, retryErr);
+                    // Let the next attempt try or show final error
+                    if (modelLoadAttempts === 3) {
+                      setError(`Failed to load 3D model after 3 attempts: ${retryErr instanceof Error ? retryErr.message : 'Unknown error'}`);
+                      setIsLoading(false);
+                    }
+                  }
+                );
+              }, 1000); // Add a small delay between retries
+            } else {
+              setError(`Failed to load 3D model: ${err instanceof Error ? err.message : 'Unknown error'}`);
+              setIsLoading(false);
+            }
           }
         );
         
@@ -248,7 +309,7 @@ export default function SimpleAR() {
       }
     };
   }, [startCamera]); // Add startCamera as a dependency
-  
+
   return (
     <div className="h-screen w-full bg-black">
       <div 

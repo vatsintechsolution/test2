@@ -17,6 +17,20 @@ const nextConfig = {
           },
         ],
       },
+      // Add CORS headers for GLB model files
+      {
+        source: '/models/:path*',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
       // Add headers for static assets to ensure proper handling
       {
         source: '/:path*',
