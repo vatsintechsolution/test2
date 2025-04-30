@@ -5,12 +5,8 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { useRouter } from 'next/navigation';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AR View - Elevate',
-  description: 'View the Elevate HVAC unit in augmented reality',
-};
+
 
 export default function ElevateAR() {
   const router = useRouter();
@@ -256,7 +252,7 @@ export default function ElevateAR() {
         const loader = new GLTFLoader();
         
         // Simple direct path
-        const modelPath = '/models/airo-elevate.glb';
+        const modelPath = '/models/airoelevate.glb';
         console.log('Loading model from path:', modelPath);
         
         loader.load(
