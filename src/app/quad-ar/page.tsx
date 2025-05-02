@@ -17,6 +17,7 @@ export default function SimpleAR() {
   const [showPermissionPrompt, setShowPermissionPrompt] = useState(true);
   const [arSupported, setArSupported] = useState(false);
   const [arActive, setArActive] = useState(false);
+  const cameraInitialized = useRef(false); // Track if camera has been initialized
   
   // Store scene elements in refs
   const sceneRef = useRef<THREE.Scene | null>(null);
@@ -167,6 +168,13 @@ export default function SimpleAR() {
   // Initialize camera stream and scene setup with useCallback
   const startCamera = useCallback(async () => {
     console.log('🔍 Starting camera and initializing scene...');
+    
+    // Prevent multiple initialization attempts
+    if (cameraInitialized.current) {
+      console.log('⚠️ Camera already initialized, skipping');
+      return;
+    }
+    
     // First check if the ref is available
     if (!videoRef.current) {
       console.log('⚠️ Video ref not yet available, retrying in 500ms');
@@ -197,221 +205,19 @@ export default function SimpleAR() {
       }
       
       videoRef.current.srcObject = stream;
-      videoRef.current.play();
+      videoRef.current.play().catch(err => {
+        console.error('❌ Error playing video:', err);
+      });
+      
+      // Mark as initialized to prevent duplicate initialization
+      cameraInitialized.current = true;
       setCameraPermissionGranted(true);
       console.log('✅ Camera started successfully');
       
-      // Initialize the 3D scene now that we have camera permission
-      if (containerRef.current && canvasRef.current) {
-        setIsLoading(true);
-        setError(null);
-        
-        console.log('🔍 Setting up 3D scene...');
-        // Setup scene
-        const scene = new THREE.Scene();
-        sceneRef.current = scene;
-        console.log('✅ Scene created');
-        
-        // Setup camera - position it further away to see the entire model
-        const aspectRatio = containerRef.current.clientWidth / containerRef.current.clientHeight;
-        const camera = new THREE.PerspectiveCamera(45, aspectRatio, 0.1, 1000);
-        camera.position.set(0, 0, 25); // Increased distance from 20 to 25 to zoom out more
-        cameraRef.current = camera;
-        console.log('✅ Camera created with position:', camera.position);
-        
-        // Create XR-compatible context and initialize renderer with it
-        console.log('🔍 Creating WebGL context...');
-        const glContext = createXRCompatibleWebGLContext(canvasRef.current);
-        
-        if (!glContext) {
-          console.error('❌ Failed to create WebGL context');
-          setError('Failed to create WebGL context');
-          return;
-        }
-        console.log('✅ WebGL context created:', glContext);
-        
-        // Setup renderer with the XR-compatible context
-        console.log('🔍 Creating renderer with XR-compatible context...');
-        const renderer = new THREE.WebGLRenderer({
-          canvas: canvasRef.current,
-          context: glContext,
-          alpha: true, // Transparent background
-          antialias: true
-        });
-        
-        renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.outputColorSpace = THREE.SRGBColorSpace;
-        
-        // Enable XR
-        console.log('🔍 Enabling XR capabilities on renderer');
-        renderer.xr.enabled = true;
-        rendererRef.current = renderer;
-        console.log('✅ Renderer created with XR enabled');
-        
-        // Add lights
-        console.log('🔍 Setting up lights...');
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
-        scene.add(ambientLight);
-        
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-        directionalLight.position.set(5, 5, 5);
-        scene.add(directionalLight);
-        console.log('✅ Lights added to scene');
-        
-        // Add OrbitControls with restricted rotation
-        console.log('🔍 Setting up orbit controls...');
-        const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-        controls.dampingFactor = 0.05;
-        controls.autoRotate = false; // Disable auto-rotation for this model
-        
-        // Set the target to the center of the model to ensure proper rotation axis
-        controls.target.set(0, 0, 0);
-        
-        // Allow vertical rotation but restrict horizontal rotation
-        controls.enableRotate = true;
-        
-        // Lock horizontal rotation - remove these if they're causing issues
-        controls.minAzimuthAngle = 0; // Lock to front view
-        controls.maxAzimuthAngle = 0; // Lock to front view
-        
-        // Strict zoom limits (95% to 105% of default view)
-        controls.minDistance = 24; // 95% of default distance (25)
-        controls.maxDistance = 26; // 105% of default distance (25)
-        
-        controls.minPolarAngle = Math.PI / 4; // 45 degrees from top
-        controls.maxPolarAngle = Math.PI * 3/4; // 45 degrees from bottom
-        
-        // Disable panning to prevent user from moving the model
-        controls.enablePan = false;
-        
-        controlsRef.current = controls;
-        console.log('✅ Orbit controls configured');
-        
-        // Load model with simplified approach matching working AR viewer
-        const loader = new GLTFLoader();
-        
-        // Simple direct path without environment checks or fallbacks
-        const modelPath = '/models/airo-quad.glb';
-        console.log('🔍 Loading model from path:', modelPath);
-        
-        loader.load(
-          modelPath,
-          (gltf) => {
-            try {
-              console.log('✅ Model loaded successfully, processing...');
-              const model = gltf.scene;
-              
-              // Traverse all materials to ensure they're properly processed
-              console.log('🔍 Processing model materials...');
-              model.traverse((object) => {
-                if ((object as THREE.Mesh).isMesh) {
-                  const mesh = object as THREE.Mesh;
-                  if (mesh.material) {
-                    // Make sure materials use correct color space
-                    const material = mesh.material as THREE.MeshStandardMaterial;
-                    if (material.map) material.map.colorSpace = THREE.SRGBColorSpace;
-                    if (material.normalMap) material.normalMap.colorSpace = THREE.NoColorSpace;
-                  }
-                }
-              });
-              console.log('✅ Materials processed');
-              
-              // Scale model
-              console.log('🔍 Scaling model...');
-              model.scale.set(0.01, 0.01, 0.01);
-              console.log('✅ Model scaled:', model.scale);
-              
-              // Center model
-              console.log('🔍 Centering model...');
-              const box = new THREE.Box3().setFromObject(model);
-              const center = box.getCenter(new THREE.Vector3());
-              console.log('   Model bounds:', box.min, box.max);
-              console.log('   Model center:', center);
-              
-              // Instead of moving the model, set the orbital controls target to the center
-              controls.target.set(center.x, center.y, center.z);
-              console.log('✅ Orbit controls target set to model center');
-              
-              // Keep the position adjustment for height only
-              console.log('🔍 Adjusting model position...');
-              model.position.y = 4; // Move model up by 4 units
-              console.log('✅ Model position set:', model.position);
-              
-              // Add model to scene
-              console.log('🔍 Adding model to scene...');
-              scene.add(model);
-              modelRef.current = model;
-              console.log('✅ Model added to scene');
-              
-              setIsLoading(false);
-              console.log('✅ Model successfully loaded and set up');
-            } catch (err) {
-              console.error('❌ Error processing loaded model:', err);
-              setError(`Error processing 3D model: ${err instanceof Error ? err.message : 'Unknown error'}`);
-              setIsLoading(false);
-            }
-          },
-          (xhr) => {
-            // Progress callback
-            const percentComplete = xhr.loaded / xhr.total * 100;
-            console.log(`📊 Model loading: ${Math.round(percentComplete)}%`);
-          },
-          (err) => {
-            // Error callback with simplified handling
-            console.error('❌ Error loading model:', err);
-            console.error('Error details:', err instanceof Error ? err.message : 'Unknown error');
-            // Log model path to verify it's correct
-            console.error('Failed model path:', modelPath);
-            setError(`Failed to load 3D model: ${err instanceof Error ? err.message : 'Unknown error'}`);
-            setIsLoading(false);
-          }
-        );
-        
-        // Animation loop - using requestAnimationFrame for better cleanup
-        const animate = () => {
-          if (controlsRef.current) {
-            controlsRef.current.update();
-          }
-          
-          if (!rendererRef.current?.xr.isPresenting && sceneRef.current && cameraRef.current && rendererRef.current) {
-            rendererRef.current.render(sceneRef.current, cameraRef.current);
-          }
-          
-          requestRef.current = requestAnimationFrame(animate);
-        };
-        
-        // Start animation loop
-        console.log('🔍 Starting animation loop');
-        requestRef.current = requestAnimationFrame(animate);
-        console.log('✅ Animation loop started');
-        
-        // Handle resize
-        const handleResize = () => {
-          if (!containerRef.current || !cameraRef.current || !rendererRef.current) return;
-          
-          const width = containerRef.current.clientWidth;
-          const height = containerRef.current.clientHeight;
-          
-          cameraRef.current.aspect = width / height;
-          cameraRef.current.updateProjectionMatrix();
-          
-          rendererRef.current.setSize(width, height);
-          console.log('📱 Window resized, renderer and camera updated');
-        };
-        
-        window.addEventListener('resize', handleResize);
-        console.log('✅ Resize handler configured');
-        
-        // Set up cleanup for resize listener
-        const cleanupResize = () => {
-          window.removeEventListener('resize', handleResize);
-        };
-        
-        // Store cleanup function
-        return cleanupResize;
-      }
+      // Add a small delay before initializing 3D scene to ensure video element is stable
+      setTimeout(() => {
+        initializeScene();
+      }, 500);
       
     } catch (err) {
       console.error('❌ Error accessing camera:', err);
@@ -420,8 +226,225 @@ export default function SimpleAR() {
       setShowPermissionPrompt(true);
     }
   }, []);
+  
+  // Separate scene initialization to make the code more maintainable
+  const initializeScene = useCallback(() => {
+    console.log('🔍 Initializing 3D scene after camera setup...');
+    
+    // Initialize the 3D scene now that we have camera permission
+    if (containerRef.current && canvasRef.current) {
+      setIsLoading(true);
+      setError(null);
+      
+      console.log('🔍 Setting up 3D scene...');
+      // Setup scene
+      const scene = new THREE.Scene();
+      sceneRef.current = scene;
+      console.log('✅ Scene created');
+      
+      // Setup camera - position it further away to see the entire model
+      const aspectRatio = containerRef.current.clientWidth / containerRef.current.clientHeight;
+      const camera = new THREE.PerspectiveCamera(45, aspectRatio, 0.1, 1000);
+      camera.position.set(0, 0, 25); // Increased distance from 20 to 25 to zoom out more
+      cameraRef.current = camera;
+      console.log('✅ Camera created with position:', camera.position);
+      
+      // Create XR-compatible context and initialize renderer with it
+      console.log('🔍 Creating WebGL context...');
+      const glContext = createXRCompatibleWebGLContext(canvasRef.current);
+      
+      if (!glContext) {
+        console.error('❌ Failed to create WebGL context');
+        setError('Failed to create WebGL context');
+        return;
+      }
+      console.log('✅ WebGL context created:', glContext);
+      
+      // Setup renderer with the XR-compatible context
+      console.log('🔍 Creating renderer with XR-compatible context...');
+      const renderer = new THREE.WebGLRenderer({
+        canvas: canvasRef.current,
+        context: glContext,
+        alpha: true, // Transparent background
+        antialias: true
+      });
+      
+      renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      
+      // Enable XR
+      console.log('🔍 Enabling XR capabilities on renderer');
+      renderer.xr.enabled = true;
+      rendererRef.current = renderer;
+      console.log('✅ Renderer created with XR enabled');
+      
+      // Add lights
+      console.log('🔍 Setting up lights...');
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+      scene.add(ambientLight);
+      
+      const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+      directionalLight.position.set(5, 5, 5);
+      scene.add(directionalLight);
+      console.log('✅ Lights added to scene');
+      
+      // Add OrbitControls with restricted rotation
+      console.log('🔍 Setting up orbit controls...');
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.05;
+      controls.autoRotate = false; // Disable auto-rotation for this model
+      
+      // Set the target to the center of the model to ensure proper rotation axis
+      controls.target.set(0, 0, 0);
+      
+      // Allow vertical rotation but restrict horizontal rotation
+      controls.enableRotate = true;
+      
+      // Lock horizontal rotation - remove these if they're causing issues
+      controls.minAzimuthAngle = 0; // Lock to front view
+      controls.maxAzimuthAngle = 0; // Lock to front view
+      
+      // Strict zoom limits (95% to 105% of default view)
+      controls.minDistance = 24; // 95% of default distance (25)
+      controls.maxDistance = 26; // 105% of default distance (25)
+      
+      controls.minPolarAngle = Math.PI / 4; // 45 degrees from top
+      controls.maxPolarAngle = Math.PI * 3/4; // 45 degrees from bottom
+      
+      // Disable panning to prevent user from moving the model
+      controls.enablePan = false;
+      
+      controlsRef.current = controls;
+      console.log('✅ Orbit controls configured');
+      
+      // Load model with simplified approach matching working AR viewer
+      const loader = new GLTFLoader();
+      
+      // Simple direct path without environment checks or fallbacks
+      const modelPath = '/models/airo-quad.glb';
+      console.log('🔍 Loading model from path:', modelPath);
+      
+      loader.load(
+        modelPath,
+        (gltf) => {
+          try {
+            console.log('✅ Model loaded successfully, processing...');
+            const model = gltf.scene;
+            
+            // Traverse all materials to ensure they're properly processed
+            console.log('🔍 Processing model materials...');
+            model.traverse((object) => {
+              if ((object as THREE.Mesh).isMesh) {
+                const mesh = object as THREE.Mesh;
+                if (mesh.material) {
+                  // Make sure materials use correct color space
+                  const material = mesh.material as THREE.MeshStandardMaterial;
+                  if (material.map) material.map.colorSpace = THREE.SRGBColorSpace;
+                  if (material.normalMap) material.normalMap.colorSpace = THREE.NoColorSpace;
+                }
+              }
+            });
+            console.log('✅ Materials processed');
+            
+            // Scale model
+            console.log('🔍 Scaling model...');
+            model.scale.set(0.01, 0.01, 0.01);
+            console.log('✅ Model scaled:', model.scale);
+            
+            // Center model
+            console.log('🔍 Centering model...');
+            const box = new THREE.Box3().setFromObject(model);
+            const center = box.getCenter(new THREE.Vector3());
+            console.log('   Model bounds:', box.min, box.max);
+            console.log('   Model center:', center);
+            
+            // Instead of moving the model, set the orbital controls target to the center
+            controls.target.set(center.x, center.y, center.z);
+            console.log('✅ Orbit controls target set to model center');
+            
+            // Keep the position adjustment for height only
+            console.log('🔍 Adjusting model position...');
+            model.position.y = 4; // Move model up by 4 units
+            console.log('✅ Model position set:', model.position);
+            
+            // Add model to scene
+            console.log('🔍 Adding model to scene...');
+            scene.add(model);
+            modelRef.current = model;
+            console.log('✅ Model added to scene');
+            
+            setIsLoading(false);
+            console.log('✅ Model successfully loaded and set up');
+          } catch (err) {
+            console.error('❌ Error processing loaded model:', err);
+            console.error('Error details:', err instanceof Error ? err.message : 'Unknown error');
+            // Log model path to verify it's correct
+            console.error('Failed model path:', modelPath);
+            setError(`Error processing 3D model: ${err instanceof Error ? err.message : 'Unknown error'}`);
+            setIsLoading(false);
+          }
+        },
+        (xhr) => {
+          // Progress callback
+          const percentComplete = xhr.loaded / xhr.total * 100;
+          console.log(`📊 Model loading: ${Math.round(percentComplete)}%`);
+        },
+        (err) => {
+          // Error callback with simplified handling
+          console.error('❌ Error loading model:', err);
+          console.error('Error details:', err instanceof Error ? err.message : 'Unknown error');
+          // Log model path to verify it's correct
+          console.error('Failed model path:', modelPath);
+          setError(`Failed to load 3D model: ${err instanceof Error ? err.message : 'Unknown error'}`);
+          setIsLoading(false);
+        }
+      );
+      
+      // Animation loop - using requestAnimationFrame for better cleanup
+      const animate = () => {
+        if (controlsRef.current) {
+          controlsRef.current.update();
+        }
+        
+        if (!rendererRef.current?.xr.isPresenting && sceneRef.current && cameraRef.current && rendererRef.current) {
+          rendererRef.current.render(sceneRef.current, cameraRef.current);
+        }
+        
+        requestRef.current = requestAnimationFrame(animate);
+      };
+      
+      // Start animation loop
+      console.log('🔍 Starting animation loop');
+      requestRef.current = requestAnimationFrame(animate);
+      console.log('✅ Animation loop started');
+      
+      // Handle resize
+      const handleResize = () => {
+        if (!containerRef.current || !cameraRef.current || !rendererRef.current) return;
+        
+        const width = containerRef.current.clientWidth;
+        const height = containerRef.current.clientHeight;
+        
+        cameraRef.current.aspect = width / height;
+        cameraRef.current.updateProjectionMatrix();
+        
+        rendererRef.current.setSize(width, height);
+        console.log('📱 Window resized, renderer and camera updated');
+      };
+      
+      window.addEventListener('resize', handleResize);
+      console.log('✅ Resize handler configured');
+      
+      // Set up cleanup for resize listener
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
 
-  // Stop camera stream and redirect to /elevate
+  // Stop camera stream and redirect to /quad
   const stopCamera = () => {
     console.log('🔍 Stopping camera and cleaning up...');
     if (!videoRef.current || !videoRef.current.srcObject) {
@@ -434,6 +457,7 @@ export default function SimpleAR() {
     
     tracks.forEach(track => track.stop());
     videoRef.current.srcObject = null;
+    cameraInitialized.current = false; // Reset initialization flag
     console.log('✅ Camera stopped');
     
     // End AR session if active
@@ -444,7 +468,7 @@ export default function SimpleAR() {
       });
     }
     
-    // Redirect to /elevate
+    // Redirect to /quad
     console.log('🔍 Redirecting to /quad');
     router.push('/quad');
   };
@@ -452,7 +476,13 @@ export default function SimpleAR() {
   // Auto-start camera when component mounts
   useEffect(() => {
     console.log('🔍 Component mounted, starting camera');
-    startCamera();
+    
+    // Only start camera if not already initialized
+    if (!cameraInitialized.current) {
+      startCamera();
+    } else {
+      console.log('⚠️ Camera already initialized, skipping startCamera');
+    }
     
     // Clean up on unmount
     return () => {
@@ -496,6 +526,9 @@ export default function SimpleAR() {
         console.log('✅ Controls disposed');
       }
       
+      // Reset initialization flag on unmount
+      cameraInitialized.current = false;
+      
       console.log('✅ Cleanup complete');
     };
   }, [startCamera]); // Add startCamera as a dependency
@@ -503,10 +536,7 @@ export default function SimpleAR() {
   return (
     <div className="h-screen w-full bg-black">
       {/* Add Cross-Origin headers for better WebGL support */}
-      <head>
-        <meta httpEquiv="Cross-Origin-Opener-Policy" content="same-origin" />
-        <meta httpEquiv="Cross-Origin-Embedder-Policy" content="require-corp" />
-      </head>
+      
       
       <div 
         ref={containerRef} 
