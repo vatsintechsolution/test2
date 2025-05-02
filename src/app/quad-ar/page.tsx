@@ -16,7 +16,7 @@ export default function SimpleAR() {
   const [cameraPermissionGranted, setCameraPermissionGranted] = useState(false);
   const [showPermissionPrompt, setShowPermissionPrompt] = useState(true);
   const [arSupported, setArSupported] = useState(false);
-  const [arActive, setArActive] = useState(false);
+  // const [arActive, setArActive] = useState(false);
   
   // Store scene elements in refs
   const sceneRef = useRef<THREE.Scene | null>(null);
@@ -87,58 +87,58 @@ export default function SimpleAR() {
   };
 
   // AR Session Start Function
-  const startARSession = async () => {
-    if (!rendererRef.current || !sceneRef.current || !cameraRef.current) {
-      console.error('Renderer, scene, or camera not initialized');
-      setError('Unable to start AR: scene not initialized');
-      return;
-    }
+  // const startARSession = async () => {
+  //   if (!rendererRef.current || !sceneRef.current || !cameraRef.current) {
+  //     console.error('Renderer, scene, or camera not initialized');
+  //     setError('Unable to start AR: scene not initialized');
+  //     return;
+  //   }
     
-    if (!arSupported) {
-      setError('AR is not supported on this device');
-      return;
-    }
+  //   if (!arSupported) {
+  //     setError('AR is not supported on this device');
+  //     return;
+  //   }
     
-    try {
-      // Try different reference spaces if one fails
-      const referenceSpaceTypes = ['local', 'local-floor', 'viewer', 'unbounded'];
+  //   try {
+  //     // Try different reference spaces if one fails
+  //     const referenceSpaceTypes = ['local', 'local-floor', 'viewer', 'unbounded'];
       
-      // Make sure XR is enabled on the renderer
-      rendererRef.current.xr.enabled = true;
+  //     // Make sure XR is enabled on the renderer
+  //     rendererRef.current.xr.enabled = true;
       
-      // Request AR session with minimal features for compatibility
-      const session = await navigator.xr.requestSession('immersive-ar', {
-        optionalFeatures: []
-      });
+  //     // Request AR session with minimal features for compatibility
+  //     const session = await navigator.xr.requestSession('immersive-ar', {
+  //       optionalFeatures: []
+  //     });
       
-      // Set session
-      await rendererRef.current.xr.setSession(session);
-      setArActive(true);
+  //     // Set session
+  //     await rendererRef.current.xr.setSession(session);
+  //     setArActive(true);
       
-      // Try different reference spaces
-      for (const spaceType of referenceSpaceTypes) {
-        try {
-          const referenceSpace = await session.requestReferenceSpace(spaceType as XRReferenceSpaceType);
-          rendererRef.current.xr.setReferenceSpace(referenceSpace);
-          console.log(`Using reference space: ${spaceType}`);
-          break;
-        } catch (e) {
-          console.warn(`Failed to get reference space ${spaceType}:`, e);
-          // Continue trying other space types
-        }
-      }
+  //     // Try different reference spaces
+  //     for (const spaceType of referenceSpaceTypes) {
+  //       try {
+  //         const referenceSpace = await session.requestReferenceSpace(spaceType as XRReferenceSpaceType);
+  //         rendererRef.current.xr.setReferenceSpace(referenceSpace);
+  //         console.log(`Using reference space: ${spaceType}`);
+  //         break;
+  //       } catch (e) {
+  //         console.warn(`Failed to get reference space ${spaceType}:`, e);
+  //         // Continue trying other space types
+  //       }
+  //     }
       
-      // Setup session end handling
-      session.addEventListener('end', () => {
-        setArActive(false);
-        console.log('AR session ended');
-      });
+  //     // Setup session end handling
+  //     session.addEventListener('end', () => {
+  //       setArActive(false);
+  //       console.log('AR session ended');
+  //     });
       
-    } catch (error) {
-      console.error('Failed to start AR session:', error);
-      setError(`Failed to start AR session: ${error instanceof Error ? error.message : 'Unknown error'}`);
-    }
-  };
+  //   } catch (error) {
+  //     console.error('Failed to start AR session:', error);
+  //     setError(`Failed to start AR session: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  //   }
+  // };
 
   // Initialize camera stream and scene setup with useCallback
   const startCamera = useCallback(async () => {
