@@ -17,6 +17,7 @@ import { ProductAirDeliveryCard } from "@/components/product/ProductAirDeliveryC
 import { ProductRobustMotorCard } from "@/components/product/ProductRobustMotorCard";
 import { ProductDoubleBearingCard } from "@/components/product/ProductDoubleBearingCard";
 import { ProductPremiumAestheticsCard } from "@/components/product/ProductPremiumAestheticsCard";
+import { YouTubeVideoCard } from '@/components/product/YouTubeVideoCard';
 import productsData, { Product } from "@/lib/products";
 import { DigiShieldSection } from "@/components/DigiShieldSection";
 import { ARViewSection } from "@/components/ARViewSection";
@@ -266,7 +267,36 @@ export default function ProductPage({ params }: { params: ProductPageParams }) {
             </div>
           )}
 
-         
+          {/* YouTube Video Cards */}
+          {slug === 'airoquad' && (
+            <div className="py-10">
+              <YouTubeVideoCard
+                videoSrc="https://www.youtube.com/watch?v=9erDEx8NSA4"
+                className=""
+                gradientClass="bg-gradient-to-t from-black/30 via-black/20 to-transparent"
+              />
+            </div>
+          )}
+
+          {slug === 'airoelevate' && (
+            <div className="py-10">
+              <YouTubeVideoCard
+                videoSrc="https://www.youtube.com/watch?v=e7k7TqKlbsQ"
+                className=""
+                gradientClass="bg-gradient-to-t from-black/30 via-black/20 to-transparent"
+              />
+            </div>
+          )}
+
+          {(slug === 'airojewel' || slug === 'airogeometry') && (
+            <div className="py-10">
+              <YouTubeVideoCard
+                videoSrc="https://www.youtube.com/watch?v=Pcqcr2ePBlk"
+                className=""
+                gradientClass="bg-gradient-to-t from-black/30 via-black/20 to-transparent"
+              />
+            </div>
+          )}
 
           <section className="grid grid-cols-1 gap-4 py-10">
             {!slug.includes('airozephyr') && !slug.includes('airoserenade') && !slug.includes('airosleek') && !slug.includes('stardust') && !slug.includes('vayuultra') && !slug.includes('vayuprohs') && (
