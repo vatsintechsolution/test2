@@ -285,6 +285,9 @@ export default function ElevateAR() {
               // Instead of moving the model, set the orbital controls target to the center
               controls.target.set(center.x, center.y, center.z);
               
+              // Flip the model to correct orientation
+
+              model.rotation.x = Math.PI; // Rotate 180 degrees around X axis
               // Keep the position adjustment for height only
               model.position.y = 4; // Move model up by 4 units
               
@@ -488,7 +491,7 @@ export default function ElevateAR() {
         )}
         
         {/* AR Button - Only show when camera is active and AR is supported */}
-        {cameraPermissionGranted && arSupported && !arActive && !isLoading && (
+        {/* {cameraPermissionGranted && arSupported && !arActive && !isLoading && (
           <div className="fixed bottom-24 left-0 right-0 flex justify-center z-50">
             <button
               onClick={startARSession}
@@ -497,7 +500,7 @@ export default function ElevateAR() {
               START AR
             </button>
           </div>
-        )}
+        )} */}
         
         {/* Camera Button - Only show when camera is active */}
         {cameraPermissionGranted && (

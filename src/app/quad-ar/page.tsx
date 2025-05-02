@@ -489,7 +489,7 @@ export default function SimpleAR() {
         )}
         
         {/* AR Button - Only show when camera is active and AR is supported */}
-        {cameraPermissionGranted && arSupported && !arActive && !isLoading && (
+        {/* {cameraPermissionGranted && arSupported && !arActive && !isLoading && (
           <div className="fixed bottom-24 left-0 right-0 flex justify-center z-50">
             <button
               onClick={startARSession}
@@ -498,7 +498,7 @@ export default function SimpleAR() {
               START AR
             </button>
           </div>
-        )}
+        )} */}
         
         {/* Camera Button - Only show when camera is active */}
         {cameraPermissionGranted && (
