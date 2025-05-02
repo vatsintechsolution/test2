@@ -49,6 +49,23 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/(.*)\\.glb', // Target all .glb files
+        headers: [
+          {
+            key: 'Cross-Origin-Resource-Policy',
+            value: 'same-origin',
+          },
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin',
+          },
+          {
+            key: 'Cross-Origin-Embedder-Policy',
+            value: 'require-corp',
+          },
+        ],
+      },
       // Add headers for static assets to ensure proper handling
       {
         source: '/:path*',
