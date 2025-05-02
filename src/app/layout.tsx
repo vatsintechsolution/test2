@@ -5,6 +5,8 @@ import StyledComponentsRegistry from "../lib/registry";
 import { ThemeProvider } from "@/lib/ThemeProvider";
 import ScrollToTop from "@/components/ScrollToTop";
 import Script from "next/script";
+// import { GoogleTagManager } from '@next/third-parties/google';
+// import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -137,6 +139,10 @@ export default function RootLayout({
             gtag('event', 'conversion', {'send_to': 'AW-10956281123/ug4zCKbnj7UZEKOqrugo'});
           `}
         </Script>
+
+        {/* Next.js official Google integrations */}
+        {/* <GoogleTagManager gtmId="GTM-XXXXXXX" />
+        <GoogleAnalytics gaId="G-XXXXXXXXXX" /> */}
       </body>
     </html>
   );

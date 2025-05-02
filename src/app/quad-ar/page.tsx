@@ -600,7 +600,7 @@ export default function SimpleAR() {
         
         {/* AR Button - Only show when camera is active and AR is supported */}
         {cameraPermissionGranted && arSupported && !arActive && !isLoading && (
-          <div className="fixed bottom-24 left-0 right-0 flex justify-center z-50 hiddden">
+          <div className="fixed bottom-24 left-0 right-0  justify-center z-50 hidden">
             <button
               onClick={startARSession}
               className="px-8 py-4 rounded-full font-bold text-lg shadow-lg bg-blue-500 hover:bg-blue-600 text-white"

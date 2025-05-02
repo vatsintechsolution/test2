@@ -1,20 +1,17 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { RemoteControl } from './RemoteControl/RemoteControlEcoLink';
+import { RemoteControl } from './RemoteControl/RemoteControlEcoLinkNonLight';
 import Link from "next/link";
 import React from "react";
 // Import dynamic to handle client-side only components
 
 type RotationSpeed = "off" | "speed1" | "speed2" | "speed3" | "speed4" | "speed5" | "speed6";
 
-interface ArStatusChangeEvent extends Event {
-  detail: {
-    status: string;
-  };
-}
 
-interface ModelViewerElement extends HTMLElement {
+
+// Define the interface for the model-viewer element locally
+interface ModelViewerElementType extends HTMLElement {
   model: {
     materials: Array<{
       pbrMetallicRoughness: {
@@ -23,6 +20,9 @@ interface ModelViewerElement extends HTMLElement {
     }>;
   };
 }
+
+// Import the ModelViewerElement interface from the custom-types.d.ts file
+// We'll use the one already declared there
 
 export default function ARViewer2({ modelPath }: { modelPath: string }) {
   const [rotationSpeed, setRotationSpeed] = useState<RotationSpeed>("off");
@@ -48,10 +48,9 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
           .then(() => {
             setIsLoading(false);
             // Initialize model-viewer properly
-            // @ts-expect-error - This is expected for custom elements
             customElements.define(
               "model-viewer",
-              // @ts-expect-error - Model viewer types are complex
+              // @ts-expect-error - Ignore type checking for the model-viewer component
               window["model-viewer"].ModelViewer
             );
           })
@@ -92,6 +91,36 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
     speed6: direction === "clockwise" ? "2000deg" : "-2000deg",
   };
 
+  // Helper function to get next speed
+  const getNextSpeed = (currentSpeed: RotationSpeed): RotationSpeed => {
+    const speeds: RotationSpeed[] = ["off", "speed1", "speed2", "speed3", "speed4", "speed5", "speed6"];
+    const currentIndex = speeds.indexOf(currentSpeed);
+    if (currentIndex === speeds.length - 1) {
+      return speeds[currentIndex]; // Stay at max speed
+    }
+    return speeds[currentIndex + 1];
+  };
+
+  // Helper function to get previous speed
+  const getPreviousSpeed = (currentSpeed: RotationSpeed): RotationSpeed => {
+    const speeds: RotationSpeed[] = ["off", "speed1", "speed2", "speed3", "speed4", "speed5", "speed6"];
+    const currentIndex = speeds.indexOf(currentSpeed);
+    if (currentIndex === 0) {
+      return speeds[0]; // Stay at off
+    }
+    return speeds[currentIndex - 1];
+  };
+
+  // Handle speed increase
+  const handleSpeedUp = () => {
+    setRotationSpeed(current => getNextSpeed(current));
+  };
+
+  // Handle speed decrease
+  const handleSpeedDown = () => {
+    setRotationSpeed(current => getPreviousSpeed(current));
+  };
+
   // const handleARClick = (e: React.MouseEvent) => {
   //   e.preventDefault();
   //   setShowAR(true);
@@ -101,9 +130,10 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
   const handleColorChange = (color: string) => {
     setCurrentColor(color);
     if (modelRef.current) {
-      const model = (modelRef.current as ModelViewerElement).model;
-      if (model) {
-        const [material] = model.materials;
+      // Type assertion for the model-viewer element
+      const modelViewerElement = modelRef.current as ModelViewerElementType;
+      if (modelViewerElement.model) {
+        const [material] = modelViewerElement.model.materials;
         material.pbrMetallicRoughness.setBaseColorFactor(color);
       }
     }
@@ -112,12 +142,10 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
   return (
     <div className="w-full h-[500px] md:h-[600px] bg-[url(/home/ar-bg.jpg)] bg-cover bg-top bg-no-repeat relative">
       {/* 
-        This uses a lowercase model-viewer element which Next.js
-        will process as a custom element. TypeScript will flag this
-        but Next.js config ignores these errors during build.
-
-        Point Towards open area on ceiling
+        model-viewer is a custom element, using @ts-ignore to suppress TypeScript errors
+        since the project is configured to ignore TypeScript errors during build
       */}
+      {/* @ts-expect-error - model-viewer is a custom element */}
       <model-viewer
         ref={modelRef}
         src={modelPath}
@@ -129,7 +157,6 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
         scale={`${scale} ${scale} ${scale}`}
         orientation={`0deg ${verticalAngle}deg 0deg`}
         auto-rotate
-        ios-src="/fan-3d.usdz"
         rotation-per-second={speedValues[rotationSpeed]}
         interaction-policy="allow-when-focused"
         disable-zoom
@@ -138,7 +165,7 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
         camera-orbit="0deg 120deg 100%"
         min-camera-orbit="auto 120deg 100%"
         max-camera-orbit="auto 120deg 200%"
-        camera-target="0m -300.5m 0m"
+        camera-target="0m -350.5m 0m"
         field-of-view="30deg"
         shadow-intensity="1"
         exposure="1"
@@ -150,7 +177,7 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
           setModelError("Failed to load AR experience");
           setArError("Failed to load AR experience");
         }}
-        onArStatusChange={(e: ArStatusChangeEvent) => {
+        onArStatusChange={(e: CustomEvent) => {
           const status = e.detail.status;
           console.log("AR Status:", status);
           setShowAR(status === "session-started");
@@ -279,7 +306,8 @@ export default function ARViewer2({ modelPath }: { modelPath: string }) {
                   setRotationSpeed("off");
               }
             }}
-            onLightClick={() => console.log('Light clicked')}
+            onSpeedUpClick={handleSpeedUp}
+            onSpeedDownClick={handleSpeedDown}
             onAntiClockwiseClick={() => setDirection(prev => prev === "clockwise" ? "anticlockwise" : "clockwise")}
           />
         </div>

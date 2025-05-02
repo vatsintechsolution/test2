@@ -37,7 +37,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
   const modelRef = useRef<HTMLElement | null>(null);
   const [arError, setArError] = useState<string | null>(null);
   const [direction, setDirection] = useState<"clockwise" | "anticlockwise">("clockwise");
-  const [currentColor, setCurrentColor] = useState('#F8F6F0');
+  const [currentColor, setCurrentColor] = useState('#635e5e');
   const [hoveredButton, setHoveredButton] = useState<string | null>(null);
 
   useEffect(() => {
@@ -67,9 +67,34 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
     }
   }, []);
 
+  // Apply the default color when model is loaded
+  useEffect(() => {
+    const applyDefaultColor = () => {
+      if (modelRef.current) {
+        const model = (modelRef.current as ModelViewerElement).model;
+        if (model) {
+          const [material] = model.materials;
+          material.pbrMetallicRoughness.setBaseColorFactor(currentColor);
+        }
+      }
+    };
+
+    // Check if model is loaded and try to apply color
+    const modelLoadedInterval = setInterval(() => {
+      if (modelRef.current && (modelRef.current as ModelViewerElement).model) {
+        applyDefaultColor();
+        clearInterval(modelLoadedInterval);
+      }
+    }, 500);
+
+    // Clean up interval
+    return () => clearInterval(modelLoadedInterval);
+  }, [currentColor]);
+
   // Update the document title with the current color
   useEffect(() => {
     document.title = `AR Viewer - ${currentColor}`;
+    
   }, [currentColor]);
 
   if (modelError) {
@@ -100,7 +125,7 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
     router.push('/quad-ar');
   };
 
-  const handleColorChange = (color: string) => {
+  const handleColorChange = (color: string = '#635e5e') => {
     setCurrentColor(color);
     if (modelRef.current) {
       const model = (modelRef.current as ModelViewerElement).model;
@@ -156,6 +181,16 @@ export default function ARViewer({ modelPath }: { modelPath: string }) {
           }
         }}
         style={{ width: "100%", height: "100%" }}
+        onLoad={() => {
+          // Apply color on load
+          if (modelRef.current) {
+            const model = (modelRef.current as ModelViewerElement).model;
+            if (model && model.materials && model.materials.length > 0) {
+              const [material] = model.materials;
+              material.pbrMetallicRoughness.setBaseColorFactor(currentColor);
+            }
+          }
+        }}
       ></model-viewer>
 
       {/* Color Controls with inline styles */}

@@ -252,7 +252,7 @@ export default function ElevateAR() {
       const loader = new GLTFLoader();
       
       // Simple direct path
-      const modelPath = '/models/airoelevate.glb';
+      const modelPath = '/models/airoelevate-logo.glb';
       console.log('🔍 Loading model from path:', modelPath);
       
       loader.load(
