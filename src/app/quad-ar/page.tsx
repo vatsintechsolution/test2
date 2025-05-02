@@ -15,7 +15,7 @@ export default function SimpleAR() {
   const [error, setError] = useState<string | null>(null);
   const [cameraPermissionGranted, setCameraPermissionGranted] = useState(false);
   const [showPermissionPrompt, setShowPermissionPrompt] = useState(true);
-  const [arSupported, setArSupported] = useState(false);
+  // const [arSupported, setArSupported] = useState(false);
   // const [arActive, setArActive] = useState(false);
   
   // Store scene elements in refs
