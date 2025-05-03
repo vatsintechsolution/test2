@@ -139,6 +139,20 @@ export default function RootLayout({
             gtag('event', 'conversion', {'send_to': 'AW-10956281123/ug4zCKbnj7UZEKOqrugo'});
           `}
         </Script>
+        
+        {/* Google Analytics G-GXSYMY0S6X */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GXSYMY0S6X"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics-ga4" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GXSYMY0S6X');
+          `}
+        </Script>
 
         {/* Next.js official Google integrations */}
         {/* <GoogleTagManager gtmId="GTM-XXXXXXX" />
