@@ -5,6 +5,7 @@ import { DesktopHeroSwiper } from "@/components/hero/DesktopHeroSwiper";
 import { ProductCard } from "@/components/fans/ProductCard";
 import { FAQItem } from "@/components/FAQItem";
 import { useState, useEffect } from "react";
+import { HomeSchema } from "@/components/schema/HomeSchema";
 
 import { Footer } from "@/components/footer/Footer";
 import { WhyChooseSection } from "@/components/WhyChooseSection";
@@ -403,6 +404,7 @@ export default function Home() {
 
   return (
     <>
+      <HomeSchema />
       <main className="mt-[-75px]">
         <div className="relative">
           {isMobile ? (
