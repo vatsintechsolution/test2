@@ -47,7 +47,7 @@ export const ProductFeatureCard: FC<ProductFeatureCardProps> = ({
             quality={100}
           />
         </div>
-        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white dark:text-white">{title}</h3>
+        <h3 className="text-lg md:text-2xl lg:text-3xl font-bold mb-2 text-white dark:text-white">{title}</h3>
         <p className="text-sm md:text-lg text-white dark:text-white/80">{description}</p>
       </div>
     </motion.div>

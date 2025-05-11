@@ -43,11 +43,11 @@ export const ProductFeatureCard: FC<ProductFeatureCardProps> = ({
             width={imageWidth}
             height={imageHeight}
             priority={priority}
-            className="object-contain lg:w-[450px] lg:h-[250px] scale-110 lg:scale-150 lg:p-4"
+            className="object-contain lg:w-[450px] lg:h-[250px] xs:w-[250px] xs:h-[150px] scale-110 lg:scale-150 lg:p-4"
             quality={100}
           />
         </div>
-        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white dark:text-white">{title}</h3>
+        <h3 className="sm:text-xl xs:text-lg md:text-2xl lg:text-3xl font-bold mb-2 text-white dark:text-white">{title}</h3>
         <p className="text-sm md:text-lg text-white dark:text-white/80">{description}</p>
       </div> 
     </motion.div>

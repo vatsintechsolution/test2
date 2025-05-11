@@ -36,7 +36,7 @@ to-black`}
       <div className="flex flex-col h-full justify-center p-2">
         {/* Top Text Content */}
         <div className="text-center mb-4 pt-2">
-          <h3 className="text-2xl lg:text-3xl font-medium mb-2 text-white">{title}</h3>
+          <h3 className="text-xl xs:text-lg md:text-2xl lg:text-3xl font-medium mb-2 text-white">{title}</h3>
           <p className="text-base lg:text-lg text-white/90 max-w-lg mx-auto">{description}</p>
         </div>
 

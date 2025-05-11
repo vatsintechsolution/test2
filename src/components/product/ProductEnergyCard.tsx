@@ -34,7 +34,7 @@ export const ProductEnergyCard: FC<ProductEnergyCardProps> = ({
       <div className="flex flex-col h-full py-6 px-2">
         {/* Top Text Content */}
         <div className="text-center mb-6 lg:mt-10 lg:mb-10">
-          <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white">{title}</h3>
+          <h3 className="sm:text-xl xs:text-lg md:text-2xl lg:text-3xl font-bold mb-3 text-white">{title}</h3>
           <p className="text-sm md:text-lg text-white/90 max-w-xl mx-auto">{description}</p>
         </div>
 
